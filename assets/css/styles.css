@@ -268,15 +268,24 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
-  font-size: var(--text-lg);
+  gap: var(--space-3);
+  font-size: var(--text-xl);
   font-weight: 700;
   color: var(--color-primary);
+  padding: var(--space-2) var(--space-4);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.logo:hover {
+  background-color: rgba(212, 165, 116, 0.08);
+  transform: scale(1.02);
 }
 
 .logo img {
-  height: 48px;
+  height: 80px;
   width: auto;
+  filter: drop-shadow(0 2px 8px rgba(26, 58, 42, 0.15));
 }
 
 nav ul {
