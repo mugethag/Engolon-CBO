@@ -577,6 +577,54 @@ section {
 }
 
 /* ============================================
+   STORY NARRATIVE BLOCK
+   ============================================ */
+
+.story-narrative {
+  max-width: 720px;
+  margin: var(--space-8) auto 0;
+  padding: var(--space-8);
+  background: linear-gradient(135deg, rgba(26, 58, 42, 0.04) 0%, rgba(212, 165, 116, 0.06) 100%);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.story-lead {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  font-family: var(--font-family-serif);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--space-4);
+}
+
+.story-narrative p {
+  font-size: var(--text-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-3);
+}
+
+.story-closing {
+  font-weight: 700;
+  color: var(--color-primary) !important;
+  font-size: var(--text-xl) !important;
+  margin-bottom: var(--space-5) !important;
+}
+
+.story-cta {
+  display: inline-block;
+  margin-top: var(--space-2);
+  font-size: var(--text-base);
+  padding: var(--space-3) var(--space-5);
+  min-width: unset;
+  max-width: 480px;
+  white-space: normal;
+  line-height: var(--lh-normal);
+}
+
+/* ============================================
    YOUTH SPORTS & MENTORSHIP SECTION
    ============================================ */
 
