@@ -485,6 +485,177 @@ section {
 }
 
 /* ============================================
+   ENGOLON MEANING - NAME DEFINITION
+   ============================================ */
+
+.engolon-meaning {
+  background: linear-gradient(135deg, rgba(26, 58, 42, 0.08) 0%, rgba(212, 165, 116, 0.08) 100%);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin: var(--space-6) 0;
+  text-align: center;
+}
+
+.meaning-label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-2);
+}
+
+.engolon-meaning h3 {
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  margin: var(--space-3) 0;
+  line-height: var(--lh-tight);
+}
+
+.engolon-meaning h3 em {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.meaning-definition {
+  display: inline-block;
+  background: var(--color-accent);
+  color: white;
+  padding: var(--space-1) var(--space-3);
+  border-radius: 20px;
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-left: var(--space-2);
+  font-style: normal;
+}
+
+.meaning-description {
+  font-size: var(--text-base);
+  color: var(--color-gray-700);
+  line-height: var(--lh-relaxed);
+  margin-top: var(--space-3);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.meaning-description em {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.meaning-description strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ============================================
+   IMAGE GALLERY (Our Home / Our Stories)
+   ============================================ */
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.image-gallery img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================
+   YOUTH SPORTS & MENTORSHIP SECTION
+   ============================================ */
+
+.youth-intro {
+  max-width: 800px;
+  margin: 0 auto var(--space-8);
+  text-align: center;
+}
+
+.youth-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.youth-photo-featured img {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.youth-photo-secondary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.youth-photo-secondary img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.youth-photo-secondary img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+.youth-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.youth-stat {
+  text-align: center;
+  padding: var(--space-4);
+  background: var(--color-light);
+  border-radius: var(--radius-lg);
+  border-top: 3px solid var(--color-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.youth-stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: -0.02em;
+}
+
+.youth-stat-label {
+  font-size: var(--text-xs);
+  color: var(--color-gray-600);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: var(--space-1);
+}
+
+/* ============================================
    OUR WORK SECTION - 4 FOCUS AREAS
    ============================================ */
 
@@ -539,6 +710,14 @@ section {
 .work-icon {
   font-size: 2.5rem;
   margin-bottom: var(--space-2);
+}
+
+.work-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin: var(--space-3) 0;
 }
 
 /* ============================================
@@ -910,6 +1089,353 @@ footer a:hover {
 }
 
 /* ============================================
+   TOURS SECTION - KIBERA SLUM TOURS
+   ============================================ */
+
+.tours-section {
+  padding: var(--space-12) 0;
+  background: linear-gradient(135deg, rgba(26, 58, 42, 0.03) 0%, rgba(212, 165, 116, 0.03) 100%);
+}
+
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-5);
+  margin-bottom: var(--space-8);
+}
+
+.tour-card {
+  background: var(--color-light);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.tour-image {
+  font-size: 3rem;
+  padding: var(--space-5);
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-primary) 0%, rgba(26, 58, 42, 0.8) 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+}
+
+.tour-content {
+  padding: var(--space-4);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-content h3 {
+  font-size: var(--text-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.tour-rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.stars {
+  color: #f59e0b;
+  letter-spacing: 2px;
+}
+
+.review-count {
+  color: var(--color-gray-600);
+}
+
+.tour-description {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-3);
+  line-height: var(--lh-relaxed);
+}
+
+.tour-highlights {
+  list-style: none;
+  flex: 1;
+}
+
+.tour-highlights li {
+  padding: var(--space-1) 0;
+  font-size: var(--text-sm);
+  color: var(--color-gray-700);
+}
+
+/* ============================================
+   BOOKING FORM SECTION
+   ============================================ */
+
+.booking-section {
+  background: var(--color-light);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  max-width: 700px;
+  margin: var(--space-8) auto 0;
+}
+
+.booking-title {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.booking-subtitle {
+  text-align: center;
+  color: var(--color-gray-600);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-6);
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: var(--text-sm);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius);
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+  color: var(--color-gray-800);
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: var(--font-family);
+}
+
+.date-picker-wrapper {
+  position: relative;
+}
+
+.date-picker-wrapper input {
+  cursor: pointer;
+  width: 100%;
+}
+
+/* ============================================
+   CALENDAR PICKER
+   ============================================ */
+
+.calendar-picker {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-3);
+  z-index: 1000;
+  margin-top: var(--space-1);
+  min-width: 300px;
+}
+
+.calendar-picker.active {
+  display: block;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.calendar-header button {
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: var(--space-1);
+  transition: var(--transition);
+}
+
+.calendar-header button:hover {
+  color: var(--color-accent);
+}
+
+.calendar-header h3 {
+  font-size: var(--text-lg);
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-1);
+  margin-bottom: var(--space-2);
+}
+
+.calendar-weekdays span {
+  text-align: center;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  padding: var(--space-2);
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-1);
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  transition: var(--transition);
+  background: var(--color-gray-50);
+}
+
+.calendar-day:hover:not(.disabled):not(.other-month) {
+  background: var(--color-accent);
+  color: white;
+}
+
+.calendar-day.selected {
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+}
+
+.calendar-day.disabled {
+  color: var(--color-gray-400);
+  cursor: not-allowed;
+  background: var(--color-gray-100);
+}
+
+.calendar-day.other-month {
+  color: var(--color-gray-300);
+}
+
+/* ============================================
+   FORM AGREEMENT & BUTTON
+   ============================================ */
+
+.form-agreement {
+  padding: var(--space-3);
+  background: var(--color-gray-50);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-4);
+}
+
+.form-agreement label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  line-height: var(--lh-relaxed);
+  color: var(--color-gray-700);
+}
+
+.form-agreement input[type="checkbox"] {
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.btn-large {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.btn-large:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.form-message {
+  padding: var(--space-3);
+  border-radius: var(--radius);
+  text-align: center;
+  font-weight: 500;
+  margin-top: var(--space-3);
+}
+
+.form-message.success {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
+}
+
+.form-message.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+/* ============================================
    RESPONSIVE DESIGN - PREMIUM RESPONSIVE
    ============================================ */
 
@@ -987,6 +1513,18 @@ footer a:hover {
 
 /* Mobile (below 768px) */
 @media (max-width: 767px) {
+  .youth-photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .youth-photo-featured img {
+    min-height: 280px;
+  }
+
+  .youth-stats {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
   section {
     padding: var(--space-8) var(--space-2);
   }

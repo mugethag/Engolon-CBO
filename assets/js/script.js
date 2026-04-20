@@ -162,6 +162,231 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ============================================
+  // TOUR BOOKING CALENDAR & FORM
+  // ============================================
+  
+  const tourDateInput = document.getElementById('tour-date');
+  const calendarPicker = document.getElementById('calendar-picker');
+  let currentMonth = new Date().getMonth();
+  let currentYear = new Date().getFullYear();
+  let selectedDate = null;
+
+  // Function to render calendar
+  function renderCalendar() {
+    calendarPicker.innerHTML = '';
+    
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                       'July', 'August', 'September', 'October', 'November', 'December'];
+    const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    
+    // Header with navigation
+    const header = document.createElement('div');
+    header.className = 'calendar-header';
+    
+    const prevBtn = document.createElement('button');
+    prevBtn.innerHTML = '←';
+    prevBtn.type = 'button';
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (currentMonth === 0) {
+        currentMonth = 11;
+        currentYear--;
+      } else {
+        currentMonth--;
+      }
+      renderCalendar();
+    });
+    
+    const monthYear = document.createElement('h3');
+    monthYear.textContent = monthNames[currentMonth] + ' ' + currentYear;
+    
+    const nextBtn = document.createElement('button');
+    nextBtn.innerHTML = '→';
+    nextBtn.type = 'button';
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (currentMonth === 11) {
+        currentMonth = 0;
+        currentYear++;
+      } else {
+        currentMonth++;
+      }
+      renderCalendar();
+    });
+    
+    header.appendChild(prevBtn);
+    header.appendChild(monthYear);
+    header.appendChild(nextBtn);
+    calendarPicker.appendChild(header);
+    
+    // Weekday headers
+    const weekdaysDiv = document.createElement('div');
+    weekdaysDiv.className = 'calendar-weekdays';
+    dayNames.forEach(day => {
+      const span = document.createElement('span');
+      span.textContent = day;
+      weekdaysDiv.appendChild(span);
+    });
+    calendarPicker.appendChild(weekdaysDiv);
+    
+    // Days
+    const daysDiv = document.createElement('div');
+    daysDiv.className = 'calendar-days';
+    
+    const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+    const today = new Date();
+    
+    // Previous month's days
+    const prevMonthDays = new Date(currentYear, currentMonth, 0).getDate();
+    for (let i = firstDay - 1; i >= 0; i--) {
+      const dayDiv = document.createElement('div');
+      dayDiv.className = 'calendar-day other-month';
+      dayDiv.textContent = prevMonthDays - i;
+      daysDiv.appendChild(dayDiv);
+    }
+    
+    // Current month's days
+    for (let day = 1; day <= daysInMonth; day++) {
+      const dayDiv = document.createElement('div');
+      dayDiv.className = 'calendar-day';
+      dayDiv.textContent = day;
+      
+      const dateObj = new Date(currentYear, currentMonth, day);
+      
+      // Disable past dates and Sundays (for example)
+      if (dateObj < today || dateObj.getDay() === 0) {
+        dayDiv.classList.add('disabled');
+      } else {
+        dayDiv.addEventListener('click', (e) => {
+          e.preventDefault();
+          selectDate(dateObj);
+        });
+      }
+      
+      // Highlight selected date
+      if (selectedDate && 
+          dateObj.getDate() === selectedDate.getDate() &&
+          dateObj.getMonth() === selectedDate.getMonth() &&
+          dateObj.getFullYear() === selectedDate.getFullYear()) {
+        dayDiv.classList.add('selected');
+      }
+      
+      daysDiv.appendChild(dayDiv);
+    }
+    
+    // Next month's days
+    const totalCells = daysDiv.children.length;
+    const remainingCells = 42 - totalCells; // 6 weeks * 7 days
+    for (let day = 1; day <= remainingCells; day++) {
+      const dayDiv = document.createElement('div');
+      dayDiv.className = 'calendar-day other-month';
+      dayDiv.textContent = day;
+      daysDiv.appendChild(dayDiv);
+    }
+    
+    calendarPicker.appendChild(daysDiv);
+  }
+
+  function selectDate(dateObj) {
+    selectedDate = dateObj;
+    const dateString = dateObj.toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    tourDateInput.value = dateString;
+    calendarPicker.classList.remove('active');
+    renderCalendar();
+  }
+
+  // Toggle calendar on input click
+  if (tourDateInput) {
+    tourDateInput.addEventListener('click', (e) => {
+      e.preventDefault();
+      calendarPicker.classList.toggle('active');
+      if (calendarPicker.classList.contains('active')) {
+        renderCalendar();
+      }
+    });
+  }
+
+  // Close calendar when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.date-picker-wrapper')) {
+      calendarPicker.classList.remove('active');
+    }
+  });
+
+  // ============================================
+  // TOUR BOOKING FORM SUBMISSION
+  // ============================================
+  
+  const tourBookingForm = document.getElementById('tour-booking-form');
+  if (tourBookingForm) {
+    tourBookingForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      const formData = {
+        name: document.getElementById('visitor-name').value,
+        email: document.getElementById('visitor-email').value,
+        phone: document.getElementById('visitor-phone').value,
+        groupSize: document.getElementById('group-size').value,
+        tourType: document.getElementById('tour-select').value,
+        date: document.getElementById('tour-date').value,
+        interests: document.getElementById('interests').value,
+        terms: document.querySelector('input[name="terms"]').checked
+      };
+
+      // Validation
+      if (!formData.name || !formData.email || !formData.phone || !formData.groupSize || 
+          !formData.tourType || !formData.date || !formData.terms) {
+        showFormMessage('Please fill in all required fields and agree to the terms.', 'error');
+        return;
+      }
+
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email)) {
+        showFormMessage('Please enter a valid email address.', 'error');
+        return;
+      }
+
+      // In production, send to server/email service
+      console.log('Tour Booking Data:', formData);
+      
+      // Success message
+      showFormMessage('Thank you for your booking request! We\'ll confirm your tour within 24 hours.', 'success');
+      
+      // Reset form
+      tourBookingForm.reset();
+      tourDateInput.value = '';
+      selectedDate = null;
+      
+      // Scroll to message
+      document.querySelector('.form-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+
+  function showFormMessage(message, type) {
+    const messageDiv = document.getElementById('form-message');
+    if (messageDiv) {
+      messageDiv.textContent = message;
+      messageDiv.classList.remove('success', 'error');
+      messageDiv.classList.add(type);
+      messageDiv.style.display = 'block';
+      
+      if (type === 'success') {
+        setTimeout(() => {
+          messageDiv.style.display = 'none';
+        }, 7000);
+      }
+    }
+  }
+});
+
   // Scroll to top button (optional enhancement)
   const scrollTopBtn = document.getElementById('scroll-top-btn');
   if (scrollTopBtn) {
