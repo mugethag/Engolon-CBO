@@ -78,52 +78,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Counter Animation for Impact Statistics
-  const impactNumbers = document.querySelectorAll('.impact-number');
-  
-  const animateCounter = (element) => {
-    const target = parseInt(element.getAttribute('data-target'), 10);
-    const suffix = element.getAttribute('data-suffix') || '';
-    let current = 0;
-    const increment = Math.ceil(target / 50);
-    
-    const timer = setInterval(function () {
-      current += increment;
-      if (current >= target) {
-        element.textContent = target.toLocaleString() + suffix;
-        clearInterval(timer);
-      } else {
-        element.textContent = current.toLocaleString() + suffix;
-      }
-    }, 20);
-  };
-
-  // Intersection Observer to trigger animations when section comes into view
-  const observerOptions = {
-    threshold: 0.5
-  };
-
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        if (entry.target.classList.contains('impact-number')) {
-          // Only animate if it hasn't been animated yet
-          if (!entry.target.classList.contains('animated')) {
-            animateCounter(entry.target);
-            entry.target.classList.add('animated');
-          }
-        }
-        // Stop observing this element
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  // Start observing all impact numbers
-  impactNumbers.forEach(number => {
-    observer.observe(number);
-  });
-
   // CTA Button Click Handlers (with placeholder actions)
   const donateBtn = document.getElementById('donate-btn');
   const volunteerBtn = document.getElementById('volunteer-btn');
