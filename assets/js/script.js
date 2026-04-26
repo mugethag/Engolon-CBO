@@ -23,24 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Smooth Scroll for Navigation Links
-  const scrollLinks = document.querySelectorAll('a[href^="#"]');
-  scrollLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href !== '#') {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      }
-    });
-  });
-
   // Newsletter Form Validation
   const newsletterForm = document.getElementById('newsletter-form');
   if (newsletterForm) {
