@@ -384,7 +384,7 @@ document.addEventListener('DOMContentLoaded', function () {
       messageDiv.classList.remove('success', 'error');
       messageDiv.classList.add(type);
       messageDiv.style.display = 'block';
-      
+
       if (type === 'success') {
         setTimeout(() => {
           messageDiv.style.display = 'none';
@@ -392,7 +392,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   }
-});
 
   // Scroll to top button (optional enhancement)
   const scrollTopBtn = document.getElementById('scroll-top-btn');
