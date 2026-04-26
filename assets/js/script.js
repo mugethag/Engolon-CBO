@@ -94,9 +94,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (volunteerBtn) {
     volunteerBtn.addEventListener('click', function () {
-      console.log('Volunteer button clicked - redirect to volunteer form');
-      // In production: window.location.href = '/volunteer';
-      alert('Thank you for your interest in volunteering! Redirecting to volunteer form...');
+      const target = document.getElementById('get-involved');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   }
 
@@ -321,6 +322,58 @@ document.addEventListener('DOMContentLoaded', function () {
       
       // Scroll to message
       document.querySelector('.form-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+
+  // ============================================
+  // GET INVOLVED FORM SUBMISSION
+  // ============================================
+
+  const involveForm = document.getElementById('involve-form');
+  if (involveForm) {
+    involveForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('involve-name').value.trim();
+      const email = document.getElementById('involve-email').value.trim();
+      const type = document.getElementById('involve-type').value;
+      const area = document.getElementById('involve-area').value;
+      const availability = document.getElementById('involve-availability').value;
+      const messageDiv = document.getElementById('involve-form-message');
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!name || !email || !type || !area || !availability) {
+        messageDiv.textContent = 'Please fill in all required fields.';
+        messageDiv.classList.remove('success');
+        messageDiv.classList.add('error');
+        messageDiv.style.display = 'block';
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+        messageDiv.textContent = 'Please enter a valid email address.';
+        messageDiv.classList.remove('success');
+        messageDiv.classList.add('error');
+        messageDiv.style.display = 'block';
+        return;
+      }
+
+      // In production, submit to a backend / email service
+      console.log('Get Involved submission:', { name, email, type, area, availability });
+
+      messageDiv.textContent = 'Thank you! We have received your interest and will be in touch within 3 business days.';
+      messageDiv.classList.remove('error');
+      messageDiv.classList.add('success');
+      messageDiv.style.display = 'block';
+
+      involveForm.reset();
+
+      messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      setTimeout(() => {
+        messageDiv.style.display = 'none';
+      }, 8000);
     });
   }
 
