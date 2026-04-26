@@ -48,7 +48,7 @@
       <p>Engolon CBO supports vulnerable communities in Kenya through youth mentorship, skills training, digital access, disability inclusion, and community-led care.</p>
       <div class="hero-cta">
         <button class="btn btn-secondary" id="donate-btn">💰 Donate Now</button>
-        <button type="button" class="btn btn-outline" onclick="document.getElementById('get-involved').scrollIntoView({behavior:'smooth'})">🤝 Get Involved</button>
+        <button type="button" class="btn btn-outline" onclick="openInvolveModal()">🤝 Get Involved</button>
       </div>
     </div>
   </section>
@@ -649,7 +649,7 @@
       
       <div class="cta-buttons">
         <button class="btn" id="donate-btn">💰 Donate</button>
-        <button type="button" class="btn" onclick="document.getElementById('get-involved').scrollIntoView({behavior:'smooth'})">🤝 Volunteer</button>
+        <button type="button" class="btn" onclick="openInvolveModal()">🤝 Volunteer</button>
         <button class="btn" id="contact-btn">📧 Contact Us</button>
         <button class="btn" id="resources-btn">📄 Download Resources</button>
       </div>
@@ -724,6 +724,98 @@
       <p>&copy; 2026 Engolon Community Based Organization. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Volunteer / Internship Modal -->
+  <div id="involve-modal" class="modal-overlay" onclick="if(event.target===this)closeInvolveModal()">
+    <div class="modal-box">
+      <button type="button" class="modal-close" onclick="closeInvolveModal()" aria-label="Close">&times;</button>
+
+      <div class="modal-tabs">
+        <button type="button" class="modal-tab active" onclick="switchTab('volunteer')">🤝 Volunteer</button>
+        <button type="button" class="modal-tab" onclick="switchTab('intern')">🎓 Internship</button>
+      </div>
+
+      <div id="tab-volunteer" class="modal-tab-content">
+        <h3>Volunteer With Us</h3>
+        <p>Give your time and skills directly to the community — mentorship, digital literacy, skills training, outreach, and more.</p>
+        <ul class="modal-list">
+          <li>Youth sports &amp; mentorship support</li>
+          <li>Digital literacy facilitation</li>
+          <li>Women's skills training assistance</li>
+          <li>Community outreach &amp; events</li>
+          <li>Documentation &amp; storytelling</li>
+        </ul>
+        <p class="modal-badge">Open year-round · Flexible hours</p>
+      </div>
+
+      <div id="tab-intern" class="modal-tab-content modal-tab-content--hidden">
+        <h3>Internship Opportunities</h3>
+        <p>Gain hands-on experience while making a real impact. Open to students and early-career professionals.</p>
+        <ul class="modal-list">
+          <li>Community program coordination</li>
+          <li>Communications &amp; social media</li>
+          <li>Monitoring, evaluation &amp; reporting</li>
+          <li>Grant writing &amp; fundraising support</li>
+          <li>ICT &amp; digital tools support</li>
+        </ul>
+        <p class="modal-badge">3–6 month placements · Certificate provided</p>
+      </div>
+
+      <form id="modal-involve-form" class="modal-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="m-name">Full Name *</label>
+            <input type="text" id="m-name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="m-email">Email *</label>
+            <input type="email" id="m-email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="m-type">I want to *</label>
+            <select id="m-type" required>
+              <option value="">Select one</option>
+              <option value="volunteer">Volunteer</option>
+              <option value="intern">Apply for an Internship</option>
+              <option value="both">Explore Both</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="m-area">Area of Interest *</label>
+            <select id="m-area" required>
+              <option value="">Select an area</option>
+              <option value="youth">Youth Mentorship &amp; Sports</option>
+              <option value="digital">Digital Literacy &amp; ICT</option>
+              <option value="womens">Women's Skills Training</option>
+              <option value="comms">Communications &amp; Social Media</option>
+              <option value="mer">Monitoring &amp; Evaluation</option>
+              <option value="grants">Grant Writing &amp; Fundraising</option>
+              <option value="outreach">Community Outreach &amp; Events</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="m-availability">Availability *</label>
+          <select id="m-availability" required>
+            <option value="">When can you commit?</option>
+            <option value="weekdays">Weekdays</option>
+            <option value="weekends">Weekends</option>
+            <option value="flexible">Flexible / Remote</option>
+            <option value="fulltime">Full-time (internship)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="m-message">Tell us about yourself (optional)</label>
+          <textarea id="m-message" rows="3" placeholder="Your background, skills, or anything else you'd like us to know."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit My Interest</button>
+        <div id="modal-form-msg" class="form-message modal-form-msg--hidden"></div>
+      </form>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="assets/js/script.js"></script>

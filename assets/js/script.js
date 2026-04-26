@@ -2,6 +2,28 @@
 // Engolon CBO - JavaScript Interactivity
 // ============================================
 
+// ============================================
+// VOLUNTEER / INTERNSHIP MODAL
+// ============================================
+
+function openInvolveModal() {
+  document.getElementById('involve-modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeInvolveModal() {
+  document.getElementById('involve-modal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function switchTab(tab) {
+  document.getElementById('tab-volunteer').classList.toggle('modal-tab-content--hidden', tab !== 'volunteer');
+  document.getElementById('tab-intern').classList.toggle('modal-tab-content--hidden', tab !== 'intern');
+  document.querySelectorAll('.modal-tab').forEach(function(btn) {
+    btn.classList.toggle('active', btn.textContent.toLowerCase().includes(tab === 'volunteer' ? 'volunteer' : 'intern'));
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   // Mobile Menu Toggle
   const hamburger = document.querySelector('.hamburger');
@@ -298,6 +320,45 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ============================================
+  // MODAL INVOLVE FORM SUBMISSION
+  // ============================================
+
+  const modalInvolveForm = document.getElementById('modal-involve-form');
+  if (modalInvolveForm) {
+    modalInvolveForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('m-name').value.trim();
+      const email = document.getElementById('m-email').value.trim();
+      const type = document.getElementById('m-type').value;
+      const area = document.getElementById('m-area').value;
+      const availability = document.getElementById('m-availability').value;
+      const msgDiv = document.getElementById('modal-form-msg');
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!name || !email || !type || !area || !availability) {
+        msgDiv.textContent = 'Please fill in all required fields.';
+        msgDiv.className = 'form-message error';
+        return;
+      }
+      if (!emailRegex.test(email)) {
+        msgDiv.textContent = 'Please enter a valid email address.';
+        msgDiv.className = 'form-message error';
+        return;
+      }
+
+      console.log('Modal involve form:', { name, email, type, area, availability });
+      msgDiv.textContent = 'Thank you! We\'ll be in touch within 3 business days.';
+      msgDiv.className = 'form-message success';
+      modalInvolveForm.reset();
+
+      setTimeout(function() {
+        closeInvolveModal();
+        msgDiv.className = 'form-message modal-form-msg--hidden';
+      }, 3000);
+    });
+  }
+
+  // ============================================
   // GET INVOLVED FORM SUBMISSION
   // ============================================
 
@@ -383,6 +444,10 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeInvolveModal();
+  });
 
   console.log('Engolon CBO website loaded successfully!');
 });
