@@ -48,7 +48,7 @@
       <p>Engolon CBO supports vulnerable communities in Kenya through youth mentorship, skills training, digital access, disability inclusion, and community-led care.</p>
       <div class="hero-cta">
         <button class="btn btn-secondary" id="donate-btn">💰 Donate Now</button>
-        <button type="button" class="btn btn-outline" onclick="openInvolveModal()">🤝 Get Involved</button>
+        <a href="#involve-modal" class="btn btn-outline">🤝 Get Involved</a>
       </div>
     </div>
   </section>
@@ -649,7 +649,7 @@
       
       <div class="cta-buttons">
         <button class="btn" id="donate-btn">💰 Donate</button>
-        <button type="button" class="btn" onclick="openInvolveModal()">🤝 Volunteer</button>
+        <a href="#involve-modal" class="btn">🤝 Volunteer</a>
         <button class="btn" id="contact-btn">📧 Contact Us</button>
         <button class="btn" id="resources-btn">📄 Download Resources</button>
       </div>
@@ -726,9 +726,9 @@
   </footer>
 
   <!-- Volunteer / Internship Modal -->
-  <div id="involve-modal" class="modal-overlay" onclick="if(event.target===this)closeInvolveModal()">
+  <div id="involve-modal" class="modal-overlay">
     <div class="modal-box">
-      <button type="button" class="modal-close" onclick="closeInvolveModal()" aria-label="Close">&times;</button>
+      <a href="#" class="modal-close" aria-label="Close">&times;</a>
 
       <div class="modal-tabs">
         <button type="button" class="modal-tab active" onclick="switchTab('volunteer')">🤝 Volunteer</button>
@@ -816,6 +816,31 @@
       </form>
     </div>
   </div>
+
+  <!-- Modal functions — inline so they work regardless of script.js state -->
+  <script>
+    function openInvolveModal() {
+      document.getElementById('involve-modal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeInvolveModal() {
+      document.getElementById('involve-modal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    function switchTab(tab) {
+      var tabs = ['volunteer','intern'];
+      tabs.forEach(function(t) {
+        var el = document.getElementById('tab-' + t);
+        if (el) el.classList.toggle('modal-tab-content--hidden', t !== tab);
+      });
+      document.querySelectorAll('.modal-tab').forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('onclick').indexOf("'"+tab+"'") !== -1);
+      });
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeInvolveModal();
+    });
+  </script>
 
   <!-- Scripts -->
   <script src="assets/js/script.js"></script>
