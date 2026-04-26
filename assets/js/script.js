@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // CTA Button Click Handlers (with placeholder actions)
   const donateBtn = document.getElementById('donate-btn');
-  const volunteerBtn = document.getElementById('volunteer-btn');
   const resourcesBtn = document.getElementById('resources-btn');
   const contactBtn = document.getElementById('contact-btn');
 
@@ -89,15 +88,6 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log('Donate button clicked - redirect to payment page');
       // In production: window.location.href = '/donate';
       alert('Thank you for your interest in donating! Redirecting to donation page...');
-    });
-  }
-
-  if (volunteerBtn) {
-    volunteerBtn.addEventListener('click', function () {
-      const target = document.getElementById('get-involved');
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
     });
   }
 
