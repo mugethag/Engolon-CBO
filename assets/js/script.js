@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
       
       const emailInput = document.getElementById('newsletter-email');
-      const messageDiv = document.getElementById('form-message');
+      const messageDiv = document.getElementById('newsletter-form-message');
       const email = emailInput.value.trim();
 
       // Basic email validation

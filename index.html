@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Engolon Community Based Organization - Serving and uplifting vulnerable members of our community in Kenya and beyond.">
   <meta name="keywords" content="CBO, Kenya, community, women, children, elderly, disabilities, social support">
-  <title>Engolon CBO - Caring for All, Leaving None Behind</title>
+  <title>Engolon CBO — Community, Kibra &amp; Beyond</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -15,8 +18,7 @@
   <header>
     <div class="header-content container">
       <div class="logo">
-        <img src="assets/images/logo.png" alt="Engolon CBO Logo">
-        <span>Engolon CBO</span>
+        <span>ENGOLON</span>
       </div>
       <nav>
         <ul>
@@ -25,7 +27,6 @@
           <li><a href="#tours">Community Tours</a></li>
           <li><a href="#impact">Impact</a></li>
           <li><a href="#youth-programs">Youth</a></li>
-          <li><a href="#get-involved">Get Involved</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#technology">Digital Access</a></li>
           <li><a href="#contact" class="btn btn-primary">Donate</a></li>
@@ -40,18 +41,62 @@
   </header>
 
   <!-- ============================================
-       HERO SECTION
+       HERO SECTION — SPLIT LAYOUT
        ============================================ -->
   <section class="hero">
-    <div class="container">
-      <h1>Caring for All, Leaving None Behind</h1>
+    <!-- Hidden legacy container so JS doesn't break if it references it -->
+    <div class="container hero-legacy-container"></div>
+
+    <!-- Left column: text content -->
+    <div class="hero-left">
+      <span class="hero-location">——&nbsp;&nbsp;Kibra · Kajiado · Nairobi</span>
+      <h1>Caring for all, <em class="accent">leaving none behind.</em></h1>
       <p>Engolon CBO supports vulnerable communities in Kenya through youth mentorship, skills training, digital access, disability inclusion, and community-led care.</p>
       <div class="hero-cta">
-        <button class="btn btn-secondary" id="donate-btn">💰 Donate Now</button>
-        <a href="#involve-modal" class="btn btn-outline">🤝 Get Involved</a>
+        <button type="button" class="btn btn-primary" id="donate-btn">Donate Now</button>
+        <a href="#involve-modal" class="btn btn-outline">Get Involved</a>
       </div>
     </div>
+
+    <!-- Right column: dark image panel -->
+    <div class="hero-right">
+      <p class="hero-caption">Kibra — Where We Begin</p>
+    </div>
   </section>
+
+  <!-- ============================================
+       MARQUEE / TICKER
+       ============================================ -->
+  <div class="marquee-wrapper" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-content">
+        Community Walks &nbsp;◆&nbsp; Women's Empowerment &nbsp;◆&nbsp; Youth Skating &nbsp;◆&nbsp; Digital Futures &nbsp;◆&nbsp; Keep Her in School &nbsp;◆&nbsp; Girl Child Back to School &nbsp;◆&nbsp; Boy Child Rising &nbsp;◆&nbsp; Baked with Love &nbsp;◆&nbsp; Community Tours &nbsp;◆&nbsp; Skills Training &nbsp;◆&nbsp;&nbsp;
+      </span>
+      <span class="marquee-content" aria-hidden="true">
+        Community Walks &nbsp;◆&nbsp; Women's Empowerment &nbsp;◆&nbsp; Youth Skating &nbsp;◆&nbsp; Digital Futures &nbsp;◆&nbsp; Keep Her in School &nbsp;◆&nbsp; Girl Child Back to School &nbsp;◆&nbsp; Boy Child Rising &nbsp;◆&nbsp; Baked with Love &nbsp;◆&nbsp; Community Tours &nbsp;◆&nbsp; Skills Training &nbsp;◆&nbsp;&nbsp;
+      </span>
+    </div>
+  </div>
+
+  <!-- ============================================
+       STATS BAR
+       ============================================ -->
+  <div class="stats-bar">
+    <div class="stats-bar-inner">
+      <div class="stat-item">
+        <div class="stat-number">500+</div>
+        <div class="stat-label">Community Members</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">4.9★</div>
+        <div class="stat-label">TripAdvisor Rating</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Locations</div>
+      </div>
+    </div>
+  </div>
 
   <!-- ============================================
        ABOUT SECTION
@@ -59,7 +104,8 @@
   <section id="about" class="section-alt">
     <div class="container about">
       <div class="section-title">
-        <h2>Our Mission</h2>
+        <p class="section-label">Who We Are</p>
+        <h2>Our <em class="accent">Mission.</em></h2>
         <p class="section-subtitle">Serving vulnerable communities with dignity and opportunity</p>
       </div>
       <div class="mission">
@@ -74,7 +120,7 @@
       </div>
 
       <p>Engolon Community Based Organization is a Kenya-centered organization with a global audience, dedicated to empowering vulnerable populations through skills training, financial support, education, and access to essential services. Every person deserves the opportunity to thrive.</p>
-      <p style="font-weight: 600; color: var(--color-orange); font-size: 1.2rem; margin-top: var(--spacing-xl);">Where Compassion Meets Impact</p>
+      <p class="about-tagline">Where Compassion Meets Impact</p>
     </div>
   </section>
 
@@ -84,6 +130,7 @@
   <section id="our-home">
     <div class="container">
       <div class="section-title">
+        <p class="section-label">Our Place</p>
         <h2>Our Home</h2>
         <p class="section-subtitle">A glimpse into our vibrant community</p>
       </div>
@@ -103,6 +150,7 @@
   <section id="our-stories">
     <div class="container">
       <div class="section-title">
+        <p class="section-label">Stories</p>
         <h2>Our Stories</h2>
         <p class="section-subtitle">Celebrating the moments that define us</p>
       </div>
@@ -118,7 +166,7 @@
         <p>No screens. No toys. Just children doing what children do best — connecting.</p>
         <p>But they deserve more than a dark corner. They deserve bright, safe spaces where their energy, creativity, and voices can truly shine.</p>
         <p class="story-closing">That is what we are building.</p>
-        <a href="#contact" class="btn btn-primary story-cta">👉 Help us create safe spaces where Kibera's children can thrive</a>
+        <a href="#contact" class="btn btn-primary story-cta">Help us create safe spaces where Kibera's children can thrive</a>
       </div>
     </div>
   </section>
@@ -129,7 +177,8 @@
   <section id="youth-programs" class="section-alt">
     <div class="container">
       <div class="section-title">
-        <h2>Youth Sports & Mentorship</h2>
+        <p class="section-label">Programs</p>
+        <h2>Youth Sports &amp; <em class="accent">Mentorship.</em></h2>
         <p class="section-subtitle">Building confidence, discipline, and community through skateboarding and inline skating on Kibera's streets</p>
       </div>
 
@@ -172,7 +221,8 @@
   <section id="our-work">
     <div class="container">
       <div class="section-title">
-        <h2>Our Work</h2>
+        <p class="section-label">Our Work</p>
+        <h2>What We <em class="accent">Do.</em></h2>
         <p class="section-subtitle">Targeted support creating real change in vulnerable communities</p>
       </div>
       <div class="work-grid">
@@ -190,7 +240,7 @@
         <!-- Children -->
         <div class="work-card">
           <div class="work-icon">👶</div>
-          <h3>Children: Education & Protection</h3>
+          <h3>Children: Education &amp; Protection</h3>
           <img src="assets/images/community/community-children-neighborhood-gathering-01.jpg" alt="Children playing and growing up in the Kibera community" class="work-card-img">
           <ul>
             <li>Support school fees, supplies, and mentorship</li>
@@ -203,7 +253,7 @@
         <!-- Elderly -->
         <div class="work-card">
           <div class="work-icon">👴</div>
-          <h3>Elderly: Care & Community</h3>
+          <h3>Elderly: Care &amp; Community</h3>
           <ul>
             <li>Offer social support and healthcare access</li>
             <li>Promote community engagement to reduce isolation</li>
@@ -214,7 +264,7 @@
         <!-- Persons with Disabilities -->
         <div class="work-card">
           <div class="work-icon">♿</div>
-          <h3>PWDs: Inclusion & Access</h3>
+          <h3>PWDs: Inclusion &amp; Access</h3>
           <ul>
             <li>Advocate for inclusion and accessibility</li>
             <li>Ensure equal access to books, computers, and learning resources</li>
@@ -232,7 +282,8 @@
   <section id="impact" class="section-alt">
     <div class="container">
       <div class="section-title">
-        <h2>Our Impact</h2>
+        <p class="section-label">Results</p>
+        <h2>Our <em class="accent">Impact.</em></h2>
         <p class="section-subtitle">We share only what is real and verified. Numbers will be added as programs scale.</p>
       </div>
 
@@ -267,7 +318,8 @@
   <section id="get-involved">
     <div class="container">
       <div class="section-title">
-        <h2>Get Involved</h2>
+        <p class="section-label">Join Us</p>
+        <h2>Get <em class="accent">Involved.</em></h2>
         <p class="section-subtitle">Lend your time, skills, and energy to uplift Kibera's community</p>
       </div>
 
@@ -279,11 +331,11 @@
           <h3>Volunteer With Us</h3>
           <p>Give your time and talents directly to the community — from youth mentorship and sports coaching to digital literacy and skills training sessions.</p>
           <ul class="involve-list">
-            <li>Youth sports & mentorship support</li>
+            <li>Youth sports &amp; mentorship support</li>
             <li>Digital literacy facilitation</li>
             <li>Women's skills training assistance</li>
-            <li>Community outreach & events</li>
-            <li>Documentation & storytelling</li>
+            <li>Community outreach &amp; events</li>
+            <li>Documentation &amp; storytelling</li>
           </ul>
           <div class="involve-badge">Open year-round · Flexible hours</div>
         </div>
@@ -294,10 +346,10 @@
           <p>Gain hands-on development experience while making a real impact. We welcome students and early-career professionals in social work, education, communications, and technology.</p>
           <ul class="involve-list">
             <li>Community program coordination</li>
-            <li>Communications & social media</li>
-            <li>Monitoring, evaluation & reporting</li>
-            <li>Grant writing & fundraising support</li>
-            <li>ICT & digital tools support</li>
+            <li>Communications &amp; social media</li>
+            <li>Monitoring, evaluation &amp; reporting</li>
+            <li>Grant writing &amp; fundraising support</li>
+            <li>ICT &amp; digital tools support</li>
           </ul>
           <div class="involve-badge">3–6 month placements · Certificate provided</div>
         </div>
@@ -341,13 +393,13 @@
             <label for="involve-area">Area of Interest *</label>
             <select id="involve-area" name="area" required>
               <option value="">Select an area</option>
-              <option value="youth-mentorship">Youth Mentorship & Sports</option>
-              <option value="digital-literacy">Digital Literacy & ICT</option>
+              <option value="youth-mentorship">Youth Mentorship &amp; Sports</option>
+              <option value="digital-literacy">Digital Literacy &amp; ICT</option>
               <option value="womens-skills">Women's Skills Training</option>
-              <option value="communications">Communications & Social Media</option>
-              <option value="monitoring-evaluation">Monitoring, Evaluation & Reporting</option>
-              <option value="grants-fundraising">Grant Writing & Fundraising</option>
-              <option value="community-outreach">Community Outreach & Events</option>
+              <option value="communications">Communications &amp; Social Media</option>
+              <option value="monitoring-evaluation">Monitoring, Evaluation &amp; Reporting</option>
+              <option value="grants-fundraising">Grant Writing &amp; Fundraising</option>
+              <option value="community-outreach">Community Outreach &amp; Events</option>
               <option value="other">Other</option>
             </select>
           </div>
@@ -381,7 +433,8 @@
   <section id="testimonials">
     <div class="container">
       <div class="section-title">
-        <h2>Success Stories</h2>
+        <p class="section-label">Voices</p>
+        <h2>Real people. <em class="accent">Real moments.</em></h2>
         <p class="section-subtitle">Real voices from the community members we serve</p>
       </div>
       <div class="testimonials-grid">
@@ -430,7 +483,8 @@
   <section id="technology" class="section-alt">
     <div class="container">
       <div class="section-title">
-        <h2>Digital Access</h2>
+        <p class="section-label">Tech &amp; Access</p>
+        <h2>Digital <em class="accent">Access.</em></h2>
       </div>
       <div class="tech-approach">
         <div class="tech-highlight">
@@ -446,7 +500,8 @@
   <section id="tours" class="tours-section">
     <div class="container">
       <div class="section-title">
-        <h2>Experience Kibera: Community Tours</h2>
+        <p class="section-label">Visit Us</p>
+        <h2>Experience Kibera: <em class="accent">Community Tours.</em></h2>
         <p class="section-subtitle">Designed by residents, for respectful visitors. Every tour directly funds Engolon's community programs.</p>
       </div>
 
@@ -465,7 +520,7 @@
         <div class="tour-card">
           <div class="tour-image">🏘️</div>
           <div class="tour-content">
-            <h3>Cultural & Community Experience</h3>
+            <h3>Cultural &amp; Community Experience</h3>
             <p class="tour-description">Meet local residents, learn about daily life, and visit small businesses and community projects. Authentic insights from those who live here.</p>
             <ul class="tour-highlights">
               <li>📍 3–4 hours, community-guided</li>
@@ -479,7 +534,7 @@
         <div class="tour-card">
           <div class="tour-image">🎨</div>
           <div class="tour-content">
-            <h3>Arts, Crafts & Creativity Tour</h3>
+            <h3>Arts, Crafts &amp; Creativity Tour</h3>
             <p class="tour-description">Discover local artists and artisans. Watch traditional crafts being made, support emerging creatives, and take home authentic handmade pieces.</p>
             <ul class="tour-highlights">
               <li>📍 2.5–3 hours, artist-guided</li>
@@ -493,7 +548,7 @@
         <div class="tour-card">
           <div class="tour-image">🍲</div>
           <div class="tour-content">
-            <h3>Food Tour & Community Stories</h3>
+            <h3>Food Tour &amp; Community Stories</h3>
             <p class="tour-description">Share meals and stories with residents at family-run eateries. Learn about food culture, livelihoods, and the people behind the food.</p>
             <ul class="tour-highlights">
               <li>📍 3–4 hours, resident-hosted</li>
@@ -507,7 +562,7 @@
         <div class="tour-card">
           <div class="tour-image">📚</div>
           <div class="tour-content">
-            <h3>Youth & Education Tour</h3>
+            <h3>Youth &amp; Education Tour</h3>
             <p class="tour-description">Visit youth programs in action. Meet young mentors and learners, see the challenges and the breakthroughs, and understand what community-led education looks like.</p>
             <ul class="tour-highlights">
               <li>📍 2–3 hours, youth-led</li>
@@ -522,27 +577,27 @@
       <div class="booking-section">
         <h2 class="booking-title">Book Your Tour</h2>
         <p class="booking-subtitle">Join us for an authentic Kibera experience. All proceeds support Engolon CBO's community programs.</p>
-        
+
         <form id="tour-booking-form" class="booking-form">
           <div class="form-row">
             <div class="form-group">
               <label for="visitor-name">Full Name *</label>
-              <input 
-                type="text" 
-                id="visitor-name" 
-                name="name" 
-                placeholder="Your full name" 
+              <input
+                type="text"
+                id="visitor-name"
+                name="name"
+                placeholder="Your full name"
                 required
                 aria-label="Full name"
               >
             </div>
             <div class="form-group">
               <label for="visitor-email">Email Address *</label>
-              <input 
-                type="email" 
-                id="visitor-email" 
-                name="email" 
-                placeholder="your@email.com" 
+              <input
+                type="email"
+                id="visitor-email"
+                name="email"
+                placeholder="your@email.com"
                 required
                 aria-label="Email address"
               >
@@ -552,11 +607,11 @@
           <div class="form-row">
             <div class="form-group">
               <label for="visitor-phone">Phone Number *</label>
-              <input 
-                type="tel" 
-                id="visitor-phone" 
-                name="phone" 
-                placeholder="+254 7XX XXX XXX" 
+              <input
+                type="tel"
+                id="visitor-phone"
+                name="phone"
+                placeholder="+254 7XX XXX XXX"
                 required
                 aria-label="Phone number"
               >
@@ -582,10 +637,10 @@
             <label for="tour-select">Which tour interests you? *</label>
             <select id="tour-select" name="tour_type" required aria-label="Select tour type">
               <option value="">Choose a tour</option>
-              <option value="cultural">Cultural & Community Experience</option>
-              <option value="arts">Arts, Crafts & Creativity Tour</option>
-              <option value="food">Food Tour & Community Stories</option>
-              <option value="youth">Youth Center & Education Tour</option>
+              <option value="cultural">Cultural &amp; Community Experience</option>
+              <option value="arts">Arts, Crafts &amp; Creativity Tour</option>
+              <option value="food">Food Tour &amp; Community Stories</option>
+              <option value="youth">Youth Center &amp; Education Tour</option>
               <option value="custom">Custom/Multiple Tours</option>
             </select>
           </div>
@@ -593,11 +648,11 @@
           <div class="form-group">
             <label for="tour-date">Preferred Date *</label>
             <div class="date-picker-wrapper">
-              <input 
-                type="text" 
-                id="tour-date" 
-                name="date" 
-                placeholder="Click to select a date" 
+              <input
+                type="text"
+                id="tour-date"
+                name="date"
+                placeholder="Click to select a date"
                 required
                 readonly
                 aria-label="Tour date"
@@ -608,9 +663,9 @@
 
           <div class="form-group">
             <label for="interests">Tell us about your interests (optional)</label>
-            <textarea 
-              id="interests" 
-              name="interests" 
+            <textarea
+              id="interests"
+              name="interests"
               placeholder="What aspects of Kibera are you most interested in? Any questions?"
               rows="4"
               aria-label="Additional interests"
@@ -619,9 +674,9 @@
 
           <div class="form-agreement">
             <label>
-              <input 
-                type="checkbox" 
-                name="terms" 
+              <input
+                type="checkbox"
+                name="terms"
                 required
                 aria-label="Agree to terms"
               >
@@ -629,7 +684,7 @@
             </label>
           </div>
 
-          <button type="submit" class="btn btn-large" style="background: linear-gradient(135deg, var(--color-accent) 0%, #c4915f 100%); color: var(--color-dark);">
+          <button type="submit" class="btn btn-primary btn-large">
             Reserve Your Spot
           </button>
 
@@ -644,33 +699,33 @@
        ============================================ -->
   <section class="cta-section" id="contact">
     <div class="container">
-      <h2>Join Us in Making a Difference</h2>
-      <p style="font-size: 1.2rem; color: rgba(255,255,255,0.95); max-width: 700px; margin: 0 auto var(--spacing-xl);">Your support, time, and voice create lasting change. Choose how you want to help today.</p>
-      
+      <h2>Show up for Kibera. <em class="accent">Join the movement.</em></h2>
+      <p class="cta-intro">Your support, time, and voice create lasting change. Choose how you want to help today.</p>
+
       <div class="cta-buttons">
-        <button class="btn" id="cta-donate-btn">💰 Donate</button>
-        <button class="btn" type="button" id="cta-volunteer-btn">🤝 Volunteer</button>
-        <button class="btn" id="contact-btn">📧 Contact Us</button>
-        <button class="btn" id="resources-btn">📄 Download Resources</button>
+        <button type="button" class="btn" id="cta-donate-btn">Donate</button>
+        <button type="button" class="btn" id="cta-volunteer-btn">Volunteer</button>
+        <button type="button" class="btn" id="contact-btn">Contact Us</button>
+        <button type="button" class="btn" id="resources-btn">Download Resources</button>
       </div>
 
-      <div style="margin-top: var(--spacing-xl); padding-top: var(--spacing-xl); border-top: 1px solid rgba(255,255,255,0.2);">
-        <h3 style="color: white; margin-bottom: var(--spacing-md);">Stay Updated on Our Impact</h3>
+      <div class="newsletter-wrapper">
+        <h3 class="newsletter-heading">Stay Updated on Our Impact</h3>
         <form id="newsletter-form" class="newsletter-form">
           <div class="form-group">
             <label for="newsletter-email">Email Address</label>
-            <input 
-              type="email" 
-              id="newsletter-email" 
-              name="email" 
-              placeholder="your@email.com" 
+            <input
+              type="email"
+              id="newsletter-email"
+              name="email"
+              placeholder="your@email.com"
               required
               aria-label="Email address"
             >
           </div>
-          <button type="submit" class="btn" style="background: linear-gradient(135deg, var(--color-accent-orange) 0%, var(--color-orange) 100%); color: white;">Subscribe</button>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
         </form>
-        <div id="form-message" class="form-message"></div>
+        <div id="newsletter-form-message" class="form-message"></div>
       </div>
     </div>
   </section>
@@ -691,7 +746,7 @@
         <ul>
           <li><a href="#about">About Us</a></li>
           <li><a href="#our-work">Our Work</a></li>
-          <li><a href="#get-involved">Volunteer & Internships</a></li>
+          <li><a href="#get-involved">Volunteer &amp; Internships</a></li>
           <li><a href="#impact">Impact</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
         </ul>
@@ -708,7 +763,7 @@
       </div>
 
       <div class="footer-section">
-        <h4>Contact & Follow</h4>
+        <h4>Contact &amp; Follow</h4>
         <p><strong>Email:</strong> <a href="mailto:info@engolon.com">info@engolon.com</a></p>
         <p><strong>Location:</strong> Kenya</p>
         <div class="social-links">
