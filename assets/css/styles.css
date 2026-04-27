@@ -1676,7 +1676,8 @@ footer a:hover {
   padding: var(--space-4);
 }
 
-.modal-overlay:target {
+.modal-overlay:target,
+.modal-overlay.active {
   display: flex;
 }
 

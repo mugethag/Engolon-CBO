@@ -82,32 +82,33 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // CTA Button Click Handlers (with placeholder actions)
-  const donateBtn = document.getElementById('donate-btn');
+  // CTA Button Click Handlers
+  const ctaDonateBtn = document.getElementById('cta-donate-btn');
+  const ctaVolunteerBtn = document.getElementById('cta-volunteer-btn');
   const resourcesBtn = document.getElementById('resources-btn');
   const contactBtn = document.getElementById('contact-btn');
 
-  if (donateBtn) {
-    donateBtn.addEventListener('click', function () {
-      console.log('Donate button clicked - redirect to payment page');
-      // In production: window.location.href = '/donate';
-      alert('Thank you for your interest in donating! Redirecting to donation page...');
+  if (ctaDonateBtn) {
+    ctaDonateBtn.addEventListener('click', function () {
+      document.getElementById('donate-btn').scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
+  if (ctaVolunteerBtn) {
+    ctaVolunteerBtn.addEventListener('click', function () {
+      openInvolveModal();
     });
   }
 
   if (resourcesBtn) {
     resourcesBtn.addEventListener('click', function () {
-      console.log('Resources button clicked - prepare download');
-      // In production: download PDF or redirect to resources page
-      alert('Resources will be downloaded. Thank you!');
+      document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth' });
     });
   }
 
   if (contactBtn) {
     contactBtn.addEventListener('click', function () {
-      console.log('Contact button clicked - redirect to contact page');
-      // In production: window.location.href = '/contact';
-      alert('Opening contact page...');
+      document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth' });
     });
   }
 
