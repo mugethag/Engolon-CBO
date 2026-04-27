@@ -217,62 +217,165 @@
   </section>
 
   <!-- ============================================
-       OUR WORK SECTION - UPDATED WITH IMAGES
+       PROGRAMS SECTION
        ============================================ -->
   <section id="our-work">
     <div class="container">
       <div class="section-title">
         <p class="section-label">Our Work</p>
-        <h2>What We <em class="accent">Do.</em></h2>
-        <p class="section-subtitle">Targeted support creating real change in vulnerable communities</p>
+        <h2>We don't visit communities. <em class="accent">We become them.</em></h2>
+        <p class="section-subtitle">Every program is born from the community itself — not designed in an office, not imposed from outside.</p>
       </div>
-      <div class="work-grid">
-        <!-- Women -->
-        <div class="work-card">
-          <div class="work-icon">👩</div>
-          <h3>Women: Economic Empowerment</h3>
-          <ul>
-            <li>Provide skills training and financial literacy</li>
-            <li>Support income-generating activities and entrepreneurship</li>
-            <li>Introduce digital tools for small business management</li>
-          </ul>
+
+      <div class="program-filters">
+        <button type="button" class="program-filter-btn active" data-filter="all">All Programs</button>
+        <button type="button" class="program-filter-btn" data-filter="kibra">Kibra</button>
+        <button type="button" class="program-filter-btn" data-filter="kajiado">Kajiado</button>
+        <button type="button" class="program-filter-btn" data-filter="support">Support</button>
+      </div>
+
+      <div class="programs-grid">
+
+        <!-- Kibra Community Walks -->
+        <div class="program-card" data-category="kibra">
+          <div class="program-icon">🚶</div>
+          <p class="program-location">Kibra, Nairobi</p>
+          <h3 class="program-title">Kibra Community Experiences</h3>
+          <p class="program-desc">Authentic, community-led walks showing the real Kibra — its people, culture, and daily life. All proceeds return to the community.</p>
+          <div class="program-pricing">
+            <div class="pricing-row"><span class="pricing-name">Orientation Walk</span><span class="pricing-duration">1 hr</span><span class="pricing-price">$15</span></div>
+            <div class="pricing-row"><span class="pricing-name">Cultural Walk</span><span class="pricing-duration">2 hrs</span><span class="pricing-price">$25</span></div>
+            <div class="pricing-row"><span class="pricing-name">Market Walk</span><span class="pricing-duration">2 hrs</span><span class="pricing-price">$30</span></div>
+            <div class="pricing-row"><span class="pricing-name">Immersion Walk</span><span class="pricing-duration">Half day</span><span class="pricing-price">$45</span></div>
+            <div class="pricing-row"><span class="pricing-name">Insider Walk</span><span class="pricing-duration">Half day</span><span class="pricing-price">$55</span></div>
+          </div>
+          <div class="program-tags"><span>Community-led</span><span>All ages</span><span>Group rates</span></div>
+          <p class="program-tagline">Group discounts available · 10% off for 4+ people · NGO rates on request</p>
         </div>
 
-        <!-- Children -->
-        <div class="work-card">
-          <div class="work-icon">👶</div>
-          <h3>Children: Education &amp; Protection</h3>
-          <img src="assets/images/community/community-children-neighborhood-gathering-01.jpg" alt="Children playing and growing up in the Kibera community" class="work-card-img">
-          <ul>
-            <li>Support school fees, supplies, and mentorship</li>
-            <li>Provide books and learning materials</li>
-            <li>Offer computers and digital literacy programs</li>
-            <li>Advocate for child protection rights</li>
-          </ul>
+        <!-- Women's Tailoring -->
+        <div class="program-card" data-category="kibra support">
+          <div class="program-icon">✂️</div>
+          <p class="program-location">Kibra, Nairobi</p>
+          <h3 class="program-title">Women's Tailoring Program</h3>
+          <p class="program-desc">Teaching women to sew and tailor — building independent income and economic security. Every stitch is a school fee paid, a family fed, a future secured.</p>
+          <div class="program-pricing">
+            <div class="pricing-row"><span class="pricing-name">Sewing Machine</span><span class="pricing-duration">1 woman</span><span class="pricing-price">$120</span></div>
+            <div class="pricing-row"><span class="pricing-name">Tailoring Training</span><span class="pricing-duration">1 month</span><span class="pricing-price">$40</span></div>
+            <div class="pricing-row"><span class="pricing-name">Full Program — 3 Months</span><span class="pricing-duration">1 woman</span><span class="pricing-price">$150</span></div>
+          </div>
+          <div class="program-tags"><span>Tailoring &amp; Sewing</span><span>Business Skills</span><span>Women's Network</span></div>
+          <p class="program-tagline">This is what empowerment looks like.</p>
         </div>
 
-        <!-- Elderly -->
-        <div class="work-card">
-          <div class="work-icon">👴</div>
-          <h3>Elderly: Care &amp; Community</h3>
-          <ul>
-            <li>Offer social support and healthcare access</li>
-            <li>Promote community engagement to reduce isolation</li>
-            <li>Assist with access to government services (e.g., Inua Jamii, NHIF)</li>
-          </ul>
+        <!-- Baked with Love -->
+        <div class="program-card" data-category="kibra support">
+          <div class="program-icon">🍞</div>
+          <p class="program-location">Kibra, Nairobi · New</p>
+          <h3 class="program-title">Baked with Love</h3>
+          <p class="program-desc">Teaching women to bake bread, mandazi, cakes and more — creating daily income from home. Low startup cost, high demand, skills they own forever.</p>
+          <div class="program-pricing">
+            <div class="pricing-row"><span class="pricing-name">Basic Baking Kit</span><span class="pricing-duration">1 woman</span><span class="pricing-price">$50</span></div>
+            <div class="pricing-row"><span class="pricing-name">Baking Training</span><span class="pricing-duration">1 month</span><span class="pricing-price">$40</span></div>
+            <div class="pricing-row"><span class="pricing-name">Full Program — 3 Months</span><span class="pricing-duration">1 woman</span><span class="pricing-price">$130</span></div>
+            <div class="pricing-row"><span class="pricing-name">Community Oven</span><span class="pricing-duration">Shared</span><span class="pricing-price">$300</span></div>
+          </div>
+          <div class="program-tags"><span>Baking</span><span>Women's Income</span><span>Community</span></div>
+          <p class="program-tagline">When a woman bakes, her whole family eats.</p>
         </div>
 
-        <!-- Persons with Disabilities -->
-        <div class="work-card">
-          <div class="work-icon">♿</div>
-          <h3>PWDs: Inclusion &amp; Access</h3>
-          <ul>
-            <li>Advocate for inclusion and accessibility</li>
-            <li>Ensure equal access to books, computers, and learning resources</li>
-            <li>Provide assistive devices</li>
-            <li>Support communication and daily living</li>
-          </ul>
+        <!-- Youth Skating -->
+        <div class="program-card" data-category="kibra support">
+          <div class="program-icon">🛹</div>
+          <p class="program-location">Kibra, Nairobi</p>
+          <h3 class="program-title">Youth Skating Program</h3>
+          <p class="program-desc">Skateboards and roller skates in the hands of Kibra's youth. Building confidence, discipline, and peer mentorship — one trick at a time.</p>
+          <div class="program-pricing">
+            <div class="pricing-row"><span class="pricing-name">Skateboard</span><span class="pricing-duration">1 youth</span><span class="pricing-price">$30</span></div>
+            <div class="pricing-row"><span class="pricing-name">Roller Skates</span><span class="pricing-duration">1 youth</span><span class="pricing-price">$25</span></div>
+            <div class="pricing-row"><span class="pricing-name">Safety Gear Set</span><span class="pricing-duration">1 youth</span><span class="pricing-price">$20</span></div>
+          </div>
+          <div class="program-tags"><span>Skateboarding</span><span>Peer Mentorship</span><span>After-School</span></div>
+          <p class="program-tagline">One board. One mentor. One child whose life just changed.</p>
         </div>
+
+        <!-- Digital Futures -->
+        <div class="program-card" data-category="kibra support">
+          <div class="program-icon">💻</div>
+          <p class="program-location">Kibra, Nairobi · Urgent Need</p>
+          <h3 class="program-title">Digital Futures Program</h3>
+          <p class="program-desc">The world runs on computers. So should our kids. Digital literacy and coding skills for Kibra's children — because opportunity in the 21st century starts with a keyboard.</p>
+          <div class="program-pricing">
+            <div class="pricing-row"><span class="pricing-name">1 Computer</span><span class="pricing-duration">1 child</span><span class="pricing-price">$300</span></div>
+            <div class="pricing-row"><span class="pricing-name">5 Computers</span><span class="pricing-duration">Classroom row</span><span class="pricing-price">$1,500</span></div>
+            <div class="pricing-row"><span class="pricing-name">Full Computer Lab</span><span class="pricing-duration">20 computers</span><span class="pricing-price">$6,000</span></div>
+          </div>
+          <div class="program-tags"><span>Digital Literacy</span><span>Coding</span><span>After-School</span></div>
+          <p class="program-tagline">Every cent goes directly to computers for Kibra's children.</p>
+        </div>
+
+        <!-- Kajiado Experience Tour -->
+        <div class="program-card" data-category="kajiado">
+          <div class="program-icon">🌍</div>
+          <p class="program-location">Kajiado Central · Experience Tour</p>
+          <h3 class="program-title">Heart of Kajiado Experience</h3>
+          <p class="program-desc">This is not a safari. A raw, honest journey into the lives of Kajiado's most vulnerable — women without income, girls kept from school, forgotten elders. Come not as a tourist. Come as a human being.</p>
+          <div class="program-pricing">
+            <div class="pricing-row"><span class="pricing-name">Half Day — 2 Visits</span><span class="pricing-duration">4 hrs</span><span class="pricing-price">$55</span></div>
+            <div class="pricing-row"><span class="pricing-name">Full Day — 4 Visits</span><span class="pricing-duration">Full day</span><span class="pricing-price">$90</span></div>
+            <div class="pricing-row"><span class="pricing-name">Overnight Stay</span><span class="pricing-duration">1 night</span><span class="pricing-price">$150</span></div>
+            <div class="pricing-row"><span class="pricing-name">Group Tour (4–8 people)</span><span class="pricing-duration">Full day</span><span class="pricing-price">$65 pp</span></div>
+          </div>
+          <div class="program-tags"><span>Women's Visit</span><span>Girls Education</span><span>Elder Visits</span></div>
+          <p class="program-tagline">100% of tour proceeds fund Kajiado community programs.</p>
+        </div>
+
+        <!-- Keep Her in School -->
+        <div class="program-card" data-category="kajiado support">
+          <div class="program-icon">📖</div>
+          <p class="program-location">Kajiado Central</p>
+          <h3 class="program-title">Keep Her in School</h3>
+          <p class="program-desc">Girls in Kajiado drop out because of school fees, lack of sanitary pads, and cultural pressure. We remove every barrier standing between a girl and her education.</p>
+          <div class="program-pricing">
+            <div class="pricing-row"><span class="pricing-name">Sanitary Pads — 1 Month</span><span class="pricing-duration">1 girl</span><span class="pricing-price">$5</span></div>
+            <div class="pricing-row"><span class="pricing-name">School Supplies Pack</span><span class="pricing-duration">1 girl</span><span class="pricing-price">$25</span></div>
+            <div class="pricing-row"><span class="pricing-name">Term School Fees</span><span class="pricing-duration">1 girl</span><span class="pricing-price">$80</span></div>
+            <div class="pricing-row"><span class="pricing-name">Full Year Support</span><span class="pricing-duration">1 girl</span><span class="pricing-price">$300</span></div>
+          </div>
+          <div class="program-tags"><span>School Fees</span><span>Sanitary Pads</span><span>Mentorship</span></div>
+          <p class="program-tagline">A packet of sanitary pads keeps a girl in school.</p>
+        </div>
+
+        <!-- Mama Inua -->
+        <div class="program-card" data-category="kajiado support">
+          <div class="program-icon">👩</div>
+          <p class="program-location">Kajiado Central</p>
+          <h3 class="program-title">Mama Inua — Lift Up Mama</h3>
+          <p class="program-desc">64% of women in Kajiado have no income at all. Mama Inua builds economic independence through vocational skills, savings groups and microcredit — because when a mother rises, her whole family rises.</p>
+          <div class="program-pricing">
+            <div class="pricing-row"><span class="pricing-name">Skills Training — 1 Month</span><span class="pricing-duration">1 woman</span><span class="pricing-price">$40</span></div>
+            <div class="pricing-row"><span class="pricing-name">Startup Tool Kit</span><span class="pricing-duration">1 woman</span><span class="pricing-price">$80</span></div>
+            <div class="pricing-row"><span class="pricing-name">Full Training Program</span><span class="pricing-duration">3 months</span><span class="pricing-price">$150</span></div>
+          </div>
+          <div class="program-tags"><span>Vocational Skills</span><span>Savings Groups</span><span>Microcredit</span></div>
+          <p class="program-tagline">When a mother earns, her whole family eats.</p>
+        </div>
+
+        <!-- Boy Child Rising -->
+        <div class="program-card" data-category="kajiado support">
+          <div class="program-icon">👦</div>
+          <p class="program-location">Kajiado Central</p>
+          <h3 class="program-title">Boy Child Rising</h3>
+          <p class="program-desc">The boy child is equally vulnerable — facing drug abuse, school dropout and unemployment. Engolon sees him. We give boys a positive path forward through mentorship and life skills.</p>
+          <div class="program-pricing">
+            <div class="pricing-row"><span class="pricing-name">Mentorship Sessions</span><span class="pricing-duration">1 month</span><span class="pricing-price">$15</span></div>
+            <div class="pricing-row"><span class="pricing-name">Life Skills Workshop</span><span class="pricing-duration">1 boy</span><span class="pricing-price">$30</span></div>
+            <div class="pricing-row"><span class="pricing-name">Full Term Program</span><span class="pricing-duration">1 boy</span><span class="pricing-price">$100</span></div>
+          </div>
+          <div class="program-tags"><span>Mentorship</span><span>Life Skills</span><span>Youth Employment</span></div>
+          <p class="program-tagline">No child — boy or girl — is left behind.</p>
+        </div>
+
       </div>
     </div>
   </section>

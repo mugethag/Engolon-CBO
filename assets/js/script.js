@@ -113,6 +113,28 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ============================================
+  // PROGRAM FILTER TABS
+  // ============================================
+
+  const filterBtns = document.querySelectorAll('.program-filter-btn');
+  const programCards = document.querySelectorAll('.program-card');
+
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      filterBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      const filter = this.dataset.filter;
+      programCards.forEach(function(card) {
+        if (filter === 'all' || card.dataset.category.includes(filter)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // ============================================
   // TOUR BOOKING CALENDAR & FORM
   // ============================================
   
