@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (ctaDonateBtn) {
     ctaDonateBtn.addEventListener('click', function () {
-      document.getElementById('donate-btn').scrollIntoView({ behavior: 'smooth' });
+      window.location.href = 'mailto:info@engolon.com?subject=Donation%20to%20Engolon%20CBO&body=Hello%2C%20I%20would%20like%20to%20make%20a%20donation%20to%20Engolon%20CBO.';
     });
   }
 
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (contactBtn) {
     contactBtn.addEventListener('click', function () {
-      document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth' });
+      window.location.href = 'mailto:info@engolon.com?subject=Enquiry%20-%20Engolon%20CBO';
     });
   }
 
