@@ -1,0 +1,781 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - link "Claude" [ref=e9] [cursor=pointer]:
+            - /url: https://claude.ai
+            - img "Claude" [ref=e10]
+          - generic [ref=e12]: Content is user-generated and unverified.
+        - generic [ref=e13]:
+          - img [ref=e14]
+          - generic [ref=e16]: "3"
+      - generic [ref=e17]:
+        - button "Copy link" [ref=e20] [cursor=pointer]:
+          - img [ref=e21]
+        - button "Report" [ref=e25] [cursor=pointer]:
+          - img [ref=e26]
+        - button "Customize" [ref=e28] [cursor=pointer]:
+          - img [ref=e29]
+          - text: Customize
+    - iframe [ref=e36]:
+      - generic [active] [ref=f28e1]:
+        - alert [ref=f28e2]
+        - iframe [ref=f28e5]:
+          - generic [active] [ref=f32e1]:
+            - navigation [ref=f32e2]:
+              - link "Engolon" [ref=f32e3] [cursor=pointer]:
+                - /url: "#"
+              - list [ref=f32e4]:
+                - listitem [ref=f32e5]:
+                  - link "Our Roots" [ref=f32e6] [cursor=pointer]:
+                    - /url: "#manifesto"
+                - listitem [ref=f32e7]:
+                  - link "Stories" [ref=f32e8] [cursor=pointer]:
+                    - /url: "#stories"
+                - listitem [ref=f32e9]:
+                  - link "Programs" [ref=f32e10] [cursor=pointer]:
+                    - /url: "#programs"
+                - listitem [ref=f32e11]:
+                  - link "Partners" [ref=f32e12] [cursor=pointer]:
+                    - /url: "#partners"
+                - listitem [ref=f32e13]:
+                  - link "Give" [ref=f32e14] [cursor=pointer]:
+                    - /url: "#digital"
+              - link "Book a Walk" [ref=f32e15] [cursor=pointer]:
+                - /url: "#programs"
+            - generic [ref=f32e16]:
+              - generic [ref=f32e17]:
+                - generic [ref=f32e18]: Kibra · Kajiado · Angola
+                - heading "We are the change we need." [level=1] [ref=f32e19]:
+                  - text: We are
+                  - text: the
+                  - generic [ref=f32e20]: change
+                  - text: we need.
+                - paragraph [ref=f32e21]: Born in the streets of Kibra, growing into the plains of Kajiado and the heart of Angola. Engolon is a community-based organisation built by the people, for the people — from the ground up.
+                - generic [ref=f32e22]:
+                  - link "Explore Our Work" [ref=f32e23] [cursor=pointer]:
+                    - /url: "#programs"
+                  - link "Support Us" [ref=f32e24] [cursor=pointer]:
+                    - /url: "#digital"
+              - generic [ref=f32e26]:
+                - generic [ref=f32e27]:
+                  - text: 🛹
+                  - generic [ref=f32e28]: Kibra — Where We Begin
+                - generic [ref=f32e29]:
+                  - text: ✊
+                  - generic [ref=f32e30]: Community Power · Kibra
+              - generic [ref=f32e32]:
+                - generic [ref=f32e33]: Community Walks
+                - generic [ref=f32e34]: ◆
+                - generic [ref=f32e35]: Women's Empowerment
+                - generic [ref=f32e36]: ◆
+                - generic [ref=f32e37]: Baked with Love
+                - generic [ref=f32e38]: ◆
+                - generic [ref=f32e39]: Youth Skating
+                - generic [ref=f32e40]: ◆
+                - generic [ref=f32e41]: Digital Futures
+                - generic [ref=f32e42]: ◆
+                - generic [ref=f32e43]: Keep Her in School
+                - generic [ref=f32e44]: ◆
+                - generic [ref=f32e45]: Girl Child Back to School
+                - generic [ref=f32e46]: ◆
+                - generic [ref=f32e47]: Nubian Culture
+                - generic [ref=f32e48]: ◆
+                - generic [ref=f32e49]: Boy Child Rising
+                - generic [ref=f32e50]: ◆
+                - generic [ref=f32e51]: Community Walks
+                - generic [ref=f32e52]: ◆
+                - generic [ref=f32e53]: Women's Empowerment
+                - generic [ref=f32e54]: ◆
+                - generic [ref=f32e55]: Baked with Love
+                - generic [ref=f32e56]: ◆
+                - generic [ref=f32e57]: Youth Skating
+                - generic [ref=f32e58]: ◆
+                - generic [ref=f32e59]: Digital Futures
+                - generic [ref=f32e60]: ◆
+                - generic [ref=f32e61]: Keep Her in School
+                - generic [ref=f32e62]: ◆
+                - generic [ref=f32e63]: Girl Child Back to School
+                - generic [ref=f32e64]: ◆
+                - generic [ref=f32e65]: Nubian Culture
+                - generic [ref=f32e66]: ◆
+                - generic [ref=f32e67]: Boy Child Rising
+                - generic [ref=f32e68]: ◆
+            - generic [ref=f32e69]:
+              - generic [ref=f32e70]:
+                - generic [ref=f32e71]: 500+
+                - generic [ref=f32e72]: Community Members
+              - generic [ref=f32e74]:
+                - generic [ref=f32e75]: 4.9★
+                - generic [ref=f32e76]: TripAdvisor Rating
+              - generic [ref=f32e78]:
+                - generic [ref=f32e79]: "3"
+                - generic [ref=f32e80]: Locations
+            - generic [ref=f32e81]:
+              - generic [ref=f32e82]:
+                - generic [ref=f32e83]:
+                  - generic [ref=f32e84]: EN
+                  - paragraph [ref=f32e85]: The Name · Maasai Origin
+                  - paragraph [ref=f32e86]: ENGOLON
+                  - paragraph [ref=f32e87]:
+                    - emphasis [ref=f32e88]: eng·o·lon
+                    - text: — A Maasai word meaning
+                    - strong [ref=f32e89]: strength, power and hardness.
+                    - text: In cultural and spiritual tradition —
+                    - strong [ref=f32e90]: great power.
+                  - paragraph [ref=f32e91]: A name that connects Angola and Kenya. Rooted in the same force.
+                - generic [ref=f32e92]: Our Roots
+                - heading "Not a charity. A force." [level=2] [ref=f32e93]:
+                  - text: Not a charity.
+                  - emphasis [ref=f32e94]: A force.
+                - paragraph [ref=f32e95]: Plastic chairs. Open air. Determined women. No boardroom. No budget. Just a community deciding to change itself.
+                - paragraph [ref=f32e96]: Engolon is a movement — built by the community, for the community. We don't wait. We act.
+                - link "Read Our Stories" [ref=f32e97] [cursor=pointer]:
+                  - /url: "#stories"
+              - generic [ref=f32e98]:
+                - generic [ref=f32e99]:
+                  - paragraph [ref=f32e100]: Where It All Starts
+                  - heading "Kibra, Nairobi" [level=4] [ref=f32e101]
+                  - paragraph [ref=f32e102]: Our home base. Community walks, youth skating, women's tailoring & baking, education, digital futures and clean water. This is where Engolon lives and breathes every single day.
+                - generic [ref=f32e103]:
+                  - heading "Kajiado" [level=4] [ref=f32e104]
+                  - paragraph [ref=f32e105]: Kenya. Community uplift, girl child education, boy child mentorship & women's empowerment.
+                - generic [ref=f32e106]:
+                  - heading "Angola" [level=4] [ref=f32e107]
+                  - paragraph [ref=f32e108]: Where Engolon was born — community mobilisation & women's empowerment.
+            - generic [ref=f32e109]:
+              - generic [ref=f32e110]:
+                - generic [ref=f32e111]:
+                  - generic [ref=f32e112]: Our Stories
+                  - heading "Real people. Real moments." [level=2] [ref=f32e113]:
+                    - text: Real people.
+                    - emphasis [ref=f32e114]: Real moments.
+                - paragraph [ref=f32e115]: All images taken with community consent. Every story told with dignity.
+              - generic [ref=f32e116]:
+                - generic [ref=f32e117] [cursor=pointer]:
+                  - generic [ref=f32e118]: 🛹
+                  - generic [ref=f32e119]:
+                    - generic [ref=f32e120]: Kibra · Youth
+                    - generic [ref=f32e121]: "\"Rolling Dreams in Kibra\""
+                    - generic: One skateboard. Boundless energy. Two boys turning a Kibra street into their stage.
+                - generic [ref=f32e122] [cursor=pointer]:
+                  - generic [ref=f32e123]: 👧
+                  - generic [ref=f32e124]:
+                    - generic [ref=f32e125]: Kibra · Children
+                    - generic [ref=f32e126]: "\"The Streets Are Ours\""
+                    - generic: Seven children. One street. A thousand dreams.
+                - generic [ref=f32e127] [cursor=pointer]:
+                  - generic [ref=f32e128]: ✂️
+                  - generic [ref=f32e129]:
+                    - generic [ref=f32e130]: Kibra · Women
+                    - generic [ref=f32e131]: "\"Building, One Stitch at a Time\""
+                    - generic: These women didn't wait for opportunity. They created it.
+                - generic [ref=f32e132] [cursor=pointer]:
+                  - generic [ref=f32e133]: 🛼
+                  - generic [ref=f32e134]:
+                    - generic [ref=f32e135]: Kibra · Mentorship
+                    - generic [ref=f32e136]: "\"This Is What Mentorship Looks Like\""
+                    - generic: In Kibra, you bring others with you. You don't climb alone.
+                - generic [ref=f32e137] [cursor=pointer]:
+                  - generic [ref=f32e138]: 👨‍🏫
+                  - generic [ref=f32e139]:
+                    - generic [ref=f32e140]: Kibra · Education
+                    - generic [ref=f32e141]: "\"One Teacher. Twenty Futures.\""
+                    - generic: A teacher and twenty children — showing up is everything.
+                - generic [ref=f32e142] [cursor=pointer]:
+                  - generic [ref=f32e143]: ✊
+                  - generic [ref=f32e144]:
+                    - generic [ref=f32e145]: Angola · Engolon
+                    - generic [ref=f32e146]: "\"One Voice. One Fist.\""
+                    - generic: Fists raised. Hearts united. This is Engolon — a movement.
+                - generic [ref=f32e147] [cursor=pointer]:
+                  - generic [ref=f32e148]: ⛏️
+                  - generic [ref=f32e149]:
+                    - generic [ref=f32e150]: Angola · Community
+                    - generic [ref=f32e151]: "\"We Don't Wait. We Dig.\""
+                    - generic: No contractor. No government. Just bare hands and the will to build.
+                - generic [ref=f32e152] [cursor=pointer]:
+                  - generic [ref=f32e153]: 💧
+                  - generic [ref=f32e154]:
+                    - generic [ref=f32e155]: Kibra · Water
+                    - generic [ref=f32e156]: "\"Every Drop Counts\""
+                    - generic: He is not a victim. He is a provider. For his family. For his day.
+            - generic [ref=f32e157]:
+              - generic [ref=f32e158]:
+                - generic [ref=f32e159]:
+                  - generic [ref=f32e160]: Our Work
+                  - heading "We don't visit communities. We become them." [level=2] [ref=f32e162]:
+                    - text: We don't visit
+                    - text: communities.
+                    - emphasis [ref=f32e163]: We become them.
+                - paragraph [ref=f32e164]: Every program we run is born from the community itself — not designed in an office, not imposed from outside. This is what makes Engolon different.
+              - generic [ref=f32e165]:
+                - button "All Programs" [ref=f32e166] [cursor=pointer]
+                - button "Kibra" [ref=f32e167] [cursor=pointer]
+                - button "Kajiado" [ref=f32e168] [cursor=pointer]
+                - button "Support" [ref=f32e169] [cursor=pointer]
+              - generic [ref=f32e170]:
+                - generic [ref=f32e171]:
+                  - generic [ref=f32e172]:
+                    - generic [ref=f32e173]: 🚶
+                    - generic [ref=f32e174]: Kibra, Nairobi
+                    - generic [ref=f32e175]: Kibra Community Experiences
+                    - paragraph [ref=f32e176]: Authentic, community-led walks showing the real Kibra — its people, culture, and daily life. All proceeds return to the community.
+                  - generic [ref=f32e177]:
+                    - generic [ref=f32e178]:
+                      - generic [ref=f32e179]: Orientation Walk
+                      - generic [ref=f32e180]: 1 hr
+                      - generic [ref=f32e181]: $15
+                    - generic [ref=f32e182]:
+                      - generic [ref=f32e183]: Cultural Walk
+                      - generic [ref=f32e184]: 2 hrs
+                      - generic [ref=f32e185]: $25
+                    - generic [ref=f32e186]:
+                      - generic [ref=f32e187]: Market Walk
+                      - generic [ref=f32e188]: 2 hrs
+                      - generic [ref=f32e189]: $30
+                    - generic [ref=f32e190]:
+                      - generic [ref=f32e191]: Immersion Walk
+                      - generic [ref=f32e192]: Half day
+                      - generic [ref=f32e193]: $45
+                    - generic [ref=f32e194]:
+                      - generic [ref=f32e195]: Insider Walk
+                      - generic [ref=f32e196]: Half day
+                      - generic [ref=f32e197]: $55
+                    - paragraph [ref=f32e198]: Group discounts available · 10% off for 4+ people · NGO rates on request
+                - generic [ref=f32e199]:
+                  - generic [ref=f32e200]:
+                    - generic [ref=f32e201]: 🚶
+                    - generic [ref=f32e202]: Kibra, Nairobi
+                    - generic [ref=f32e203]: Kibra Community Experiences
+                    - paragraph [ref=f32e204]: Authentic, community-led walks showing the real Kibra — its people, culture, and daily life. All proceeds return to the community.
+                  - generic [ref=f32e205]:
+                    - generic [ref=f32e206]:
+                      - generic [ref=f32e207]: Orientation Walk
+                      - generic [ref=f32e208]: 1 hr
+                      - generic [ref=f32e209]: $15
+                    - generic [ref=f32e210]:
+                      - generic [ref=f32e211]: Cultural Walk
+                      - generic [ref=f32e212]: 2 hrs
+                      - generic [ref=f32e213]: $25
+                    - generic [ref=f32e214]:
+                      - generic [ref=f32e215]: Market Walk
+                      - generic [ref=f32e216]: 2 hrs
+                      - generic [ref=f32e217]: $30
+                    - generic [ref=f32e218]:
+                      - generic [ref=f32e219]: Immersion Walk
+                      - generic [ref=f32e220]: Half day
+                      - generic [ref=f32e221]: $45
+                    - generic [ref=f32e222]:
+                      - generic [ref=f32e223]: Insider Walk
+                      - generic [ref=f32e224]: Half day
+                      - generic [ref=f32e225]: $55
+                    - paragraph [ref=f32e226]: Group discounts available · 10% off for 4+ people · NGO rates on request
+                - generic [ref=f32e227]:
+                  - generic [ref=f32e228]:
+                    - generic [ref=f32e229]: ✂️
+                    - generic [ref=f32e230]: Kibra, Nairobi
+                    - generic [ref=f32e231]: Women's Tailoring Program
+                    - paragraph [ref=f32e232]: Teaching women to sew and tailor — building independent income and economic security. Every stitch is a school fee paid, a family fed, a future secured.
+                  - generic [ref=f32e233]:
+                    - generic [ref=f32e234]:
+                      - generic [ref=f32e235]: Sewing Machine
+                      - generic [ref=f32e236]: 1 woman
+                      - generic [ref=f32e237]: $120
+                    - generic [ref=f32e238]:
+                      - generic [ref=f32e239]: Tailoring Training
+                      - generic [ref=f32e240]: 1 month
+                      - generic [ref=f32e241]: $40
+                    - generic [ref=f32e242]:
+                      - generic [ref=f32e243]: Full Program — 3 Months
+                      - generic [ref=f32e244]: 1 woman
+                      - generic [ref=f32e245]: $150
+                    - generic [ref=f32e246]:
+                      - generic [ref=f32e247]: Tailoring & Sewing
+                      - generic [ref=f32e248]: Business Skills
+                      - generic [ref=f32e249]: Women's Network
+                    - paragraph [ref=f32e250]: This is what empowerment looks like.
+                - generic [ref=f32e251]:
+                  - generic [ref=f32e252]:
+                    - generic [ref=f32e253]: 🍞
+                    - generic [ref=f32e254]: Kibra, Nairobi · New
+                    - generic [ref=f32e255]: Baked with Love — Women's Baking Program
+                    - paragraph [ref=f32e256]: Teaching women to bake bread, mandazi, cakes and more — creating daily income from home. Low startup cost, high demand, skills they own forever. When a woman bakes, her whole family eats.
+                  - generic [ref=f32e257]:
+                    - generic [ref=f32e258]:
+                      - generic [ref=f32e259]: Basic Baking Kit
+                      - generic [ref=f32e260]: 1 woman
+                      - generic [ref=f32e261]: $50
+                    - generic [ref=f32e262]:
+                      - generic [ref=f32e263]: Baking Training
+                      - generic [ref=f32e264]: 1 month
+                      - generic [ref=f32e265]: $40
+                    - generic [ref=f32e266]:
+                      - generic [ref=f32e267]: Full Program — 3 Months
+                      - generic [ref=f32e268]: 1 woman
+                      - generic [ref=f32e269]: $130
+                    - generic [ref=f32e270]:
+                      - generic [ref=f32e271]: Community Oven
+                      - generic [ref=f32e272]: Shared
+                      - generic [ref=f32e273]: $300
+                    - generic [ref=f32e274]:
+                      - generic [ref=f32e275]: Bread & Rolls
+                      - generic [ref=f32e276]: Mandazi
+                      - generic [ref=f32e277]: Celebration Cakes
+                      - generic [ref=f32e278]: Biscuits & Cookies
+                      - generic [ref=f32e279]: Chapati
+                    - paragraph [ref=f32e280]: Baked with Love in Kibra — community made, community fed. 💛
+                - generic [ref=f32e281]:
+                  - generic [ref=f32e282]:
+                    - generic [ref=f32e283]: 🛹
+                    - generic [ref=f32e284]: Kibra, Nairobi
+                    - generic [ref=f32e285]: Youth Skating Program
+                    - paragraph [ref=f32e286]: Skateboards and roller skates in the hands of Kibra's youth. Building confidence, discipline, and peer mentorship — one trick at a time.
+                  - generic [ref=f32e287]:
+                    - generic [ref=f32e288]:
+                      - generic [ref=f32e289]: Skateboard
+                      - generic [ref=f32e290]: 1 youth
+                      - generic [ref=f32e291]: $30
+                    - generic [ref=f32e292]:
+                      - generic [ref=f32e293]: Roller Skates
+                      - generic [ref=f32e294]: 1 youth
+                      - generic [ref=f32e295]: $25
+                    - generic [ref=f32e296]:
+                      - generic [ref=f32e297]: Safety Gear Set
+                      - generic [ref=f32e298]: 1 youth
+                      - generic [ref=f32e299]: $20
+                    - generic [ref=f32e300]:
+                      - generic [ref=f32e301]: Skateboarding
+                      - generic [ref=f32e302]: Roller Skating
+                      - generic [ref=f32e303]: Peer Mentorship
+                      - generic [ref=f32e304]: After-School
+                    - paragraph [ref=f32e305]: One board. One mentor. One child whose life just changed.
+                - generic [ref=f32e306]:
+                  - generic [ref=f32e307]:
+                    - generic [ref=f32e308]: 📚
+                    - generic [ref=f32e309]: Kibra, Nairobi
+                    - generic [ref=f32e310]: Education Support
+                    - paragraph [ref=f32e311]: Supporting children and teachers with resources, school fees, and after-school programs that keep children learning and safe.
+                  - generic [ref=f32e312]:
+                    - generic [ref=f32e313]:
+                      - generic [ref=f32e314]: School Supplies Pack
+                      - generic [ref=f32e315]: 1 child
+                      - generic [ref=f32e316]: $20
+                    - generic [ref=f32e317]:
+                      - generic [ref=f32e318]: Term School Fees
+                      - generic [ref=f32e319]: 1 child
+                      - generic [ref=f32e320]: $60
+                    - generic [ref=f32e321]:
+                      - generic [ref=f32e322]: Full Year Support
+                      - generic [ref=f32e323]: 1 child
+                      - generic [ref=f32e324]: $200
+                    - generic [ref=f32e325]:
+                      - generic [ref=f32e326]: School Support
+                      - generic [ref=f32e327]: After-School Clubs
+                      - generic [ref=f32e328]: Teacher Support
+                    - paragraph [ref=f32e329]: Every child in Kibra deserves to learn.
+                - generic [ref=f32e330]:
+                  - generic [ref=f32e331]:
+                    - generic [ref=f32e332]: 💻
+                    - generic [ref=f32e333]: Kibra, Nairobi · Urgent Need
+                    - generic [ref=f32e334]: Digital Futures Program
+                    - paragraph [ref=f32e335]: The world runs on computers. So should our kids. This program gives Kibra's children access to computers, digital literacy, and coding skills — because opportunity in the 21st century starts with a keyboard.
+                    - paragraph [ref=f32e336]: "\"A child in Kibra can be brilliant and still never have touched a computer. That ends here.\""
+                  - generic [ref=f32e337]:
+                    - generic [ref=f32e338]:
+                      - generic [ref=f32e339]: 1 Computer
+                      - generic [ref=f32e340]: 1 child
+                      - generic [ref=f32e341]: $300
+                    - generic [ref=f32e342]:
+                      - generic [ref=f32e343]: 5 Computers
+                      - generic [ref=f32e344]: Classroom row
+                      - generic [ref=f32e345]: $1,500
+                    - generic [ref=f32e346]:
+                      - generic [ref=f32e347]: Full Computer Lab
+                      - generic [ref=f32e348]: 20 computers
+                      - generic [ref=f32e349]: $6,000
+                    - generic [ref=f32e350]:
+                      - generic [ref=f32e351]: Digital Literacy
+                      - generic [ref=f32e352]: Coding Basics
+                      - generic [ref=f32e353]: Internet Skills
+                      - generic [ref=f32e354]: After-School Lab
+                    - link "💻 Donate a Computer" [ref=f32e355] [cursor=pointer]:
+                      - /url: "#cta"
+                    - paragraph [ref=f32e356]: Every cent goes directly to computers for Kibra's children
+                - generic [ref=f32e357]:
+                  - generic [ref=f32e358]:
+                    - generic [ref=f32e359]: 🌍
+                    - generic [ref=f32e360]: Kajiado Central · Experience Tour
+                    - generic [ref=f32e361]: Heart of Kajiado — Vulnerability Experience Tour
+                    - paragraph [ref=f32e362]: This is not a safari. This is a raw, honest, deeply human journey into the lives of Kajiado's most vulnerable — women without income, girls kept from school, youth without direction, and elders forgotten by the system. You don't just observe. You connect, contribute and leave part of yourself behind.
+                    - paragraph [ref=f32e363]: "\"Come not as a tourist. Come as a human being.\""
+                  - generic [ref=f32e364]:
+                    - generic [ref=f32e365]:
+                      - generic [ref=f32e366]: Half Day — 2 Community Visits
+                      - generic [ref=f32e367]: 4 hrs
+                      - generic [ref=f32e368]: $55
+                    - generic [ref=f32e369]:
+                      - generic [ref=f32e370]: Full Day — 4 Community Visits
+                      - generic [ref=f32e371]: Full day
+                      - generic [ref=f32e372]: $90
+                    - generic [ref=f32e373]:
+                      - generic [ref=f32e374]: Immersive Overnight Stay
+                      - generic [ref=f32e375]: 1 night
+                      - generic [ref=f32e376]: $150
+                    - generic [ref=f32e377]:
+                      - generic [ref=f32e378]: Group Tour — 4 to 8 people
+                      - generic [ref=f32e379]: Full day
+                      - generic [ref=f32e380]: $65 pp
+                    - generic [ref=f32e381]:
+                      - generic [ref=f32e382]: Women's Visit
+                      - generic [ref=f32e383]: Girls Education
+                      - generic [ref=f32e384]: Elder Visits
+                      - generic [ref=f32e385]: Youth Programs
+                      - generic [ref=f32e386]: Donation Welcome
+                    - paragraph [ref=f32e387]: 100% of tour proceeds fund Kajiado community programs. Bring donations — food, pads, school supplies, clothing.
+                - generic [ref=f32e388]:
+                  - generic [ref=f32e389]:
+                    - generic [ref=f32e390]: 📖
+                    - generic [ref=f32e391]: Kajiado Central
+                    - generic [ref=f32e392]: Keep Her in School
+                    - paragraph [ref=f32e393]: Girls in Kajiado drop out because of school fees, lack of sanitary pads, and cultural pressure. We remove every barrier standing between a girl and her education.
+                  - generic [ref=f32e394]:
+                    - generic [ref=f32e395]:
+                      - generic [ref=f32e396]: Sanitary Pads — 1 Month
+                      - generic [ref=f32e397]: 1 girl
+                      - generic [ref=f32e398]: $5
+                    - generic [ref=f32e399]:
+                      - generic [ref=f32e400]: School Supplies Pack
+                      - generic [ref=f32e401]: 1 girl
+                      - generic [ref=f32e402]: $25
+                    - generic [ref=f32e403]:
+                      - generic [ref=f32e404]: Term School Fees
+                      - generic [ref=f32e405]: 1 girl
+                      - generic [ref=f32e406]: $80
+                    - generic [ref=f32e407]:
+                      - generic [ref=f32e408]: Full Year Support
+                      - generic [ref=f32e409]: 1 girl
+                      - generic [ref=f32e410]: $300
+                    - generic [ref=f32e411]:
+                      - generic [ref=f32e412]: School Fees
+                      - generic [ref=f32e413]: Sanitary Pads
+                      - generic [ref=f32e414]: Mentorship
+                    - paragraph [ref=f32e415]: A packet of sanitary pads keeps a girl in school.
+                - generic [ref=f32e416]:
+                  - generic [ref=f32e417]:
+                    - generic [ref=f32e418]: 👩
+                    - generic [ref=f32e419]: Kajiado Central
+                    - generic [ref=f32e420]: Mama Inua — Lift Up Mama
+                    - paragraph [ref=f32e421]: 64% of women in Kajiado have no income at all. Mama Inua builds economic independence through vocational skills, savings groups and microcredit — because when a mother rises, her whole family rises.
+                  - generic [ref=f32e422]:
+                    - generic [ref=f32e423]:
+                      - generic [ref=f32e424]: Skills Training — 1 Month
+                      - generic [ref=f32e425]: 1 woman
+                      - generic [ref=f32e426]: $40
+                    - generic [ref=f32e427]:
+                      - generic [ref=f32e428]: Startup Tool Kit
+                      - generic [ref=f32e429]: 1 woman
+                      - generic [ref=f32e430]: $80
+                    - generic [ref=f32e431]:
+                      - generic [ref=f32e432]: Full Training Program
+                      - generic [ref=f32e433]: 3 months
+                      - generic [ref=f32e434]: $150
+                    - generic [ref=f32e435]:
+                      - generic [ref=f32e436]: Sewing Machine
+                      - generic [ref=f32e437]: 1 woman
+                      - generic [ref=f32e438]: $120
+                    - generic [ref=f32e439]:
+                      - generic [ref=f32e440]: Vocational Skills
+                      - generic [ref=f32e441]: Savings Groups
+                      - generic [ref=f32e442]: Microcredit
+                    - paragraph [ref=f32e443]: When a mother earns, her whole family eats.
+                - generic [ref=f32e444]:
+                  - generic [ref=f32e445]:
+                    - generic [ref=f32e446]: 🌱
+                    - generic [ref=f32e447]: Kajiado Central
+                    - generic [ref=f32e448]: Second Chance — Back to School
+                    - paragraph [ref=f32e449]: Teen mothers want to go back to school but face stigma, childcare barriers and no support. We walk with them — providing mentorship, childcare links and re-enrollment support. One chapter does not end a story.
+                  - generic [ref=f32e450]:
+                    - generic [ref=f32e451]:
+                      - generic [ref=f32e452]: Mentorship — 1 Month
+                      - generic [ref=f32e453]: 1 mother
+                      - generic [ref=f32e454]: $20
+                    - generic [ref=f32e455]:
+                      - generic [ref=f32e456]: Re-enrollment Support
+                      - generic [ref=f32e457]: 1 mother
+                      - generic [ref=f32e458]: $60
+                    - generic [ref=f32e459]:
+                      - generic [ref=f32e460]: Full Term Support
+                      - generic [ref=f32e461]: 1 mother
+                      - generic [ref=f32e462]: $120
+                    - generic [ref=f32e463]:
+                      - generic [ref=f32e464]: Teen Mothers
+                      - generic [ref=f32e465]: Re-enrollment
+                      - generic [ref=f32e466]: Anti-Stigma
+                    - paragraph [ref=f32e467]: One chapter does not end a story.
+                - generic [ref=f32e468]:
+                  - generic [ref=f32e469]:
+                    - generic [ref=f32e470]: 👦
+                    - generic [ref=f32e471]: Kajiado Central
+                    - generic [ref=f32e472]: Boy Child Rising
+                    - paragraph [ref=f32e473]: The boy child is equally vulnerable — facing drug abuse, school dropout and unemployment. Engolon sees him. We are building mentorship and life skills programs that give boys a positive path forward.
+                  - generic [ref=f32e474]:
+                    - generic [ref=f32e475]:
+                      - generic [ref=f32e476]: Mentorship Sessions
+                      - generic [ref=f32e477]: 1 month
+                      - generic [ref=f32e478]: $15
+                    - generic [ref=f32e479]:
+                      - generic [ref=f32e480]: Life Skills Workshop
+                      - generic [ref=f32e481]: 1 boy
+                      - generic [ref=f32e482]: $30
+                    - generic [ref=f32e483]:
+                      - generic [ref=f32e484]: Full Term Program
+                      - generic [ref=f32e485]: 1 boy
+                      - generic [ref=f32e486]: $100
+                    - generic [ref=f32e487]:
+                      - generic [ref=f32e488]: Mentorship
+                      - generic [ref=f32e489]: Life Skills
+                      - generic [ref=f32e490]: Youth Employment
+                    - paragraph [ref=f32e491]: No child — boy or girl — is left behind.
+                - generic [ref=f32e492]:
+                  - generic [ref=f32e493]:
+                    - generic [ref=f32e494]: 🛡️
+                    - generic [ref=f32e495]: Kajiado Central · Urgent
+                    - generic [ref=f32e496]: Triple Threat Response
+                    - paragraph [ref=f32e497]: "Kajiado faces three interconnected crises: gender-based violence, teenage pregnancy, and HIV/AIDS. Our response provides safe spaces, health education and survivor support — because no girl should face this alone."
+                  - generic [ref=f32e498]:
+                    - generic [ref=f32e499]:
+                      - generic [ref=f32e500]: Community Awareness Session
+                      - generic [ref=f32e501]: 1 session
+                      - generic [ref=f32e502]: $50
+                    - generic [ref=f32e503]:
+                      - generic [ref=f32e504]: Survivor Support Package
+                      - generic [ref=f32e505]: 1 person
+                      - generic [ref=f32e506]: $80
+                    - generic [ref=f32e507]:
+                      - generic [ref=f32e508]: Monthly Safe Space Program
+                      - generic [ref=f32e509]: Group
+                      - generic [ref=f32e510]: $200
+                    - generic [ref=f32e511]:
+                      - generic [ref=f32e512]: GBV Response
+                      - generic [ref=f32e513]: Reproductive Health
+                      - generic [ref=f32e514]: Survivor Support
+                    - paragraph [ref=f32e515]: Because no girl should face this alone.
+                - generic [ref=f32e516]:
+                  - generic [ref=f32e517]:
+                    - generic [ref=f32e518]: 🔧
+                    - generic [ref=f32e519]: Kajiado Central
+                    - generic [ref=f32e520]: Youth Skills & Hustle
+                    - paragraph [ref=f32e521]: Youth unemployment in Kajiado traps a generation. We equip young people aged 16–25 with practical vocational skills, entrepreneurship training and real income opportunities — turning ambition into action.
+                  - generic [ref=f32e522]:
+                    - generic [ref=f32e523]:
+                      - generic [ref=f32e524]: Skills Workshop
+                      - generic [ref=f32e525]: 1 youth
+                      - generic [ref=f32e526]: $25
+                    - generic [ref=f32e527]:
+                      - generic [ref=f32e528]: Entrepreneurship Training
+                      - generic [ref=f32e529]: 1 month
+                      - generic [ref=f32e530]: $60
+                    - generic [ref=f32e531]:
+                      - generic [ref=f32e532]: Full Program — 3 Months
+                      - generic [ref=f32e533]: 1 youth
+                      - generic [ref=f32e534]: $150
+                    - generic [ref=f32e535]:
+                      - generic [ref=f32e536]: Vocational Training
+                      - generic [ref=f32e537]: Entrepreneurship
+                      - generic [ref=f32e538]: Youth 16–25
+                    - paragraph [ref=f32e539]: Turning ambition into action — one skill at a time.
+            - generic [ref=f32e540]:
+              - generic [ref=f32e541]:
+                - generic [ref=f32e542]: Community Partners
+                - heading "Roots, Resilience & Rising Together" [level=2] [ref=f32e543]:
+                  - text: Roots, Resilience
+                  - text: "&"
+                  - emphasis [ref=f32e544]: Rising Together
+                - paragraph [ref=f32e545]: The Nubian community are Kibra's original settlers — here for over a century, keepers of a proud culture, language and identity that continues to thrive despite decades of being overlooked.
+                - paragraph [ref=f32e546]: Engolon is building a future partnership with the Nubian community to support some of Kibra's most overlooked and underserved people — together.
+                - generic [ref=f32e547]:
+                  - generic [ref=f32e548]:
+                    - generic [ref=f32e549]: 👧
+                    - generic [ref=f32e550]:
+                      - heading "Girl Child Education" [level=4] [ref=f32e551]
+                      - paragraph [ref=f32e552]: Supporting girls in the Nubian community to stay in school, access mentorship and build futures beyond what circumstance would allow.
+                  - generic [ref=f32e553]:
+                    - generic [ref=f32e554]: 👦
+                    - generic [ref=f32e555]:
+                      - heading "The Boy Child" [level=4] [ref=f32e556]
+                      - paragraph [ref=f32e557]: The boy child is equally vulnerable but rarely recognised. Engolon is committed to ensuring no child — boy or girl — is left behind.
+                  - generic [ref=f32e558]:
+                    - generic [ref=f32e559]: 🍽️
+                    - generic [ref=f32e560]:
+                      - heading "Orphans & Vulnerable Children" [level=4] [ref=f32e561]
+                      - paragraph [ref=f32e562]: After-school programs with warm meals, homework support, computers and books — a lifeline for children with nothing waiting at home.
+                  - generic [ref=f32e563]:
+                    - generic [ref=f32e564]: 👴
+                    - generic [ref=f32e565]:
+                      - heading "Nubian Elders Support" [level=4] [ref=f32e566]
+                      - paragraph [ref=f32e567]: Promised government support for years and let down every time. These elders built Kibra with their bare hands. They deserve dignity — not broken promises.
+              - generic [ref=f32e568]:
+                - generic [ref=f32e570]: 🤝
+                - generic [ref=f32e572]: 👧
+                - generic [ref=f32e574]: ✊
+            - generic [ref=f32e575]:
+              - generic [ref=f32e576]:
+                - generic [ref=f32e577]: Digital Futures Program
+                - heading "The world runs on computers. So should our kids." [level=2] [ref=f32e579]:
+                  - text: The world runs
+                  - text: on computers.
+                  - emphasis [ref=f32e580]:
+                    - text: So should
+                    - text: our kids.
+                - paragraph [ref=f32e581]: In Kibra, a child can be brilliant, curious, and hardworking — and still never have touched a computer. That ends here.
+                - paragraph [ref=f32e582]: The Digital Futures Program gives Kibra's children access to computers, digital literacy, coding skills, and the tools the modern world demands.
+                - paragraph [ref=f32e583]: Because opportunity in the 21st century starts with a keyboard.
+                - generic [ref=f32e584]:
+                  - generic [ref=f32e585]: Digital Literacy
+                  - generic [ref=f32e586]: Coding Basics
+                  - generic [ref=f32e587]: Internet Skills
+                  - generic [ref=f32e588]: After-School Lab
+              - generic [ref=f32e590]:
+                - paragraph [ref=f32e591]: Sponsor a Computer
+                - generic [ref=f32e592]:
+                  - generic [ref=f32e593] [cursor=pointer]:
+                    - generic [ref=f32e594]:
+                      - heading "1 Computer" [level=4] [ref=f32e595]
+                      - paragraph [ref=f32e596]: One child's digital future
+                    - generic [ref=f32e597]: $300
+                  - generic [ref=f32e598] [cursor=pointer]:
+                    - generic [ref=f32e599]:
+                      - heading "5 Computers" [level=4] [ref=f32e600]
+                      - paragraph [ref=f32e601]: A full classroom row
+                    - generic [ref=f32e602]: $1,500
+                  - generic [ref=f32e603] [cursor=pointer]:
+                    - generic [ref=f32e604]:
+                      - heading "Full Computer Lab" [level=4] [ref=f32e605]
+                      - paragraph [ref=f32e606]: 20 computers · Change a generation
+                    - generic [ref=f32e607]: $6,000
+                - link "💻 Donate a Computer Now" [ref=f32e608] [cursor=pointer]:
+                  - /url: "#"
+                - paragraph [ref=f32e609]: Every cent goes directly to computers for Kibra's children
+            - generic [ref=f32e610]:
+              - generic [ref=f32e611]:
+                - generic [ref=f32e612]: Their Words
+                - heading "What people say about Engolon." [level=2] [ref=f32e613]:
+                  - text: What people say
+                  - text: about
+                  - emphasis [ref=f32e614]: Engolon.
+              - generic [ref=f32e615]:
+                - generic [ref=f32e616]:
+                  - text: “
+                  - generic [ref=f32e617]: ★★★★★
+                  - paragraph [ref=f32e618]: The Kibra walk completely changed how I see community. Our guide didn't show us poverty — he showed us people. Proud, resilient, joyful people. I will never forget it.
+                  - generic [ref=f32e619]:
+                    - generic [ref=f32e620]: 🌍
+                    - generic [ref=f32e621]:
+                      - generic [ref=f32e622]: Walk Visitor
+                      - generic [ref=f32e623]: TripAdvisor · Kibra Experience
+                - generic [ref=f32e624]:
+                  - text: “
+                  - generic [ref=f32e625]: ★★★★★
+                  - paragraph [ref=f32e626]: Before Engolon, I had no income. Now I have a sewing machine, skills, and customers. I paid my children's school fees this term with my own money for the first time.
+                  - generic [ref=f32e627]:
+                    - generic [ref=f32e628]: 👩
+                    - generic [ref=f32e629]:
+                      - generic [ref=f32e630]: Program Participant
+                      - generic [ref=f32e631]: Women's Livelihoods · Kibra
+                - generic [ref=f32e632]:
+                  - text: “
+                  - generic [ref=f32e633]: ★★★★★
+                  - paragraph [ref=f32e634]: The Maasai experience in Kajiado was unlike anything I've done. Authentic, respectful, genuinely run by the community. This is what responsible tourism looks like.
+                  - generic [ref=f32e635]:
+                    - generic [ref=f32e636]: ✈️
+                    - generic [ref=f32e637]:
+                      - generic [ref=f32e638]: Experience Visitor
+                      - generic [ref=f32e639]: Kajiado Cultural Experience
+            - generic [ref=f32e640]:
+              - heading "Show up for Kibra. Join the movement." [level=2] [ref=f32e641]:
+                - text: Show up for Kibra.
+                - emphasis [ref=f32e642]: Join the movement.
+              - generic [ref=f32e643]:
+                - link "Book a Walk" [ref=f32e644] [cursor=pointer]:
+                  - /url: "#programs"
+                - link "Donate Now" [ref=f32e645] [cursor=pointer]:
+                  - /url: "#digital"
+            - contentinfo [ref=f32e646]:
+              - generic [ref=f32e647]:
+                - generic [ref=f32e648]:
+                  - generic [ref=f32e649]: Engolon
+                  - paragraph [ref=f32e650]: Rooted in the streets of Kibra, Nairobi — growing into Kajiado and Angola. Built by the community. For the community.
+                - generic [ref=f32e651]:
+                  - heading "Navigate" [level=5] [ref=f32e652]
+                  - list [ref=f32e653]:
+                    - listitem [ref=f32e654]:
+                      - link "About Us" [ref=f32e655] [cursor=pointer]:
+                        - /url: "#manifesto"
+                    - listitem [ref=f32e656]:
+                      - link "Our Stories" [ref=f32e657] [cursor=pointer]:
+                        - /url: "#stories"
+                    - listitem [ref=f32e658]:
+                      - link "Programs & Walks" [ref=f32e659] [cursor=pointer]:
+                        - /url: "#programs"
+                    - listitem [ref=f32e660]:
+                      - link "Partners" [ref=f32e661] [cursor=pointer]:
+                        - /url: "#partners"
+                    - listitem [ref=f32e662]:
+                      - link "Give & Support" [ref=f32e663] [cursor=pointer]:
+                        - /url: "#digital"
+                - generic [ref=f32e664]:
+                  - heading "Programs" [level=5] [ref=f32e665]
+                  - list [ref=f32e666]:
+                    - listitem [ref=f32e667]:
+                      - link "Kibra Community Walks" [ref=f32e668] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f32e669]:
+                      - link "Keep Her in School" [ref=f32e670] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f32e671]:
+                      - link "Mama Inua — Women's Program" [ref=f32e672] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f32e673]:
+                      - link "Baked with Love" [ref=f32e674] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f32e675]:
+                      - link "Second Chance — Teen Mothers" [ref=f32e676] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f32e677]:
+                      - link "Boy Child Rising" [ref=f32e678] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f32e679]:
+                      - link "Youth Skating" [ref=f32e680] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f32e681]:
+                      - link "Digital Futures" [ref=f32e682] [cursor=pointer]:
+                        - /url: "#"
+                - generic [ref=f32e683]:
+                  - heading "Contact" [level=5] [ref=f32e684]
+                  - list [ref=f32e685]:
+                    - listitem [ref=f32e686]:
+                      - link "📍 Kibra, Nairobi, Kenya" [ref=f32e687] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f32e688]:
+                      - link "📧 info@engolon.org" [ref=f32e689] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f32e690]:
+                      - link "📱 +254 [Your Number]" [ref=f32e691] [cursor=pointer]:
+                        - /url: "#"
+                    - listitem [ref=f32e692]:
+                      - link "WhatsApp Us" [ref=f32e693] [cursor=pointer]:
+                        - /url: "#"
+              - generic [ref=f32e694]:
+                - paragraph [ref=f32e695]: © 2026 Engolon CBO. Built with community pride. All photos used with consent.
+                - generic [ref=f32e696]:
+                  - link "f" [ref=f32e697] [cursor=pointer]:
+                    - /url: "#"
+                  - link "ig" [ref=f32e698] [cursor=pointer]:
+                    - /url: "#"
+                  - link "w" [ref=f32e699] [cursor=pointer]:
+                    - /url: "#"
+                  - link "ta" [ref=f32e700] [cursor=pointer]:
+                    - /url: "#"
+  - alert [ref=e38]

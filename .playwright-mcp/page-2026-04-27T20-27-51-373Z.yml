@@ -1,0 +1,366 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img "Engolon CBO Logo" [ref=e5]
+        - generic [ref=e6]: Engolon CBO
+      - navigation [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "About" [ref=e10] [cursor=pointer]:
+              - /url: "#about"
+          - listitem [ref=e11]:
+            - link "Our Work" [ref=e12] [cursor=pointer]:
+              - /url: "#our-work"
+          - listitem [ref=e13]:
+            - link "Community Tours" [ref=e14] [cursor=pointer]:
+              - /url: "#tours"
+          - listitem [ref=e15]:
+            - link "Impact" [ref=e16] [cursor=pointer]:
+              - /url: "#impact"
+          - listitem [ref=e17]:
+            - link "Youth" [ref=e18] [cursor=pointer]:
+              - /url: "#youth-programs"
+          - listitem [ref=e19]:
+            - link "Testimonials" [ref=e20] [cursor=pointer]:
+              - /url: "#testimonials"
+          - listitem [ref=e21]:
+            - link "Digital Access" [ref=e22] [cursor=pointer]:
+              - /url: "#technology"
+          - listitem [ref=e23]:
+            - link "Donate" [ref=e24] [cursor=pointer]:
+              - /url: "#contact"
+  - generic [ref=e26]:
+    - heading "Caring for All, Leaving None Behind" [level=1] [ref=e27]
+    - paragraph [ref=e28]: Engolon CBO supports vulnerable communities in Kenya through youth mentorship, skills training, digital access, disability inclusion, and community-led care.
+    - generic [ref=e29]:
+      - button "💰 Donate Now" [ref=e30] [cursor=pointer]
+      - button "🤝 Get Involved" [ref=e31] [cursor=pointer]
+  - generic [ref=e33]:
+    - generic [ref=e34]:
+      - heading "Our Mission" [level=2] [ref=e35]
+      - paragraph [ref=e36]: Serving vulnerable communities with dignity and opportunity
+    - generic [ref=e37]: "\"Caring for all, leaving none behind.\""
+    - generic [ref=e38]:
+      - paragraph [ref=e39]: Our Name Means
+      - heading "Engolon strength, power, energy" [level=3] [ref=e40]:
+        - emphasis [ref=e41]: Engolon
+        - generic [ref=e42]: strength, power, energy
+      - paragraph [ref=e43]:
+        - text: A Maasai word expressing physical strength, capability, and intensity. Used in cultural mottos to denote resilience and power—as in
+        - emphasis [ref=e44]: "\"Naboisho ang, engolon ang\""
+        - text: meaning
+        - strong [ref=e45]: "\"Our unity, our strength\""
+    - paragraph [ref=e46]: Engolon Community Based Organization is a Kenya-centered organization with a global audience, dedicated to empowering vulnerable populations through skills training, financial support, education, and access to essential services. Every person deserves the opportunity to thrive.
+    - paragraph [ref=e47]: Where Compassion Meets Impact
+  - generic [ref=e49]:
+    - generic [ref=e50]:
+      - heading "Our Home" [level=2] [ref=e51]
+      - paragraph [ref=e52]: A glimpse into our vibrant community
+    - generic [ref=e53]:
+      - img "Children playing in the neighborhood" [ref=e54]
+      - img "A community gathering in the local area" [ref=e55]
+      - img "Indoor outreach activity with community members" [ref=e56]
+      - img "Community members participating in an indoor event" [ref=e57]
+      - img "A group of women engaged in a community discussion" [ref=e58]
+  - generic [ref=e60]:
+    - generic [ref=e61]:
+      - heading "Our Stories" [level=2] [ref=e62]
+      - paragraph [ref=e63]: Celebrating the moments that define us
+    - generic [ref=e64]:
+      - img "Community members celebrating together" [ref=e65]
+      - img "A joyful moment during a community event" [ref=e66]
+      - img "Children gathered together in a small community space in Kibera" [ref=e67]
+    - generic [ref=e68]:
+      - paragraph [ref=e69]: They don't need much. Just each other.
+      - paragraph [ref=e70]: In a small dimly lit space, these children have created their own world. Gathered together — moving, talking, laughing, simply being — they remind us that community is not built with money. It is built with presence.
+      - paragraph [ref=e71]: No screens. No toys. Just children doing what children do best — connecting.
+      - paragraph [ref=e72]: But they deserve more than a dark corner. They deserve bright, safe spaces where their energy, creativity, and voices can truly shine.
+      - paragraph [ref=e73]: That is what we are building.
+      - link "👉 Help us create safe spaces where Kibera's children can thrive" [ref=e74] [cursor=pointer]:
+        - /url: "#contact"
+  - generic [ref=e76]:
+    - generic [ref=e77]:
+      - heading "Youth Sports & Mentorship" [level=2] [ref=e78]
+      - paragraph [ref=e79]: Building confidence, discipline, and community through skateboarding and inline skating on Kibera's streets
+    - paragraph [ref=e81]: Our youth sports program uses skateboarding and inline skating as a vehicle for mentorship and character development. Older youth mentor younger children — learning leadership while passing on skills. Every session on Kibera's brick streets is a lesson in perseverance, trust, and belonging.
+    - generic [ref=e82]:
+      - img "Teen mentor guiding a young child on a skateboard in Kibera" [ref=e84]
+      - generic [ref=e85]:
+        - img "Group of children learning to inline skate in the community" [ref=e86]
+        - img "Young child seated on a skateboard being coached" [ref=e87]
+        - img "Youth mentor showing children how to use skates and skateboard" [ref=e88]
+        - img "Child rolling a tyre down a Kibera street — pure childhood joy" [ref=e89]
+    - generic [ref=e90]:
+      - generic [ref=e91]:
+        - generic [ref=e92]: 50+
+        - generic [ref=e93]: Youth Active Weekly
+      - generic [ref=e94]:
+        - generic [ref=e95]: 3×
+        - generic [ref=e96]: Sessions Per Week
+      - generic [ref=e97]:
+        - generic [ref=e98]: 5+
+        - generic [ref=e99]: Teen Mentors
+  - generic [ref=e101]:
+    - generic [ref=e102]:
+      - heading "Our Work" [level=2] [ref=e103]
+      - paragraph [ref=e104]: Targeted support creating real change in vulnerable communities
+    - generic [ref=e105]:
+      - generic [ref=e106]:
+        - generic [ref=e107]: 👩
+        - 'heading "Women: Economic Empowerment" [level=3] [ref=e108]'
+        - list [ref=e109]:
+          - listitem [ref=e110]: • Provide skills training and financial literacy
+          - listitem [ref=e111]: • Support income-generating activities and entrepreneurship
+          - listitem [ref=e112]: • Introduce digital tools for small business management
+      - generic [ref=e113]:
+        - generic [ref=e114]: 👶
+        - 'heading "Children: Education & Protection" [level=3] [ref=e115]'
+        - img "Children playing and growing up in the Kibera community" [ref=e116]
+        - list [ref=e117]:
+          - listitem [ref=e118]: • Support school fees, supplies, and mentorship
+          - listitem [ref=e119]: • Provide books and learning materials
+          - listitem [ref=e120]: • Offer computers and digital literacy programs
+          - listitem [ref=e121]: • Advocate for child protection rights
+      - generic [ref=e122]:
+        - generic [ref=e123]: 👴
+        - 'heading "Elderly: Care & Community" [level=3] [ref=e124]'
+        - list [ref=e125]:
+          - listitem [ref=e126]: • Offer social support and healthcare access
+          - listitem [ref=e127]: • Promote community engagement to reduce isolation
+          - listitem [ref=e128]: • Assist with access to government services (e.g., Inua Jamii, NHIF)
+      - generic [ref=e129]:
+        - generic [ref=e130]: ♿
+        - 'heading "PWDs: Inclusion & Access" [level=3] [ref=e131]'
+        - list [ref=e132]:
+          - listitem [ref=e133]: • Advocate for inclusion and accessibility
+          - listitem [ref=e134]: • Ensure equal access to books, computers, and learning resources
+          - listitem [ref=e135]: • Provide assistive devices
+          - listitem [ref=e136]: • Support communication and daily living
+  - generic [ref=e138]:
+    - generic [ref=e139]:
+      - heading "Our Impact" [level=2] [ref=e140]
+      - paragraph [ref=e141]: We share only what is real and verified. Numbers will be added as programs scale.
+    - generic [ref=e142]:
+      - generic [ref=e143]: Launching 2026
+      - paragraph [ref=e144]: Our programs are being built on honest foundations. Below is where we stand today — real milestones, no inflated figures.
+    - generic [ref=e145]:
+      - generic [ref=e146]:
+        - generic [ref=e147]: 🛹
+        - generic [ref=e148]: Youth program active weekly
+        - generic [ref=e149]: 50+ youth · 3 sessions per week · 5+ teen mentors in Kibera
+      - generic [ref=e150]:
+        - generic [ref=e151]: 🤝
+        - generic [ref=e152]: Community-led mentorship
+        - generic [ref=e153]: Older youth teaching younger children — peer-to-peer leadership at its core
+      - generic [ref=e154]:
+        - generic [ref=e155]: 💻
+        - generic [ref=e156]: Digital access planned
+        - generic [ref=e157]: Digital literacy and assistive tools for women, youth, and persons with disabilities — in development
+  - generic [ref=e159]:
+    - generic [ref=e160]:
+      - heading "Success Stories" [level=2] [ref=e161]
+      - paragraph [ref=e162]: Real voices from the community members we serve
+    - generic [ref=e163]:
+      - generic [ref=e164]:
+        - generic [ref=e165]: "\" The skills training transformed my life. I started my own vegetable business and now support my family."
+        - generic [ref=e166]: Mary Kipchoge
+        - generic [ref=e167]: Women's Skills Training Participant, Nairobi
+      - generic [ref=e168]:
+        - generic [ref=e169]: "\" Engolon gave my daughter the chance to stay in school. Now she dreams of becoming a teacher."
+        - generic [ref=e170]: Samuel Kiplagat
+        - generic [ref=e171]: Parent, Eldoret
+      - generic [ref=e172]:
+        - generic [ref=e173]: "\" Through Engolon, I found community again. The social programs helped me overcome loneliness and isolation."
+        - generic [ref=e174]: Grace Muthoni
+        - generic [ref=e175]: Elderly Beneficiary, Kisii
+      - generic [ref=e176]:
+        - generic [ref=e177]: "\" The assistive devices and accessibility support made me feel included. I can work and contribute to society."
+        - generic [ref=e178]: Peter Koech
+        - generic [ref=e179]: Person with Disability, Mombasa
+      - generic [ref=e180]:
+        - generic [ref=e181]: "\" Engolon's digital literacy program opened doors for me. I now work as a freelancer online."
+        - generic [ref=e182]: Jennifer Ouma
+        - generic [ref=e183]: Digital Skills Graduate, Nairobi
+      - generic [ref=e184]:
+        - generic [ref=e185]: "\" The mentorship and support gave me confidence. I'm now studying nursing and hope to serve my community."
+        - generic [ref=e186]: David Kipchoge
+        - generic [ref=e187]: Child Mentorship Beneficiary, Kericho
+  - generic [ref=e189]:
+    - heading "Digital Access" [level=2] [ref=e191]
+    - generic [ref=e193]: We use practical technology only where it helps people access services, learn skills, run small businesses, or communicate more independently. Our focus remains people, dignity, and opportunity.
+  - generic [ref=e195]:
+    - generic [ref=e196]:
+      - 'heading "Experience Kibera: Community Tours" [level=2] [ref=e197]'
+      - paragraph [ref=e198]: Designed by residents, for respectful visitors. Every tour directly funds Engolon's community programs.
+    - generic [ref=e199]:
+      - generic [ref=e200]:
+        - generic [ref=e201]: 🤝 Community-led
+        - generic [ref=e202]: 💚 Proceeds fund local programs
+        - generic [ref=e203]: 🙏 Dignity-first guidelines
+      - paragraph [ref=e204]: These tours are designed by and for Kibera's community. Visitors are welcomed as guests, not spectators. Our local guides set the tone — respectful, honest, and human. Photography and behaviour guidelines are shared before every tour.
+    - generic [ref=e205]:
+      - generic [ref=e206]:
+        - generic [ref=e207]: 🏘️
+        - generic [ref=e208]:
+          - heading "Cultural & Community Experience" [level=3] [ref=e209]
+          - paragraph [ref=e210]: Meet local residents, learn about daily life, and visit small businesses and community projects. Authentic insights from those who live here.
+          - list [ref=e211]:
+            - listitem [ref=e212]: 📍 3–4 hours, community-guided
+            - listitem [ref=e213]: 👥 Groups of 4–10 people
+            - listitem [ref=e214]: 💰 $25 USD per person
+      - generic [ref=e215]:
+        - generic [ref=e216]: 🎨
+        - generic [ref=e217]:
+          - heading "Arts, Crafts & Creativity Tour" [level=3] [ref=e218]
+          - paragraph [ref=e219]: Discover local artists and artisans. Watch traditional crafts being made, support emerging creatives, and take home authentic handmade pieces.
+          - list [ref=e220]:
+            - listitem [ref=e221]: 📍 2.5–3 hours, artist-guided
+            - listitem [ref=e222]: 👥 Groups of 3–8 people
+            - listitem [ref=e223]: 💰 $30 USD per person
+      - generic [ref=e224]:
+        - generic [ref=e225]: 🍲
+        - generic [ref=e226]:
+          - heading "Food Tour & Community Stories" [level=3] [ref=e227]
+          - paragraph [ref=e228]: Share meals and stories with residents at family-run eateries. Learn about food culture, livelihoods, and the people behind the food.
+          - list [ref=e229]:
+            - listitem [ref=e230]: 📍 3–4 hours, resident-hosted
+            - listitem [ref=e231]: 👥 Groups of 4–12 people
+            - listitem [ref=e232]: 💰 $35 USD per person (includes meals)
+      - generic [ref=e233]:
+        - generic [ref=e234]: 📚
+        - generic [ref=e235]:
+          - heading "Youth & Education Tour" [level=3] [ref=e236]
+          - paragraph [ref=e237]: Visit youth programs in action. Meet young mentors and learners, see the challenges and the breakthroughs, and understand what community-led education looks like.
+          - list [ref=e238]:
+            - listitem [ref=e239]: 📍 2–3 hours, youth-led
+            - listitem [ref=e240]: 👥 Groups of 5–15 people
+            - listitem [ref=e241]: 💰 $20 USD per person
+    - generic [ref=e242]:
+      - heading "Book Your Tour" [level=2] [ref=e243]
+      - paragraph [ref=e244]: Join us for an authentic Kibera experience. All proceeds support Engolon CBO's community programs.
+      - generic [ref=e245]:
+        - generic [ref=e246]:
+          - generic [ref=e247]:
+            - generic [ref=e248]: Full Name *
+            - textbox "Full name" [ref=e249]:
+              - /placeholder: Your full name
+          - generic [ref=e250]:
+            - generic [ref=e251]: Email Address *
+            - textbox "Email address" [ref=e252]:
+              - /placeholder: your@email.com
+        - generic [ref=e253]:
+          - generic [ref=e254]:
+            - generic [ref=e255]: Phone Number *
+            - textbox "Phone number" [ref=e256]:
+              - /placeholder: +254 7XX XXX XXX
+          - generic [ref=e257]:
+            - generic [ref=e258]: Group Size *
+            - combobox "Group size" [ref=e259]:
+              - option "Select number of people" [selected]
+              - option "1 person"
+              - option "2 people"
+              - option "3 people"
+              - option "4 people"
+              - option "5 people"
+              - option "6 people"
+              - option "7 people"
+              - option "8 people"
+              - option "9+ people"
+        - generic [ref=e260]:
+          - generic [ref=e261]: Which tour interests you? *
+          - combobox "Select tour type" [ref=e262]:
+            - option "Choose a tour" [selected]
+            - option "Cultural & Community Experience"
+            - option "Arts, Crafts & Creativity Tour"
+            - option "Food Tour & Community Stories"
+            - option "Youth Center & Education Tour"
+            - option "Custom/Multiple Tours"
+        - generic [ref=e263]:
+          - generic [ref=e264]: Preferred Date *
+          - textbox "Tour date" [ref=e266] [cursor=pointer]:
+            - /placeholder: Click to select a date
+        - generic [ref=e267]:
+          - generic [ref=e268]: Tell us about your interests (optional)
+          - textbox "Additional interests" [ref=e269]:
+            - /placeholder: What aspects of Kibera are you most interested in? Any questions?
+        - generic [ref=e271] [cursor=pointer]:
+          - checkbox "Agree to terms" [ref=e272]
+          - text: I understand this is a respectful, guided cultural experience and I agree to Engolon's community guidelines
+        - button "Reserve Your Spot" [ref=e273] [cursor=pointer]
+  - generic [ref=e275]:
+    - heading "Join Us in Making a Difference" [level=2] [ref=e276]
+    - paragraph [ref=e277]: Your support, time, and voice create lasting change. Choose how you want to help today.
+    - generic [ref=e278]:
+      - button "💰 Donate" [ref=e279] [cursor=pointer]
+      - button "🤝 Volunteer" [ref=e280] [cursor=pointer]
+      - button "📧 Contact Us" [ref=e281] [cursor=pointer]
+      - button "📄 Download Resources" [ref=e282] [cursor=pointer]
+    - generic [ref=e283]:
+      - heading "Stay Updated on Our Impact" [level=3] [ref=e284]
+      - generic [ref=e285]:
+        - generic [ref=e286]:
+          - generic [ref=e287]: Email Address
+          - textbox "Email address" [ref=e288]:
+            - /placeholder: your@email.com
+        - button "Subscribe" [ref=e289] [cursor=pointer]
+  - contentinfo [ref=e290]:
+    - generic [ref=e291]:
+      - generic [ref=e292]:
+        - heading "Engolon CBO" [level=4] [ref=e293]
+        - paragraph [ref=e294]:
+          - strong [ref=e295]: "\"Caring for all, leaving none behind.\""
+        - paragraph [ref=e296]: Empowering vulnerable communities in Kenya and beyond through skills, support, and opportunity.
+      - generic [ref=e297]:
+        - heading "Quick Links" [level=4] [ref=e298]
+        - list [ref=e299]:
+          - listitem [ref=e300]:
+            - link "About Us" [ref=e301] [cursor=pointer]:
+              - /url: "#about"
+          - listitem [ref=e302]:
+            - link "Our Work" [ref=e303] [cursor=pointer]:
+              - /url: "#our-work"
+          - listitem [ref=e304]:
+            - link "Impact" [ref=e305] [cursor=pointer]:
+              - /url: "#impact"
+          - listitem [ref=e306]:
+            - link "Testimonials" [ref=e307] [cursor=pointer]:
+              - /url: "#testimonials"
+      - generic [ref=e308]:
+        - heading "Resources" [level=4] [ref=e309]
+        - list [ref=e310]:
+          - listitem [ref=e311]:
+            - link "Services" [ref=e312] [cursor=pointer]:
+              - /url: "#services"
+          - listitem [ref=e313]:
+            - link "Blog" [ref=e314] [cursor=pointer]:
+              - /url: "#blog"
+          - listitem [ref=e315]:
+            - link "Contact" [ref=e316] [cursor=pointer]:
+              - /url: "#contact"
+          - listitem [ref=e317]:
+            - link "Privacy Policy" [ref=e318] [cursor=pointer]:
+              - /url: "#privacy"
+      - generic [ref=e319]:
+        - heading "Contact & Follow" [level=4] [ref=e320]
+        - paragraph [ref=e321]:
+          - strong [ref=e322]: "Email:"
+          - link "info@engolon.com" [ref=e323] [cursor=pointer]:
+            - /url: mailto:info@engolon.com
+        - paragraph [ref=e324]:
+          - strong [ref=e325]: "Location:"
+          - text: Kenya
+        - generic [ref=e326]:
+          - link "Facebook" [ref=e327] [cursor=pointer]:
+            - /url: "#facebook"
+            - text: f
+          - link "Twitter" [ref=e328] [cursor=pointer]:
+            - /url: "#twitter"
+            - text: 𝕏
+          - link "Instagram" [ref=e329] [cursor=pointer]:
+            - /url: "#instagram"
+            - text: 📷
+          - link "LinkedIn" [ref=e330] [cursor=pointer]:
+            - /url: "#linkedin"
+            - text: in
+    - paragraph [ref=e332]: © 2026 Engolon Community Based Organization. All rights reserved.

@@ -1,0 +1,22 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e8]:
+        - link "Claude" [ref=e9] [cursor=pointer]:
+          - /url: https://claude.ai
+          - img "Claude" [ref=e10]
+        - generic [ref=e12]: Content is user-generated and unverified.
+      - generic [ref=e13]:
+        - button "Copy link" [ref=e16] [cursor=pointer]:
+          - img [ref=e17]
+        - button "Report" [ref=e21] [cursor=pointer]:
+          - img [ref=e22]
+        - button "Customize" [ref=e24] [cursor=pointer]:
+          - img [ref=e25]
+          - text: Customize
+    - iframe [ref=e32]:
+      - generic [active] [ref=f14e1]:
+        - status [ref=f14e4]:
+          - generic [ref=f14e5]: Loading...
+        - alert [ref=f14e6]
+  - alert [ref=e34]

@@ -1,0 +1,696 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img "Engolon CBO Logo" [ref=e5]
+        - generic [ref=e6]: ENGOLON
+      - navigation [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "About" [ref=e10] [cursor=pointer]:
+              - /url: "#about"
+          - listitem [ref=e11]:
+            - link "Our Work" [ref=e12] [cursor=pointer]:
+              - /url: "#our-work"
+          - listitem [ref=e13]:
+            - link "Community Tours" [ref=e14] [cursor=pointer]:
+              - /url: "#tours"
+          - listitem [ref=e15]:
+            - link "Impact" [ref=e16] [cursor=pointer]:
+              - /url: "#impact"
+          - listitem [ref=e17]:
+            - link "Youth" [ref=e18] [cursor=pointer]:
+              - /url: "#youth-programs"
+          - listitem [ref=e19]:
+            - link "Testimonials" [ref=e20] [cursor=pointer]:
+              - /url: "#testimonials"
+          - listitem [ref=e21]:
+            - link "Digital Access" [ref=e22] [cursor=pointer]:
+              - /url: "#technology"
+          - listitem [ref=e23]:
+            - link "Donate" [ref=e24] [cursor=pointer]:
+              - /url: "#contact"
+  - generic [ref=e25]:
+    - generic [ref=e26]:
+      - generic [ref=e27]: —— Kibra · Kajiado · Nairobi
+      - heading "Caring for all, leaving none behind." [level=1] [ref=e28]:
+        - text: Caring for all,
+        - emphasis [ref=e29]: leaving none behind.
+      - paragraph [ref=e30]: Engolon CBO supports vulnerable communities in Kenya through youth mentorship, skills training, digital access, disability inclusion, and community-led care.
+      - generic [ref=e31]:
+        - button "Donate Now" [ref=e32] [cursor=pointer]
+        - link "Get Involved" [ref=e33] [cursor=pointer]:
+          - /url: "#involve-modal"
+    - paragraph [ref=e35]: Kibra — Where We Begin
+  - generic [ref=e37]:
+    - generic [ref=e38]: Community Walks ◆ Women's Empowerment ◆ Youth Skating ◆ Digital Futures ◆ Keep Her in School ◆ Girl Child Back to School ◆ Boy Child Rising ◆ Baked with Love ◆ Community Tours ◆ Skills Training ◆
+    - generic [ref=e39]: Community Walks ◆ Women's Empowerment ◆ Youth Skating ◆ Digital Futures ◆ Keep Her in School ◆ Girl Child Back to School ◆ Boy Child Rising ◆ Baked with Love ◆ Community Tours ◆ Skills Training ◆
+  - generic [ref=e41]:
+    - generic [ref=e42]:
+      - generic [ref=e43]: 500+
+      - generic [ref=e44]: Community Members
+    - generic [ref=e45]:
+      - generic [ref=e46]: 4.9★
+      - generic [ref=e47]: TripAdvisor Rating
+    - generic [ref=e48]:
+      - generic [ref=e49]: "3"
+      - generic [ref=e50]: Locations
+  - generic [ref=e52]:
+    - generic [ref=e53]:
+      - paragraph [ref=e54]: Who We Are
+      - heading "Our Mission." [level=2] [ref=e55]:
+        - text: Our
+        - emphasis [ref=e56]: Mission.
+      - paragraph [ref=e57]: Serving vulnerable communities with dignity and opportunity
+    - generic [ref=e58]: "\"Caring for all, leaving none behind.\""
+    - generic [ref=e59]:
+      - paragraph [ref=e60]: Our Name Means
+      - heading "Engolon strength, power, energy" [level=3] [ref=e61]:
+        - emphasis [ref=e62]: Engolon
+        - generic [ref=e63]: strength, power, energy
+      - paragraph [ref=e64]:
+        - text: A Maasai word expressing physical strength, capability, and intensity. Used in cultural mottos to denote resilience and power—as in
+        - emphasis [ref=e65]: "\"Naboisho ang, engolon ang\""
+        - text: meaning
+        - strong [ref=e66]: "\"Our unity, our strength\""
+    - paragraph [ref=e67]: Engolon Community Based Organization is a Kenya-centered organization with a global audience, dedicated to empowering vulnerable populations through skills training, financial support, education, and access to essential services. Every person deserves the opportunity to thrive.
+    - paragraph [ref=e68]: Where Compassion Meets Impact
+  - generic [ref=e70]:
+    - generic [ref=e71]:
+      - paragraph [ref=e72]: Our Place
+      - heading "Our Home" [level=2] [ref=e73]
+      - paragraph [ref=e74]: A glimpse into our vibrant community
+    - generic [ref=e75]:
+      - img "Children playing in the neighborhood" [ref=e76]
+      - img "A community gathering in the local area" [ref=e77]
+      - img "Indoor outreach activity with community members" [ref=e78]
+      - img "Community members participating in an indoor event" [ref=e79]
+      - img "A group of women engaged in a community discussion" [ref=e80]
+  - generic [ref=e82]:
+    - generic [ref=e83]:
+      - paragraph [ref=e84]: Stories
+      - heading "Our Stories" [level=2] [ref=e85]
+      - paragraph [ref=e86]: Celebrating the moments that define us
+    - generic [ref=e87]:
+      - img "Community members celebrating together" [ref=e88]
+      - img "A joyful moment during a community event" [ref=e89]
+      - img "Children gathered together in a small community space in Kibera" [ref=e90]
+    - generic [ref=e91]:
+      - paragraph [ref=e92]: They don't need much. Just each other.
+      - paragraph [ref=e93]: In a small dimly lit space, these children have created their own world. Gathered together — moving, talking, laughing, simply being — they remind us that community is not built with money. It is built with presence.
+      - paragraph [ref=e94]: No screens. No toys. Just children doing what children do best — connecting.
+      - paragraph [ref=e95]: But they deserve more than a dark corner. They deserve bright, safe spaces where their energy, creativity, and voices can truly shine.
+      - paragraph [ref=e96]: That is what we are building.
+      - link "Help us create safe spaces where Kibera's children can thrive" [ref=e97] [cursor=pointer]:
+        - /url: "#contact"
+  - generic [ref=e99]:
+    - generic [ref=e100]:
+      - paragraph [ref=e101]: Programs
+      - heading "Youth Sports & Mentorship." [level=2] [ref=e102]:
+        - text: Youth Sports &
+        - emphasis [ref=e103]: Mentorship.
+      - paragraph [ref=e104]: Building confidence, discipline, and community through skateboarding and inline skating on Kibera's streets
+    - paragraph [ref=e106]: Our youth sports program uses skateboarding and inline skating as a vehicle for mentorship and character development. Older youth mentor younger children — learning leadership while passing on skills. Every session on Kibera's brick streets is a lesson in perseverance, trust, and belonging.
+    - generic [ref=e107]:
+      - img "Teen mentor guiding a young child on a skateboard in Kibera" [ref=e109]
+      - generic [ref=e110]:
+        - img "Group of children learning to inline skate in the community" [ref=e111]
+        - img "Young child seated on a skateboard being coached" [ref=e112]
+        - img "Youth mentor showing children how to use skates and skateboard" [ref=e113]
+        - img "Child rolling a tyre down a Kibera street — pure childhood joy" [ref=e114]
+    - generic [ref=e115]:
+      - generic [ref=e116]:
+        - generic [ref=e117]: 50+
+        - generic [ref=e118]: Youth Active Weekly
+      - generic [ref=e119]:
+        - generic [ref=e120]: 3×
+        - generic [ref=e121]: Sessions Per Week
+      - generic [ref=e122]:
+        - generic [ref=e123]: 5+
+        - generic [ref=e124]: Teen Mentors
+  - generic [ref=e126]:
+    - generic [ref=e127]:
+      - paragraph [ref=e128]: Our Work
+      - heading "We don't visit communities. We become them." [level=2] [ref=e129]:
+        - text: We don't visit communities.
+        - emphasis [ref=e130]: We become them.
+      - paragraph [ref=e131]: Every program is born from the community itself — not designed in an office, not imposed from outside.
+    - generic [ref=e132]:
+      - button "All Programs" [ref=e133] [cursor=pointer]
+      - button "Kibra" [ref=e134] [cursor=pointer]
+      - button "Kajiado" [ref=e135] [cursor=pointer]
+      - button "Support" [ref=e136] [cursor=pointer]
+    - generic [ref=e137]:
+      - generic [ref=e138]:
+        - generic [ref=e139]: 🚶
+        - paragraph [ref=e140]: Kibra, Nairobi
+        - heading "Kibra Community Experiences" [level=3] [ref=e141]
+        - paragraph [ref=e142]: Authentic, community-led walks showing the real Kibra — its people, culture, and daily life. All proceeds return to the community.
+        - generic [ref=e143]:
+          - generic [ref=e144]:
+            - generic [ref=e145]: Orientation Walk
+            - generic [ref=e146]: 1 hr
+            - generic [ref=e147]: $15
+          - generic [ref=e148]:
+            - generic [ref=e149]: Cultural Walk
+            - generic [ref=e150]: 2 hrs
+            - generic [ref=e151]: $25
+          - generic [ref=e152]:
+            - generic [ref=e153]: Market Walk
+            - generic [ref=e154]: 2 hrs
+            - generic [ref=e155]: $30
+          - generic [ref=e156]:
+            - generic [ref=e157]: Immersion Walk
+            - generic [ref=e158]: Half day
+            - generic [ref=e159]: $45
+          - generic [ref=e160]:
+            - generic [ref=e161]: Insider Walk
+            - generic [ref=e162]: Half day
+            - generic [ref=e163]: $55
+        - generic [ref=e164]:
+          - generic [ref=e165]: Community-led
+          - generic [ref=e166]: All ages
+          - generic [ref=e167]: Group rates
+        - paragraph [ref=e168]: Group discounts available · 10% off for 4+ people · NGO rates on request
+      - generic [ref=e169]:
+        - generic [ref=e170]: ✂️
+        - paragraph [ref=e171]: Kibra, Nairobi
+        - heading "Women's Tailoring Program" [level=3] [ref=e172]
+        - paragraph [ref=e173]: Teaching women to sew and tailor — building independent income and economic security. Every stitch is a school fee paid, a family fed, a future secured.
+        - generic [ref=e174]:
+          - generic [ref=e175]:
+            - generic [ref=e176]: Sewing Machine
+            - generic [ref=e177]: 1 woman
+            - generic [ref=e178]: $120
+          - generic [ref=e179]:
+            - generic [ref=e180]: Tailoring Training
+            - generic [ref=e181]: 1 month
+            - generic [ref=e182]: $40
+          - generic [ref=e183]:
+            - generic [ref=e184]: Full Program — 3 Months
+            - generic [ref=e185]: 1 woman
+            - generic [ref=e186]: $150
+        - generic [ref=e187]:
+          - generic [ref=e188]: Tailoring & Sewing
+          - generic [ref=e189]: Business Skills
+          - generic [ref=e190]: Women's Network
+        - paragraph [ref=e191]: This is what empowerment looks like.
+      - generic [ref=e192]:
+        - generic [ref=e193]: 🍞
+        - paragraph [ref=e194]: Kibra, Nairobi · New
+        - heading "Baked with Love" [level=3] [ref=e195]
+        - paragraph [ref=e196]: Teaching women to bake bread, mandazi, cakes and more — creating daily income from home. Low startup cost, high demand, skills they own forever.
+        - generic [ref=e197]:
+          - generic [ref=e198]:
+            - generic [ref=e199]: Basic Baking Kit
+            - generic [ref=e200]: 1 woman
+            - generic [ref=e201]: $50
+          - generic [ref=e202]:
+            - generic [ref=e203]: Baking Training
+            - generic [ref=e204]: 1 month
+            - generic [ref=e205]: $40
+          - generic [ref=e206]:
+            - generic [ref=e207]: Full Program — 3 Months
+            - generic [ref=e208]: 1 woman
+            - generic [ref=e209]: $130
+          - generic [ref=e210]:
+            - generic [ref=e211]: Community Oven
+            - generic [ref=e212]: Shared
+            - generic [ref=e213]: $300
+        - generic [ref=e214]:
+          - generic [ref=e215]: Baking
+          - generic [ref=e216]: Women's Income
+          - generic [ref=e217]: Community
+        - paragraph [ref=e218]: When a woman bakes, her whole family eats.
+      - generic [ref=e219]:
+        - generic [ref=e220]: 🛹
+        - paragraph [ref=e221]: Kibra, Nairobi
+        - heading "Youth Skating Program" [level=3] [ref=e222]
+        - paragraph [ref=e223]: Skateboards and roller skates in the hands of Kibra's youth. Building confidence, discipline, and peer mentorship — one trick at a time.
+        - generic [ref=e224]:
+          - generic [ref=e225]:
+            - generic [ref=e226]: Skateboard
+            - generic [ref=e227]: 1 youth
+            - generic [ref=e228]: $30
+          - generic [ref=e229]:
+            - generic [ref=e230]: Roller Skates
+            - generic [ref=e231]: 1 youth
+            - generic [ref=e232]: $25
+          - generic [ref=e233]:
+            - generic [ref=e234]: Safety Gear Set
+            - generic [ref=e235]: 1 youth
+            - generic [ref=e236]: $20
+        - generic [ref=e237]:
+          - generic [ref=e238]: Skateboarding
+          - generic [ref=e239]: Peer Mentorship
+          - generic [ref=e240]: After-School
+        - paragraph [ref=e241]: One board. One mentor. One child whose life just changed.
+      - generic [ref=e242]:
+        - generic [ref=e243]: 💻
+        - paragraph [ref=e244]: Kibra, Nairobi · Urgent Need
+        - heading "Digital Futures Program" [level=3] [ref=e245]
+        - paragraph [ref=e246]: The world runs on computers. So should our kids. Digital literacy and coding skills for Kibra's children — because opportunity in the 21st century starts with a keyboard.
+        - generic [ref=e247]:
+          - generic [ref=e248]:
+            - generic [ref=e249]: 1 Computer
+            - generic [ref=e250]: 1 child
+            - generic [ref=e251]: $300
+          - generic [ref=e252]:
+            - generic [ref=e253]: 5 Computers
+            - generic [ref=e254]: Classroom row
+            - generic [ref=e255]: $1,500
+          - generic [ref=e256]:
+            - generic [ref=e257]: Full Computer Lab
+            - generic [ref=e258]: 20 computers
+            - generic [ref=e259]: $6,000
+        - generic [ref=e260]:
+          - generic [ref=e261]: Digital Literacy
+          - generic [ref=e262]: Coding
+          - generic [ref=e263]: After-School
+        - paragraph [ref=e264]: Every cent goes directly to computers for Kibra's children.
+      - generic [ref=e265]:
+        - generic [ref=e266]: 🌍
+        - paragraph [ref=e267]: Kajiado Central · Experience Tour
+        - heading "Heart of Kajiado Experience" [level=3] [ref=e268]
+        - paragraph [ref=e269]: This is not a safari. A raw, honest journey into the lives of Kajiado's most vulnerable — women without income, girls kept from school, forgotten elders. Come not as a tourist. Come as a human being.
+        - generic [ref=e270]:
+          - generic [ref=e271]:
+            - generic [ref=e272]: Half Day — 2 Visits
+            - generic [ref=e273]: 4 hrs
+            - generic [ref=e274]: $55
+          - generic [ref=e275]:
+            - generic [ref=e276]: Full Day — 4 Visits
+            - generic [ref=e277]: Full day
+            - generic [ref=e278]: $90
+          - generic [ref=e279]:
+            - generic [ref=e280]: Overnight Stay
+            - generic [ref=e281]: 1 night
+            - generic [ref=e282]: $150
+          - generic [ref=e283]:
+            - generic [ref=e284]: Group Tour (4–8 people)
+            - generic [ref=e285]: Full day
+            - generic [ref=e286]: $65 pp
+        - generic [ref=e287]:
+          - generic [ref=e288]: Women's Visit
+          - generic [ref=e289]: Girls Education
+          - generic [ref=e290]: Elder Visits
+        - paragraph [ref=e291]: 100% of tour proceeds fund Kajiado community programs.
+      - generic [ref=e292]:
+        - generic [ref=e293]: 📖
+        - paragraph [ref=e294]: Kajiado Central
+        - heading "Keep Her in School" [level=3] [ref=e295]
+        - paragraph [ref=e296]: Girls in Kajiado drop out because of school fees, lack of sanitary pads, and cultural pressure. We remove every barrier standing between a girl and her education.
+        - generic [ref=e297]:
+          - generic [ref=e298]:
+            - generic [ref=e299]: Sanitary Pads — 1 Month
+            - generic [ref=e300]: 1 girl
+            - generic [ref=e301]: $5
+          - generic [ref=e302]:
+            - generic [ref=e303]: School Supplies Pack
+            - generic [ref=e304]: 1 girl
+            - generic [ref=e305]: $25
+          - generic [ref=e306]:
+            - generic [ref=e307]: Term School Fees
+            - generic [ref=e308]: 1 girl
+            - generic [ref=e309]: $80
+          - generic [ref=e310]:
+            - generic [ref=e311]: Full Year Support
+            - generic [ref=e312]: 1 girl
+            - generic [ref=e313]: $300
+        - generic [ref=e314]:
+          - generic [ref=e315]: School Fees
+          - generic [ref=e316]: Sanitary Pads
+          - generic [ref=e317]: Mentorship
+        - paragraph [ref=e318]: A packet of sanitary pads keeps a girl in school.
+      - generic [ref=e319]:
+        - generic [ref=e320]: 👩
+        - paragraph [ref=e321]: Kajiado Central
+        - heading "Mama Inua — Lift Up Mama" [level=3] [ref=e322]
+        - paragraph [ref=e323]: 64% of women in Kajiado have no income at all. Mama Inua builds economic independence through vocational skills, savings groups and microcredit — because when a mother rises, her whole family rises.
+        - generic [ref=e324]:
+          - generic [ref=e325]:
+            - generic [ref=e326]: Skills Training — 1 Month
+            - generic [ref=e327]: 1 woman
+            - generic [ref=e328]: $40
+          - generic [ref=e329]:
+            - generic [ref=e330]: Startup Tool Kit
+            - generic [ref=e331]: 1 woman
+            - generic [ref=e332]: $80
+          - generic [ref=e333]:
+            - generic [ref=e334]: Full Training Program
+            - generic [ref=e335]: 3 months
+            - generic [ref=e336]: $150
+        - generic [ref=e337]:
+          - generic [ref=e338]: Vocational Skills
+          - generic [ref=e339]: Savings Groups
+          - generic [ref=e340]: Microcredit
+        - paragraph [ref=e341]: When a mother earns, her whole family eats.
+      - generic [ref=e342]:
+        - generic [ref=e343]: 👦
+        - paragraph [ref=e344]: Kajiado Central
+        - heading "Boy Child Rising" [level=3] [ref=e345]
+        - paragraph [ref=e346]: The boy child is equally vulnerable — facing drug abuse, school dropout and unemployment. Engolon sees him. We give boys a positive path forward through mentorship and life skills.
+        - generic [ref=e347]:
+          - generic [ref=e348]:
+            - generic [ref=e349]: Mentorship Sessions
+            - generic [ref=e350]: 1 month
+            - generic [ref=e351]: $15
+          - generic [ref=e352]:
+            - generic [ref=e353]: Life Skills Workshop
+            - generic [ref=e354]: 1 boy
+            - generic [ref=e355]: $30
+          - generic [ref=e356]:
+            - generic [ref=e357]: Full Term Program
+            - generic [ref=e358]: 1 boy
+            - generic [ref=e359]: $100
+        - generic [ref=e360]:
+          - generic [ref=e361]: Mentorship
+          - generic [ref=e362]: Life Skills
+          - generic [ref=e363]: Youth Employment
+        - paragraph [ref=e364]: No child — boy or girl — is left behind.
+  - generic [ref=e366]:
+    - generic [ref=e367]:
+      - paragraph [ref=e368]: Results
+      - heading "Our Impact." [level=2] [ref=e369]:
+        - text: Our
+        - emphasis [ref=e370]: Impact.
+      - paragraph [ref=e371]: We share only what is real and verified. Numbers will be added as programs scale.
+    - generic [ref=e372]:
+      - generic [ref=e373]: Launching 2026
+      - paragraph [ref=e374]: Our programs are being built on honest foundations. Below is where we stand today — real milestones, no inflated figures.
+    - generic [ref=e375]:
+      - generic [ref=e376]:
+        - generic [ref=e377]: 🛹
+        - generic [ref=e378]: Youth program active weekly
+        - generic [ref=e379]: 50+ youth · 3 sessions per week · 5+ teen mentors in Kibera
+      - generic [ref=e380]:
+        - generic [ref=e381]: 🤝
+        - generic [ref=e382]: Community-led mentorship
+        - generic [ref=e383]: Older youth teaching younger children — peer-to-peer leadership at its core
+      - generic [ref=e384]:
+        - generic [ref=e385]: 💻
+        - generic [ref=e386]: Digital access planned
+        - generic [ref=e387]: Digital literacy and assistive tools for women, youth, and persons with disabilities — in development
+  - generic [ref=e389]:
+    - generic [ref=e390]:
+      - paragraph [ref=e391]: Join Us
+      - heading "Get Involved." [level=2] [ref=e392]:
+        - text: Get
+        - emphasis [ref=e393]: Involved.
+      - paragraph [ref=e394]: Lend your time, skills, and energy to uplift Kibera's community
+    - generic [ref=e395]:
+      - generic [ref=e396]:
+        - generic [ref=e397]: 🤝
+        - heading "Volunteer With Us" [level=3] [ref=e398]
+        - paragraph [ref=e399]: Give your time and talents directly to the community — from youth mentorship and sports coaching to digital literacy and skills training sessions.
+        - list [ref=e400]:
+          - listitem [ref=e401]: → Youth sports & mentorship support
+          - listitem [ref=e402]: → Digital literacy facilitation
+          - listitem [ref=e403]: → Women's skills training assistance
+          - listitem [ref=e404]: → Community outreach & events
+          - listitem [ref=e405]: → Documentation & storytelling
+        - generic [ref=e406]: Open year-round · Flexible hours
+      - generic [ref=e407]:
+        - generic [ref=e408]: 🎓
+        - heading "Internship Opportunities" [level=3] [ref=e409]
+        - paragraph [ref=e410]: Gain hands-on development experience while making a real impact. We welcome students and early-career professionals in social work, education, communications, and technology.
+        - list [ref=e411]:
+          - listitem [ref=e412]: → Community program coordination
+          - listitem [ref=e413]: → Communications & social media
+          - listitem [ref=e414]: → Monitoring, evaluation & reporting
+          - listitem [ref=e415]: → Grant writing & fundraising support
+          - listitem [ref=e416]: → ICT & digital tools support
+        - generic [ref=e417]: 3–6 month placements · Certificate provided
+    - generic [ref=e418]:
+      - heading "Sign Up to Get Involved" [level=3] [ref=e419]
+      - paragraph [ref=e420]: Tell us a bit about yourself and we'll be in touch within 3 business days.
+      - generic [ref=e421]:
+        - generic [ref=e422]:
+          - generic [ref=e423]:
+            - generic [ref=e424]: Full Name *
+            - textbox "Full Name *" [ref=e425]:
+              - /placeholder: Your full name
+          - generic [ref=e426]:
+            - generic [ref=e427]: Email Address *
+            - textbox "Email Address *" [ref=e428]:
+              - /placeholder: your@email.com
+        - generic [ref=e429]:
+          - generic [ref=e430]:
+            - generic [ref=e431]: Phone Number
+            - textbox "Phone Number" [ref=e432]:
+              - /placeholder: +254 7XX XXX XXX
+          - generic [ref=e433]:
+            - generic [ref=e434]: I want to *
+            - combobox "I want to *" [ref=e435]:
+              - option "Select one" [selected]
+              - option "Volunteer"
+              - option "Apply for an Internship"
+              - option "Explore Both"
+        - generic [ref=e436]:
+          - generic [ref=e437]: Area of Interest *
+          - combobox "Area of Interest *" [ref=e438]:
+            - option "Select an area" [selected]
+            - option "Youth Mentorship & Sports"
+            - option "Digital Literacy & ICT"
+            - option "Women's Skills Training"
+            - option "Communications & Social Media"
+            - option "Monitoring, Evaluation & Reporting"
+            - option "Grant Writing & Fundraising"
+            - option "Community Outreach & Events"
+            - option "Other"
+        - generic [ref=e439]:
+          - generic [ref=e440]: Availability *
+          - combobox "Availability *" [ref=e441]:
+            - option "When can you commit?" [selected]
+            - option "Weekdays"
+            - option "Weekends"
+            - option "Flexible / Remote"
+            - option "Full-time (internship)"
+        - generic [ref=e442]:
+          - generic [ref=e443]: Tell us about yourself (optional)
+          - textbox "Tell us about yourself (optional)" [ref=e444]:
+            - /placeholder: Share your background, skills, or anything you'd like us to know.
+        - button "Submit My Interest" [ref=e445] [cursor=pointer]
+  - generic [ref=e447]:
+    - generic [ref=e448]:
+      - paragraph [ref=e449]: Voices
+      - heading "Real people. Real moments." [level=2] [ref=e450]:
+        - text: Real people.
+        - emphasis [ref=e451]: Real moments.
+      - paragraph [ref=e452]: Real voices from the community members we serve
+    - generic [ref=e453]:
+      - generic [ref=e454]:
+        - generic [ref=e455]: "\" The skills training transformed my life. I started my own vegetable business and now support my family."
+        - generic [ref=e456]: Mary Kipchoge
+        - generic [ref=e457]: Women's Skills Training Participant, Nairobi
+      - generic [ref=e458]:
+        - generic [ref=e459]: "\" Engolon gave my daughter the chance to stay in school. Now she dreams of becoming a teacher."
+        - generic [ref=e460]: Samuel Kiplagat
+        - generic [ref=e461]: Parent, Eldoret
+      - generic [ref=e462]:
+        - generic [ref=e463]: "\" Through Engolon, I found community again. The social programs helped me overcome loneliness and isolation."
+        - generic [ref=e464]: Grace Muthoni
+        - generic [ref=e465]: Elderly Beneficiary, Kisii
+      - generic [ref=e466]:
+        - generic [ref=e467]: "\" The assistive devices and accessibility support made me feel included. I can work and contribute to society."
+        - generic [ref=e468]: Peter Koech
+        - generic [ref=e469]: Person with Disability, Mombasa
+      - generic [ref=e470]:
+        - generic [ref=e471]: "\" Engolon's digital literacy program opened doors for me. I now work as a freelancer online."
+        - generic [ref=e472]: Jennifer Ouma
+        - generic [ref=e473]: Digital Skills Graduate, Nairobi
+      - generic [ref=e474]:
+        - generic [ref=e475]: "\" The mentorship and support gave me confidence. I'm now studying nursing and hope to serve my community."
+        - generic [ref=e476]: David Kipchoge
+        - generic [ref=e477]: Child Mentorship Beneficiary, Kericho
+  - generic [ref=e479]:
+    - generic [ref=e480]:
+      - paragraph [ref=e481]: Tech & Access
+      - heading "Digital Access." [level=2] [ref=e482]:
+        - text: Digital
+        - emphasis [ref=e483]: Access.
+    - generic [ref=e485]: We use practical technology only where it helps people access services, learn skills, run small businesses, or communicate more independently. Our focus remains people, dignity, and opportunity.
+  - generic [ref=e487]:
+    - generic [ref=e488]:
+      - paragraph [ref=e489]: Visit Us
+      - 'heading "Experience Kibera: Community Tours." [level=2] [ref=e490]':
+        - text: "Experience Kibera:"
+        - emphasis [ref=e491]: Community Tours.
+      - paragraph [ref=e492]: Designed by residents, for respectful visitors. Every tour directly funds Engolon's community programs.
+    - generic [ref=e493]:
+      - generic [ref=e494]:
+        - generic [ref=e495]: 🤝 Community-led
+        - generic [ref=e496]: 💚 Proceeds fund local programs
+        - generic [ref=e497]: 🙏 Dignity-first guidelines
+      - paragraph [ref=e498]: These tours are designed by and for Kibera's community. Visitors are welcomed as guests, not spectators. Our local guides set the tone — respectful, honest, and human. Photography and behaviour guidelines are shared before every tour.
+    - generic [ref=e499]:
+      - generic [ref=e500]:
+        - generic [ref=e501]: 🏘️
+        - generic [ref=e502]:
+          - heading "Cultural & Community Experience" [level=3] [ref=e503]
+          - paragraph [ref=e504]: Meet local residents, learn about daily life, and visit small businesses and community projects. Authentic insights from those who live here.
+          - list [ref=e505]:
+            - listitem [ref=e506]: 📍 3–4 hours, community-guided
+            - listitem [ref=e507]: 👥 Groups of 4–10 people
+            - listitem [ref=e508]: 💰 $25 USD per person
+      - generic [ref=e509]:
+        - generic [ref=e510]: 🎨
+        - generic [ref=e511]:
+          - heading "Arts, Crafts & Creativity Tour" [level=3] [ref=e512]
+          - paragraph [ref=e513]: Discover local artists and artisans. Watch traditional crafts being made, support emerging creatives, and take home authentic handmade pieces.
+          - list [ref=e514]:
+            - listitem [ref=e515]: 📍 2.5–3 hours, artist-guided
+            - listitem [ref=e516]: 👥 Groups of 3–8 people
+            - listitem [ref=e517]: 💰 $30 USD per person
+      - generic [ref=e518]:
+        - generic [ref=e519]: 🍲
+        - generic [ref=e520]:
+          - heading "Food Tour & Community Stories" [level=3] [ref=e521]
+          - paragraph [ref=e522]: Share meals and stories with residents at family-run eateries. Learn about food culture, livelihoods, and the people behind the food.
+          - list [ref=e523]:
+            - listitem [ref=e524]: 📍 3–4 hours, resident-hosted
+            - listitem [ref=e525]: 👥 Groups of 4–12 people
+            - listitem [ref=e526]: 💰 $35 USD per person (includes meals)
+      - generic [ref=e527]:
+        - generic [ref=e528]: 📚
+        - generic [ref=e529]:
+          - heading "Youth & Education Tour" [level=3] [ref=e530]
+          - paragraph [ref=e531]: Visit youth programs in action. Meet young mentors and learners, see the challenges and the breakthroughs, and understand what community-led education looks like.
+          - list [ref=e532]:
+            - listitem [ref=e533]: 📍 2–3 hours, youth-led
+            - listitem [ref=e534]: 👥 Groups of 5–15 people
+            - listitem [ref=e535]: 💰 $20 USD per person
+    - generic [ref=e536]:
+      - heading "Book Your Tour" [level=2] [ref=e537]
+      - paragraph [ref=e538]: Join us for an authentic Kibera experience. All proceeds support Engolon CBO's community programs.
+      - generic [ref=e539]:
+        - generic [ref=e540]:
+          - generic [ref=e541]:
+            - generic [ref=e542]: Full Name *
+            - textbox "Full name" [ref=e543]:
+              - /placeholder: Your full name
+          - generic [ref=e544]:
+            - generic [ref=e545]: Email Address *
+            - textbox "Email address" [ref=e546]:
+              - /placeholder: your@email.com
+        - generic [ref=e547]:
+          - generic [ref=e548]:
+            - generic [ref=e549]: Phone Number *
+            - textbox "Phone number" [ref=e550]:
+              - /placeholder: +254 7XX XXX XXX
+          - generic [ref=e551]:
+            - generic [ref=e552]: Group Size *
+            - combobox "Group size" [ref=e553]:
+              - option "Select number of people" [selected]
+              - option "1 person"
+              - option "2 people"
+              - option "3 people"
+              - option "4 people"
+              - option "5 people"
+              - option "6 people"
+              - option "7 people"
+              - option "8 people"
+              - option "9+ people"
+        - generic [ref=e554]:
+          - generic [ref=e555]: Which tour interests you? *
+          - combobox "Select tour type" [ref=e556]:
+            - option "Choose a tour" [selected]
+            - option "Cultural & Community Experience"
+            - option "Arts, Crafts & Creativity Tour"
+            - option "Food Tour & Community Stories"
+            - option "Youth Center & Education Tour"
+            - option "Custom/Multiple Tours"
+        - generic [ref=e557]:
+          - generic [ref=e558]: Preferred Date *
+          - textbox "Tour date" [ref=e560] [cursor=pointer]:
+            - /placeholder: Click to select a date
+        - generic [ref=e561]:
+          - generic [ref=e562]: Tell us about your interests (optional)
+          - textbox "Additional interests" [ref=e563]:
+            - /placeholder: What aspects of Kibera are you most interested in? Any questions?
+        - generic [ref=e565] [cursor=pointer]:
+          - checkbox "Agree to terms" [ref=e566]
+          - text: I understand this is a respectful, guided cultural experience and I agree to Engolon's community guidelines
+        - button "Reserve Your Spot" [ref=e567] [cursor=pointer]
+  - generic [ref=e569]:
+    - heading "Show up for Kibera. Join the movement." [level=2] [ref=e570]:
+      - text: Show up for Kibera.
+      - emphasis [ref=e571]: Join the movement.
+    - paragraph [ref=e572]: Your support, time, and voice create lasting change. Choose how you want to help today.
+    - generic [ref=e573]:
+      - button "Donate" [ref=e574] [cursor=pointer]
+      - button "Volunteer" [ref=e575] [cursor=pointer]
+      - button "Contact Us" [ref=e576] [cursor=pointer]
+      - button "Download Resources" [ref=e577] [cursor=pointer]
+    - generic [ref=e578]:
+      - heading "Stay Updated on Our Impact" [level=3] [ref=e579]
+      - generic [ref=e580]:
+        - generic [ref=e581]:
+          - generic [ref=e582]: Email Address
+          - textbox "Email address" [ref=e583]:
+            - /placeholder: your@email.com
+        - button "Subscribe" [ref=e584] [cursor=pointer]
+  - contentinfo [ref=e585]:
+    - generic [ref=e586]:
+      - generic [ref=e587]:
+        - heading "Engolon CBO" [level=4] [ref=e588]
+        - paragraph [ref=e589]:
+          - strong [ref=e590]: "\"Caring for all, leaving none behind.\""
+        - paragraph [ref=e591]: Empowering vulnerable communities in Kenya and beyond through skills, support, and opportunity.
+      - generic [ref=e592]:
+        - heading "Quick Links" [level=4] [ref=e593]
+        - list [ref=e594]:
+          - listitem [ref=e595]:
+            - link "About Us" [ref=e596] [cursor=pointer]:
+              - /url: "#about"
+          - listitem [ref=e597]:
+            - link "Our Work" [ref=e598] [cursor=pointer]:
+              - /url: "#our-work"
+          - listitem [ref=e599]:
+            - link "Volunteer & Internships" [ref=e600] [cursor=pointer]:
+              - /url: "#get-involved"
+          - listitem [ref=e601]:
+            - link "Impact" [ref=e602] [cursor=pointer]:
+              - /url: "#impact"
+          - listitem [ref=e603]:
+            - link "Testimonials" [ref=e604] [cursor=pointer]:
+              - /url: "#testimonials"
+      - generic [ref=e605]:
+        - heading "Resources" [level=4] [ref=e606]
+        - list [ref=e607]:
+          - listitem [ref=e608]:
+            - link "Services" [ref=e609] [cursor=pointer]:
+              - /url: "#services"
+          - listitem [ref=e610]:
+            - link "Blog" [ref=e611] [cursor=pointer]:
+              - /url: "#blog"
+          - listitem [ref=e612]:
+            - link "Contact" [ref=e613] [cursor=pointer]:
+              - /url: "#contact"
+          - listitem [ref=e614]:
+            - link "Privacy Policy" [ref=e615] [cursor=pointer]:
+              - /url: "#privacy"
+      - generic [ref=e616]:
+        - heading "Contact & Follow" [level=4] [ref=e617]
+        - paragraph [ref=e618]:
+          - strong [ref=e619]: "Email:"
+          - link "info@engolon.com" [ref=e620] [cursor=pointer]:
+            - /url: mailto:info@engolon.com
+        - paragraph [ref=e621]:
+          - strong [ref=e622]: "Location:"
+          - text: Kenya
+        - generic [ref=e623]:
+          - link "Facebook" [ref=e624] [cursor=pointer]:
+            - /url: "#facebook"
+            - text: f
+          - link "Twitter" [ref=e625] [cursor=pointer]:
+            - /url: "#twitter"
+            - text: 𝕏
+          - link "Instagram" [ref=e626] [cursor=pointer]:
+            - /url: "#instagram"
+            - text: 📷
+          - link "LinkedIn" [ref=e627] [cursor=pointer]:
+            - /url: "#linkedin"
+            - text: in
+    - paragraph [ref=e629]: © 2026 Engolon Community Based Organization. All rights reserved.
+  - text: → → → → → → → → → →
