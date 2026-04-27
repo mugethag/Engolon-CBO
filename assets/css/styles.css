@@ -345,9 +345,11 @@ header {
   opacity: 0.85;
 }
 
-/* Hide the logo image on dark background */
 .logo img {
-  display: none;
+  height: 48px;
+  width: 48px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 nav ul {
