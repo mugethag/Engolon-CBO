@@ -3,6 +3,13 @@
 // ============================================
 
 // ============================================
+// TRIPADVISOR — one place to update
+// Replace the URL below with your listing URL
+// once TripAdvisor approves your business.
+// ============================================
+var TRIPADVISOR_URL = 'https://www.tripadvisor.com/';
+
+// ============================================
 // VOLUNTEER / INTERNSHIP MODAL
 // ============================================
 
@@ -25,6 +32,11 @@ function switchTab(tab) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  // Wire up all TripAdvisor links from the single constant above
+  document.querySelectorAll('.ta-link').forEach(function (el) {
+    el.href = TRIPADVISOR_URL;
+  });
+
   // Mobile Menu Toggle
   const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('nav');

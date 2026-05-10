@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap");
+
+      :root {
+        --bg: #0d0d0d;
+        --surface: #161616;
+        --surface-2: #1d1d1d;
+        --cream: #f5f0e8;
+        --muted: rgba(245, 240, 232, 0.68);
+        --faint: rgba(245, 240, 232, 0.1);
+        --orange: #e8833a;
+        --green: #00aa6c;
+        --cyan: #55c7d9;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--bg);
+        color: var(--cream);
+        font-family: Inter, "Segoe UI", sans-serif;
+      }
+
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background:
+          linear-gradient(90deg, rgba(245, 240, 232, 0.035) 1px, transparent 1px),
+          linear-gradient(0deg, rgba(245, 240, 232, 0.03) 1px, transparent 1px),
+          radial-gradient(circle at 76% 18%, rgba(0, 170, 108, 0.12), transparent 28%),
+          radial-gradient(circle at 15% 85%, rgba(232, 131, 58, 0.16), transparent 30%),
+          var(--bg);
+        background-size: 80px 80px, 80px 80px, auto, auto, auto;
+      }
+
+      .scene {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        padding: 96px 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 34px;
+        overflow: hidden;
+      }
+
+      .scene::before {
+        content: "";
+        position: absolute;
+        inset: 54px;
+        border: 1px solid rgba(245, 240, 232, 0.08);
+        pointer-events: none;
+      }
+
+      .scene-label {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        color: var(--orange);
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .scene-label::before {
+        content: "";
+        width: 76px;
+        height: 3px;
+        background: var(--orange);
+      }
+
+      h1,
+      h2 {
+        font-family: "Playfair Display", Georgia, serif;
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        max-width: 1340px;
+        font-size: 104px;
+      }
+
+      h2 {
+        font-size: 82px;
+        max-width: 1220px;
+      }
+
+      .accent {
+        color: var(--orange);
+        font-style: italic;
+      }
+
+      .lede {
+        max-width: 1120px;
+        color: var(--muted);
+        font-size: 34px;
+        line-height: 1.35;
+      }
+
+      .brand-row {
+        position: absolute;
+        left: 120px;
+        top: 74px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        color: var(--cream);
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        z-index: 5;
+      }
+
+      .brand-row img {
+        width: 64px;
+        height: 64px;
+        object-fit: contain;
+      }
+
+      .caption {
+        position: absolute;
+        left: 120px;
+        right: 120px;
+        bottom: 66px;
+        min-height: 70px;
+        padding: 18px 24px;
+        border-left: 4px solid var(--orange);
+        background: rgba(13, 13, 13, 0.72);
+        color: rgba(245, 240, 232, 0.82);
+        font-size: 25px;
+        line-height: 1.35;
+      }
+
+      .meta-strip,
+      .tile-grid,
+      .term-grid,
+      .capstone-grid {
+        display: grid;
+        gap: 22px;
+        width: 100%;
+      }
+
+      .meta-strip {
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 20px;
+      }
+
+      .tile,
+      .term,
+      .capstone-node {
+        min-height: 178px;
+        padding: 28px;
+        border: 1px solid var(--faint);
+        border-top: 4px solid var(--orange);
+        background: rgba(22, 22, 22, 0.88);
+      }
+
+      .tile strong,
+      .term strong,
+      .capstone-node strong {
+        display: block;
+        margin-bottom: 12px;
+        color: var(--cream);
+        font-size: 30px;
+        line-height: 1.12;
+      }
+
+      .tile span,
+      .term span,
+      .capstone-node span {
+        display: block;
+        color: var(--muted);
+        font-size: 22px;
+        line-height: 1.35;
+      }
+
+      .tile-grid {
+        grid-template-columns: repeat(7, 1fr);
+      }
+
+      .outcome {
+        min-height: 250px;
+        border-top-color: var(--green);
+      }
+
+      .outcome .icon {
+        width: 54px;
+        height: 54px;
+        margin-bottom: 22px;
+        border: 2px solid var(--green);
+        display: grid;
+        place-items: center;
+        color: var(--green);
+        font-size: 24px;
+        font-weight: 800;
+      }
+
+      .outcome strong {
+        font-size: 24px;
+      }
+
+      .outcome span {
+        font-size: 18px;
+      }
+
+      .term-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .term {
+        min-height: 390px;
+        border-top-color: var(--cyan);
+      }
+
+      .term small {
+        display: inline-flex;
+        margin-bottom: 28px;
+        padding: 8px 12px;
+        background: rgba(85, 199, 217, 0.1);
+        color: var(--cyan);
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .term ul {
+        display: grid;
+        gap: 14px;
+        color: var(--muted);
+        font-size: 22px;
+        line-height: 1.25;
+        list-style: none;
+      }
+
+      .term li::before {
+        content: "";
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        margin-right: 12px;
+        background: var(--orange);
+      }
+
+      .diagram {
+        position: absolute;
+        right: 120px;
+        top: 196px;
+        width: 500px;
+        height: 500px;
+      }
+
+      .orbit {
+        position: absolute;
+        inset: 42px;
+        border: 2px solid rgba(85, 199, 217, 0.25);
+        border-radius: 50%;
+      }
+
+      .orbit:nth-child(2) {
+        inset: 112px;
+        border-color: rgba(0, 170, 108, 0.32);
+      }
+
+      .drone {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 142px;
+        height: 142px;
+        transform: translate(-50%, -50%);
+        border: 3px solid var(--orange);
+        display: grid;
+        place-items: center;
+        color: var(--orange);
+        font-size: 44px;
+        font-weight: 800;
+        background: rgba(232, 131, 58, 0.08);
+      }
+
+      .sensor {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: var(--green);
+      }
+
+      .sensor.one {
+        left: 36px;
+        top: 236px;
+      }
+
+      .sensor.two {
+        right: 94px;
+        top: 62px;
+        background: var(--cyan);
+      }
+
+      .sensor.three {
+        right: 74px;
+        bottom: 92px;
+        background: var(--orange);
+      }
+
+      .architecture-layout {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 70px;
+        align-items: center;
+      }
+
+      .pathway {
+        position: relative;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        gap: 26px;
+      }
+
+      .pathway::before {
+        content: "";
+        position: absolute;
+        left: 70px;
+        right: 70px;
+        top: 50%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--orange), var(--green), var(--cyan));
+      }
+
+      .path-node {
+        position: relative;
+        z-index: 2;
+        flex: 1;
+        min-height: 170px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: var(--surface);
+        border: 1px solid var(--faint);
+      }
+
+      .path-node strong {
+        font-size: 26px;
+      }
+
+      .path-node span {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 20px;
+        line-height: 1.3;
+      }
+
+      .capstone-wrap {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 54px;
+        align-items: center;
+      }
+
+      .capstone-core {
+        min-height: 460px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(232, 131, 58, 0.3);
+        background:
+          linear-gradient(135deg, rgba(232, 131, 58, 0.12), transparent),
+          var(--surface);
+      }
+
+      .capstone-core strong {
+        width: 260px;
+        height: 260px;
+        display: grid;
+        place-items: center;
+        border: 4px solid var(--orange);
+        color: var(--cream);
+        text-align: center;
+        font-size: 34px;
+        line-height: 1.1;
+      }
+
+      .capstone-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .capstone-node {
+        min-height: 150px;
+        border-top-color: var(--green);
+      }
+
+      .capstone-node strong {
+        font-size: 25px;
+      }
+
+      .capstone-node span {
+        font-size: 19px;
+      }
+
+      .closing {
+        align-items: center;
+        text-align: center;
+      }
+
+      .closing h2 {
+        max-width: 1220px;
+      }
+
+      .closing .lede {
+        max-width: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="92"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div class="brand-row">
+        <img src="assets/engolon-logo.png" alt="Engolon CBO logo" />
+        <span>ENGOLON CBO</span>
+      </div>
+
+      <section id="scene-title" class="clip scene" data-start="0" data-duration="12" data-track-index="1">
+        <div class="scene-label">Program Orientation</div>
+        <h1>Certificate in <span class="accent">Robotics, Autonomous Systems</span> and Intelligent Drone Technologies</h1>
+        <p class="lede">A fully online EQF Level 6 certificate for learners designing responsible, secure, and sustainable autonomous systems.</p>
+        <div class="diagram" data-layout-ignore>
+          <div class="orbit"></div>
+          <div class="orbit"></div>
+          <div class="drone">AI</div>
+          <div class="sensor one"></div>
+          <div class="sensor two"></div>
+          <div class="sensor three"></div>
+        </div>
+        <div class="caption">Welcome to a two-year learning journey in robotics, drones, artificial intelligence, autonomy, cybersecurity, and sustainable intelligent systems.</div>
+      </section>
+
+      <section id="scene-architecture" class="clip scene" data-start="12" data-duration="12" data-track-index="1">
+        <div class="architecture-layout">
+          <div>
+            <div class="scene-label">Program Shape</div>
+            <h2>Two years. Six terms. One applied capstone.</h2>
+            <p class="lede">The structure moves from core foundations to advanced intelligent systems, then into a real-world autonomous solution.</p>
+          </div>
+          <div class="pathway">
+            <div class="path-node"><strong>Year 1</strong><span>Robotics, drones, autonomy, AI, cybersecurity</span></div>
+            <div class="path-node"><strong>Year 2</strong><span>Infrastructure, construction, perception, quantum systems</span></div>
+            <div class="path-node"><strong>Capstone</strong><span>Integrated autonomous solution and technical demonstration</span></div>
+          </div>
+        </div>
+        <div class="meta-strip">
+          <div class="tile"><strong>EQF Level 6</strong><span>Advanced undergraduate-level professional learning</span></div>
+          <div class="tile"><strong>60 ECTS</strong><span>Structured certificate credit load</span></div>
+          <div class="tile"><strong>Fully Online</strong><span>Simulation-based labs and collaborative projects</span></div>
+          <div class="tile"><strong>6 Terms</strong><span>Three terms per academic year</span></div>
+        </div>
+        <div class="caption">The certificate carries 60 ECTS credits and is delivered fully online through simulation-based labs, applied design exercises, and collaborative projects.</div>
+      </section>
+
+      <section id="scene-outcomes" class="clip scene" data-start="24" data-duration="15" data-track-index="1">
+        <div class="scene-label">Graduate Capabilities</div>
+        <h2>Students learn to design across the full autonomous systems stack.</h2>
+        <div class="tile-grid">
+          <div class="tile outcome"><div class="icon">R</div><strong>Robotics and drones</strong><span>Develop expertise in robotic and aerial systems.</span></div>
+          <div class="tile outcome"><div class="icon">AI</div><strong>Machine learning</strong><span>Apply AI in robotic environments.</span></div>
+          <div class="tile outcome"><div class="icon">S</div><strong>Swarm intelligence</strong><span>Coordinate multi-agent autonomous systems.</span></div>
+          <div class="tile outcome"><div class="icon">C</div><strong>Cybersecurity</strong><span>Analyze risks in robotic ecosystems.</span></div>
+          <div class="tile outcome"><div class="icon">E</div><strong>Ethics</strong><span>Examine drone warfare and legal implications.</span></div>
+          <div class="tile outcome"><div class="icon">Q</div><strong>Quantum concepts</strong><span>Connect future computing to robotics and AI.</span></div>
+          <div class="tile outcome"><div class="icon">G</div><strong>Sustainability</strong><span>Design systems for environment and infrastructure.</span></div>
+        </div>
+        <div class="caption">By the end of the program, learners connect robotics, AI, swarm systems, cybersecurity, ethics, quantum concepts, and sustainability.</div>
+      </section>
+
+      <section id="scene-year-one" class="clip scene" data-start="39" data-duration="15" data-track-index="1">
+        <div class="scene-label">Year 1 Foundation</div>
+        <h2>From motion and control to autonomy, AI, and risk.</h2>
+        <div class="term-grid">
+          <div class="term"><small>Term I</small><strong>Core Robotics, Drones and Control</strong><ul><li>Kinematics, dynamics, sensors and actuators</li><li>Drone components and flight control</li><li>Simulation and basic control strategies</li></ul></div>
+          <div class="term"><small>Term II</small><strong>Autonomy, Swarms and Environmental Monitoring</strong><ul><li>Sensor integration and real-time data</li><li>Swarm intelligence and coordination</li><li>GIS, IoT and disaster-response drones</li></ul></div>
+          <div class="term"><small>Term III</small><strong>AI, Cybersecurity and Decision-Making</strong><ul><li>AI-driven drone navigation</li><li>Probabilistic models and Bayesian reasoning</li><li>GPS spoofing, jamming and swarm security</li></ul></div>
+        </div>
+        <div class="caption">Year 1 builds the technical base: how robots move, how drones navigate, how autonomous systems coordinate, and how decisions are made under uncertainty.</div>
+      </section>
+
+      <section id="scene-year-two" class="clip scene" data-start="54" data-duration="15" data-track-index="1">
+        <div class="scene-label">Year 2 Advanced Systems</div>
+        <h2>Advanced intelligent systems, industry use, and future technologies.</h2>
+        <div class="term-grid">
+          <div class="term"><small>Term I</small><strong>Infrastructure and Construction Robotics</strong><ul><li>Cooperative drone inspection</li><li>Hazardous environment robotics</li><li>Aerial additive manufacturing and repair</li></ul></div>
+          <div class="term"><small>Term II</small><strong>Perception, AI and Quantum Concepts</strong><ul><li>Computer vision and object detection</li><li>AI-assisted drone perception</li><li>Quantum optimization and cybersecurity awareness</li></ul></div>
+          <div class="term"><small>Term III</small><strong>Capstone Preparation</strong><ul><li>Project lifecycle planning</li><li>Integrated autonomy and AI</li><li>Professional reports and demonstrations</li></ul></div>
+        </div>
+        <div class="caption">Year 2 applies the foundations to infrastructure inspection, robotic construction, intelligent perception, quantum-aware futures, and professional project delivery.</div>
+      </section>
+
+      <section id="scene-capstone" class="clip scene" data-start="69" data-duration="15" data-track-index="1">
+        <div class="capstone-wrap">
+          <div>
+            <div class="scene-label">Capstone Integration</div>
+            <h2>One real-world autonomous solution.</h2>
+            <p class="lede">Students design, simulate, evaluate, and present an advanced solution for an environmental, infrastructure, or intelligent systems challenge.</p>
+          </div>
+          <div class="capstone-wrap">
+            <div class="capstone-core"><strong>Autonomous System Capstone</strong></div>
+            <div class="capstone-grid">
+              <div class="capstone-node"><strong>Perception</strong><span>Sensors, vision, environmental data</span></div>
+              <div class="capstone-node"><strong>Control</strong><span>Navigation, stability, optimization</span></div>
+              <div class="capstone-node"><strong>AI Decisions</strong><span>Learning, planning, uncertainty</span></div>
+              <div class="capstone-node"><strong>Secure Design</strong><span>Cybersecurity and responsible deployment</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="caption">The capstone integrates perception, control, AI-driven decision-making, cybersecurity awareness, sustainability, evaluation, and professional communication.</div>
+      </section>
+
+      <section id="scene-close" class="clip scene closing" data-start="84" data-duration="8" data-track-index="1">
+        <div class="scene-label">Welcome to the Program</div>
+        <h2>Design autonomous technologies that are useful, secure, responsible, and ready for real-world challenges.</h2>
+        <p class="lede">Robotics. Drones. AI. Swarms. Cybersecurity. Sustainability. Future intelligent systems.</p>
+        <div class="caption">This reusable HyperFrames template can now become the foundation for term overviews, module lessons, simulation explainers, and capstone guidance videos.</div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      function animateIfFound(selector, vars, at) {
+        const targets = document.querySelectorAll(selector);
+        if (targets.length) {
+          tl.from(targets, { ...vars, immediateRender: false }, at);
+        }
+      }
+
+      function enterScene(selector, at) {
+        animateIfFound(`${selector} .scene-label`, { opacity: 0, y: 28, duration: 0.55, ease: "power3.out" }, at + 0.1);
+        animateIfFound(`${selector} h1, ${selector} h2`, { opacity: 0, y: 44, duration: 0.7, ease: "power3.out" }, at + 0.25);
+        animateIfFound(`${selector} .lede`, { opacity: 0, y: 30, duration: 0.55, ease: "power3.out" }, at + 0.45);
+        animateIfFound(`${selector} .tile, ${selector} .term, ${selector} .path-node, ${selector} .capstone-node`, { opacity: 0, y: 34, duration: 0.45, stagger: 0.08, ease: "power2.out" }, at + 0.7);
+        animateIfFound(`${selector} .caption`, { opacity: 0, y: 18, duration: 0.45, ease: "power2.out" }, at + 0.9);
+      }
+
+      enterScene("#scene-title", 0);
+      tl.from("#scene-title .diagram", { opacity: 0, scale: 0.92, duration: 0.8, ease: "power2.out", immediateRender: false }, 0.55);
+      tl.to("#scene-title .drone", { rotation: 360, duration: 10, ease: "none" }, 0.5);
+      tl.to("#scene-title .sensor", { scale: 1.35, opacity: 0.55, duration: 0.7, repeat: 8, yoyo: true, stagger: 0.18, ease: "sine.inOut" }, 1);
+
+      enterScene("#scene-architecture", 12);
+
+      enterScene("#scene-outcomes", 24);
+      enterScene("#scene-year-one", 39);
+      enterScene("#scene-year-two", 54);
+      enterScene("#scene-capstone", 69);
+      tl.from("#scene-capstone .capstone-core", { opacity: 0, scale: 0.94, duration: 0.65, ease: "power2.out", immediateRender: false }, 69.55);
+
+      enterScene("#scene-close", 84);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
