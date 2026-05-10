@@ -18,19 +18,26 @@ Visual identity: dark editorial Engolon style with technical robotics overlays. 
 | 6. Capstone integration | 3:05-3:45 | Explain the final applied project. | Central autonomous system diagram linking perception, control, AI, cybersecurity, sustainability, and evaluation. | Capstone/project brief scene. |
 | 7. Closing | 3:45-4:15 | Reinforce professional and responsible design. | Final statement, learner-ready outcomes, Engolon mark. | Closing scene. |
 
-## HyperFrames Pilot Mapping
+## HyperFrames Production Mapping
 
-The implemented `index.html` condenses the full storyboard into a 92-second review version:
+The implemented `index.html` now follows the full 4:15 production storyboard:
 
-| Pilot Scene | Time | Full Storyboard Equivalent |
+| Production Scene | Time | Full Storyboard Equivalent |
 | --- | ---: | --- |
-| `scene-title` | 0-12s | Scene 1 |
-| `scene-architecture` | 12-24s | Scene 2 |
-| `scene-outcomes` | 24-39s | Scene 3 |
-| `scene-year-one` | 39-54s | Scene 4 |
-| `scene-year-two` | 54-69s | Scene 5 |
-| `scene-capstone` | 69-84s | Scene 6 |
-| `scene-close` | 84-92s | Scene 7 |
+| `scene-title` | 0:00-0:30 | Scene 1 |
+| `scene-architecture` | 0:30-1:00 | Scene 2 |
+| `scene-outcomes` | 1:00-1:45 | Scene 3 |
+| `scene-year-one` | 1:45-2:25 | Scene 4 |
+| `scene-year-two` | 2:25-3:05 | Scene 5 |
+| `scene-capstone` | 3:05-3:45 | Scene 6 |
+| `scene-close` | 3:45-4:15 | Scene 7 |
+
+## Student-Ready Use
+
+- Use `index.html` as the source composition for the full course orientation video.
+- Render the composition to MP4 before publishing to the Engolon website or LMS.
+- Keep this orientation as the first item students complete before Term 1 Module 1.
+- Pair the video with `course-mvp/README.md` and `course-mvp/term-1/course-map.md` inside the LMS.
 
 ## On-Screen Text Principles
 

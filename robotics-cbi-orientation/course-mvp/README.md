@@ -16,6 +16,13 @@ Scope: Program orientation, Term 1 content only, two full module lessons, one si
 | Simulation-based lab | `term-1/lab/simulation-lab-01.md` | Drafted |
 | Reusable production guide | `production-guide.md` | Drafted |
 | Reusable templates | `templates/` | Drafted |
+| Full production tracker | `../../COURSE_PRODUCTION_TRACKER.md` | Active |
+
+## Production Control Documents
+
+- Full tracker: `../../COURSE_PRODUCTION_TRACKER.md`
+- Module package checklist: `templates/module-package-checklist.md`
+- Production guide: `production-guide.md`
 
 ## MVP Learning Flow
 

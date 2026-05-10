@@ -2,6 +2,8 @@
 
 This guide operationalizes the MVP so future modules can be produced consistently and at lower cost.
 
+Use `../../COURSE_PRODUCTION_TRACKER.md` as the master status tracker for all modules, videos, quizzes, handouts, labs, and Moodle upload work.
+
 ## Asset Pattern Per Module
 
 Each module should include:

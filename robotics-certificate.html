@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="course-page">
+<body class="course-page course-locked">
   <header>
     <div class="header-content container">
       <a class="logo" href="index.html" aria-label="Engolon CBO home">
@@ -62,114 +62,154 @@
       </div>
     </section>
 
-    <section class="course-facts section-alt">
-      <div class="container course-facts-grid">
-        <div class="course-fact"><strong>EQF Level</strong><span>6</span></div>
-        <div class="course-fact"><strong>Credits</strong><span>60 ECTS</span></div>
-        <div class="course-fact"><strong>Mode</strong><span>Fully Online</span></div>
-        <div class="course-fact"><strong>Duration</strong><span>2 Years / 6 Terms</span></div>
+    <section id="course-login" class="course-login-section section-alt" aria-live="polite">
+      <div class="container">
+        <div class="course-login-card">
+          <p class="section-label">Restricted Course Access</p>
+          <h2>Student Login</h2>
+          <p>Enter the course access password to view the orientation video, MVP course materials, handouts, quizzes, and simulation lab.</p>
+          <form id="course-login-form" class="course-login-form">
+            <div class="form-group">
+              <label for="course-password">Course password</label>
+              <input type="password" id="course-password" name="course-password" autocomplete="current-password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Unlock Course</button>
+            <div id="course-login-message" class="form-message course-login-message" role="status"></div>
+          </form>
+          <p class="course-login-help">Students should request access from Engolon CBO before beginning the course.</p>
+        </div>
       </div>
     </section>
 
-    <section id="overview">
-      <div class="container">
-        <div class="section-title">
-          <p class="section-label">Program Overview</p>
-          <h2>From foundations to an applied <em class="accent">capstone.</em></h2>
-          <p class="section-subtitle">
-            Learners build a foundation in robotics, drone systems, autonomy, AI, swarm coordination,
-            cybersecurity, sustainable robotics, infrastructure applications, and future intelligent systems.
-          </p>
+    <div id="course-protected-content" class="course-protected" aria-hidden="true">
+      <section class="course-facts section-alt">
+        <div class="container course-facts-grid">
+          <div class="course-fact"><strong>EQF Level</strong><span>6</span></div>
+          <div class="course-fact"><strong>Credits</strong><span>60 ECTS</span></div>
+          <div class="course-fact"><strong>Mode</strong><span>Fully Online</span></div>
+          <div class="course-fact"><strong>Duration</strong><span>2 Years / 6 Terms</span></div>
         </div>
-        <div class="course-overview-grid">
-          <div class="course-panel">
-            <h3>Year 1: Foundational Concepts</h3>
-            <ul class="course-list">
-              <li>Core robotics, intelligent systems, drones and control</li>
-              <li>Autonomy, swarms and environmental monitoring</li>
-              <li>AI, cybersecurity and decision-making under uncertainty</li>
-            </ul>
+      </section>
+
+      <section id="overview">
+        <div class="container">
+          <div class="section-title">
+            <p class="section-label">Program Overview</p>
+            <h2>From foundations to an applied <em class="accent">capstone.</em></h2>
+            <p class="section-subtitle">
+              Learners build a foundation in robotics, drone systems, autonomy, AI, swarm coordination,
+              cybersecurity, sustainable robotics, infrastructure applications, and future intelligent systems.
+            </p>
           </div>
-          <div class="course-panel">
-            <h3>Year 2: Advanced Intelligent Systems</h3>
-            <ul class="course-list">
-              <li>Infrastructure robotics and smart inspection systems</li>
-              <li>Computer vision, drone perception and quantum concepts</li>
-              <li>Capstone project integrating AI, autonomy, security and sustainability</li>
-            </ul>
+          <div class="course-overview-grid">
+            <div class="course-panel">
+              <h3>Year 1: Foundational Concepts</h3>
+              <ul class="course-list">
+                <li>Core robotics, intelligent systems, drones and control</li>
+                <li>Autonomy, swarms and environmental monitoring</li>
+                <li>AI, cybersecurity and decision-making under uncertainty</li>
+              </ul>
+            </div>
+            <div class="course-panel">
+              <h3>Year 2: Advanced Intelligent Systems</h3>
+              <ul class="course-list">
+                <li>Infrastructure robotics and smart inspection systems</li>
+                <li>Computer vision, drone perception and quantum concepts</li>
+                <li>Capstone project integrating AI, autonomy, security and sustainability</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="mvp" class="section-alt">
-      <div class="container">
-        <div class="section-title">
-          <p class="section-label">Minimum Viable CBT Course</p>
-          <h2>Term 1 pilot package, ready for review.</h2>
-          <p class="section-subtitle">
-            The first CBT build focuses on the program orientation, two Term 1 modules,
-            one simulation lab, quizzes, and learner handouts.
+      <section id="mvp" class="section-alt">
+        <div class="container">
+          <div class="section-title">
+            <p class="section-label">Minimum Viable CBT Course</p>
+            <h2>Term 1 pilot package, ready for review.</h2>
+            <p class="section-subtitle">
+              The first CBT build focuses on the program orientation, two Term 1 modules,
+              one simulation lab, quizzes, and learner handouts.
+            </p>
+          </div>
+          <div class="mvp-grid">
+            <article class="mvp-card">
+              <p class="program-location">Video 0</p>
+              <h3>Program Orientation</h3>
+              <p>Full 4:15 HyperFrames orientation lesson and reusable visual template for the course series.</p>
+              <a href="robotics-cbi-orientation/storyboard.md">View Storyboard</a>
+            </article>
+            <article class="mvp-card">
+              <p class="program-location">Module 1</p>
+              <h3>Sustainability Robotics &amp; Intelligent Systems</h3>
+              <p>Full lesson script, storyboard, quiz, and learner handout.</p>
+              <a href="robotics-cbi-orientation/course-mvp/term-1/module-1/lesson-script.md">View Lesson Script</a>
+            </article>
+            <article class="mvp-card">
+              <p class="program-location">Module 2</p>
+              <h3>Drone Systems, Aerial Robotics &amp; Control</h3>
+              <p>Full lesson script, storyboard, quiz, and learner handout.</p>
+              <a href="robotics-cbi-orientation/course-mvp/term-1/module-2/lesson-script.md">View Lesson Script</a>
+            </article>
+            <article class="mvp-card">
+              <p class="program-location">Simulation Lab</p>
+              <h3>Mobile Robot and Drone Control Foundations</h3>
+              <p>Simulator-neutral lab connecting sensors, actuators, feedback, stability, and response.</p>
+              <a href="robotics-cbi-orientation/course-mvp/term-1/lab/simulation-lab-01.md">View Lab</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="orientation-video">
+        <div class="container">
+          <div class="section-title">
+            <p class="section-label">Student Orientation</p>
+            <h2>Watch the full program <em class="accent">orientation.</em></h2>
+            <p class="section-subtitle">
+              This draft render contains the full 4:15 orientation lesson with timed narration audio
+              and learner-facing captions.
+            </p>
+          </div>
+          <div class="course-video-frame">
+            <video controls preload="metadata">
+              <source src="robotics-cbi-orientation/renders/program-orientation-narrated.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section id="outcomes">
+        <div class="container">
+          <div class="section-title">
+            <p class="section-label">Learning Outcomes</p>
+            <h2>What learners will be able to <em class="accent">do.</em></h2>
+          </div>
+          <div class="outcomes-grid">
+            <div class="outcome-card">Develop expertise in robotics, drones and autonomous systems.</div>
+            <div class="outcome-card">Apply AI and machine learning in robotic environments.</div>
+            <div class="outcome-card">Understand swarm intelligence and coordinated autonomous systems.</div>
+            <div class="outcome-card">Analyze cybersecurity risks in drone and robotic ecosystems.</div>
+            <div class="outcome-card">Explore ethical and technological implications of drone warfare systems.</div>
+            <div class="outcome-card">Introduce quantum computing concepts relevant to robotics and AI.</div>
+            <div class="outcome-card">Design sustainable and secure autonomous systems for real-world challenges.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="course-cta section-alt">
+        <div class="container">
+          <p class="section-label">Next Production Step</p>
+          <h2>Turn Module 1 into the first full CBT lesson video.</h2>
+          <p>
+            The course structure, scripts, storyboards, quizzes, handouts and simulation lab are drafted.
+            The next step is producing the first full HyperFrames module lesson from the Module 1 package.
           </p>
+          <a href="mailto:info@engolon.com?subject=Robotics%20CBT%20Course%20Development" class="btn btn-primary">Discuss Course Development</a>
         </div>
-        <div class="mvp-grid">
-          <article class="mvp-card">
-            <p class="program-location">Video 0</p>
-            <h3>Program Orientation</h3>
-            <p>HyperFrames orientation video and reusable visual template for the course series.</p>
-            <a href="robotics-cbi-orientation/storyboard.md">View Storyboard</a>
-          </article>
-          <article class="mvp-card">
-            <p class="program-location">Module 1</p>
-            <h3>Sustainability Robotics &amp; Intelligent Systems</h3>
-            <p>Full lesson script, storyboard, quiz, and learner handout.</p>
-            <a href="robotics-cbi-orientation/course-mvp/term-1/module-1/lesson-script.md">View Lesson Script</a>
-          </article>
-          <article class="mvp-card">
-            <p class="program-location">Module 2</p>
-            <h3>Drone Systems, Aerial Robotics &amp; Control</h3>
-            <p>Full lesson script, storyboard, quiz, and learner handout.</p>
-            <a href="robotics-cbi-orientation/course-mvp/term-1/module-2/lesson-script.md">View Lesson Script</a>
-          </article>
-          <article class="mvp-card">
-            <p class="program-location">Simulation Lab</p>
-            <h3>Mobile Robot and Drone Control Foundations</h3>
-            <p>Simulator-neutral lab connecting sensors, actuators, feedback, stability, and response.</p>
-            <a href="robotics-cbi-orientation/course-mvp/term-1/lab/simulation-lab-01.md">View Lab</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="outcomes">
-      <div class="container">
-        <div class="section-title">
-          <p class="section-label">Learning Outcomes</p>
-          <h2>What learners will be able to <em class="accent">do.</em></h2>
-        </div>
-        <div class="outcomes-grid">
-          <div class="outcome-card">Develop expertise in robotics, drones and autonomous systems.</div>
-          <div class="outcome-card">Apply AI and machine learning in robotic environments.</div>
-          <div class="outcome-card">Understand swarm intelligence and coordinated autonomous systems.</div>
-          <div class="outcome-card">Analyze cybersecurity risks in drone and robotic ecosystems.</div>
-          <div class="outcome-card">Explore ethical and technological implications of drone warfare systems.</div>
-          <div class="outcome-card">Introduce quantum computing concepts relevant to robotics and AI.</div>
-          <div class="outcome-card">Design sustainable and secure autonomous systems for real-world challenges.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="course-cta section-alt">
-      <div class="container">
-        <p class="section-label">Next Production Step</p>
-        <h2>Turn Module 1 into the first full CBT lesson video.</h2>
-        <p>
-          The course structure, scripts, storyboards, quizzes, handouts and simulation lab are drafted.
-          The next step is producing the first full HyperFrames module lesson from the Module 1 package.
-        </p>
-        <a href="mailto:info@engolon.com?subject=Robotics%20CBT%20Course%20Development" class="btn btn-primary">Discuss Course Development</a>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
   <footer>
@@ -192,6 +232,7 @@
         <h4>Course Resources</h4>
         <ul>
           <li><a href="robotics-cbi-orientation/course-mvp/README.md">MVP Course Map</a></li>
+          <li><a href="robotics-cbi-orientation/student-launch-checklist.md">Student Launch Checklist</a></li>
           <li><a href="robotics-cbi-orientation/course-mvp/term-1/module-1/handout.md">Module 1 Handout</a></li>
           <li><a href="robotics-cbi-orientation/course-mvp/term-1/module-2/handout.md">Module 2 Handout</a></li>
           <li><a href="robotics-cbi-orientation/course-mvp/term-1/lab/simulation-lab-01.md">Simulation Lab</a></li>
@@ -209,5 +250,6 @@
   </footer>
 
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/course-auth.js"></script>
 </body>
 </html>

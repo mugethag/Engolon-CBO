@@ -1214,6 +1214,56 @@ section {
   position: sticky;
 }
 
+.course-login-section {
+  display: block;
+}
+
+.course-unlocked .course-login-section {
+  display: none;
+}
+
+.course-protected {
+  display: none;
+}
+
+.course-unlocked .course-protected {
+  display: block;
+}
+
+.course-login-card {
+  max-width: 620px;
+  margin: 0 auto;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-orange);
+  padding: var(--space-5);
+}
+
+.course-login-card h2 {
+  margin-bottom: var(--space-2);
+}
+
+.course-login-form {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.course-login-message {
+  display: none;
+}
+
+.course-login-message.success,
+.course-login-message.error {
+  display: block;
+}
+
+.course-login-help {
+  margin-top: var(--space-3);
+  margin-bottom: 0;
+  font-size: var(--text-sm);
+}
+
 .course-hero {
   padding-top: calc(var(--space-16) + 72px);
   background:
@@ -1372,6 +1422,20 @@ section {
   margin-top: auto;
   color: var(--color-orange);
   font-weight: 700;
+}
+
+.course-video-frame {
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-orange);
+  background: var(--color-bg-card);
+  padding: var(--space-3);
+}
+
+.course-video-frame video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000000;
 }
 
 .outcomes-grid {
