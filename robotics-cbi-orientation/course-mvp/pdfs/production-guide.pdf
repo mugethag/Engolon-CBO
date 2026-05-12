@@ -1,0 +1,93 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 2035 >>
+stream
+BT /F1 9 Tf 54 738.00 Td (CBT Production Guide) Tj ET
+BT /F2 18 Tf 54 714.00 Td (CBT Production Guide) Tj ET
+BT /F1 10.5 Tf 54 657.20 Td (This guide operationalizes the MVP so future modules can be produced consistently and at) Tj ET
+BT /F1 10.5 Tf 54 643.03 Td (lower cost.) Tj ET
+BT /F1 10.5 Tf 54 604.35 Td (Use ../../COURSE_PRODUCTION_TRACKER.md as the master status tracker for all modules, videos,) Tj ET
+BT /F1 10.5 Tf 54 590.18 Td (quizzes, handouts, labs, and Moodle upload work.) Tj ET
+BT /F2 14 Tf 54 551.50 Td (Asset Pattern Per Module) Tj ET
+BT /F1 10.5 Tf 54 504.10 Td (Each module should include:) Tj ET
+BT /F1 10.5 Tf 54 465.43 Td (1. Lesson script) Tj ET
+BT /F1 10.5 Tf 54 447.25 Td (2. Scene-by-scene storyboard) Tj ET
+BT /F1 10.5 Tf 54 429.08 Td (3. HyperFrames video composition) Tj ET
+BT /F1 10.5 Tf 54 410.90 Td (4. Quiz) Tj ET
+BT /F1 10.5 Tf 54 392.73 Td (5. Learner handout) Tj ET
+BT /F1 10.5 Tf 54 374.55 Td (6. Optional simulation or practice activity) Tj ET
+BT /F2 14 Tf 54 335.88 Td (Recommended Video Structure) Tj ET
+BT /F1 9.5 Tf 54 288.48 Td (Scene | Target Duration | Purpose) Tj ET
+BT /F1 9.5 Tf 54 272.65 Td (Title | 15-20s | Establish module topic and relevance) Tj ET
+BT /F1 9.5 Tf 54 256.83 Td (Outcomes | 30-45s | State what learners will be able to do) Tj ET
+BT /F1 9.5 Tf 54 241.00 Td (Concept 1 | 60-90s | Explain the first core idea) Tj ET
+BT /F1 9.5 Tf 54 225.18 Td (Concept 2 | 60-90s | Explain the second core idea) Tj ET
+BT /F1 9.5 Tf 54 209.35 Td (Applied Example | 60-90s | Connect concept to robotics, drones, environment, or infrastructure) Tj ET
+BT /F1 9.5 Tf 54 193.53 Td (Checkpoint | 20-30s | Ask a short learner reflection or quiz-style prompt) Tj ET
+BT /F1 9.5 Tf 54 177.70 Td (Recap | 30-45s | Reinforce main takeaways and bridge to next module) Tj ET
+BT /F2 14 Tf 54 141.38 Td (HyperFrames Implementation Pattern) Tj ET
+BT /F1 10.5 Tf 54 93.98 Td (\267 Start from ../index.html.) Tj ET
+BT /F1 10.5 Tf 54 75.80 Td (\267 Duplicate the scene structure and replace content.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1608 >>
+stream
+BT /F1 10.5 Tf 54 738.00 Td (\267 Keep DESIGN.md as the style source.) Tj ET
+BT /F1 10.5 Tf 54 719.83 Td (\267 Run npm run check before review.) Tj ET
+BT /F1 10.5 Tf 54 701.65 Td (\267 Use npm run dev -- --port 3017 for preview.) Tj ET
+BT /F1 10.5 Tf 54 683.48 Td (\267 Render only after script, storyboard, and content are approved.) Tj ET
+BT /F2 14 Tf 54 644.80 Td (Cost-Control Rules) Tj ET
+BT /F1 10.5 Tf 54 597.40 Td (\267 Use one visual identity for all videos.) Tj ET
+BT /F1 10.5 Tf 54 579.23 Td (\267 Reuse the same title, outcomes, concept, example, checkpoint, and recap scene classes.) Tj ET
+BT /F1 10.5 Tf 54 561.05 Td (\267 Create diagrams in HTML/CSS where possible instead of commissioning custom animation.) Tj ET
+BT /F1 10.5 Tf 54 542.88 Td (\267 Use narration to carry detail; keep visuals clean.) Tj ET
+BT /F1 10.5 Tf 54 524.70 Td (\267 Batch-produce scripts before building videos.) Tj ET
+BT /F1 10.5 Tf 54 506.53 Td (\267 Build the first two module videos fully, then reuse the template.) Tj ET
+BT /F2 14 Tf 54 467.85 Td (Quality Gates) Tj ET
+BT /F1 10.5 Tf 54 420.45 Td (\267 Learning outcomes are measurable.) Tj ET
+BT /F1 10.5 Tf 54 402.28 Td (\267 Quiz questions map to stated outcomes.) Tj ET
+BT /F1 10.5 Tf 54 384.10 Td (\267 Handout reinforces the video without duplicating every word.) Tj ET
+BT /F1 10.5 Tf 54 365.93 Td (\267 Lab activity is doable with free or low-cost simulation tooling.) Tj ET
+BT /F1 10.5 Tf 54 347.75 Td (\267 Video passes HyperFrames lint and layout inspection.) Tj ET
+BT /F1 10.5 Tf 54 329.58 Td (\267 No scene contains dense curriculum paragraphs.) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000266 00000 n 
+0000000334 00000 n 
+0000002421 00000 n 
+0000002567 00000 n 
+0000004227 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+4373
+%%EOF

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/songambele/Data_Projects/engolon-robotics-pilot/**)",
+      "Read(//c/Users/songambele/Data_Projects/engolon-robotics-pilot/assets/**)",
+      "Bash(gh repo *)",
+      "Bash(gh auth *)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "Bash(netlify api *)",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\songambele\\\\Data_Projects\\\\Engolon CBO\\\\assets\" -Recurse -File | Select-Object @{Name=\"Path\";Expression={$_.FullName.Replace\\(\"C:\\\\Users\\\\songambele\\\\Data_Projects\\\\Engolon CBO\\\\\", \"\"\\)}} | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\songambele\\\\Data_Projects\\\\Engolon CBO\\\\robotics-cbi-orientation\\\\course-mvp\" -Recurse -File | Select-Object @{Name=\"Path\";Expression={$_.FullName.Replace\\(\"C:\\\\Users\\\\songambele\\\\Data_Projects\\\\Engolon CBO\\\\robotics-cbi-orientation\\\\course-mvp\\\\\", \"\"\\)}} | Sort-Object)"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 2568 >>
+stream
+BT /F1 9 Tf 54 738.00 Td (Module 2 Storyboard) Tj ET
+BT /F2 18 Tf 54 714.00 Td (Module 2 Storyboard) Tj ET
+BT /F1 10.5 Tf 54 657.20 Td (Module: Introduction to Drone Systems, Aerial Robotics and Control Design Fundamentals) Tj ET
+BT /F1 10.5 Tf 54 618.53 Td (Target video duration: 7-8 minutes) Tj ET
+BT /F1 9.5 Tf 54 579.85 Td (Scene | Time | Purpose | Visual Direction) Tj ET
+BT /F1 9.5 Tf 54 564.03 Td (1. Title | 0:00-0:30 | Introduce drone systems and control design. | Drone silhouette with subsystem) Tj ET
+BT /F1 9.5 Tf 54 551.20 Td (callouts.) Tj ET
+BT /F1 9.5 Tf 54 535.38 Td (2. Learning outcomes | 0:30-1:05 | State measurable outcomes. | Five outcome tiles.) Tj ET
+BT /F1 9.5 Tf 54 519.55 Td (3. Drone architecture | 1:05-2:00 | Explain frame, propulsion, power, sensors, controller,) Tj ET
+BT /F1 9.5 Tf 54 506.72 Td (communication, payload. | Labeled drone architecture diagram.) Tj ET
+BT /F1 9.5 Tf 54 490.90 Td (4. Flight control | 2:00-2:55 | Explain roll, pitch, yaw, altitude. | Four-axis motion diagram.) Tj ET
+BT /F1 9.5 Tf 54 475.07 Td (5. Control design concepts | 2:55-3:45 | Connect model, command, response, stability, error. |) Tj ET
+BT /F1 9.5 Tf 54 462.25 Td (Command-response graph.) Tj ET
+BT /F1 9.5 Tf 54 446.43 Td (6. PID and state-space | 3:45-4:45 | Introduce PID and state variables. | PID block and state vector) Tj ET
+BT /F1 9.5 Tf 54 433.60 Td (display.) Tj ET
+BT /F1 9.5 Tf 54 417.78 Td (7. Autonomous navigation | 4:45-5:45 | Explain perception, localization, planning, control. |) Tj ET
+BT /F1 9.5 Tf 54 404.95 Td (Navigation stack pipeline.) Tj ET
+BT /F1 9.5 Tf 54 389.13 Td (8. Real-world applications | 5:45-6:45 | Compare missions and design priorities. | Application matrix:) Tj ET
+BT /F1 9.5 Tf 54 376.30 Td (environment, infrastructure, disaster, defense.) Tj ET
+BT /F1 9.5 Tf 54 360.48 Td (9. Checkpoint | 6:45-7:15 | Ask altitude oscillation question. | Altitude line graph with overshoot.) Tj ET
+BT /F1 9.5 Tf 54 344.65 Td (10. Recap | 7:15-7:45 | Reinforce takeaways and bridge to lab. | Drone architecture plus feedback) Tj ET
+BT /F1 9.5 Tf 54 331.83 Td (loop.) Tj ET
+BT /F2 14 Tf 54 295.50 Td (Reusable Scene Notes) Tj ET
+BT /F1 10.5 Tf 54 248.10 Td (\267 Keep flight dynamics conceptual in this MVP.) Tj ET
+BT /F1 10.5 Tf 54 229.93 Td (\267 Avoid operational guidance for harmful drone use.) Tj ET
+BT /F1 10.5 Tf 54 211.75 Td (\267 Defense examples should remain analytical and ethical, not tactical.) Tj ET
+BT /F1 10.5 Tf 54 193.58 Td (\267 Use the checkpoint to prepare learners for the simulation lab.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000260 00000 n 
+0000000328 00000 n 
+0000002948 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+3094
+%%EOF

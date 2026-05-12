@@ -1,0 +1,160 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R 11 0 R 13 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 1978 >>
+stream
+BT /F1 9 Tf 54 738.00 Td (Simulation Lab 01) Tj ET
+BT /F2 18 Tf 54 714.00 Td (Simulation Lab 01) Tj ET
+BT /F1 10.5 Tf 54 657.20 Td (Lab title: Mobile Robot and Drone Control Foundations) Tj ET
+BT /F1 10.5 Tf 54 618.53 Td (Connected modules:) Tj ET
+BT /F1 10.5 Tf 54 579.85 Td (\267 Module 1: Introduction to Sustainability Robotics and Intelligent Systems) Tj ET
+BT /F1 10.5 Tf 54 561.68 Td (\267 Module 2: Introduction to Drone Systems, Aerial Robotics and Control Design Fundamentals) Tj ET
+BT /F1 10.5 Tf 54 523.00 Td (Estimated learner time: 2-3 hours) Tj ET
+BT /F2 14 Tf 54 484.33 Td (Lab Purpose) Tj ET
+BT /F1 10.5 Tf 54 436.93 Td (This lab helps learners connect robotic subsystems, feedback control, motion behavior, and) Tj ET
+BT /F1 10.5 Tf 54 422.75 Td (drone control concepts using simulation.) Tj ET
+BT /F1 10.5 Tf 54 384.08 Td (The lab can be completed with a free or low-cost simulation environment. Recommended options) Tj ET
+BT /F1 10.5 Tf 54 369.90 Td (include Webots, CoppeliaSim Edu, Gazebo, MATLAB/Simulink if institutionally available, or a) Tj ET
+BT /F1 10.5 Tf 54 355.73 Td (simple browser-based control simulator created later for the course.) Tj ET
+BT /F2 14 Tf 54 317.05 Td (Learning Outcomes) Tj ET
+BT /F1 10.5 Tf 54 269.65 Td (By the end of this lab, learners should be able to:) Tj ET
+BT /F1 10.5 Tf 54 230.98 Td (1. Identify sensors, actuators, controller, and feedback in a simulated robot.) Tj ET
+BT /F1 10.5 Tf 54 212.80 Td (2. Observe how command changes affect robot motion.) Tj ET
+BT /F1 10.5 Tf 54 194.63 Td (3. Compare open-loop and closed-loop behavior.) Tj ET
+BT /F1 10.5 Tf 54 176.45 Td (4. Describe overshoot, oscillation, settling, and error.) Tj ET
+BT /F1 10.5 Tf 54 158.28 Td (5. Connect drone altitude control to general feedback control ideas.) Tj ET
+BT /F1 10.5 Tf 54 140.10 Td (6. Reflect on how simulation reduces cost and risk before real-world deployment.) Tj ET
+BT /F2 14 Tf 54 101.43 Td (Required Simulation Scenario) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 2012 >>
+stream
+BT /F1 10.5 Tf 54 738.00 Td (Learners complete two short simulation tasks:) Tj ET
+BT /F1 10.5 Tf 54 699.33 Td (1. Ground robot target approach) Tj ET
+BT /F1 10.5 Tf 54 681.15 Td (2. Drone altitude hold concept) Tj ET
+BT /F1 10.5 Tf 54 642.48 Td (If a drone simulator is not available, the altitude hold task may be completed using a) Tj ET
+BT /F1 10.5 Tf 54 628.30 Td (one-dimensional vertical motion model or an instructor-provided graphing activity.) Tj ET
+BT /F2 14 Tf 54 589.63 Td (Part A: Ground Robot Target Approach) Tj ET
+BT /F2 12 Tf 54 542.23 Td (Scenario) Tj ET
+BT /F1 10.5 Tf 54 497.53 Td (A mobile robot must move from a starting point to a target position. The learner compares) Tj ET
+BT /F1 10.5 Tf 54 483.35 Td (behavior with and without feedback correction.) Tj ET
+BT /F2 12 Tf 54 444.68 Td (Steps) Tj ET
+BT /F1 10.5 Tf 54 399.98 Td (1. Open the selected simulator.) Tj ET
+BT /F1 10.5 Tf 54 381.80 Td (2. Load or create a simple mobile robot scene.) Tj ET
+BT /F1 10.5 Tf 54 363.63 Td (3. Set a target position one to three meters away from the start.) Tj ET
+BT /F1 10.5 Tf 54 345.45 Td (4. Run an open-loop attempt where the robot drives forward for a fixed time.) Tj ET
+BT /F1 10.5 Tf 54 327.28 Td (5. Record whether the robot reaches, undershoots, overshoots, or drifts away from the) Tj ET
+BT /F1 10.5 Tf 54 313.10 Td (target.) Tj ET
+BT /F1 10.5 Tf 54 294.93 Td (6. Run a feedback-based attempt where sensor or position feedback is used to reduce target) Tj ET
+BT /F1 10.5 Tf 54 280.75 Td (error.) Tj ET
+BT /F1 10.5 Tf 54 262.58 Td (7. Record the final error and describe the motion behavior.) Tj ET
+BT /F2 12 Tf 54 223.90 Td (Evidence To Submit) Tj ET
+BT /F1 10.5 Tf 54 179.20 Td (\267 Screenshot of the simulation setup.) Tj ET
+BT /F1 10.5 Tf 54 161.03 Td (\267 Screenshot or note showing the final robot position.) Tj ET
+BT /F1 10.5 Tf 54 142.85 Td (\267 Short table comparing open-loop and closed-loop behavior.) Tj ET
+BT /F2 14 Tf 54 104.18 Td (Part B: Drone Altitude Hold Concept) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 1974 >>
+stream
+BT /F2 12 Tf 54 738.00 Td (Scenario) Tj ET
+BT /F1 10.5 Tf 54 693.30 Td (A drone or vertical-motion model must reach and hold a target altitude.) Tj ET
+BT /F2 12 Tf 54 654.63 Td (Steps) Tj ET
+BT /F1 10.5 Tf 54 609.92 Td (1. Set a target altitude.) Tj ET
+BT /F1 10.5 Tf 54 591.75 Td (2. Run a low-response control setting.) Tj ET
+BT /F1 10.5 Tf 54 573.58 Td (3. Observe whether the system responds slowly or fails to reach target altitude.) Tj ET
+BT /F1 10.5 Tf 54 555.40 Td (4. Run a high-response control setting.) Tj ET
+BT /F1 10.5 Tf 54 537.23 Td (5. Observe whether the system overshoots or oscillates.) Tj ET
+BT /F1 10.5 Tf 54 519.05 Td (6. Run a balanced response setting if available.) Tj ET
+BT /F1 10.5 Tf 54 500.88 Td (7. Describe which behavior seems most stable and why.) Tj ET
+BT /F2 12 Tf 54 462.20 Td (Evidence To Submit) Tj ET
+BT /F1 10.5 Tf 54 417.50 Td (\267 Screenshot of altitude behavior or a hand-drawn response graph.) Tj ET
+BT /F1 10.5 Tf 54 399.33 Td (\267 Notes describing overshoot, oscillation, settling, and steady-state error.) Tj ET
+BT /F1 10.5 Tf 54 381.15 Td (\267 One paragraph explaining how feedback control is being used.) Tj ET
+BT /F2 14 Tf 54 342.48 Td (Lab Worksheet) Tj ET
+BT /F1 9.5 Tf 54 295.08 Td (Prompt | Learner Response) Tj ET
+BT /F1 9.5 Tf 54 279.25 Td (Which sensors or measurements did the robot use?) Tj ET
+BT /F1 9.5 Tf 54 263.43 Td (Which actuators produced movement?) Tj ET
+BT /F1 9.5 Tf 54 247.60 Td (What command was given?) Tj ET
+BT /F1 9.5 Tf 54 231.78 Td (What was the actual response?) Tj ET
+BT /F1 9.5 Tf 54 215.95 Td (What error did you observe?) Tj ET
+BT /F1 9.5 Tf 54 200.13 Td (How did feedback change the behavior?) Tj ET
+BT /F1 9.5 Tf 54 184.30 Td (Did the system overshoot or oscillate?) Tj ET
+BT /F1 9.5 Tf 54 168.48 Td (What setting or design choice improved stability?) Tj ET
+BT /F2 14 Tf 54 132.15 Td (Reflection) Tj ET
+BT /F1 10.5 Tf 54 84.75 Td (Write 250-400 words responding to the following:) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 1972 >>
+stream
+BT /F1 10.5 Tf 54 717.50 Td (How did simulation help you understand robotic and drone control before working with) Tj ET
+BT /F1 10.5 Tf 54 703.33 Td (physical hardware? In your answer, refer to sensors, actuators, feedback, stability, and one) Tj ET
+BT /F1 10.5 Tf 54 689.15 Td (sustainability or safety benefit of simulation.) Tj ET
+BT /F2 14 Tf 54 650.48 Td (Assessment Rubric) Tj ET
+BT /F1 9.5 Tf 54 603.08 Td (Criteria | Excellent | Satisfactory | Needs Improvement) Tj ET
+BT /F1 9.5 Tf 54 587.25 Td (Subsystem identification | Correctly identifies sensors, actuators, controller, and feedback |) Tj ET
+BT /F1 9.5 Tf 54 574.43 Td (Identifies most subsystems | Missing or confused subsystem descriptions) Tj ET
+BT /F1 9.5 Tf 54 558.60 Td (Control behavior analysis | Clearly explains command, response, error, overshoot, oscillation, and) Tj ET
+BT /F1 9.5 Tf 54 545.77 Td (stability | Explains basic behavior with minor gaps | Little evidence of control reasoning) Tj ET
+BT /F1 9.5 Tf 54 529.95 Td (Evidence submission | Provides clear screenshots or graphs and comparison table | Provides partial) Tj ET
+BT /F1 9.5 Tf 54 517.12 Td (evidence | Evidence missing or unclear) Tj ET
+BT /F1 9.5 Tf 54 501.30 Td (Reflection quality | Connects simulation to safety, sustainability, and learning | Gives a basic) Tj ET
+BT /F1 9.5 Tf 54 488.47 Td (reflection | Reflection is too brief or unrelated) Tj ET
+BT /F2 14 Tf 54 452.15 Td (Instructor Notes) Tj ET
+BT /F1 10.5 Tf 54 404.75 Td (\267 This MVP lab is intentionally simulator-neutral.) Tj ET
+BT /F1 10.5 Tf 54 386.57 Td (\267 If the institution selects a standard platform, replace the generic steps with exact) Tj ET
+BT /F1 10.5 Tf 54 372.40 Td (installation and scene instructions.) Tj ET
+BT /F1 10.5 Tf 54 354.22 Td (\267 A later course version can include downloadable starter simulation files.) Tj ET
+BT /F1 10.5 Tf 54 336.05 Td (\267 Keep the first lab focused on observation and reasoning, not advanced coding.) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 12 0 R >>
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000135 00000 n 
+0000000205 00000 n 
+0000000280 00000 n 
+0000000348 00000 n 
+0000002378 00000 n 
+0000002524 00000 n 
+0000004588 00000 n 
+0000004734 00000 n 
+0000006761 00000 n 
+0000006909 00000 n 
+0000008934 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R >>
+startxref
+9082
+%%EOF

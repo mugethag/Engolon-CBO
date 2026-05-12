@@ -1,0 +1,171 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "Engolon Robotics home" [ref=e3] [cursor=pointer]:
+      - /url: "#top"
+      - generic [ref=e4]: Engolon Robotics
+    - navigation "Main navigation" [ref=e5]:
+      - link "Program" [ref=e6] [cursor=pointer]:
+        - /url: "#program"
+      - link "Pathway" [ref=e7] [cursor=pointer]:
+        - /url: "#pathway"
+      - link "Apply" [ref=e8] [cursor=pointer]:
+        - /url: "#apply"
+      - link "Student portal" [ref=e9] [cursor=pointer]:
+        - /url: /portal
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - paragraph [ref=e13]: Cohort 1 applications
+        - heading "Robotics & Automation Foundations" [level=1] [ref=e14]
+        - paragraph [ref=e15]: A focused four-week pilot for young adults ready to learn robotics, simulation, automation logic, sensors, and local problem-solving.
+        - generic [ref=e16]:
+          - link "Apply for Cohort 1" [ref=e17] [cursor=pointer]:
+            - /url: "#apply"
+          - link "Preview portal" [ref=e18] [cursor=pointer]:
+            - /url: /portal
+      - generic "Cohort summary" [ref=e19]:
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - term [ref=e22]: Cohort size
+            - definition [ref=e23]: 40-60 learners
+          - generic [ref=e24]:
+            - term [ref=e25]: Duration
+            - definition [ref=e26]: 4 weeks
+          - generic [ref=e27]:
+            - term [ref=e28]: Format
+            - definition [ref=e29]: Live session, lab, self-paced work
+          - generic [ref=e30]:
+            - term [ref=e31]: Outcome
+            - definition [ref=e32]: Simulation project + Level 2 readiness
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - paragraph [ref=e35]: What learners will prove
+        - heading "Completion, delivery, outcomes, and sponsor confidence." [level=2] [ref=e36]
+      - generic [ref=e37]:
+        - article [ref=e38]:
+          - strong [ref=e39]: 85%+
+          - text: Week 1 attendance target
+        - article [ref=e40]:
+          - strong [ref=e41]: 65%+
+          - text: Final project completion target
+        - article [ref=e42]:
+          - strong [ref=e43]: 35%+
+          - text: Level 2 qualification target
+        - article [ref=e44]:
+          - strong [ref=e45]: 5-8
+          - text: mentor candidates identified
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - paragraph [ref=e48]: Four-week plan
+        - heading "Built around visible learner outputs." [level=2] [ref=e49]
+        - paragraph [ref=e50]: Every week ends with a small deliverable. The final week asks teams to explain a robot concept tied to a real local problem.
+      - generic [ref=e51]:
+        - article [ref=e52]:
+          - text: Week 1
+          - heading "Robotics and automation in the real world" [level=3] [ref=e53]
+          - paragraph [ref=e54]: Complete a first robot movement task.
+        - article [ref=e55]:
+          - text: Week 2
+          - heading "Programming robot behavior" [level=3] [ref=e56]
+          - paragraph [ref=e57]: Program a robot to complete a defined path.
+        - article [ref=e58]:
+          - text: Week 3
+          - heading "Sensors and decisions" [level=3] [ref=e59]
+          - paragraph [ref=e60]: Create behavior that reacts to the environment.
+        - article [ref=e61]:
+          - text: Week 4
+          - heading "Applied project" [level=3] [ref=e62]
+          - paragraph [ref=e63]: Submit and present a local problem-solving robot concept.
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - paragraph [ref=e66]: Scaling pathway
+        - heading "The first cohort becomes a talent pipeline." [level=2] [ref=e67]
+      - generic [ref=e68]:
+        - article [ref=e69]:
+          - text: Level 1
+          - heading "Robotics & Automation Foundations" [level=3] [ref=e70]
+          - paragraph [ref=e71]: Beginners learn robotics, simulation, logic, and sensors.
+        - article [ref=e72]:
+          - text: Level 2
+          - heading "Robotics Programming" [level=3] [ref=e73]
+          - paragraph [ref=e74]: Motivated completers deepen coding and control logic.
+        - article [ref=e75]:
+          - text: Level 3
+          - heading "Applied Robotics Projects" [level=3] [ref=e76]
+          - paragraph [ref=e77]: Top learners work on agriculture, logistics, health, and IoT.
+        - article [ref=e78]:
+          - text: Track
+          - heading "Instructor Track" [level=3] [ref=e79]
+          - paragraph [ref=e80]: Strong graduates train as facilitators and peer mentors.
+    - generic [ref=e81]:
+      - generic [ref=e82]:
+        - paragraph [ref=e83]: Application form
+        - heading "Screen for readiness, access, and commitment." [level=2] [ref=e84]
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - text: Full name
+          - textbox "Full name" [ref=e87]
+        - generic [ref=e88]:
+          - text: Age
+          - spinbutton "Age" [ref=e89]
+        - generic [ref=e90]:
+          - text: Town / county
+          - textbox "Town / county" [ref=e91]
+        - generic [ref=e92]:
+          - text: Education level
+          - combobox "Education level" [ref=e93]:
+            - option "Select one" [selected]
+            - option "Secondary school"
+            - option "TVET / college"
+            - option "University"
+            - option "School leaver"
+            - option "Early-career learner"
+        - generic [ref=e94]:
+          - text: Phone
+          - textbox "Phone" [ref=e95]
+        - generic [ref=e96]:
+          - text: Email
+          - textbox "Email" [ref=e97]
+        - generic [ref=e98]:
+          - text: Device access
+          - combobox "Device access" [ref=e99]:
+            - option "Select one" [selected]
+            - option "Laptop or desktop"
+            - option "Tablet"
+            - option "Smartphone only"
+            - option "No reliable device"
+        - generic [ref=e100]:
+          - text: Internet access
+          - combobox "Internet access" [ref=e101]:
+            - option "Select one" [selected]
+            - option "Reliable daily access"
+            - option "Some weekly access"
+            - option "Limited access"
+        - generic [ref=e102]:
+          - text: Prior coding experience
+          - combobox "Prior coding experience" [ref=e103]:
+            - option "Select one" [selected]
+            - option "None"
+            - option "Beginner"
+            - option "Some Python or JavaScript"
+            - option "Comfortable with coding"
+        - generic [ref=e104]:
+          - text: Payment / sponsorship status
+          - combobox "Payment / sponsorship status" [ref=e105]:
+            - option "Select one" [selected]
+            - option "Can pay individual learner fee"
+            - option "Sponsored by organization"
+            - option "Requesting scholarship"
+            - option "Can pay small commitment fee only"
+        - generic [ref=e106]:
+          - text: Why do you want to join this course?
+          - textbox "Why do you want to join this course?" [ref=e107]
+        - generic [ref=e108]:
+          - checkbox "I can attend weekly live sessions and submit weekly tasks." [ref=e109]
+          - generic [ref=e110]: I can attend weekly live sessions and submit weekly tasks.
+        - button "Prepare application" [ref=e111] [cursor=pointer]
+        - status
+  - contentinfo [ref=e112]:
+    - generic [ref=e113]: Engolon Robotics & Automation Foundations
+    - link "Admin tracker" [ref=e114] [cursor=pointer]:
+      - /url: /admin

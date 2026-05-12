@@ -1,0 +1,86 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 2283 >>
+stream
+BT /F1 9 Tf 54 738.00 Td (Learner Handout: Module 1) Tj ET
+BT /F2 18 Tf 54 714.00 Td (Learner Handout: Module 1) Tj ET
+BT /F1 10.5 Tf 54 657.20 Td (Module: Introduction to Sustainability Robotics and Intelligent Systems) Tj ET
+BT /F2 14 Tf 54 618.53 Td (Big Idea) Tj ET
+BT /F1 10.5 Tf 54 571.13 Td (A robot is a system that senses, decides, acts, and uses feedback to improve its behavior.) Tj ET
+BT /F1 10.5 Tf 54 556.95 Td (Sustainability robotics applies these capabilities to environmental, infrastructure,) Tj ET
+BT /F1 10.5 Tf 54 542.78 Td (community, and resource-aware challenges.) Tj ET
+BT /F2 14 Tf 54 504.10 Td (Core Terms) Tj ET
+BT /F1 9.5 Tf 54 456.70 Td (Term | Meaning) Tj ET
+BT /F1 9.5 Tf 54 440.88 Td (Sensor | A device that collects information from the robot or its environment) Tj ET
+BT /F1 9.5 Tf 54 425.05 Td (Actuator | A component that creates motion or physical action) Tj ET
+BT /F1 9.5 Tf 54 409.23 Td (Controller | The decision-making component that sends commands to the system) Tj ET
+BT /F1 9.5 Tf 54 393.40 Td (Feedback | Information about actual performance used to adjust future action) Tj ET
+BT /F1 9.5 Tf 54 377.58 Td (Kinematics | Study of motion, position, velocity, and path) Tj ET
+BT /F1 9.5 Tf 54 361.75 Td (Dynamics | Study of forces, torque, mass, acceleration, and energy) Tj ET
+BT /F1 9.5 Tf 54 345.93 Td (Open-loop control | Control without checking the result) Tj ET
+BT /F1 9.5 Tf 54 330.10 Td (Closed-loop control | Control that uses feedback to correct behavior) Tj ET
+BT /F1 9.5 Tf 54 314.28 Td (Sustainability robotics | Robotics designed for environmental, social, and resource-aware outcomes) Tj ET
+BT /F1 9.5 Tf 54 298.45 Td (Bio-inspired robotics | Robotic design influenced by living systems) Tj ET
+BT /F2 14 Tf 54 262.13 Td (Robotics Subsystem Loop) Tj ET
+BT /F1 10.5 Tf 54 214.73 Td (1. Sense: collect information.) Tj ET
+BT /F1 10.5 Tf 54 196.55 Td (2. Decide: process information and choose an action.) Tj ET
+BT /F1 10.5 Tf 54 178.38 Td (3. Act: move or interact with the environment.) Tj ET
+BT /F1 10.5 Tf 54 160.20 Td (4. Feedback: compare actual behavior with desired behavior.) Tj ET
+BT /F1 10.5 Tf 54 142.03 Td (5. Correct: adjust future commands.) Tj ET
+BT /F2 14 Tf 54 103.35 Td (Sustainability Design Checklist) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 973 >>
+stream
+BT /F1 10.5 Tf 54 738.00 Td (\267 What problem does the robot solve?) Tj ET
+BT /F1 10.5 Tf 54 719.83 Td (\267 Who benefits from the system?) Tj ET
+BT /F1 10.5 Tf 54 701.65 Td (\267 What environmental or social risks might it create?) Tj ET
+BT /F1 10.5 Tf 54 683.48 Td (\267 How much energy does it require?) Tj ET
+BT /F1 10.5 Tf 54 665.30 Td (\267 Can it be maintained or repaired locally?) Tj ET
+BT /F1 10.5 Tf 54 647.13 Td (\267 What data does it collect, and how should that data be protected?) Tj ET
+BT /F1 10.5 Tf 54 628.95 Td (\267 What happens at the end of the robot's useful life?) Tj ET
+BT /F2 14 Tf 54 590.28 Td (Reflection Prompt) Tj ET
+BT /F1 10.5 Tf 54 542.88 Td (Choose one environmental or infrastructure challenge in your community. Describe a robotic) Tj ET
+BT /F1 10.5 Tf 54 528.70 Td (system that could help address it. Identify the sensors, actuators, controller, and feedback) Tj ET
+BT /F1 10.5 Tf 54 514.53 Td (mechanism the system might need.) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000266 00000 n 
+0000000334 00000 n 
+0000002669 00000 n 
+0000002815 00000 n 
+0000003839 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+3985
+%%EOF

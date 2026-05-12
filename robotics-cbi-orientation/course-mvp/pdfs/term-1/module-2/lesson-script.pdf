@@ -1,0 +1,145 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R 11 0 R 13 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 2089 >>
+stream
+BT /F1 9 Tf 54 738.00 Td (Module 2 Lesson Script) Tj ET
+BT /F2 18 Tf 54 714.00 Td (Module 2 Lesson Script) Tj ET
+BT /F1 10.5 Tf 54 657.20 Td (Module title: Introduction to Drone Systems, Aerial Robotics and Control Design Fundamentals) Tj ET
+BT /F1 10.5 Tf 54 618.53 Td (Estimated video duration: 7-8 minutes) Tj ET
+BT /F2 14 Tf 54 579.85 Td (Scene 1: Title) Tj ET
+BT /F1 10.5 Tf 54 532.45 Td (Welcome to Module 2: Introduction to Drone Systems, Aerial Robotics and Control Design) Tj ET
+BT /F1 10.5 Tf 54 518.28 Td (Fundamentals.) Tj ET
+BT /F1 10.5 Tf 54 479.60 Td (In this lesson, we apply robotics foundations to aerial systems. We will look at drone) Tj ET
+BT /F1 10.5 Tf 54 465.43 Td (components, flight control, autonomous navigation, real-world applications, and the basic) Tj ET
+BT /F1 10.5 Tf 54 451.25 Td (control ideas that make stable flight possible.) Tj ET
+BT /F2 14 Tf 54 412.58 Td (Scene 2: Learning Outcomes) Tj ET
+BT /F1 10.5 Tf 54 365.18 Td (By the end of this module, you should be able to identify major drone components and explain) Tj ET
+BT /F1 10.5 Tf 54 351.00 Td (their functions.) Tj ET
+BT /F1 10.5 Tf 54 312.33 Td (You should also be able to describe flight control systems, explain introductory autonomous) Tj ET
+BT /F1 10.5 Tf 54 298.15 Td (navigation, model a simple dynamic system conceptually, and compare civilian, environmental,) Tj ET
+BT /F1 10.5 Tf 54 283.98 Td (infrastructure, and defense uses of drones.) Tj ET
+BT /F2 14 Tf 54 245.30 Td (Scene 3: Drone System Architecture) Tj ET
+BT /F1 10.5 Tf 54 197.90 Td (A drone is an aerial robotic system. It has a frame, propulsion system, power source,) Tj ET
+BT /F1 10.5 Tf 54 183.73 Td (sensors, onboard controller, communication link, and payload.) Tj ET
+BT /F1 10.5 Tf 54 145.05 Td (The propulsion system produces lift and movement. The power system supplies energy. Sensors) Tj ET
+BT /F1 10.5 Tf 54 130.88 Td (estimate position, orientation, altitude, and environmental conditions. The flight) Tj ET
+BT /F1 10.5 Tf 54 116.70 Td (controller processes sensor data and sends commands to the motors.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 2248 >>
+stream
+BT /F1 10.5 Tf 54 738.00 Td (The payload depends on the mission. It may be a camera, thermal sensor, mapping sensor,) Tj ET
+BT /F1 10.5 Tf 54 723.83 Td (environmental sensor, delivery package, or inspection tool.) Tj ET
+BT /F2 14 Tf 54 685.15 Td (Scene 4: Flight Control Fundamentals) Tj ET
+BT /F1 10.5 Tf 54 637.75 Td (Stable flight requires constant adjustment.) Tj ET
+BT /F1 10.5 Tf 54 599.08 Td (A drone must control roll, pitch, yaw, and altitude. Roll tilts the drone left or right.) Tj ET
+BT /F1 10.5 Tf 54 584.90 Td (Pitch tilts it forward or backward. Yaw rotates it around its vertical axis. Altitude) Tj ET
+BT /F1 10.5 Tf 54 570.73 Td (controls height.) Tj ET
+BT /F1 10.5 Tf 54 532.05 Td (The flight controller compares the desired state with the actual state, then adjusts motor) Tj ET
+BT /F1 10.5 Tf 54 517.88 Td (speeds to reduce the error.) Tj ET
+BT /F1 10.5 Tf 54 479.20 Td (This is a practical example of feedback control.) Tj ET
+BT /F2 14 Tf 54 440.53 Td (Scene 5: Control Design Concepts) Tj ET
+BT /F1 10.5 Tf 54 393.13 Td (Control design begins with a model of system behavior.) Tj ET
+BT /F1 10.5 Tf 54 354.45 Td (A simple model might describe how a drone's altitude changes when motor thrust changes. A) Tj ET
+BT /F1 10.5 Tf 54 340.28 Td (more advanced model may use differential equations and state variables to describe motion) Tj ET
+BT /F1 10.5 Tf 54 326.10 Td (over time.) Tj ET
+BT /F1 10.5 Tf 54 287.43 Td (In this MVP course, the goal is not to master advanced mathematics immediately. The goal is) Tj ET
+BT /F1 10.5 Tf 54 273.25 Td (to understand the relationship between command, response, stability, and error correction.) Tj ET
+BT /F2 14 Tf 54 234.58 Td (Scene 6: PID and State-Space Ideas) Tj ET
+BT /F1 10.5 Tf 54 187.18 Td (A PID controller uses proportional, integral, and derivative terms.) Tj ET
+BT /F1 10.5 Tf 54 148.50 Td (The proportional term responds to present error. The integral term responds to accumulated) Tj ET
+BT /F1 10.5 Tf 54 134.33 Td (error. The derivative term responds to the rate of change.) Tj ET
+BT /F1 10.5 Tf 54 95.65 Td (State-space control describes a system using state variables, such as position, velocity,) Tj ET
+BT /F1 10.5 Tf 54 81.48 Td (orientation, and angular velocity.) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 2173 >>
+stream
+BT /F1 10.5 Tf 54 717.50 Td (Both approaches help engineers reason about how a system responds to commands and) Tj ET
+BT /F1 10.5 Tf 54 703.33 Td (disturbances.) Tj ET
+BT /F2 14 Tf 54 664.65 Td (Scene 7: Autonomous Navigation) Tj ET
+BT /F1 10.5 Tf 54 617.25 Td (Autonomous navigation allows a drone to move toward a goal with limited or no direct human) Tj ET
+BT /F1 10.5 Tf 54 603.08 Td (control.) Tj ET
+BT /F1 10.5 Tf 54 564.40 Td (Navigation may involve GPS, inertial measurement, cameras, lidar, barometers, magnetometers,) Tj ET
+BT /F1 10.5 Tf 54 550.23 Td (or environmental sensors.) Tj ET
+BT /F1 10.5 Tf 54 511.55 Td (A basic autonomy stack includes perception, localization, planning, control, and mission) Tj ET
+BT /F1 10.5 Tf 54 497.38 Td (monitoring.) Tj ET
+BT /F1 10.5 Tf 54 458.70 Td (The drone must know where it is, understand relevant parts of its environment, choose a safe) Tj ET
+BT /F1 10.5 Tf 54 444.53 Td (path, and adjust its motion as conditions change.) Tj ET
+BT /F2 14 Tf 54 405.85 Td (Scene 8: Real-World Applications) Tj ET
+BT /F1 10.5 Tf 54 358.45 Td (Drones are used in environmental monitoring, agriculture, disaster response, infrastructure) Tj ET
+BT /F1 10.5 Tf 54 344.28 Td (inspection, mapping, logistics, search and rescue, journalism, public safety, and defense.) Tj ET
+BT /F1 10.5 Tf 54 305.60 Td (The same core architecture can support very different missions.) Tj ET
+BT /F1 10.5 Tf 54 266.93 Td (For example, a drone used for biodiversity monitoring may prioritize quiet operation, camera) Tj ET
+BT /F1 10.5 Tf 54 252.75 Td (quality, GPS accuracy, battery endurance, and careful data handling. A drone used for bridge) Tj ET
+BT /F1 10.5 Tf 54 238.58 Td (inspection may prioritize stability near structures, obstacle avoidance, high-resolution) Tj ET
+BT /F1 10.5 Tf 54 224.40 Td (imaging, and safe return procedures.) Tj ET
+BT /F2 14 Tf 54 185.73 Td (Scene 9: Checkpoint) Tj ET
+BT /F1 10.5 Tf 54 138.33 Td (Pause and answer this question:) Tj ET
+BT /F1 10.5 Tf 54 99.65 Td (If a drone oscillates up and down while trying to hold altitude, what might this suggest) Tj ET
+BT /F1 10.5 Tf 54 85.48 Td (about the controller response?) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 827 >>
+stream
+BT /F1 10.5 Tf 54 717.50 Td (Think about error correction, overreaction, damping, and stability.) Tj ET
+BT /F2 14 Tf 54 678.83 Td (Scene 10: Recap) Tj ET
+BT /F1 10.5 Tf 54 631.43 Td (In this module, you learned that drones are aerial robotic systems built from propulsion,) Tj ET
+BT /F1 10.5 Tf 54 617.25 Td (power, sensing, control, communication, and payload subsystems.) Tj ET
+BT /F1 10.5 Tf 54 578.58 Td (You were introduced to flight control, roll, pitch, yaw, altitude, PID control, state-space) Tj ET
+BT /F1 10.5 Tf 54 564.40 Td (thinking, autonomous navigation, and real-world drone applications.) Tj ET
+BT /F1 10.5 Tf 54 525.73 Td (In the simulation lab, you will connect these ideas by observing how command, feedback, and) Tj ET
+BT /F1 10.5 Tf 54 511.55 Td (control settings affect robotic and drone behavior.) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 12 0 R >>
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000135 00000 n 
+0000000205 00000 n 
+0000000280 00000 n 
+0000000348 00000 n 
+0000002489 00000 n 
+0000002635 00000 n 
+0000004935 00000 n 
+0000005081 00000 n 
+0000007307 00000 n 
+0000007455 00000 n 
+0000008334 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R >>
+startxref
+8482
+%%EOF

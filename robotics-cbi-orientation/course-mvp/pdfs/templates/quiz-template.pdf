@@ -1,0 +1,54 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 705 >>
+stream
+BT /F1 9 Tf 54 738.00 Td (Quiz Template) Tj ET
+BT /F2 18 Tf 54 714.00 Td (Quiz Template) Tj ET
+BT /F1 10.5 Tf 54 657.20 Td (Module:) Tj ET
+BT /F1 10.5 Tf 54 618.53 Td (Passing score:) Tj ET
+BT /F2 14 Tf 54 579.85 Td (Questions) Tj ET
+BT /F1 10.5 Tf 54 532.45 Td (1. Question text) Tj ET
+BT /F1 10.5 Tf 54 514.28 Td (\267 A.) Tj ET
+BT /F1 10.5 Tf 54 496.10 Td (\267 B.) Tj ET
+BT /F1 10.5 Tf 54 477.93 Td (\267 C.) Tj ET
+BT /F1 10.5 Tf 54 459.75 Td (\267 D.) Tj ET
+BT /F1 10.5 Tf 54 421.08 Td (Correct answer:) Tj ET
+BT /F1 10.5 Tf 54 382.40 Td (Feedback:) Tj ET
+BT /F2 14 Tf 54 343.73 Td (Answer Key) Tj ET
+BT /F1 9.5 Tf 54 296.33 Td (Question | Answer | Outcome) Tj ET
+BT /F1 9.5 Tf 54 280.50 Td (1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000260 00000 n 
+0000000328 00000 n 
+0000001084 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+1230
+%%EOF

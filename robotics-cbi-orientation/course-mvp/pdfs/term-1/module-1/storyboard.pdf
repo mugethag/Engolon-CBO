@@ -1,0 +1,67 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 2758 >>
+stream
+BT /F1 9 Tf 54 738.00 Td (Module 1 Storyboard) Tj ET
+BT /F2 18 Tf 54 714.00 Td (Module 1 Storyboard) Tj ET
+BT /F1 10.5 Tf 54 657.20 Td (Module: Introduction to Sustainability Robotics and Intelligent Systems) Tj ET
+BT /F1 10.5 Tf 54 618.53 Td (Target video duration: 7-8 minutes) Tj ET
+BT /F1 9.5 Tf 54 579.85 Td (Scene | Time | Purpose | Visual Direction) Tj ET
+BT /F1 9.5 Tf 54 564.03 Td (1. Title | 0:00-0:30 | Introduce module and relevance. | Title frame with robot subsystem diagram:) Tj ET
+BT /F1 9.5 Tf 54 551.20 Td (sense, decide, act, feedback.) Tj ET
+BT /F1 9.5 Tf 54 535.38 Td (2. Learning outcomes | 0:30-1:05 | State measurable outcomes. | Five outcome tiles.) Tj ET
+BT /F1 9.5 Tf 54 519.55 Td (3. Robotic system basics | 1:05-1:55 | Explain sensors, actuators, controller, feedback. | Four-part) Tj ET
+BT /F1 9.5 Tf 54 506.72 Td (loop diagram with animated arrows.) Tj ET
+BT /F1 9.5 Tf 54 490.90 Td (4. Kinematics and dynamics | 1:55-2:50 | Distinguish motion description from force explanation. |) Tj ET
+BT /F1 9.5 Tf 54 478.07 Td (Split-screen: path trace versus force/torque labels.) Tj ET
+BT /F1 9.5 Tf 54 462.25 Td (5. Control and simulation | 2:50-3:45 | Explain open-loop and closed-loop control. | Before/after) Tj ET
+BT /F1 9.5 Tf 54 449.43 Td (control response line.) Tj ET
+BT /F1 9.5 Tf 54 433.60 Td (6. Sustainability robotics | 3:45-4:50 | Connect robotics to environmental and social applications. |) Tj ET
+BT /F1 9.5 Tf 54 420.78 Td (Environmental monitoring, infrastructure, agriculture, disaster icons.) Tj ET
+BT /F1 9.5 Tf 54 404.95 Td (7. Bio-inspired systems | 4:50-5:40 | Introduce nature-inspired design. | Bird, insect swarm, fish,) Tj ET
+BT /F1 9.5 Tf 54 392.13 Td (walking gait abstraction.) Tj ET
+BT /F1 9.5 Tf 54 376.30 Td (8. Applied example | 5:40-6:45 | Apply concepts to water-channel inspection robot. | Scenario diagram) Tj ET
+BT /F1 9.5 Tf 54 363.48 Td (with terrain, water channel, robot, sensor zones.) Tj ET
+BT /F1 9.5 Tf 54 347.65 Td (9. Checkpoint | 6:45-7:15 | Ask diagnostic reasoning question. | Four subsystem cards.) Tj ET
+BT /F1 9.5 Tf 54 331.83 Td (10. Recap | 7:15-7:45 | Reinforce main takeaways. | Summary loop: sense, act, control, feedback,) Tj ET
+BT /F1 9.5 Tf 54 319.00 Td (sustainability.) Tj ET
+BT /F2 14 Tf 54 282.68 Td (Reusable Scene Notes) Tj ET
+BT /F1 10.5 Tf 54 235.28 Td (\267 Use the same title and outcomes scene style as the orientation video.) Tj ET
+BT /F1 10.5 Tf 54 217.10 Td (\267 Keep all diagrams simple enough to render in HTML/CSS.) Tj ET
+BT /F1 10.5 Tf 54 198.93 Td (\267 Avoid hardware-specific claims unless a later SME review confirms them.) Tj ET
+BT /F1 10.5 Tf 54 180.75 Td (\267 The checkpoint can become an LMS discussion question or embedded quiz prompt.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000260 00000 n 
+0000000328 00000 n 
+0000003138 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+3284
+%%EOF

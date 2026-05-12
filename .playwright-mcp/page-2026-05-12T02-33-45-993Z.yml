@@ -1,0 +1,23 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "Engolon Robotics home" [ref=e3] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e4]: Engolon Robotics
+    - navigation "Main navigation" [ref=e5]:
+      - link "Program" [ref=e6] [cursor=pointer]:
+        - /url: /#program
+      - link "Pathway" [ref=e7] [cursor=pointer]:
+        - /url: /#pathway
+      - link "Student portal" [ref=e8] [cursor=pointer]:
+        - /url: /portal
+  - main [ref=e9]:
+    - generic [ref=e10]:
+      - paragraph [ref=e11]: Application received
+      - heading "You're in the queue for Cohort 1." [level=1] [ref=e12]
+      - paragraph [ref=e13]: We've received your application. Our team will review it and contact you via the phone number or email you provided within 7 days.
+      - link "Preview the student portal" [ref=e14] [cursor=pointer]:
+        - /url: /portal
+  - contentinfo [ref=e15]:
+    - generic [ref=e16]: Engolon Robotics & Automation Foundations
+    - link "Back to home" [ref=e17] [cursor=pointer]:
+      - /url: /

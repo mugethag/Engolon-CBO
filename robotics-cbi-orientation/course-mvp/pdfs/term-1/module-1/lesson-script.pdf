@@ -1,0 +1,149 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R 11 0 R 13 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 1904 >>
+stream
+BT /F1 9 Tf 54 738.00 Td (Module 1 Lesson Script) Tj ET
+BT /F2 18 Tf 54 714.00 Td (Module 1 Lesson Script) Tj ET
+BT /F1 10.5 Tf 54 657.20 Td (Module title: Introduction to Sustainability Robotics and Intelligent Systems) Tj ET
+BT /F1 10.5 Tf 54 618.53 Td (Estimated video duration: 7-8 minutes) Tj ET
+BT /F2 14 Tf 54 579.85 Td (Scene 1: Title) Tj ET
+BT /F1 10.5 Tf 54 532.45 Td (Welcome to Module 1: Introduction to Sustainability Robotics and Intelligent Systems.) Tj ET
+BT /F1 10.5 Tf 54 493.78 Td (In this lesson, we begin with the basic building blocks of robotic systems, then connect) Tj ET
+BT /F1 10.5 Tf 54 479.60 Td (those building blocks to sustainability, environmental applications, and bio-inspired) Tj ET
+BT /F1 10.5 Tf 54 465.43 Td (design.) Tj ET
+BT /F1 10.5 Tf 54 426.75 Td (Robotics is not only about machines that move. It is about designing systems that sense,) Tj ET
+BT /F1 10.5 Tf 54 412.58 Td (decide, act, and adapt in ways that solve real problems.) Tj ET
+BT /F2 14 Tf 54 373.90 Td (Scene 2: Learning Outcomes) Tj ET
+BT /F1 10.5 Tf 54 326.50 Td (By the end of this module, you should be able to describe the main subsystems of a robot and) Tj ET
+BT /F1 10.5 Tf 54 312.33 Td (explain what each one does.) Tj ET
+BT /F1 10.5 Tf 54 273.65 Td (You should also be able to apply introductory ideas from kinematics and dynamics to robot) Tj ET
+BT /F1 10.5 Tf 54 259.48 Td (motion, identify basic control strategies in simulation, compare robotic systems across) Tj ET
+BT /F1 10.5 Tf 54 245.30 Td (different sectors, and explain how sustainability and bio-inspired thinking influence) Tj ET
+BT /F1 10.5 Tf 54 231.13 Td (robotics design.) Tj ET
+BT /F2 14 Tf 54 192.45 Td (Scene 3: What Makes a System Robotic?) Tj ET
+BT /F1 10.5 Tf 54 145.05 Td (A robotic system usually contains four core capabilities: sensing, actuation, control, and) Tj ET
+BT /F1 10.5 Tf 54 130.88 Td (feedback.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 2463 >>
+stream
+BT /F1 10.5 Tf 54 738.00 Td (Sensors collect information from the environment. Actuators create motion or physical) Tj ET
+BT /F1 10.5 Tf 54 723.83 Td (action. The controller processes information and chooses commands. Feedback allows the) Tj ET
+BT /F1 10.5 Tf 54 709.65 Td (system to compare what is happening with what should happen.) Tj ET
+BT /F1 10.5 Tf 54 670.98 Td (For example, a mobile robot navigating a greenhouse may use distance sensors to detect) Tj ET
+BT /F1 10.5 Tf 54 656.80 Td (obstacles, motors to move its wheels, a controller to choose a path, and feedback to correct) Tj ET
+BT /F1 10.5 Tf 54 642.63 Td (its direction.) Tj ET
+BT /F2 14 Tf 54 603.95 Td (Scene 4: Kinematics and Dynamics) Tj ET
+BT /F1 10.5 Tf 54 556.55 Td (Kinematics describes motion without focusing on the forces that cause it. It helps us answer) Tj ET
+BT /F1 10.5 Tf 54 542.38 Td (questions such as: Where is the robot? How fast is it moving? What path is it following?) Tj ET
+BT /F1 10.5 Tf 54 503.70 Td (Dynamics looks at forces, mass, acceleration, torque, and energy. It helps us understand) Tj ET
+BT /F1 10.5 Tf 54 489.53 Td (what effort is required to move a robot safely and efficiently.) Tj ET
+BT /F1 10.5 Tf 54 450.85 Td (In early simulation exercises, learners do not need to solve every equation by hand. The) Tj ET
+BT /F1 10.5 Tf 54 436.68 Td (goal is to understand how motion variables affect behavior and how control strategies can) Tj ET
+BT /F1 10.5 Tf 54 422.50 Td (improve performance.) Tj ET
+BT /F2 14 Tf 54 383.83 Td (Scene 5: Control and Simulation) Tj ET
+BT /F1 10.5 Tf 54 336.43 Td (Control is the process of making a robotic system behave in a desired way.) Tj ET
+BT /F1 10.5 Tf 54 297.75 Td (An open-loop system sends commands without checking the result. A closed-loop system uses) Tj ET
+BT /F1 10.5 Tf 54 283.58 Td (feedback to adjust its actions.) Tj ET
+BT /F1 10.5 Tf 54 244.90 Td (For most practical robots, feedback control is essential. If a robot is expected to move) Tj ET
+BT /F1 10.5 Tf 54 230.73 Td (forward one meter, feedback helps it detect whether it has moved too little, too far, or) Tj ET
+BT /F1 10.5 Tf 54 216.55 Td (drifted off course.) Tj ET
+BT /F1 10.5 Tf 54 177.88 Td (Simulation allows us to test these ideas before using physical hardware. This lowers cost,) Tj ET
+BT /F1 10.5 Tf 54 163.70 Td (reduces risk, and helps learners explore mistakes safely.) Tj ET
+BT /F2 14 Tf 54 125.03 Td (Scene 6: Sustainability Robotics) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 2469 >>
+stream
+BT /F1 10.5 Tf 54 738.00 Td (Sustainability robotics focuses on designing robotic systems that support environmental,) Tj ET
+BT /F1 10.5 Tf 54 723.83 Td (social, and resource-aware goals.) Tj ET
+BT /F1 10.5 Tf 54 685.15 Td (Examples include robots that monitor ecosystems, inspect water infrastructure, support) Tj ET
+BT /F1 10.5 Tf 54 670.98 Td (precision agriculture, assist disaster response, reduce human exposure to hazardous) Tj ET
+BT /F1 10.5 Tf 54 656.80 Td (environments, or help maintain renewable energy systems.) Tj ET
+BT /F1 10.5 Tf 54 618.13 Td (Sustainability also affects design choices. A sustainable robot should consider energy use,) Tj ET
+BT /F1 10.5 Tf 54 603.95 Td (maintenance, repairability, local context, data responsibility, and the long-term) Tj ET
+BT /F1 10.5 Tf 54 589.78 Td (consequences of deployment.) Tj ET
+BT /F2 14 Tf 54 551.10 Td (Scene 7: Bio-Inspired Systems) Tj ET
+BT /F1 10.5 Tf 54 503.70 Td (Bio-inspired robotics studies patterns from living systems and uses them to guide robotic) Tj ET
+BT /F1 10.5 Tf 54 489.53 Td (design.) Tj ET
+BT /F1 10.5 Tf 54 450.85 Td (Birds inspire aerial robots. Insects inspire swarm behavior. Fish inspire underwater robots.) Tj ET
+BT /F1 10.5 Tf 54 436.68 Td (Human and animal motion inspire walking, grasping, and adaptive movement.) Tj ET
+BT /F1 10.5 Tf 54 398.00 Td (The point is not to copy nature exactly. The point is to learn from proven biological) Tj ET
+BT /F1 10.5 Tf 54 383.83 Td (strategies and adapt them to engineering problems.) Tj ET
+BT /F2 14 Tf 54 345.15 Td (Scene 8: Applied Example) Tj ET
+BT /F1 10.5 Tf 54 297.75 Td (Imagine a small autonomous robot designed to inspect a water channel after heavy rainfall.) Tj ET
+BT /F1 10.5 Tf 54 259.08 Td (It needs sensors to detect position, water level, and obstacles. It needs actuators to move) Tj ET
+BT /F1 10.5 Tf 54 244.90 Td (through uneven terrain. It needs a controller to choose safe motion. It needs feedback to) Tj ET
+BT /F1 10.5 Tf 54 230.73 Td (stay on course. It also needs sustainable design decisions: low energy use, safe materials,) Tj ET
+BT /F1 10.5 Tf 54 216.55 Td (easy maintenance, and a clear benefit to the community.) Tj ET
+BT /F1 10.5 Tf 54 177.88 Td (This example shows how the technical and sustainability sides of robotics must work) Tj ET
+BT /F1 10.5 Tf 54 163.70 Td (together.) Tj ET
+BT /F2 14 Tf 54 125.03 Td (Scene 9: Checkpoint) Tj ET
+BT /F1 10.5 Tf 54 77.63 Td (Pause and answer this question:) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 10 0 R >>
+endobj
+12 0 obj
+<< /Length 1007 >>
+stream
+BT /F1 10.5 Tf 54 717.50 Td (If a robot fails to reach its target position, which subsystem would you inspect first: the) Tj ET
+BT /F1 10.5 Tf 54 703.33 Td (sensor, the actuator, the controller, or the feedback loop?) Tj ET
+BT /F1 10.5 Tf 54 664.65 Td (There may be more than one correct path of investigation. The important skill is to reason) Tj ET
+BT /F1 10.5 Tf 54 650.48 Td (from the system behavior back to the subsystem that may be causing the issue.) Tj ET
+BT /F2 14 Tf 54 611.80 Td (Scene 10: Recap) Tj ET
+BT /F1 10.5 Tf 54 564.40 Td (In this module, you learned that robots combine sensors, actuators, control, and feedback.) Tj ET
+BT /F1 10.5 Tf 54 525.73 Td (You were introduced to kinematics, dynamics, simulation, sustainability robotics, and) Tj ET
+BT /F1 10.5 Tf 54 511.55 Td (bio-inspired design.) Tj ET
+BT /F1 10.5 Tf 54 472.88 Td (In the next module, we apply these foundations to drone systems, aerial robotics, and) Tj ET
+BT /F1 10.5 Tf 54 458.70 Td (control design fundamentals.) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 12 0 R >>
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000135 00000 n 
+0000000205 00000 n 
+0000000280 00000 n 
+0000000348 00000 n 
+0000002304 00000 n 
+0000002450 00000 n 
+0000004965 00000 n 
+0000005111 00000 n 
+0000007633 00000 n 
+0000007781 00000 n 
+0000008841 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R >>
+startxref
+8989
+%%EOF

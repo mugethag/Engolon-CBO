@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Engolon Robotics & Automation Foundations</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Engolon Robotics home">
+        <img src="assets/engolon-logo.png" alt="" />
+        <span>Engolon Robotics</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#program">Program</a>
+        <a href="#pathway">Pathway</a>
+        <a href="#apply">Apply</a>
+        <a href="portal.html">Student portal</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Cohort 1 applications</p>
+          <h1>Robotics & Automation Foundations</h1>
+          <p>
+            A focused four-week pilot for young adults ready to learn robotics,
+            simulation, automation logic, sensors, and local problem-solving.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#apply">Apply for Cohort 1</a>
+            <a class="button secondary" href="portal.html">Preview portal</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Cohort summary">
+          <dl>
+            <div>
+              <dt>Cohort size</dt>
+              <dd>40-60 learners</dd>
+            </div>
+            <div>
+              <dt>Duration</dt>
+              <dd>4 weeks</dd>
+            </div>
+            <div>
+              <dt>Format</dt>
+              <dd>Live session, lab, self-paced work</dd>
+            </div>
+            <div>
+              <dt>Outcome</dt>
+              <dd>Simulation project + Level 2 readiness</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="program" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">What learners will prove</p>
+          <h2>Completion, delivery, outcomes, and sponsor confidence.</h2>
+        </div>
+        <div class="metric-grid">
+          <article>
+            <strong>85%+</strong>
+            <span>Week 1 attendance target</span>
+          </article>
+          <article>
+            <strong>65%+</strong>
+            <span>Final project completion target</span>
+          </article>
+          <article>
+            <strong>35%+</strong>
+            <span>Level 2 qualification target</span>
+          </article>
+          <article>
+            <strong>5-8</strong>
+            <span>mentor candidates identified</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section two-column">
+        <div>
+          <p class="eyebrow">Four-week plan</p>
+          <h2>Built around visible learner outputs.</h2>
+          <p>
+            Every week ends with a small deliverable. The final week asks teams
+            to explain a robot concept tied to a real local problem.
+          </p>
+        </div>
+        <div class="week-list">
+          <article>
+            <span>Week 1</span>
+            <h3>Robotics and automation in the real world</h3>
+            <p>Complete a first robot movement task.</p>
+          </article>
+          <article>
+            <span>Week 2</span>
+            <h3>Programming robot behavior</h3>
+            <p>Program a robot to complete a defined path.</p>
+          </article>
+          <article>
+            <span>Week 3</span>
+            <h3>Sensors and decisions</h3>
+            <p>Create behavior that reacts to the environment.</p>
+          </article>
+          <article>
+            <span>Week 4</span>
+            <h3>Applied project</h3>
+            <p>Submit and present a local problem-solving robot concept.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="pathway" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Scaling pathway</p>
+          <h2>The first cohort becomes a talent pipeline.</h2>
+        </div>
+        <div class="pathway">
+          <article>
+            <span>Level 1</span>
+            <h3>Robotics & Automation Foundations</h3>
+            <p>Beginners learn robotics, simulation, logic, and sensors.</p>
+          </article>
+          <article>
+            <span>Level 2</span>
+            <h3>Robotics Programming</h3>
+            <p>Motivated completers deepen coding and control logic.</p>
+          </article>
+          <article>
+            <span>Level 3</span>
+            <h3>Applied Robotics Projects</h3>
+            <p>Top learners work on agriculture, logistics, health, and IoT.</p>
+          </article>
+          <article>
+            <span>Track</span>
+            <h3>Instructor Track</h3>
+            <p>Strong graduates train as facilitators and peer mentors.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="apply" class="section apply-section">
+        <div class="section-heading">
+          <p class="eyebrow">Application form</p>
+          <h2>Screen for readiness, access, and commitment.</h2>
+        </div>
+        <form id="applicationForm" class="application-form"
+              name="cohort-1-application"
+              method="POST"
+              action="/thank-you.html"
+              data-netlify="true">
+          <input type="hidden" name="form-name" value="cohort-1-application" />
+          <label>
+            Full name
+            <input name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Age
+            <input name="age" type="number" min="15" max="35" required />
+          </label>
+          <label>
+            Town / county
+            <input name="county" required />
+          </label>
+          <label>
+            Education level
+            <select name="education" required>
+              <option value="">Select one</option>
+              <option>Secondary school</option>
+              <option>TVET / college</option>
+              <option>University</option>
+              <option>School leaver</option>
+              <option>Early-career learner</option>
+            </select>
+          </label>
+          <label>
+            Phone
+            <input name="phone" autocomplete="tel" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            Device access
+            <select name="device" required>
+              <option value="">Select one</option>
+              <option>Laptop or desktop</option>
+              <option>Tablet</option>
+              <option>Smartphone only</option>
+              <option>No reliable device</option>
+            </select>
+          </label>
+          <label>
+            Internet access
+            <select name="internet" required>
+              <option value="">Select one</option>
+              <option>Reliable daily access</option>
+              <option>Some weekly access</option>
+              <option>Limited access</option>
+            </select>
+          </label>
+          <label>
+            Prior coding experience
+            <select name="coding" required>
+              <option value="">Select one</option>
+              <option>None</option>
+              <option>Beginner</option>
+              <option>Some Python or JavaScript</option>
+              <option>Comfortable with coding</option>
+            </select>
+          </label>
+          <label>
+            Payment / sponsorship status
+            <select name="funding" required>
+              <option value="">Select one</option>
+              <option>Can pay individual learner fee</option>
+              <option>Sponsored by organization</option>
+              <option>Requesting scholarship</option>
+              <option>Can pay small commitment fee only</option>
+            </select>
+          </label>
+          <label class="wide">
+            Why do you want to join this course?
+            <textarea name="motivation" rows="5" required></textarea>
+          </label>
+          <label class="checkbox wide">
+            <input name="availability" type="checkbox" required />
+            <span>I can attend weekly live sessions and submit weekly tasks.</span>
+          </label>
+          <button class="button primary" type="submit">Prepare application</button>
+          <p id="formStatus" class="form-status" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Engolon Robotics & Automation Foundations</span>
+      <a href="admin.html">Admin tracker</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

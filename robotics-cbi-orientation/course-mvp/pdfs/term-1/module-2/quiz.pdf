@@ -1,0 +1,130 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R 11 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 1903 >>
+stream
+BT /F1 9 Tf 54 738.00 Td (Module 2 Quiz) Tj ET
+BT /F2 18 Tf 54 714.00 Td (Module 2 Quiz) Tj ET
+BT /F1 10.5 Tf 54 657.20 Td (Module: Introduction to Drone Systems, Aerial Robotics and Control Design Fundamentals) Tj ET
+BT /F1 10.5 Tf 54 618.53 Td (Recommended passing score: 70%) Tj ET
+BT /F2 14 Tf 54 579.85 Td (Questions) Tj ET
+BT /F1 10.5 Tf 54 532.45 Td (1. A drone is best understood as:) Tj ET
+BT /F1 10.5 Tf 54 514.28 Td (\267 A. Only a flying camera) Tj ET
+BT /F1 10.5 Tf 54 496.10 Td (\267 B. An aerial robotic system with sensing, control, propulsion, communication, and payload) Tj ET
+BT /F1 10.5 Tf 54 481.93 Td (subsystems) Tj ET
+BT /F1 10.5 Tf 54 463.75 Td (\267 C. A computer that does not move) Tj ET
+BT /F1 10.5 Tf 54 445.58 Td (\267 D. A ground vehicle with wheels) Tj ET
+BT /F1 10.5 Tf 54 406.90 Td (2. Which component is primarily responsible for processing sensor data and sending commands) Tj ET
+BT /F1 10.5 Tf 54 392.73 Td (to the motors?) Tj ET
+BT /F1 10.5 Tf 54 374.55 Td (\267 A. Flight controller) Tj ET
+BT /F1 10.5 Tf 54 356.38 Td (\267 B. Frame color) Tj ET
+BT /F1 10.5 Tf 54 338.20 Td (\267 C. Landing pad) Tj ET
+BT /F1 10.5 Tf 54 320.03 Td (\267 D. Carrying case) Tj ET
+BT /F1 10.5 Tf 54 281.35 Td (3. Roll describes:) Tj ET
+BT /F1 10.5 Tf 54 263.18 Td (\267 A. Rotation around the drone's vertical axis) Tj ET
+BT /F1 10.5 Tf 54 245.00 Td (\267 B. Tilting left or right) Tj ET
+BT /F1 10.5 Tf 54 226.83 Td (\267 C. Moving straight upward only) Tj ET
+BT /F1 10.5 Tf 54 208.65 Td (\267 D. Battery charging speed) Tj ET
+BT /F1 10.5 Tf 54 169.98 Td (4. Yaw describes:) Tj ET
+BT /F1 10.5 Tf 54 151.80 Td (\267 A. Rotation around the drone's vertical axis) Tj ET
+BT /F1 10.5 Tf 54 133.63 Td (\267 B. Tilting forward or backward) Tj ET
+BT /F1 10.5 Tf 54 115.45 Td (\267 C. The weight of the payload) Tj ET
+BT /F1 10.5 Tf 54 97.28 Td (\267 D. The image resolution of a camera) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 2587 >>
+stream
+BT /F1 10.5 Tf 54 738.00 Td (5. In feedback control, the controller compares:) Tj ET
+BT /F1 10.5 Tf 54 719.83 Td (\267 A. Desired behavior with actual behavior) Tj ET
+BT /F1 10.5 Tf 54 701.65 Td (\267 B. Logo color with battery color) Tj ET
+BT /F1 10.5 Tf 54 683.48 Td (\267 C. Course schedule with student grades) Tj ET
+BT /F1 10.5 Tf 54 665.30 Td (\267 D. The drone frame with the packaging) Tj ET
+BT /F1 10.5 Tf 54 626.63 Td (6. The proportional term in a PID controller responds mainly to:) Tj ET
+BT /F1 10.5 Tf 54 608.45 Td (\267 A. Present error) Tj ET
+BT /F1 10.5 Tf 54 590.28 Td (\267 B. Accumulated historical error only) Tj ET
+BT /F1 10.5 Tf 54 572.10 Td (\267 C. The drone's brand name) Tj ET
+BT /F1 10.5 Tf 54 553.93 Td (\267 D. Weather reports only) Tj ET
+BT /F1 10.5 Tf 54 515.25 Td (7. State-space control uses state variables such as:) Tj ET
+BT /F1 10.5 Tf 54 497.08 Td (\267 A. Position, velocity, orientation, and angular velocity) Tj ET
+BT /F1 10.5 Tf 54 478.90 Td (\267 B. Price, logo, packaging, and marketing copy) Tj ET
+BT /F1 10.5 Tf 54 460.73 Td (\267 C. Student ID, course name, and password) Tj ET
+BT /F1 10.5 Tf 54 442.55 Td (\267 D. File size and font size) Tj ET
+BT /F1 10.5 Tf 54 403.88 Td (8. A basic autonomous navigation stack may include:) Tj ET
+BT /F1 10.5 Tf 54 385.70 Td (\267 A. Perception, localization, planning, control, and mission monitoring) Tj ET
+BT /F1 10.5 Tf 54 367.53 Td (\267 B. Printing, filing, copying, scanning, and stapling) Tj ET
+BT /F1 10.5 Tf 54 349.35 Td (\267 C. Painting, packaging, selling, invoicing, and shipping) Tj ET
+BT /F1 10.5 Tf 54 331.18 Td (\267 D. Guessing, drifting, ignoring, and stopping) Tj ET
+BT /F1 10.5 Tf 54 292.50 Td (9. If a drone overshoots its target altitude and oscillates, the issue is most closely) Tj ET
+BT /F1 10.5 Tf 54 278.33 Td (related to:) Tj ET
+BT /F1 10.5 Tf 54 260.15 Td (\267 A. Stability and controller tuning) Tj ET
+BT /F1 10.5 Tf 54 241.98 Td (\267 B. The spelling of the mission name) Tj ET
+BT /F1 10.5 Tf 54 223.80 Td (\267 C. The color of the propellers) Tj ET
+BT /F1 10.5 Tf 54 205.63 Td (\267 D. The file format of the syllabus) Tj ET
+BT /F1 10.5 Tf 54 166.95 Td (10. Which mission would likely prioritize high-resolution imaging and stable flight near) Tj ET
+BT /F1 10.5 Tf 54 152.78 Td (structures?) Tj ET
+BT /F1 10.5 Tf 54 134.60 Td (\267 A. Bridge inspection) Tj ET
+BT /F1 10.5 Tf 54 116.43 Td (\267 B. Random indoor decoration) Tj ET
+BT /F1 10.5 Tf 54 98.25 Td (\267 C. Offline word processing) Tj ET
+BT /F1 10.5 Tf 54 80.08 Td (\267 D. Classroom seating arrangement) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 809 >>
+stream
+BT /F2 14 Tf 54 717.50 Td (Answer Key) Tj ET
+BT /F1 9.5 Tf 54 670.10 Td (Question | Answer | Outcome) Tj ET
+BT /F1 9.5 Tf 54 654.27 Td (1 | B | Identify drone systems) Tj ET
+BT /F1 9.5 Tf 54 638.45 Td (2 | A | Identify flight control components) Tj ET
+BT /F1 9.5 Tf 54 622.62 Td (3 | B | Explain flight axes) Tj ET
+BT /F1 9.5 Tf 54 606.80 Td (4 | A | Explain flight axes) Tj ET
+BT /F1 9.5 Tf 54 590.97 Td (5 | A | Explain feedback control) Tj ET
+BT /F1 9.5 Tf 54 575.15 Td (6 | A | Explain PID basics) Tj ET
+BT /F1 9.5 Tf 54 559.32 Td (7 | A | Explain state-space basics) Tj ET
+BT /F1 9.5 Tf 54 543.50 Td (8 | A | Explain autonomous navigation) Tj ET
+BT /F1 9.5 Tf 54 527.67 Td (9 | A | Assess stability and transient response) Tj ET
+BT /F1 9.5 Tf 54 511.85 Td (10 | A | Compare real-world applications) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000128 00000 n 
+0000000198 00000 n 
+0000000273 00000 n 
+0000000341 00000 n 
+0000002296 00000 n 
+0000002442 00000 n 
+0000005081 00000 n 
+0000005227 00000 n 
+0000006088 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R >>
+startxref
+6236
+%%EOF

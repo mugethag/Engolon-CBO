@@ -1,0 +1,93 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 2097 >>
+stream
+BT /F1 9 Tf 54 738.00 Td (Learner Handout: Module 2) Tj ET
+BT /F2 18 Tf 54 714.00 Td (Learner Handout: Module 2) Tj ET
+BT /F1 10.5 Tf 54 657.20 Td (Module: Introduction to Drone Systems, Aerial Robotics and Control Design Fundamentals) Tj ET
+BT /F2 14 Tf 54 618.53 Td (Big Idea) Tj ET
+BT /F1 10.5 Tf 54 571.13 Td (A drone is an aerial robotic system. Stable and useful drone behavior depends on propulsion,) Tj ET
+BT /F1 10.5 Tf 54 556.95 Td (power, sensors, flight control, communication, payload design, feedback, and) Tj ET
+BT /F1 10.5 Tf 54 542.78 Td (mission-specific autonomy.) Tj ET
+BT /F2 14 Tf 54 504.10 Td (Core Drone Subsystems) Tj ET
+BT /F1 9.5 Tf 54 456.70 Td (Subsystem | Function) Tj ET
+BT /F1 9.5 Tf 54 440.88 Td (Frame | Physical structure that holds components) Tj ET
+BT /F1 9.5 Tf 54 425.05 Td (Propulsion | Motors and propellers that generate lift and movement) Tj ET
+BT /F1 9.5 Tf 54 409.23 Td (Power | Battery and power distribution) Tj ET
+BT /F1 9.5 Tf 54 393.40 Td (Sensors | Estimate altitude, orientation, position, speed, and environment) Tj ET
+BT /F1 9.5 Tf 54 377.58 Td (Flight controller | Processes sensor data and commands motors) Tj ET
+BT /F1 9.5 Tf 54 361.75 Td (Communication link | Connects drone to operator, base station, or network) Tj ET
+BT /F1 9.5 Tf 54 345.93 Td (Payload | Mission equipment such as camera, sensor, package, or inspection tool) Tj ET
+BT /F2 14 Tf 54 309.60 Td (Flight Axes) Tj ET
+BT /F1 9.5 Tf 54 262.20 Td (Axis | Meaning) Tj ET
+BT /F1 9.5 Tf 54 246.38 Td (Roll | Tilting left or right) Tj ET
+BT /F1 9.5 Tf 54 230.55 Td (Pitch | Tilting forward or backward) Tj ET
+BT /F1 9.5 Tf 54 214.73 Td (Yaw | Rotating around the vertical axis) Tj ET
+BT /F1 9.5 Tf 54 198.90 Td (Altitude | Height above a reference point) Tj ET
+BT /F2 14 Tf 54 162.58 Td (Control Design Language) Tj ET
+BT /F1 10.5 Tf 54 115.18 Td (\267 Command: what the system is asked to do.) Tj ET
+BT /F1 10.5 Tf 54 97.00 Td (\267 Response: how the system actually behaves.) Tj ET
+BT /F1 10.5 Tf 54 78.83 Td (\267 Error: the difference between desired and actual behavior.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1495 >>
+stream
+BT /F1 10.5 Tf 54 738.00 Td (\267 Stability: whether the system settles into acceptable behavior.) Tj ET
+BT /F1 10.5 Tf 54 719.83 Td (\267 Overshoot: when the system goes beyond the target.) Tj ET
+BT /F1 10.5 Tf 54 701.65 Td (\267 Oscillation: repeated movement above and below a target.) Tj ET
+BT /F1 10.5 Tf 54 683.48 Td (\267 Disturbance: an external effect such as wind or sensor noise.) Tj ET
+BT /F2 14 Tf 54 644.80 Td (PID Controller Memory Aid) Tj ET
+BT /F1 10.5 Tf 54 597.40 Td (\267 P: present error) Tj ET
+BT /F1 10.5 Tf 54 579.23 Td (\267 I: accumulated error) Tj ET
+BT /F1 10.5 Tf 54 561.05 Td (\267 D: rate of change of error) Tj ET
+BT /F2 14 Tf 54 522.38 Td (Basic Autonomy Stack) Tj ET
+BT /F1 10.5 Tf 54 474.98 Td (1. Perception: detect relevant environment information.) Tj ET
+BT /F1 10.5 Tf 54 456.80 Td (2. Localization: estimate where the drone is.) Tj ET
+BT /F1 10.5 Tf 54 438.63 Td (3. Planning: choose a path or action.) Tj ET
+BT /F1 10.5 Tf 54 420.45 Td (4. Control: convert the plan into motion commands.) Tj ET
+BT /F1 10.5 Tf 54 402.28 Td (5. Mission monitoring: check safety, progress, and constraints.) Tj ET
+BT /F2 14 Tf 54 363.60 Td (Reflection Prompt) Tj ET
+BT /F1 10.5 Tf 54 316.20 Td (Choose one drone mission: environmental monitoring, bridge inspection, disaster response,) Tj ET
+BT /F1 10.5 Tf 54 302.03 Td (agriculture, or mapping. List the payload, sensors, control priorities, and safety concerns) Tj ET
+BT /F1 10.5 Tf 54 287.85 Td (for that mission.) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000266 00000 n 
+0000000334 00000 n 
+0000002483 00000 n 
+0000002629 00000 n 
+0000004176 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+4322
+%%EOF

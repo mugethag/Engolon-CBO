@@ -1,0 +1,94 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 2366 >>
+stream
+BT /F1 9 Tf 54 738.00 Td (Minimum Viable CBT Course) Tj ET
+BT /F2 18 Tf 54 714.00 Td (Minimum Viable CBT Course) Tj ET
+BT /F1 10.5 Tf 54 657.20 Td (Program: Certificate in Robotics, Autonomous Systems and Intelligent Drone Technologies) Tj ET
+BT /F1 10.5 Tf 54 618.53 Td (Scope: Program orientation, Term 1 content only, two full module lessons, one) Tj ET
+BT /F1 10.5 Tf 54 604.35 Td (simulation-based lab, one quiz per module, and one learner handout per module.) Tj ET
+BT /F2 14 Tf 54 565.68 Td (MVP Course Components) Tj ET
+BT /F1 9.5 Tf 54 518.28 Td (Component | File or Folder | Status) Tj ET
+BT /F1 9.5 Tf 54 502.45 Td (Program orientation video | `../index.html` | HyperFrames pilot built) Tj ET
+BT /F1 9.5 Tf 54 486.63 Td (Program narration and storyboard | `../narration-script.md`, `../storyboard.md` | Drafted) Tj ET
+BT /F1 9.5 Tf 54 470.80 Td (Term 1 course map | `term-1/course-map.md` | Drafted) Tj ET
+BT /F1 9.5 Tf 54 454.98 Td (Module 1 lesson package | `term-1/module-1/` | Drafted) Tj ET
+BT /F1 9.5 Tf 54 439.15 Td (Module 2 lesson package | `term-1/module-2/` | Drafted) Tj ET
+BT /F1 9.5 Tf 54 423.33 Td (Simulation-based lab | `term-1/lab/simulation-lab-01.md` | Drafted) Tj ET
+BT /F1 9.5 Tf 54 407.50 Td (Reusable production guide | `production-guide.md` | Drafted) Tj ET
+BT /F1 9.5 Tf 54 391.68 Td (Reusable templates | `templates/` | Drafted) Tj ET
+BT /F1 9.5 Tf 54 375.85 Td (Full production tracker | `../../COURSE_PRODUCTION_TRACKER.md` | Active) Tj ET
+BT /F2 14 Tf 54 339.53 Td (Production Control Documents) Tj ET
+BT /F1 10.5 Tf 54 292.13 Td (\267 Full tracker: ../../COURSE_PRODUCTION_TRACKER.md) Tj ET
+BT /F1 10.5 Tf 54 273.95 Td (\267 Module package checklist: templates/module-package-checklist.md) Tj ET
+BT /F1 10.5 Tf 54 255.78 Td (\267 Production guide: production-guide.md) Tj ET
+BT /F2 14 Tf 54 217.10 Td (MVP Learning Flow) Tj ET
+BT /F1 10.5 Tf 54 169.70 Td (1. Watch the program orientation video.) Tj ET
+BT /F1 10.5 Tf 54 151.53 Td (2. Complete Module 1: Introduction to Sustainability Robotics and Intelligent Systems.) Tj ET
+BT /F1 10.5 Tf 54 133.35 Td (3. Complete Module 1 quiz.) Tj ET
+BT /F1 10.5 Tf 54 115.18 Td (4. Review Module 1 handout.) Tj ET
+BT /F1 10.5 Tf 54 97.00 Td (5. Complete Module 2: Introduction to Drone Systems, Aerial Robotics and Control Design) Tj ET
+BT /F1 10.5 Tf 54 82.83 Td (Fundamentals.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1595 >>
+stream
+BT /F1 10.5 Tf 54 738.00 Td (6. Complete Module 2 quiz.) Tj ET
+BT /F1 10.5 Tf 54 719.83 Td (7. Review Module 2 handout.) Tj ET
+BT /F1 10.5 Tf 54 701.65 Td (8. Complete Simulation Lab 01: Mobile Robot and Drone Control Foundations.) Tj ET
+BT /F1 10.5 Tf 54 683.48 Td (9. Submit a short lab reflection and simulation evidence.) Tj ET
+BT /F2 14 Tf 54 644.80 Td (Recommended LMS Setup) Tj ET
+BT /F1 10.5 Tf 54 597.40 Td (\267 Course shell: Robotics, Autonomous Systems and Intelligent Drone Technologies - MVP) Tj ET
+BT /F1 10.5 Tf 54 579.23 Td (\267 Section 0: Program Orientation) Tj ET
+BT /F1 10.5 Tf 54 561.05 Td (\267 Section 1: Term 1 Module 1) Tj ET
+BT /F1 10.5 Tf 54 542.88 Td (\267 Section 2: Term 1 Module 2) Tj ET
+BT /F1 10.5 Tf 54 524.70 Td (\267 Section 3: Simulation Lab) Tj ET
+BT /F1 10.5 Tf 54 506.53 Td (\267 Section 4: Learner Reflection and Feedback) Tj ET
+BT /F2 14 Tf 54 467.85 Td (MVP Success Criteria) Tj ET
+BT /F1 10.5 Tf 54 420.45 Td (\267 Learners can explain the major subsystems of robotic and drone systems.) Tj ET
+BT /F1 10.5 Tf 54 402.28 Td (\267 Learners can distinguish sustainability robotics from general robotics.) Tj ET
+BT /F1 10.5 Tf 54 384.10 Td (\267 Learners can identify sensors, actuators, controllers, and feedback loops.) Tj ET
+BT /F1 10.5 Tf 54 365.93 Td (\267 Learners can model a simple control scenario using simulation logic.) Tj ET
+BT /F1 10.5 Tf 54 347.75 Td (\267 Learners can interpret basic stability, response, and navigation behavior.) Tj ET
+BT /F1 10.5 Tf 54 329.58 Td (\267 Learners complete both quizzes and submit one lab artifact.) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000266 00000 n 
+0000000334 00000 n 
+0000002752 00000 n 
+0000002898 00000 n 
+0000004545 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+4691
+%%EOF

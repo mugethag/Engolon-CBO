@@ -1,0 +1,89 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 2322 >>
+stream
+BT /F1 9 Tf 54 738.00 Td (Term 1 Course Map) Tj ET
+BT /F2 18 Tf 54 714.00 Td (Term 1 Course Map) Tj ET
+BT /F1 10.5 Tf 54 657.20 Td (Term title: Core Robotics, Intelligent Systems, Drones and Control) Tj ET
+BT /F1 10.5 Tf 54 618.53 Td (MVP coverage: Modules 1 and 2 from Term 1.) Tj ET
+BT /F2 14 Tf 54 579.85 Td (Term 1 Modules) Tj ET
+BT /F1 9.5 Tf 54 532.45 Td (Module | Title | MVP Asset Type | Estimated Learner Time) Tj ET
+BT /F1 9.5 Tf 54 516.63 Td (1 | Introduction to Sustainability Robotics and Intelligent Systems | Full CBT lesson, quiz, handout |) Tj ET
+BT /F1 9.5 Tf 54 503.80 Td (2.5-3 hours) Tj ET
+BT /F1 9.5 Tf 54 487.98 Td (2 | Introduction to Drone Systems, Aerial Robotics and Control Design Fundamentals | Full CBT lesson,) Tj ET
+BT /F1 9.5 Tf 54 475.15 Td (quiz, handout | 2.5-3 hours) Tj ET
+BT /F1 9.5 Tf 54 459.33 Td (Lab 1 | Mobile Robot and Drone Control Foundations | Simulation-based lab | 2-3 hours) Tj ET
+BT /F2 14 Tf 54 423.00 Td (Term 1 Learning Outcomes) Tj ET
+BT /F1 10.5 Tf 54 375.60 Td (By the end of this MVP term, learners should be able to:) Tj ET
+BT /F1 10.5 Tf 54 336.93 Td (1. Describe robotic subsystems and their functions.) Tj ET
+BT /F1 10.5 Tf 54 318.75 Td (2. Explain the role of sensors, actuators, controllers, and feedback.) Tj ET
+BT /F1 10.5 Tf 54 300.58 Td (3. Apply basic kinematic and dynamic ideas to robot motion.) Tj ET
+BT /F1 10.5 Tf 54 282.40 Td (4. Compare robotic systems across environmental, industrial, civilian, and defense contexts.) Tj ET
+BT /F1 10.5 Tf 54 264.23 Td (5. Explain sustainability robotics and bio-inspired system design.) Tj ET
+BT /F1 10.5 Tf 54 246.05 Td (6. Identify drone components and flight control subsystems.) Tj ET
+BT /F1 10.5 Tf 54 227.88 Td (7. Describe autonomous navigation at an introductory level.) Tj ET
+BT /F1 10.5 Tf 54 209.70 Td (8. Design a basic feedback control response in simulation.) Tj ET
+BT /F1 10.5 Tf 54 191.53 Td (9. Assess simple system behavior using stability and transient response language.) Tj ET
+BT /F2 14 Tf 54 152.85 Td (Suggested Weekly Delivery) Tj ET
+BT /F1 9.5 Tf 54 105.45 Td (Week | Learner Activity | Deliverable) Tj ET
+BT /F1 9.5 Tf 54 89.63 Td (1 | Program orientation and Module 1 lesson | Orientation reflection) Tj ET
+BT /F1 9.5 Tf 54 73.80 Td (2 | Module 1 activities and quiz | Quiz 1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1173 >>
+stream
+BT /F1 9.5 Tf 54 738.00 Td (3 | Module 2 lesson | Control concept notes) Tj ET
+BT /F1 9.5 Tf 54 722.17 Td (4 | Module 2 activities and quiz | Quiz 2) Tj ET
+BT /F1 9.5 Tf 54 706.35 Td (5 | Simulation Lab 01 | Lab worksheet and screenshot evidence) Tj ET
+BT /F1 9.5 Tf 54 690.52 Td (6 | Review, remediation, and feedback | Short learner reflection) Tj ET
+BT /F2 14 Tf 54 654.20 Td (Minimum Assessment Mix) Tj ET
+BT /F1 10.5 Tf 54 606.80 Td (\267 Module 1 quiz: 10 questions) Tj ET
+BT /F1 10.5 Tf 54 588.62 Td (\267 Module 2 quiz: 10 questions) Tj ET
+BT /F1 10.5 Tf 54 570.45 Td (\267 Simulation Lab 01: practical submission) Tj ET
+BT /F1 10.5 Tf 54 552.27 Td (\267 Learner reflection: 250-400 words) Tj ET
+BT /F2 14 Tf 54 513.60 Td (Production Notes) Tj ET
+BT /F1 10.5 Tf 54 466.20 Td (\267 Use the orientation video style from ../index.html.) Tj ET
+BT /F1 10.5 Tf 54 448.03 Td (\267 Each module video should be produced as a 6-8 minute HyperFrames composition.) Tj ET
+BT /F1 10.5 Tf 54 429.85 Td (\267 Keep detailed technical explanations in narration, handouts, and lab prompts.) Tj ET
+BT /F1 10.5 Tf 54 411.68 Td (\267 Use short on-screen labels for learner recall.) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000266 00000 n 
+0000000334 00000 n 
+0000002708 00000 n 
+0000002854 00000 n 
+0000004079 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+4225
+%%EOF

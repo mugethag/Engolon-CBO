@@ -1,0 +1,134 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R 11 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Length 1498 >>
+stream
+BT /F1 9 Tf 54 738.00 Td (Module Package Checklist) Tj ET
+BT /F2 18 Tf 54 714.00 Td (Module Package Checklist) Tj ET
+BT /F1 10.5 Tf 54 657.20 Td (Use this checklist for every new module. Module 1 and Module 2 are the reference packages.) Tj ET
+BT /F1 10.5 Tf 54 618.53 Td (Reference examples:) Tj ET
+BT /F1 10.5 Tf 54 579.85 Td (\267 term-1/module-1/) Tj ET
+BT /F1 10.5 Tf 54 561.68 Td (\267 term-1/module-2/) Tj ET
+BT /F2 14 Tf 54 523.00 Td (Required Files) Tj ET
+BT /F1 10.5 Tf 54 475.60 Td (Create a folder for the module:) Tj ET
+BT /F3 9 Tf 54 436.93 Td (term-X/module-Y/) Tj ET
+BT /F3 9 Tf 54 422.78 Td (lesson-script.md) Tj ET
+BT /F3 9 Tf 54 408.63 Td (storyboard.md) Tj ET
+BT /F3 9 Tf 54 394.48 Td (quiz.md) Tj ET
+BT /F3 9 Tf 54 380.33 Td (handout.md) Tj ET
+BT /F2 14 Tf 54 345.68 Td (Lesson Script Standard) Tj ET
+BT /F1 10.5 Tf 54 298.28 Td (The lesson script should include:) Tj ET
+BT /F1 10.5 Tf 54 259.60 Td (\267 Module title) Tj ET
+BT /F1 10.5 Tf 54 241.43 Td (\267 Estimated video duration) Tj ET
+BT /F1 10.5 Tf 54 223.25 Td (\267 Scene 1: Title) Tj ET
+BT /F1 10.5 Tf 54 205.08 Td (\267 Scene 2: Learning Outcomes) Tj ET
+BT /F1 10.5 Tf 54 186.90 Td (\267 Scene 3: Core Concept 1) Tj ET
+BT /F1 10.5 Tf 54 168.73 Td (\267 Scene 4: Core Concept 2) Tj ET
+BT /F1 10.5 Tf 54 150.55 Td (\267 Scene 5: Applied Example) Tj ET
+BT /F1 10.5 Tf 54 132.38 Td (\267 Scene 6: Checkpoint) Tj ET
+BT /F1 10.5 Tf 54 114.20 Td (\267 Scene 7: Recap) Tj ET
+BT /F1 10.5 Tf 54 75.53 Td (Writing rules:) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1760 >>
+stream
+BT /F1 10.5 Tf 54 717.50 Td (\267 Use direct learner-facing narration.) Tj ET
+BT /F1 10.5 Tf 54 699.33 Td (\267 Keep technical detail accurate but introductory unless the module requires depth.) Tj ET
+BT /F1 10.5 Tf 54 681.15 Td (\267 Use examples connected to robotics, drones, environment, infrastructure, cybersecurity, or) Tj ET
+BT /F1 10.5 Tf 54 666.98 Td (intelligent systems.) Tj ET
+BT /F1 10.5 Tf 54 648.80 Td (\267 Avoid operationally harmful drone or cyber instructions.) Tj ET
+BT /F2 14 Tf 54 610.13 Td (Storyboard Standard) Tj ET
+BT /F1 10.5 Tf 54 562.73 Td (The storyboard should include:) Tj ET
+BT /F1 10.5 Tf 54 524.05 Td (\267 Target video duration) Tj ET
+BT /F1 10.5 Tf 54 505.88 Td (\267 Scene table with time, purpose, and visual direction) Tj ET
+BT /F1 10.5 Tf 54 487.70 Td (\267 Reusable scene notes) Tj ET
+BT /F1 10.5 Tf 54 469.53 Td (\267 Any simulation, diagram, or animation requirements) Tj ET
+BT /F2 14 Tf 54 430.85 Td (Quiz Standard) Tj ET
+BT /F1 10.5 Tf 54 383.45 Td (Each quiz should include:) Tj ET
+BT /F1 10.5 Tf 54 344.78 Td (\267 10 questions minimum) Tj ET
+BT /F1 10.5 Tf 54 326.60 Td (\267 Four answer options per question) Tj ET
+BT /F1 10.5 Tf 54 308.43 Td (\267 Answer key) Tj ET
+BT /F1 10.5 Tf 54 290.25 Td (\267 Outcome mapping) Tj ET
+BT /F1 10.5 Tf 54 272.08 Td (\267 Feedback-ready wording where possible) Tj ET
+BT /F1 10.5 Tf 54 233.40 Td (Question types:) Tj ET
+BT /F1 10.5 Tf 54 194.73 Td (\267 Concept identification) Tj ET
+BT /F1 10.5 Tf 54 176.55 Td (\267 Scenario reasoning) Tj ET
+BT /F1 10.5 Tf 54 158.38 Td (\267 Vocabulary) Tj ET
+BT /F1 10.5 Tf 54 140.20 Td (\267 Risk or ethics judgment) Tj ET
+BT /F1 10.5 Tf 54 122.03 Td (\267 Applied interpretation) Tj ET
+BT /F2 14 Tf 54 83.35 Td (Handout Standard) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 1732 >>
+stream
+BT /F1 10.5 Tf 54 717.50 Td (Each handout should include:) Tj ET
+BT /F1 10.5 Tf 54 678.83 Td (\267 Big Idea) Tj ET
+BT /F1 10.5 Tf 54 660.65 Td (\267 Core Terms) Tj ET
+BT /F1 10.5 Tf 54 642.48 Td (\267 Process or system diagram in text/table form) Tj ET
+BT /F1 10.5 Tf 54 624.30 Td (\267 Checklist or memory aid) Tj ET
+BT /F1 10.5 Tf 54 606.13 Td (\267 Reflection prompt) Tj ET
+BT /F2 14 Tf 54 567.45 Td (Video Production Standard) Tj ET
+BT /F1 10.5 Tf 54 520.05 Td (Before producing the HyperFrames video:) Tj ET
+BT /F1 10.5 Tf 54 481.38 Td (\267 Confirm script and storyboard are approved.) Tj ET
+BT /F1 10.5 Tf 54 463.20 Td (\267 Reuse visual identity from ../../DESIGN.md.) Tj ET
+BT /F1 10.5 Tf 54 445.03 Td (\267 Keep on-screen text brief.) Tj ET
+BT /F1 10.5 Tf 54 426.85 Td (\267 Use narration for detail.) Tj ET
+BT /F1 10.5 Tf 54 408.68 Td (\267 Run npm run check.) Tj ET
+BT /F1 10.5 Tf 54 390.50 Td (\267 Render draft MP4.) Tj ET
+BT /F1 10.5 Tf 54 372.33 Td (\267 Review for readability, audio pacing, and caption overlap.) Tj ET
+BT /F1 10.5 Tf 54 354.15 Td (\267 Render final MP4.) Tj ET
+BT /F2 14 Tf 54 315.48 Td (Moodle Upload Standard) Tj ET
+BT /F1 10.5 Tf 54 268.08 Td (For each module in Moodle:) Tj ET
+BT /F1 10.5 Tf 54 229.40 Td (\267 Add lesson overview page.) Tj ET
+BT /F1 10.5 Tf 54 211.23 Td (\267 Upload or embed MP4.) Tj ET
+BT /F1 10.5 Tf 54 193.05 Td (\267 Add handout as PDF or page.) Tj ET
+BT /F1 10.5 Tf 54 174.88 Td (\267 Build quiz in Moodle question bank.) Tj ET
+BT /F1 10.5 Tf 54 156.70 Td (\267 Add checkpoint/reflection activity if needed.) Tj ET
+BT /F1 10.5 Tf 54 138.53 Td (\267 Mark completion criteria.) Tj ET
+BT /F1 10.5 Tf 54 120.35 Td (\267 Confirm student role can access the materials.) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000128 00000 n 
+0000000198 00000 n 
+0000000273 00000 n 
+0000000341 00000 n 
+0000001891 00000 n 
+0000002037 00000 n 
+0000003849 00000 n 
+0000003995 00000 n 
+0000005780 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R >>
+startxref
+5928
+%%EOF
