@@ -1,4 +1,22 @@
 [[redirects]]
+  from = "http://engolon.com/*"
+  to   = "https://engolon.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.engolon.com/*"
+  to   = "https://engolon.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.engolon.com/*"
+  to   = "https://engolon.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/pilot"
   to   = "/robotics-cbi-orientation/pilot-site/index.html"
   status = 301
