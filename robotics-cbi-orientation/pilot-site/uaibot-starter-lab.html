@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>UAIbot Starter Lab | Engolon Robotics</title>
+    <title>BrowserBotics Starter Lab | Engolon Robotics</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
       .step-list {
@@ -130,6 +130,15 @@
         line-height: 1.6;
       }
 
+      .code-block {
+        background: #f0f4f0;
+        border-radius: 6px;
+        padding: 12px;
+        font-size: 0.82rem;
+        overflow-x: auto;
+        margin: 8px 0 0;
+      }
+
       @media (max-width: 560px) {
         .step-list li {
           grid-template-columns: 1fr;
@@ -151,7 +160,7 @@
       <nav aria-label="Main navigation">
         <a href="index.html#apply">Apply</a>
         <a href="portal.html">Student portal</a>
-        <a href="uaibot-starter-lab.html" aria-current="page">UAIbot lab</a>
+        <a href="uaibot-starter-lab.html" aria-current="page">BrowserBotics lab</a>
         <a href="admin.html">Admin</a>
       </nav>
     </header>
@@ -159,19 +168,20 @@
     <main>
       <section class="page-title">
         <p class="eyebrow">Week 1 simulator activity</p>
-        <h1>UAIbot Starter Lab</h1>
+        <h1>BrowserBotics Starter Lab</h1>
         <p>
-          Your first hands-on session with the UAIbot simulator. Follow the
-          steps below, complete each task, and use the checklist to confirm
+          Your first hands-on session with the BrowserBotics simulator. Write
+          Python code to control a virtual robot — no installation needed. Follow
+          the steps below, complete each task, and use the checklist to confirm
           your submission is ready.
         </p>
         <div class="hero-actions" style="margin-top: 22px;">
           <a
             class="button primary"
-            href="https://uairobot.com/"
+            href="https://browserbotics.com/sandbox"
             target="_blank"
             rel="noreferrer"
-          >Open UAIbot simulator</a>
+          >Open BrowserBotics sandbox</a>
           <a class="button secondary" href="portal.html">Back to portal</a>
         </div>
       </section>
@@ -185,55 +195,66 @@
         <ol class="step-list">
           <li>
             <div class="step-body">
-              <h3>Open the simulator and create your workspace</h3>
+              <h3>Open the sandbox and run your first program</h3>
               <p>
-                Go to <strong>uairobot.com</strong> and sign in (or continue as
-                guest). Create a new project and name it
-                <em>Cohort1-YourFirstName</em>. Take a screenshot of the empty
-                workspace showing your project name.
+                Go to <strong>browserbotics.com/sandbox</strong>. The page
+                loads a Python editor on the left and a 3D simulator on the
+                right. Paste the code below into the editor and click the
+                Run (▶) button:
               </p>
-              <span class="tip">Screenshot required: empty named workspace</span>
+              <pre class="code-block">import browserbotics as bb
+bb.addGroundPlane()
+bb.createBody('box', halfExtent=[0.1,0.1,0.1], position=[0,0,0.1], color='red')</pre>
+              <span class="tip">Screenshot required: simulator window showing the red box</span>
             </div>
           </li>
 
           <li>
             <div class="step-body">
-              <h3>Place a UAIbot on the grid</h3>
+              <h3>Load a robot and read its starting position</h3>
               <p>
-                From the component panel, drag a UAIbot onto the simulation
-                grid. Position it at the centre of the arena. Note the starting
-                coordinates shown in the properties panel — you'll need these
-                in Step 5.
+                Replace your code with the program below and run it. The
+                robot's x, y, z position will print in the output panel beneath
+                the editor. Write down those three numbers — you will need
+                them in Step 5.
               </p>
-              <span class="tip">Remember: X and Y start coordinates</span>
+              <pre class="code-block">import browserbotics as bb
+bb.addGroundPlane()
+robot = bb.loadURDF('roomba.urdf')
+pos, rot = bb.getBasePose(robot)
+print('Starting position:', pos)</pre>
+              <span class="tip">Remember: starting x, y, z values from the output panel</span>
             </div>
           </li>
 
           <li>
             <div class="step-body">
-              <h3>Program a forward movement sequence</h3>
+              <h3>Drive the robot in an L-shape</h3>
               <p>
-                Using the block editor or code view, write a sequence that
-                moves the robot forward 3 steps, turns right 90°, then moves
-                forward 3 more steps. This traces an L-shape path. Run the
-                simulation and observe the robot's movement.
+                Extend your code to drive the robot forward, spin it right 90°,
+                then drive forward again. Use velocity control: equal wheel
+                speeds move forward; opposite speeds spin in place. Add
+                <code>import time</code> and use <code>time.sleep(seconds)</code>
+                between commands so the simulation has time to move. Run it and
+                watch the robot trace an L.
               </p>
               <span class="tip">
-                Tip: use <code>move(steps)</code> and <code>turn("right")</code> commands
+                Tip: <code>bb.setJointMotorControl(robot, 0, controlMode='velocity', targetVelocity=3)</code>
+                — joint 0 is the left wheel, joint 1 is the right wheel
               </span>
             </div>
           </li>
 
           <li>
             <div class="step-body">
-              <h3>Add a loop to repeat the L-shape</h3>
+              <h3>Use a loop to repeat the L-shape 4 times</h3>
               <p>
-                Wrap your movement sequence in a loop that repeats it 4 times.
-                The robot should trace a square-ish path back to its starting
-                position. Run the simulation again and confirm it returns to
-                the origin.
+                Wrap your drive-and-turn code inside a <code>for</code> loop
+                that repeats 4 times. The robot should trace a roughly square
+                path and return close to where it started. Run it and observe
+                the full path.
               </p>
-              <span class="tip">Screenshot required: completed loop path on grid</span>
+              <span class="tip">Screenshot required: simulation showing the completed 4-loop path</span>
             </div>
           </li>
 
@@ -241,24 +262,28 @@
             <div class="step-body">
               <h3>Add an obstacle and observe the response</h3>
               <p>
-                Place one obstacle block anywhere along the robot's path.
-                Run the simulation and observe what happens when the robot
-                encounters it. Note whether the robot stops, reports an error,
-                or ignores it. Write one sentence describing what you observed.
+                Place a stationary box in the robot's path by adding this line
+                before your loop, then run the simulation. Observe what happens
+                when the robot reaches the box — does it stop, push it, or
+                drive through? Write one sentence describing what you saw.
               </p>
+              <pre class="code-block">bb.createBody('box', halfExtent=[0.15,0.15,0.15],
+              position=[0.5,0,0.15], mass=0, color='orange')</pre>
               <span class="tip">Written observation required (1 sentence minimum)</span>
             </div>
           </li>
 
           <li>
             <div class="step-body">
-              <h3>Export your code and save your project</h3>
+              <h3>Save your code as a snippet</h3>
               <p>
-                Export or copy your code from the editor into a plain text
-                file. Save the project in UAIbot. You will attach both the
-                screenshot(s) and the code snippet in your submission email.
+                In the sandbox toolbar, click <strong>Save Snippet</strong> and
+                name it <em>Cohort1-YourFirstName</em>. This creates a
+                shareable link to your code. Copy the snippet URL — you will
+                paste it into your submission email alongside your screenshots
+                and written observation.
               </p>
-              <span class="tip">Deliverables: 2 screenshots + code snippet</span>
+              <span class="tip">Deliverables: snippet URL + 2 screenshots + written observation</span>
             </div>
           </li>
         </ol>
@@ -274,9 +299,9 @@
           <label>
             <input type="checkbox" />
             <div class="label-body">
-              <span>Named workspace screenshot</span>
+              <span>Starter code screenshot</span>
               <span class="label-desc">
-                Shows the empty project named <em>Cohort1-YourFirstName</em>
+                Simulator window showing the red box on the ground plane (Step 1)
               </span>
             </div>
           </label>
@@ -284,9 +309,9 @@
           <label>
             <input type="checkbox" />
             <div class="label-body">
-              <span>Completed loop path screenshot</span>
+              <span>4-loop path screenshot</span>
               <span class="label-desc">
-                Grid view showing the robot's full L-shape loop path
+                Simulation showing the robot completing the full L-shape loop pattern (Step 4)
               </span>
             </div>
           </label>
@@ -294,9 +319,9 @@
           <label>
             <input type="checkbox" />
             <div class="label-body">
-              <span>Code snippet included</span>
+              <span>Snippet URL copied</span>
               <span class="label-desc">
-                Copied or exported from the UAIbot editor, pasted into the email
+                Saved as <em>Cohort1-YourFirstName</em> in the BrowserBotics sandbox (Step 6)
               </span>
             </div>
           </label>
@@ -306,7 +331,7 @@
             <div class="label-body">
               <span>One-sentence obstacle observation written</span>
               <span class="label-desc">
-                Describes what the robot did when it hit the obstacle block
+                Describes what the robot did when it reached the orange box (Step 5)
               </span>
             </div>
           </label>
@@ -314,9 +339,9 @@
           <label>
             <input type="checkbox" />
             <div class="label-body">
-              <span>Project saved in UAIbot</span>
+              <span>Starting position coordinates noted</span>
               <span class="label-desc">
-                Saved under your Cohort1 project name before closing the browser
+                x, y, z values printed in the output panel during Step 2
               </span>
             </div>
           </label>
@@ -326,7 +351,7 @@
             <div class="label-body">
               <span>Email subject line correct</span>
               <span class="label-desc">
-                Subject: <em>UAIbot Starter Lab — YourFirstName — Cohort 1</em>
+                Subject: <em>BrowserBotics Starter Lab — YourFirstName — Cohort 1</em>
               </span>
             </div>
           </label>
@@ -336,17 +361,17 @@
       <section class="section" style="padding-top: 0;">
         <div class="submit-panel">
           <p class="eyebrow" style="margin:0;">Submit your work</p>
-          <h3>Email your screenshots, code, and observation.</h3>
+          <h3>Email your screenshots, snippet link, and observation.</h3>
           <p>
-            Attach your two screenshots and paste your code snippet directly
+            Attach your two screenshots and paste your BrowserBotics snippet URL
             into the body of the email. Include your one-sentence obstacle
             observation. Use the subject line:
-            <strong>UAIbot Starter Lab — YourFirstName — Cohort 1</strong>.
+            <strong>BrowserBotics Starter Lab — YourFirstName — Cohort 1</strong>.
           </p>
           <div class="hero-actions">
             <a
               class="button primary"
-              href="mailto:info@zawadilabs.com?subject=UAIbot%20Starter%20Lab%20%E2%80%94%20Cohort%201"
+              href="mailto:info@zawadilabs.com?subject=BrowserBotics%20Starter%20Lab%20%E2%80%94%20Cohort%201"
             >Submit by email</a>
             <a class="button secondary" href="portal.html">Back to student portal</a>
           </div>
@@ -355,7 +380,7 @@
     </main>
 
     <footer class="site-footer">
-      <span>UAIbot Starter Lab &mdash; Week 1 activity</span>
+      <span>BrowserBotics Starter Lab &mdash; Week 1 activity</span>
       <a href="portal.html">Back to student portal</a>
     </footer>
   </body>
