@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/pilot"
+  to   = "/robotics-cbi-orientation/pilot-site/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/pilot/*"
+  to   = "/robotics-cbi-orientation/pilot-site/:splat"
+  status = 301
