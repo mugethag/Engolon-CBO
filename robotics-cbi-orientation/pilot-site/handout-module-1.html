@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Module 1 Handout | Engolon Robotics</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* ── Page shell ──────────────────────────────────────────────────── */
+      .handout-main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 32px clamp(18px, 5vw, 48px) 72px;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+      }
+
+      /* ── Breadcrumb ──────────────────────────────────────────────────── */
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--muted);
+      }
+
+      .breadcrumb a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover { color: var(--green); }
+      .breadcrumb span { color: var(--line); }
+      .breadcrumb strong { color: var(--ink); }
+
+      /* ── Section label ───────────────────────────────────────────────── */
+      .section-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--clay);
+        margin-bottom: 14px;
+      }
+
+      .section-label::before {
+        content: '';
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: var(--clay);
+        border-radius: 99px;
+      }
+
+      /* ── Big Idea card ───────────────────────────────────────────────── */
+      .big-idea {
+        background: var(--green);
+        border-radius: 16px;
+        padding: 28px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .big-idea .label {
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.65);
+      }
+
+      .big-idea p {
+        margin: 0;
+        font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+        line-height: 1.6;
+        color: white;
+        font-weight: 600;
+      }
+
+      .big-idea strong {
+        color: #a8e6c0;
+      }
+
+      /* ── Loop diagram ────────────────────────────────────────────────── */
+      .loop-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .loop-step {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        position: relative;
+        padding-bottom: 20px;
+      }
+
+      /* Vertical connector line */
+      .loop-step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        left: 16px;
+        top: 36px;
+        width: 2px;
+        bottom: 0;
+        background: linear-gradient(to bottom, var(--green), var(--line));
+      }
+
+      .loop-num {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        border-radius: 50%;
+        background: var(--green);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        font-size: 0.82rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .loop-step.loop-back .loop-num {
+        background: var(--clay);
+      }
+
+      .loop-content {
+        padding-top: 5px;
+      }
+
+      .loop-content strong {
+        display: block;
+        font-size: 1rem;
+        color: var(--ink);
+        margin-bottom: 3px;
+      }
+
+      .loop-content span {
+        font-size: 0.88rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .loop-returns {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 8px;
+        padding: 10px 14px;
+        background: #fff8f4;
+        border: 1px dashed var(--clay);
+        border-radius: 10px;
+        font-size: 0.82rem;
+        color: var(--clay);
+        font-weight: 700;
+      }
+
+      .loop-returns::before {
+        content: '↺';
+        font-size: 1.1rem;
+      }
+
+      /* ── Glossary accordion ──────────────────────────────────────────── */
+      .glossary {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .glossary details {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: border-color 0.15s;
+      }
+
+      .glossary details[open] {
+        border-color: var(--green-2);
+      }
+
+      .glossary summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 16px;
+        font-weight: 800;
+        font-size: 0.95rem;
+        color: var(--ink);
+        cursor: pointer;
+        list-style: none;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+
+      .glossary summary::-webkit-details-marker { display: none; }
+
+      .glossary summary::after {
+        content: '+';
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: var(--muted);
+        transition: transform 0.2s;
+      }
+
+      .glossary details[open] summary::after {
+        transform: rotate(45deg);
+      }
+
+      .glossary-def {
+        padding: 0 16px 14px;
+        font-size: 0.9rem;
+        color: var(--muted);
+        line-height: 1.6;
+        border-top: 1px solid var(--line);
+        margin: 0;
+      }
+
+      /* ── Sustainability checklist ────────────────────────────────────── */
+      .checklist-progress {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .checklist-progress-track {
+        flex: 1;
+        height: 6px;
+        background: var(--line);
+        border-radius: 99px;
+        overflow: hidden;
+      }
+
+      .checklist-progress-fill {
+        height: 100%;
+        background: var(--green);
+        border-radius: 99px;
+        transition: width 0.3s ease;
+      }
+
+      .checklist-progress-label {
+        font-size: 0.8rem;
+        font-weight: 800;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .checklist-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .checklist-q {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px 16px;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: border-color 0.15s, background 0.15s;
+      }
+
+      .checklist-q:hover { border-color: var(--green-2); }
+
+      .checklist-q.checked {
+        background: #f4faf6;
+        border-color: #4caf7a;
+      }
+
+      .checklist-q input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        min-width: 18px;
+        margin-top: 2px;
+        accent-color: var(--green);
+        cursor: pointer;
+      }
+
+      .checklist-q label {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.5;
+        cursor: pointer;
+      }
+
+      .checklist-q.checked label {
+        color: var(--muted);
+      }
+
+      /* ── Reflection ──────────────────────────────────────────────────── */
+      .reflection-prompt {
+        background: #fffbf0;
+        border: 1px solid #f0d58e;
+        border-radius: 12px;
+        padding: 20px;
+        font-size: 0.95rem;
+        color: var(--ink);
+        line-height: 1.65;
+        margin-bottom: 16px;
+      }
+
+      .reflection-prompt strong {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--clay);
+        font-size: 0.78rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .reflection-textarea {
+        width: 100%;
+        min-height: 140px;
+        border: 1.5px solid var(--line);
+        border-radius: 10px;
+        background: white;
+        color: var(--ink);
+        font: inherit;
+        font-size: 0.92rem;
+        line-height: 1.6;
+        padding: 14px;
+        resize: vertical;
+        box-sizing: border-box;
+        transition: border-color 0.15s;
+      }
+
+      .reflection-textarea:focus {
+        outline: none;
+        border-color: var(--green);
+      }
+
+      .reflection-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+      }
+
+      .char-count {
+        font-size: 0.78rem;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .copy-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 14px;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        font: inherit;
+        font-size: 0.82rem;
+        font-weight: 850;
+        color: var(--ink);
+        cursor: pointer;
+        transition: background 0.15s, border-color 0.15s;
+      }
+
+      .copy-btn:hover { background: #f0faf4; border-color: var(--green-2); }
+      .copy-btn.copied { background: #d6f0e2; border-color: #4caf7a; color: #1a7a46; }
+
+      /* ── Next step CTA ───────────────────────────────────────────────── */
+      .next-card {
+        background: var(--panel);
+        border: 1.5px solid var(--green-2);
+        border-radius: 14px;
+        padding: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .next-card-text p {
+        margin: 0;
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+
+      .next-card-text strong {
+        display: block;
+        font-size: 1rem;
+        color: var(--ink);
+        margin-bottom: 3px;
+      }
+
+      .next-card a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 12px 22px;
+        background: var(--green);
+        color: white;
+        border-radius: 10px;
+        font-weight: 850;
+        font-size: 0.9rem;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .next-card a:hover { background: var(--green-2); text-decoration: none; }
+
+      @media (max-width: 480px) {
+        .next-card { flex-direction: column; align-items: flex-start; }
+        .next-card a { width: 100%; justify-content: center; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="assets/engolon-logo.png" alt="" />
+        <span>Engolon Robotics</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="portal.html">My learning</a>
+        <a href="uaibot-starter-lab.html">UAIbot lab</a>
+      </nav>
+    </header>
+
+    <main class="handout-main">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="portal.html">Portal</a>
+        <span>›</span>
+        <a href="portal.html#wk-1">Week 1: Move a Robot</a>
+        <span>›</span>
+        <strong>Module 1 Handout</strong>
+      </nav>
+
+      <!-- Big Idea -->
+      <section aria-labelledby="big-idea-heading">
+        <p class="section-label">Big idea</p>
+        <div class="big-idea">
+          <span class="label">Module 1 · Introduction to Sustainability Robotics</span>
+          <p>
+            A robot is a system that <strong>senses</strong>, <strong>decides</strong>,
+            <strong>acts</strong>, and uses <strong>feedback</strong> to improve its behavior.
+            Sustainability robotics applies these capabilities to environmental, infrastructure,
+            and community challenges.
+          </p>
+        </div>
+      </section>
+
+      <!-- Robotics Subsystem Loop -->
+      <section aria-labelledby="loop-heading">
+        <p class="section-label" id="loop-heading">The robotics loop</p>
+        <div class="loop-steps">
+          <div class="loop-step">
+            <div class="loop-num">1</div>
+            <div class="loop-content">
+              <strong>Sense</strong>
+              <span>Collect information from the environment using sensors.</span>
+            </div>
+          </div>
+          <div class="loop-step">
+            <div class="loop-num">2</div>
+            <div class="loop-content">
+              <strong>Decide</strong>
+              <span>Process that information and choose an action.</span>
+            </div>
+          </div>
+          <div class="loop-step">
+            <div class="loop-num">3</div>
+            <div class="loop-content">
+              <strong>Act</strong>
+              <span>Move or interact with the environment using actuators.</span>
+            </div>
+          </div>
+          <div class="loop-step">
+            <div class="loop-num">4</div>
+            <div class="loop-content">
+              <strong>Feedback</strong>
+              <span>Compare actual behavior with the desired outcome.</span>
+            </div>
+          </div>
+          <div class="loop-step loop-back">
+            <div class="loop-num">5</div>
+            <div class="loop-content">
+              <strong>Correct</strong>
+              <span>Adjust future commands based on feedback.</span>
+            </div>
+          </div>
+        </div>
+        <div class="loop-returns">
+          Step 5 feeds back into Step 1 — the loop repeats continuously.
+        </div>
+      </section>
+
+      <!-- Core Terms -->
+      <section aria-labelledby="terms-heading">
+        <p class="section-label" id="terms-heading">Core terms</p>
+        <div class="glossary" id="glossary">
+          <details>
+            <summary>Sensor</summary>
+            <p class="glossary-def">A device that collects information from the robot or its environment. Examples: camera, ultrasonic distance sensor, temperature probe.</p>
+          </details>
+          <details>
+            <summary>Actuator</summary>
+            <p class="glossary-def">A component that creates motion or physical action. Examples: electric motor, servo, hydraulic piston, propeller.</p>
+          </details>
+          <details>
+            <summary>Controller</summary>
+            <p class="glossary-def">The decision-making component that receives sensor data and sends commands to the actuators.</p>
+          </details>
+          <details>
+            <summary>Feedback</summary>
+            <p class="glossary-def">Information about actual performance used to adjust future action. Without feedback, errors accumulate uncorrected.</p>
+          </details>
+          <details>
+            <summary>Kinematics</summary>
+            <p class="glossary-def">The study of motion, position, velocity, and path — without considering the forces that cause them.</p>
+          </details>
+          <details>
+            <summary>Dynamics</summary>
+            <p class="glossary-def">The study of forces, torque, mass, acceleration, and energy — the physics behind why a robot moves the way it does.</p>
+          </details>
+          <details>
+            <summary>Open-loop control</summary>
+            <p class="glossary-def">Control that sends a command without checking the result. Simple but can't correct errors. Example: a timer-based sprinkler.</p>
+          </details>
+          <details>
+            <summary>Closed-loop control</summary>
+            <p class="glossary-def">Control that uses feedback to compare actual vs. desired behavior and makes corrections. Example: a thermostat.</p>
+          </details>
+          <details>
+            <summary>Sustainability robotics</summary>
+            <p class="glossary-def">Robotics designed to address environmental, social, and resource-aware challenges — minimising harm and maximising community benefit.</p>
+          </details>
+          <details>
+            <summary>Bio-inspired robotics</summary>
+            <p class="glossary-def">Robotic design influenced by living systems. Examples: drones modelled on bird flight, swarm robots modelled on ant colonies.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Sustainability Design Checklist -->
+      <section aria-labelledby="checklist-heading">
+        <p class="section-label" id="checklist-heading">Sustainability design checklist</p>
+        <p class="checklist-intro">
+          Use this when you design your Week 4 project robot. Check each question you have considered.
+        </p>
+        <div class="checklist-progress">
+          <div class="checklist-progress-track">
+            <div class="checklist-progress-fill" id="checklistFill"></div>
+          </div>
+          <span class="checklist-progress-label" id="checklistLabel">0 / 7</span>
+        </div>
+        <div class="checklist-list" id="checklistList">
+          <div class="checklist-q" id="cq-1">
+            <input type="checkbox" id="q1" />
+            <label for="q1">What problem does the robot solve?</label>
+          </div>
+          <div class="checklist-q" id="cq-2">
+            <input type="checkbox" id="q2" />
+            <label for="q2">Who benefits from the system?</label>
+          </div>
+          <div class="checklist-q" id="cq-3">
+            <input type="checkbox" id="q3" />
+            <label for="q3">What environmental or social risks might it create?</label>
+          </div>
+          <div class="checklist-q" id="cq-4">
+            <input type="checkbox" id="q4" />
+            <label for="q4">How much energy does it require?</label>
+          </div>
+          <div class="checklist-q" id="cq-5">
+            <input type="checkbox" id="q5" />
+            <label for="q5">Can it be maintained or repaired locally?</label>
+          </div>
+          <div class="checklist-q" id="cq-6">
+            <input type="checkbox" id="q6" />
+            <label for="q6">What data does it collect, and how should that data be protected?</label>
+          </div>
+          <div class="checklist-q" id="cq-7">
+            <input type="checkbox" id="q7" />
+            <label for="q7">What happens at the end of the robot's useful life?</label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reflection Prompt -->
+      <section aria-labelledby="reflection-heading">
+        <p class="section-label" id="reflection-heading">Your reflection</p>
+        <div class="reflection-prompt">
+          <strong>Think about this</strong>
+          Choose one environmental or infrastructure challenge in your community. Describe a
+          robotic system that could help address it. Identify the sensors, actuators, controller,
+          and feedback mechanism the system might need.
+        </div>
+        <textarea
+          class="reflection-textarea"
+          id="reflectionText"
+          placeholder="Start typing your answer here… What challenge did you choose? What would your robot sense, decide, do, and check?"
+          aria-label="Reflection answer"
+        ></textarea>
+        <div class="reflection-actions">
+          <span class="char-count" id="charCount">0 characters</span>
+          <button type="button" class="copy-btn" id="copyBtn">Copy to clipboard</button>
+        </div>
+      </section>
+
+      <!-- Next step -->
+      <div class="next-card">
+        <div class="next-card-text">
+          <strong>Ready for the simulator?</strong>
+          <p>Open UAIbot and move your first robot. Come back when you have a screenshot.</p>
+        </div>
+        <a href="https://uairobot.com/" target="_blank" rel="noopener noreferrer">▶ Open simulator</a>
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+      <span>Week 1 · Module 1 Handout</span>
+      <a href="portal.html">Back to portal</a>
+    </footer>
+
+    <script>
+      const CHECKLIST_KEY  = 'handout_m1_checklist';
+      const REFLECTION_KEY = 'handout_m1_reflection';
+      const TOTAL = 7;
+
+      // ── Checklist ─────────────────────────────────────────────────────
+      function loadChecklist() {
+        try { return JSON.parse(localStorage.getItem(CHECKLIST_KEY) || '[]'); }
+        catch { return []; }
+      }
+
+      function saveChecklist(checked) {
+        localStorage.setItem(CHECKLIST_KEY, JSON.stringify(checked));
+      }
+
+      function renderChecklist(checked) {
+        const pct = Math.round((checked.length / TOTAL) * 100);
+        document.getElementById('checklistFill').style.width  = pct + '%';
+        document.getElementById('checklistLabel').textContent = `${checked.length} / ${TOTAL}`;
+        for (let i = 1; i <= TOTAL; i++) {
+          const cb   = document.getElementById(`q${i}`);
+          const item = document.getElementById(`cq-${i}`);
+          const on   = checked.includes(i);
+          cb.checked = on;
+          item.classList.toggle('checked', on);
+        }
+      }
+
+      document.getElementById('checklistList').addEventListener('change', (e) => {
+        if (e.target.type !== 'checkbox') return;
+        const num     = parseInt(e.target.id.replace('q', ''), 10);
+        let checked   = loadChecklist();
+        if (e.target.checked) { if (!checked.includes(num)) checked.push(num); }
+        else { checked = checked.filter((n) => n !== num); }
+        saveChecklist(checked);
+        renderChecklist(checked);
+      });
+
+      // ── Reflection textarea ───────────────────────────────────────────
+      const textarea  = document.getElementById('reflectionText');
+      const charCount = document.getElementById('charCount');
+      const copyBtn   = document.getElementById('copyBtn');
+
+      function updateChar() {
+        const n = textarea.value.length;
+        charCount.textContent = `${n} character${n !== 1 ? 's' : ''}`;
+      }
+
+      let saveTimer;
+      textarea.addEventListener('input', () => {
+        updateChar();
+        clearTimeout(saveTimer);
+        saveTimer = setTimeout(() => {
+          localStorage.setItem(REFLECTION_KEY, textarea.value);
+        }, 600);
+      });
+
+      copyBtn.addEventListener('click', () => {
+        if (!textarea.value.trim()) return;
+        navigator.clipboard.writeText(textarea.value).then(() => {
+          copyBtn.textContent = 'Copied!';
+          copyBtn.classList.add('copied');
+          setTimeout(() => {
+            copyBtn.textContent = 'Copy to clipboard';
+            copyBtn.classList.remove('copied');
+          }, 2000);
+        });
+      });
+
+      // ── Init ──────────────────────────────────────────────────────────
+      renderChecklist(loadChecklist());
+      const saved = localStorage.getItem(REFLECTION_KEY);
+      if (saved) { textarea.value = saved; updateChar(); }
+    </script>
+  </body>
+</html>

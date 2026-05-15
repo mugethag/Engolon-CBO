@@ -146,94 +146,83 @@
 
       <section id="apply" class="section apply-section">
         <div class="section-heading">
-          <p class="eyebrow">Application form</p>
-          <h2>Screen for readiness, access, and commitment.</h2>
+          <p class="eyebrow">Cohort 1 applications open</p>
+          <h2>Pick your project. We'll teach you how to build it.</h2>
+          <p>Three questions. Thirty seconds.</p>
         </div>
-        <form id="applicationForm" class="application-form"
+        <form id="applicationForm" class="apply-form"
               name="cohort-1-application"
               method="POST"
               action="/thank-you.html"
               data-netlify="true">
           <input type="hidden" name="form-name" value="cohort-1-application" />
-          <label>
-            Full name
-            <input name="name" autocomplete="name" required />
-          </label>
-          <label>
-            Age
-            <input name="age" type="number" min="15" max="35" required />
-          </label>
-          <label>
-            Town / county
-            <input name="county" required />
-          </label>
-          <label>
-            Education level
-            <select name="education" required>
-              <option value="">Select one</option>
-              <option>Secondary school</option>
-              <option>TVET / college</option>
-              <option>University</option>
-              <option>School leaver</option>
-              <option>Early-career learner</option>
-            </select>
-          </label>
-          <label>
-            Phone
-            <input name="phone" autocomplete="tel" required />
-          </label>
-          <label>
-            Email
-            <input name="email" type="email" autocomplete="email" required />
-          </label>
-          <label>
-            Device access
-            <select name="device" required>
-              <option value="">Select one</option>
-              <option>Laptop or desktop</option>
-              <option>Tablet</option>
-              <option>Smartphone only</option>
-              <option>No reliable device</option>
-            </select>
-          </label>
-          <label>
-            Internet access
-            <select name="internet" required>
-              <option value="">Select one</option>
-              <option>Reliable daily access</option>
-              <option>Some weekly access</option>
-              <option>Limited access</option>
-            </select>
-          </label>
-          <label>
-            Prior coding experience
-            <select name="coding" required>
-              <option value="">Select one</option>
-              <option>None</option>
-              <option>Beginner</option>
-              <option>Some Python or JavaScript</option>
-              <option>Comfortable with coding</option>
-            </select>
-          </label>
-          <label>
-            Payment / sponsorship status
-            <select name="funding" required>
-              <option value="">Select one</option>
-              <option>Can pay individual learner fee</option>
-              <option>Sponsored by organization</option>
-              <option>Requesting scholarship</option>
-              <option>Can pay small commitment fee only</option>
-            </select>
-          </label>
-          <label class="wide">
-            Why do you want to join this course?
-            <textarea name="motivation" rows="5" required></textarea>
-          </label>
-          <label class="checkbox wide">
+
+          <div class="apply-fields">
+            <label class="apply-label">
+              Your name
+              <input
+                name="name"
+                placeholder="First name"
+                autocomplete="given-name"
+                required
+              />
+            </label>
+            <label class="apply-label">
+              WhatsApp number
+              <input
+                name="whatsapp"
+                type="tel"
+                placeholder="+254 7XX XXX XXX"
+                autocomplete="tel"
+                required
+              />
+            </label>
+          </div>
+
+          <fieldset class="project-fieldset">
+            <legend>What do you want to build?</legend>
+            <div class="project-cards">
+              <label class="project-card">
+                <input type="radio" name="project" value="farm-robot" required />
+                <span class="project-card-inner">
+                  <span class="project-emoji">🌾</span>
+                  <strong>Farm robot</strong>
+                  <span>Automate irrigation, planting, or pest detection for smallholder farms</span>
+                </span>
+              </label>
+              <label class="project-card">
+                <input type="radio" name="project" value="hospital-delivery" />
+                <span class="project-card-inner">
+                  <span class="project-emoji">🏥</span>
+                  <strong>Hospital delivery</strong>
+                  <span>Move supplies safely between wards without human contact</span>
+                </span>
+              </label>
+              <label class="project-card">
+                <input type="radio" name="project" value="city-logistics" />
+                <span class="project-card-inner">
+                  <span class="project-emoji">🏙️</span>
+                  <strong>City logistics</strong>
+                  <span>Last-mile delivery in dense Nairobi neighbourhoods</span>
+                </span>
+              </label>
+              <label class="project-card">
+                <input type="radio" name="project" value="waste-sorting" />
+                <span class="project-card-inner">
+                  <span class="project-emoji">♻️</span>
+                  <strong>Waste sorting</strong>
+                  <span>Automate recycling and waste classification at collection points</span>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <label class="checkbox apply-commit">
             <input name="availability" type="checkbox" required />
             <span>I can attend weekly live sessions and submit weekly tasks.</span>
           </label>
-          <button class="button primary" type="submit">Prepare application</button>
+
+          <button class="button primary apply-submit" type="submit">Apply for Cohort 1 →</button>
           <p id="formStatus" class="form-status" role="status"></p>
         </form>
       </section>
@@ -245,5 +234,15 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      document.getElementById('applicationForm').addEventListener('submit', () => {
+        const name    = document.querySelector('[name="name"]')?.value.trim() || '';
+        const project = document.querySelector('[name="project"]:checked')?.value || '';
+        try {
+          localStorage.setItem('portal_name',    JSON.stringify(name));
+          localStorage.setItem('portal_project', JSON.stringify(project));
+        } catch { /* storage unavailable */ }
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Module 2 Quiz | Engolon Robotics</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* ── Shell ───────────────────────────────────────────────────────── */
+      .quiz-main {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 32px clamp(18px, 5vw, 48px) 72px;
+      }
+
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--muted);
+        margin-bottom: 32px;
+      }
+
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--green); }
+      .breadcrumb span { color: var(--line); }
+      .breadcrumb strong { color: var(--ink); }
+
+      /* ── Slide wrapper (fade transition) ─────────────────────────────── */
+      #quizStage {
+        animation: fadeIn 0.22s ease;
+        will-change: opacity, transform;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      /* ── Progress bar ────────────────────────────────────────────────── */
+      .q-progress-wrap {
+        margin-bottom: 28px;
+      }
+
+      .q-progress-meta {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        font-weight: 800;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      .q-progress-track {
+        height: 6px;
+        background: var(--line);
+        border-radius: 99px;
+        overflow: hidden;
+      }
+
+      .q-progress-fill {
+        height: 100%;
+        background: var(--green);
+        border-radius: 99px;
+        transition: width 0.35s ease;
+      }
+
+      /* ── Intro screen ────────────────────────────────────────────────── */
+      .intro-icon {
+        font-size: 2.8rem;
+        margin-bottom: 14px;
+        line-height: 1;
+      }
+
+      .intro-title {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        margin: 0 0 6px;
+        line-height: 1.15;
+      }
+
+      .intro-module {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin: 0 0 24px;
+      }
+
+      .intro-meta {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 28px;
+      }
+
+      .meta-pill {
+        padding: 5px 13px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 800;
+        background: #edf5ef;
+        color: var(--green);
+      }
+
+      .meta-pill.warn {
+        background: #fff0e8;
+        color: #9a4a1c;
+      }
+
+      .intro-topics {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 18px 20px;
+        margin-bottom: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .intro-topics p {
+        margin: 0;
+        font-size: 0.8rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .topic-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 0.9rem;
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      .topic-dot {
+        width: 7px;
+        height: 7px;
+        min-width: 7px;
+        border-radius: 50%;
+        background: var(--green);
+        margin-top: 6px;
+      }
+
+      /* ── Question screen ─────────────────────────────────────────────── */
+      .q-label {
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--clay);
+        margin-bottom: 10px;
+      }
+
+      .q-text {
+        font-size: clamp(1rem, 2.5vw, 1.15rem);
+        font-weight: 700;
+        line-height: 1.5;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+
+      .options-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+
+      .option-btn {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        width: 100%;
+        min-height: 56px;
+        padding: 14px 16px;
+        background: white;
+        border: 1.5px solid var(--line);
+        border-radius: 12px;
+        cursor: pointer;
+        font: inherit;
+        text-align: left;
+        transition: border-color 0.15s, background 0.15s;
+        color: var(--ink);
+      }
+
+      .option-btn:hover:not(:disabled) {
+        border-color: var(--green-2);
+        background: #f4faf6;
+      }
+
+      .option-btn:disabled { cursor: default; }
+
+      .option-key {
+        width: 26px;
+        height: 26px;
+        min-width: 26px;
+        border-radius: 6px;
+        background: var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.78rem;
+        font-weight: 900;
+        color: var(--muted);
+        transition: background 0.15s, color 0.15s;
+        margin-top: 1px;
+      }
+
+      .option-text {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      /* Feedback states */
+      .option-btn.correct {
+        border-color: #4caf7a;
+        background: #f0faf4;
+      }
+
+      .option-btn.correct .option-key {
+        background: #4caf7a;
+        color: white;
+      }
+
+      .option-btn.wrong {
+        border-color: #e05252;
+        background: #fff5f5;
+      }
+
+      .option-btn.wrong .option-key {
+        background: #e05252;
+        color: white;
+      }
+
+      /* ── Hint card ───────────────────────────────────────────────────── */
+      .hint-card {
+        display: flex;
+        gap: 12px;
+        background: #fffbf0;
+        border: 1px solid #f0d58e;
+        border-radius: 10px;
+        padding: 14px 16px;
+        margin-bottom: 20px;
+        font-size: 0.88rem;
+        line-height: 1.55;
+        color: var(--ink);
+      }
+
+      .hint-icon {
+        font-size: 1.1rem;
+        line-height: 1.4;
+        flex-shrink: 0;
+      }
+
+      /* ── Navigation button ───────────────────────────────────────────── */
+      .nav-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 50px;
+        padding: 0 24px;
+        background: var(--green);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font: inherit;
+        font-weight: 850;
+        font-size: 0.96rem;
+        cursor: pointer;
+        transition: background 0.15s;
+        width: 100%;
+        justify-content: center;
+        text-decoration: none;
+      }
+
+      .nav-btn:hover { background: var(--green-2); }
+
+      .nav-btn.secondary {
+        background: transparent;
+        color: var(--green);
+        border: 1.5px solid var(--green);
+      }
+
+      .nav-btn.secondary:hover { background: #edf5ef; }
+
+      /* ── Results screen ──────────────────────────────────────────────── */
+      .score-ring-wrap {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+      }
+
+      .score-ring {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 6px solid var(--line);
+        gap: 2px;
+      }
+
+      .score-ring.passed { border-color: #4caf7a; }
+      .score-ring.failed { border-color: var(--clay); }
+
+      .score-num {
+        font-size: 2rem;
+        font-weight: 900;
+        line-height: 1;
+        color: var(--ink);
+      }
+
+      .score-denom {
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--muted);
+      }
+
+      .result-verdict {
+        text-align: center;
+        margin-bottom: 8px;
+        font-size: clamp(1.4rem, 4vw, 1.8rem);
+        font-weight: 900;
+        color: var(--ink);
+      }
+
+      .result-sub {
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.92rem;
+        margin: 0 0 28px;
+      }
+
+      .result-sub.pass { color: #1a7a46; font-weight: 700; }
+
+      .review-heading {
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 12px;
+      }
+
+      .review-item {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 14px 16px;
+        margin-bottom: 10px;
+      }
+
+      .review-item-q {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 8px;
+      }
+
+      .review-answer {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .review-answer strong {
+        color: var(--green);
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .result-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      /* ── Outcome badge ───────────────────────────────────────────────── */
+      .outcome-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #d6f0e2;
+        color: #1a7a46;
+        border-radius: 20px;
+        padding: 4px 12px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="assets/engolon-logo.png" alt="" />
+        <span>Engolon Robotics</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="portal.html">My learning</a>
+        <a href="uaibot-starter-lab.html">UAIbot lab</a>
+      </nav>
+    </header>
+
+    <main class="quiz-main">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="portal.html">Portal</a>
+        <span>›</span>
+        <a href="portal.html#wk-2">Week 2: Program a Drone</a>
+        <span>›</span>
+        <strong>Module 2 Quiz</strong>
+      </nav>
+
+      <div id="quizStage" role="main" aria-live="polite"></div>
+    </main>
+
+    <footer class="site-footer">
+      <span>Week 2 · Module 2 Quiz</span>
+      <a href="portal.html">Back to portal</a>
+    </footer>
+
+    <script>
+      // ── Quiz data ────────────────────────────────────────────────────────
+      const QUIZ = [
+        {
+          q: "A drone is best understood as:",
+          options: [
+            "Only a flying camera",
+            "An aerial robotic system with sensing, control, propulsion, communication, and payload subsystems",
+            "A computer that does not move",
+            "A ground vehicle with wheels"
+          ],
+          correct: 1,
+          hint: "A drone is a complete robotic system. It has sensing (IMU, barometer, GPS), a flight controller, propulsion (motors and propellers), a communication link, and a mission payload — all working together.",
+          outcome: "Identify drone systems"
+        },
+        {
+          q: "Which component is primarily responsible for processing sensor data and sending commands to the motors?",
+          options: [
+            "Flight controller",
+            "Frame color",
+            "Landing pad",
+            "Carrying case"
+          ],
+          correct: 0,
+          hint: "The flight controller is the drone's brain. It reads sensors hundreds of times per second and adjusts individual motor speeds to maintain stable, commanded flight.",
+          outcome: "Identify flight control components"
+        },
+        {
+          q: "Roll describes:",
+          options: [
+            "Rotation around the drone's vertical axis",
+            "Tilting left or right",
+            "Moving straight upward only",
+            "Battery charging speed"
+          ],
+          correct: 1,
+          hint: "Roll = side-to-side tilt. Yaw = rotation around the vertical axis. Pitch = forward/backward tilt. These three axes plus altitude give full 3D flight control.",
+          outcome: "Explain flight axes"
+        },
+        {
+          q: "Yaw describes:",
+          options: [
+            "Rotation around the drone's vertical axis",
+            "Tilting forward or backward",
+            "The weight of the payload",
+            "The image resolution of a camera"
+          ],
+          correct: 0,
+          hint: "Yaw spins the drone left or right without tilting — like rotating a top on a table. Pitch is forward/backward tilt; Roll is side-to-side tilt.",
+          outcome: "Explain flight axes"
+        },
+        {
+          q: "In feedback control, the controller compares:",
+          options: [
+            "Desired behavior with actual behavior",
+            "Logo color with battery color",
+            "Course schedule with student grades",
+            "The drone frame with the packaging"
+          ],
+          correct: 0,
+          hint: "Feedback control measures the gap between what you want the drone to do (e.g., hold 50 m altitude) and what it is actually doing, then adjusts motor commands to close that gap.",
+          outcome: "Explain feedback control"
+        },
+        {
+          q: "The proportional term in a PID controller responds mainly to:",
+          options: [
+            "Present error",
+            "Accumulated historical error only",
+            "The drone's brand name",
+            "Weather reports only"
+          ],
+          correct: 0,
+          hint: "P = Present error. I = accumulated (Integral) error over time. D = rate of change (Derivative) of error. P gives instant correction, but alone it can cause oscillation.",
+          outcome: "Explain PID basics"
+        },
+        {
+          q: "State-space control uses state variables such as:",
+          options: [
+            "Position, velocity, orientation, and angular velocity",
+            "Price, logo, packaging, and marketing copy",
+            "Student ID, course name, and password",
+            "File size and font size"
+          ],
+          correct: 0,
+          hint: "State-space control captures the drone's full condition: where it is (position), how fast it's moving (velocity), which way it's pointing (orientation), and how fast it's turning (angular velocity).",
+          outcome: "Explain state-space basics"
+        },
+        {
+          q: "A basic autonomous navigation stack may include:",
+          options: [
+            "Perception, localization, planning, control, and mission monitoring",
+            "Printing, filing, copying, scanning, and stapling",
+            "Painting, packaging, selling, invoicing, and shipping",
+            "Guessing, drifting, ignoring, and stopping"
+          ],
+          correct: 0,
+          hint: "Autonomous navigation is a pipeline: detect the environment (Perception), know where you are (Localization), choose a path (Planning), execute it (Control), then check safety throughout (Mission monitoring).",
+          outcome: "Explain autonomous navigation"
+        },
+        {
+          q: "If a drone overshoots its target altitude and oscillates, the issue is most closely related to:",
+          options: [
+            "Stability and controller tuning",
+            "The spelling of the mission name",
+            "The color of the propellers",
+            "The file format of the syllabus"
+          ],
+          correct: 0,
+          hint: "Overshoot and oscillation are classic signs of a controller that is tuned too aggressively — P is too high or D is too low. The drone corrects past the target, then overcorrects back.",
+          outcome: "Assess stability and transient response"
+        },
+        {
+          q: "Which mission would likely prioritize high-resolution imaging and stable flight near structures?",
+          options: [
+            "Bridge inspection",
+            "Random indoor decoration",
+            "Offline word processing",
+            "Classroom seating arrangement"
+          ],
+          correct: 0,
+          hint: "Bridge inspection requires close-proximity flight, precise altitude control, and a high-resolution camera payload to detect cracks and structural defects. Stability and imaging quality are the top priorities.",
+          outcome: "Compare real-world applications"
+        }
+      ];
+
+      const PASS_SCORE   = 7;
+      const STORAGE_KEY  = 'quiz_m2';
+      const KEYS         = ['A', 'B', 'C', 'D'];
+
+      // ── State ────────────────────────────────────────────────────────────
+      let state = {
+        phase:    'intro',
+        current:  0,
+        selected: null,
+        answers:  [],
+      };
+
+      // ── Storage ──────────────────────────────────────────────────────────
+      function markComplete(score, passed) {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({ complete: true, score, passed }));
+        } catch { /* storage unavailable */ }
+      }
+
+      // ── Render ───────────────────────────────────────────────────────────
+      const stage = document.getElementById('quizStage');
+
+      function render() {
+        stage.style.animation = 'none';
+        stage.offsetHeight;
+        stage.style.animation = '';
+
+        if      (state.phase === 'intro')    stage.innerHTML = renderIntro();
+        else if (state.phase === 'question') stage.innerHTML = renderQuestion();
+        else if (state.phase === 'feedback') stage.innerHTML = renderFeedback();
+        else if (state.phase === 'results')  stage.innerHTML = renderResults();
+
+        attachHandlers();
+      }
+
+      // ── Intro ────────────────────────────────────────────────────────────
+      function renderIntro() {
+        return `
+          <div class="intro-icon">✈️</div>
+          <h1 class="intro-title">Module 2 Quiz</h1>
+          <p class="intro-module">Introduction to Drone Systems, Aerial Robotics and Control Design</p>
+          <div class="intro-meta">
+            <span class="meta-pill">10 questions</span>
+            <span class="meta-pill warn">Pass: 7 or more correct</span>
+          </div>
+          <div class="intro-topics">
+            <p>What you'll be tested on</p>
+            ${[
+              'Drone subsystems — frame, propulsion, sensors, controller',
+              'Flight axes — roll, pitch, yaw, altitude',
+              'Feedback control and PID basics',
+              'The basic autonomy stack',
+              'Real-world drone mission priorities'
+            ].map(t => `
+              <div class="topic-row">
+                <span class="topic-dot" aria-hidden="true"></span>
+                <span>${t}</span>
+              </div>`).join('')}
+          </div>
+          <button class="nav-btn" data-action="start">Start quiz →</button>
+        `;
+      }
+
+      // ── Question ─────────────────────────────────────────────────────────
+      function renderQuestion() {
+        const q   = QUIZ[state.current];
+        const num = state.current + 1;
+        const pct = Math.round(((num - 1) / QUIZ.length) * 100);
+
+        return `
+          <div class="q-progress-wrap">
+            <div class="q-progress-meta">
+              <span>Question ${num} of ${QUIZ.length}</span>
+              <span>${state.answers.length} answered</span>
+            </div>
+            <div class="q-progress-track">
+              <div class="q-progress-fill" style="width:${pct}%"></div>
+            </div>
+          </div>
+          <p class="q-label">Question ${num}</p>
+          <p class="q-text">${q.q}</p>
+          <div class="options-list" role="group" aria-label="Answer options">
+            ${q.options.map((opt, i) => `
+              <button
+                class="option-btn"
+                data-action="select"
+                data-index="${i}"
+                aria-label="Option ${KEYS[i]}: ${opt}"
+              >
+                <span class="option-key" aria-hidden="true">${KEYS[i]}</span>
+                <span class="option-text">${opt}</span>
+              </button>`).join('')}
+          </div>
+        `;
+      }
+
+      // ── Feedback ─────────────────────────────────────────────────────────
+      function renderFeedback() {
+        const q       = QUIZ[state.current];
+        const num     = state.current + 1;
+        const pct     = Math.round((num / QUIZ.length) * 100);
+        const isRight = state.selected === q.correct;
+        const isLast  = state.current === QUIZ.length - 1;
+
+        const optionButtons = q.options.map((opt, i) => `
+          <button class="option-btn ${
+            i === q.correct ? 'correct' : (i === state.selected && !isRight ? 'wrong' : '')
+          }" disabled aria-label="Option ${KEYS[i]}: ${opt}">
+            <span class="option-key" aria-hidden="true">${
+              i === q.correct ? '✓' : (i === state.selected && !isRight ? '✗' : KEYS[i])
+            }</span>
+            <span class="option-text">${opt}</span>
+          </button>`).join('');
+
+        const hintBlock = !isRight
+          ? `<div class="hint-card" role="alert">
+               <span class="hint-icon" aria-hidden="true">💡</span>
+               <span>${q.hint}</span>
+             </div>`
+          : '';
+
+        const outcomeBlock = isRight
+          ? `<div class="outcome-badge" role="status">
+               <span aria-hidden="true">✓</span> ${q.outcome}
+             </div>`
+          : '';
+
+        return `
+          <div class="q-progress-wrap">
+            <div class="q-progress-meta">
+              <span>Question ${num} of ${QUIZ.length}</span>
+              <span role="status">${isRight ? '✓ Correct' : '✗ Incorrect'}</span>
+            </div>
+            <div class="q-progress-track">
+              <div class="q-progress-fill" style="width:${pct}%"></div>
+            </div>
+          </div>
+          <p class="q-label">Question ${num}</p>
+          <p class="q-text">${q.q}</p>
+          <div class="options-list">${optionButtons}</div>
+          ${hintBlock}
+          ${outcomeBlock}
+          <button class="nav-btn" data-action="next">
+            ${isLast ? 'See results →' : 'Next question →'}
+          </button>
+        `;
+      }
+
+      // ── Results ──────────────────────────────────────────────────────────
+      function renderResults() {
+        const score  = state.answers.filter(a => a.selected === a.correct).length;
+        const passed = score >= PASS_SCORE;
+        const pct    = Math.round((score / QUIZ.length) * 100);
+
+        markComplete(score, passed);
+
+        const wrongs = state.answers
+          .map((a, i) => ({ ...a, qi: i }))
+          .filter(a => a.selected !== a.correct);
+
+        const wrongsHtml = wrongs.length > 0 ? `
+          <p class="review-heading" style="margin-top:28px">Questions to review</p>
+          ${wrongs.map(w => `
+            <div class="review-item">
+              <p class="review-item-q">Q${w.qi + 1}. ${QUIZ[w.qi].q}</p>
+              <div class="review-answer">
+                <strong>Correct:</strong>
+                <span>${QUIZ[w.qi].options[w.correct]}</span>
+              </div>
+            </div>`).join('')}
+        ` : '';
+
+        return `
+          <div class="score-ring-wrap">
+            <div class="score-ring ${passed ? 'passed' : 'failed'}" role="img"
+                 aria-label="${score} out of ${QUIZ.length} correct">
+              <span class="score-num">${score}</span>
+              <span class="score-denom">out of ${QUIZ.length}</span>
+            </div>
+          </div>
+          <p class="result-verdict">${passed ? '🎉 You passed!' : 'Almost there.'}</p>
+          <p class="result-sub ${passed ? 'pass' : ''}">
+            ${passed
+              ? `${pct}% — you're ready for the simulator.`
+              : `You need ${PASS_SCORE} to pass. Review the handout and try again.`}
+          </p>
+          ${wrongsHtml}
+          <div class="result-actions">
+            ${passed
+              ? `<a class="nav-btn" href="portal.html#wk-2">Back to portal →</a>`
+              : `<button class="nav-btn" data-action="retry">Try again →</button>
+                 <a class="nav-btn secondary" href="handout-module-2.html">Review handout</a>`}
+          </div>
+        `;
+      }
+
+      // ── Event handlers ───────────────────────────────────────────────────
+      function attachHandlers() {
+        stage.querySelectorAll('[data-action]').forEach(el => {
+          el.addEventListener('click', handleAction);
+        });
+      }
+
+      function handleAction(e) {
+        const action = e.currentTarget.dataset.action;
+
+        if (action === 'start') {
+          state = { phase: 'question', current: 0, selected: null, answers: [] };
+          render();
+
+        } else if (action === 'select') {
+          const idx = parseInt(e.currentTarget.dataset.index, 10);
+          state.selected = idx;
+          state.phase    = 'feedback';
+          state.answers.push({ selected: idx, correct: QUIZ[state.current].correct });
+          render();
+
+        } else if (action === 'next') {
+          if (state.current < QUIZ.length - 1) {
+            state.current++;
+            state.selected = null;
+            state.phase    = 'question';
+          } else {
+            state.phase = 'results';
+          }
+          render();
+
+        } else if (action === 'retry') {
+          state = { phase: 'question', current: 0, selected: null, answers: [] };
+          render();
+        }
+      }
+
+      // ── Init ─────────────────────────────────────────────────────────────
+      render();
+    </script>
+  </body>
+</html>

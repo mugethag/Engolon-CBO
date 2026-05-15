@@ -3,8 +3,538 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Application Received | Engolon Robotics</title>
+    <title>Welcome to Cohort 1 | Engolon Robotics</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* ── Shell ───────────────────────────────────────────────────────── */
+      .onboard-main {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px clamp(18px, 5vw, 48px) 80px;
+      }
+
+      /* ── Fade transition ─────────────────────────────────────────────── */
+      #stage {
+        animation: fadeUp 0.28s ease;
+        will-change: opacity, transform;
+      }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      /* ── Step dots ───────────────────────────────────────────────────── */
+      .step-dots {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 36px;
+      }
+
+      .step-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--line);
+        transition: background 0.2s, transform 0.2s;
+      }
+
+      .step-dot.active {
+        background: var(--green);
+        transform: scale(1.3);
+      }
+
+      .step-dot.done {
+        background: var(--green-2);
+      }
+
+      /* ── Large emoji display ─────────────────────────────────────────── */
+      .hero-emoji {
+        font-size: 3.2rem;
+        line-height: 1;
+        margin-bottom: 18px;
+      }
+
+      /* ── Main heading ────────────────────────────────────────────────── */
+      .onboard-h1 {
+        font-size: clamp(1.7rem, 5vw, 2.4rem);
+        line-height: 1.15;
+        margin: 0 0 10px;
+        color: var(--ink);
+      }
+
+      .onboard-sub {
+        font-size: 1rem;
+        color: var(--muted);
+        line-height: 1.6;
+        margin: 0 0 28px;
+      }
+
+      /* ── Project badge ───────────────────────────────────────────────── */
+      .project-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #edf5ef;
+        border: 1px solid #b8dfc5;
+        border-radius: 24px;
+        padding: 7px 16px;
+        font-size: 0.92rem;
+        font-weight: 800;
+        color: var(--green);
+        margin-bottom: 20px;
+      }
+
+      /* ── Project teaser card ─────────────────────────────────────────── */
+      .teaser-card {
+        background: var(--green);
+        border-radius: 14px;
+        padding: 22px 24px;
+        margin-bottom: 28px;
+        color: white;
+      }
+
+      .teaser-card .label {
+        font-size: 0.7rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.6);
+        margin-bottom: 8px;
+      }
+
+      .teaser-card p {
+        margin: 0;
+        font-size: 0.96rem;
+        line-height: 1.65;
+        color: rgba(255,255,255,0.92);
+      }
+
+      /* ── Name prompt (fallback) ──────────────────────────────────────── */
+      .name-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .name-form label {
+        display: grid;
+        gap: 8px;
+        font-size: 0.9rem;
+        font-weight: 800;
+        color: var(--ink);
+      }
+
+      .name-form input {
+        padding: 13px 14px;
+        border: 1.5px solid var(--line);
+        border-radius: 10px;
+        font: inherit;
+        font-size: 1rem;
+        color: var(--ink);
+        background: white;
+        transition: border-color 0.15s;
+      }
+
+      .name-form input:focus {
+        outline: none;
+        border-color: var(--green);
+      }
+
+      /* Project picker (fallback) */
+      .picker-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .picker-card {
+        cursor: pointer;
+      }
+
+      .picker-card input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .picker-card-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 14px;
+        background: white;
+        border: 1.5px solid var(--line);
+        border-radius: 12px;
+        transition: border-color 0.15s, background 0.15s;
+      }
+
+      .picker-card:hover .picker-card-inner { border-color: var(--green-2); }
+
+      .picker-card input:checked + .picker-card-inner {
+        border-color: var(--green);
+        background: #edf5ef;
+        box-shadow: 0 0 0 3px rgba(36,84,58,0.1);
+      }
+
+      .picker-card input:focus-visible + .picker-card-inner {
+        outline: 2px solid var(--green);
+        outline-offset: 2px;
+      }
+
+      .picker-emoji { font-size: 1.4rem; line-height: 1; margin-bottom: 4px; }
+
+      .picker-card-inner strong {
+        font-size: 0.88rem;
+        color: var(--ink);
+      }
+
+      /* ── Journey map ─────────────────────────────────────────────────── */
+      .journey-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 28px;
+      }
+
+      .journey-week {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        position: relative;
+        padding-bottom: 0;
+      }
+
+      .journey-week:not(:last-child) {
+        padding-bottom: 0;
+      }
+
+      .journey-track {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        flex-shrink: 0;
+      }
+
+      .journey-dot {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid var(--line);
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.72rem;
+        font-weight: 900;
+        color: var(--muted);
+        transition: border-color 0.2s, background 0.2s;
+        position: relative;
+        z-index: 1;
+      }
+
+      .journey-dot.active {
+        border-color: var(--green);
+        background: var(--green);
+        color: white;
+      }
+
+      .journey-dot.project-dot {
+        border-color: var(--clay);
+        background: #fff0e8;
+        color: var(--clay);
+        font-size: 1rem;
+      }
+
+      .journey-line {
+        width: 2px;
+        height: 36px;
+        background: var(--line);
+        flex-shrink: 0;
+      }
+
+      .journey-content {
+        padding: 4px 0 28px;
+      }
+
+      .journey-week-label {
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 3px;
+      }
+
+      .journey-week-label.active-label { color: var(--green); }
+
+      .journey-week-title {
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--ink);
+        margin: 0 0 2px;
+      }
+
+      .journey-week-desc {
+        font-size: 0.85rem;
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.45;
+      }
+
+      .you-are-here {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: #edf5ef;
+        color: var(--green);
+        border-radius: 20px;
+        padding: 2px 10px;
+        font-size: 0.72rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-top: 4px;
+      }
+
+      /* ── Micro-lesson ────────────────────────────────────────────────── */
+      .task-meta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+
+      .task-meta-pill {
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.78rem;
+        font-weight: 900;
+        background: #fff0e8;
+        color: #9a4a1c;
+      }
+
+      .lesson-card {
+        background: #f7f9f6;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      .lesson-card .lesson-label {
+        font-size: 0.7rem;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 10px;
+      }
+
+      .lesson-card p {
+        margin: 0 0 14px;
+        font-size: 0.92rem;
+        color: var(--ink);
+        line-height: 1.65;
+      }
+
+      .lesson-card p:last-child { margin-bottom: 0; }
+
+      /* Loop mini diagram */
+      .loop-mini {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+      }
+
+      .loop-node {
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        background: #edf5ef;
+        color: var(--green);
+      }
+
+      .loop-arrow {
+        color: var(--muted);
+        font-size: 0.85rem;
+        font-weight: 900;
+      }
+
+      .loop-node.act { background: #e8f0ff; color: var(--blue); }
+      .loop-node.correct { background: #fff0e8; color: #9a4a1c; }
+
+      /* Simulator CTA */
+      .sim-cta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        background: var(--panel);
+        border: 1.5px solid var(--green-2);
+        border-radius: 12px;
+        padding: 18px 20px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+
+      .sim-cta-text strong {
+        display: block;
+        font-size: 0.96rem;
+        color: var(--ink);
+        margin-bottom: 3px;
+      }
+
+      .sim-cta-text span {
+        font-size: 0.83rem;
+        color: var(--muted);
+      }
+
+      .sim-open-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 10px 20px;
+        background: var(--blue);
+        color: white;
+        border-radius: 8px;
+        font-weight: 850;
+        font-size: 0.88rem;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .sim-open-btn:hover { background: #1a5e7a; text-decoration: none; }
+
+      .did-it-hint {
+        font-size: 0.82rem;
+        color: var(--muted);
+        text-align: center;
+        margin-bottom: 12px;
+      }
+
+      /* ── Primary action button ───────────────────────────────────────── */
+      .action-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        min-height: 52px;
+        padding: 0 24px;
+        background: var(--green);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font: inherit;
+        font-weight: 850;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.15s;
+      }
+
+      .action-btn:hover { background: var(--green-2); text-decoration: none; }
+
+      .action-btn.secondary {
+        background: white;
+        color: var(--green);
+        border: 1.5px solid var(--green);
+      }
+
+      .action-btn.secondary:hover { background: #edf5ef; }
+
+      /* ── Celebration ─────────────────────────────────────────────────── */
+      .win-banner {
+        text-align: center;
+        margin-bottom: 28px;
+      }
+
+      .win-emoji {
+        font-size: 3.5rem;
+        line-height: 1;
+        margin-bottom: 14px;
+      }
+
+      .win-title {
+        font-size: clamp(1.8rem, 5vw, 2.6rem);
+        font-weight: 900;
+        color: var(--ink);
+        margin: 0 0 8px;
+      }
+
+      .win-sub {
+        font-size: 1rem;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .unlocked-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: #d6f0e2;
+        color: #1a7a46;
+        border-radius: 12px;
+        padding: 16px 20px;
+        font-weight: 850;
+        font-size: 1rem;
+        margin-bottom: 24px;
+      }
+
+      .win-understands {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 28px;
+      }
+
+      .win-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px 16px;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .win-check {
+        width: 22px;
+        height: 22px;
+        min-width: 22px;
+        border-radius: 50%;
+        background: #d6f0e2;
+        color: #1a7a46;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 900;
+        margin-top: 1px;
+      }
+
+      @media (max-width: 480px) {
+        .picker-grid { grid-template-columns: 1fr; }
+        .sim-cta { flex-direction: column; align-items: flex-start; }
+        .sim-open-btn { width: 100%; justify-content: center; }
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -13,27 +543,313 @@
         <span>Engolon Robotics</span>
       </a>
       <nav aria-label="Main navigation">
-        <a href="index.html#program">Program</a>
-        <a href="index.html#pathway">Pathway</a>
+        <a href="index.html">Home</a>
         <a href="portal.html">Student portal</a>
       </nav>
     </header>
 
-    <main>
-      <section class="page-title" style="text-align:center; padding: 4rem 1.5rem;">
-        <p class="eyebrow">Application received</p>
-        <h1>You're in the queue for Cohort 1.</h1>
-        <p style="max-width:42ch; margin: 1rem auto 2rem;">
-          We've received your application. Our team will review it and contact
-          you via the phone number or email you provided within 7 days.
-        </p>
-        <a class="button primary" href="portal.html">Preview the student portal</a>
-      </section>
+    <main class="onboard-main">
+      <div id="stage" role="main" aria-live="polite"></div>
     </main>
 
     <footer class="site-footer">
-      <span>Engolon Robotics &amp; Automation Foundations</span>
+      <span>Engolon Robotics · Cohort 1</span>
       <a href="index.html">Back to home</a>
     </footer>
+
+    <script>
+      // ── Project content ──────────────────────────────────────────────────
+      const PROJECTS = {
+        'farm-robot': {
+          emoji: '🌾',
+          name: 'Farm robot',
+          teaser: 'Your robot will monitor crops, navigate field rows, and help smallholder farmers do more with less — reducing labour while improving yields.',
+          lesson: 'A farm robot moves along crop rows by receiving movement commands from its controller. Sensors detect the field boundaries and feed that position back to keep the robot on track. That feedback loop is exactly what you\'re about to experience in the simulator.',
+          week4: 'Design your farm robot'
+        },
+        'hospital-delivery': {
+          emoji: '🏥',
+          name: 'Hospital delivery',
+          teaser: 'Your robot will navigate hospital corridors, detect obstacles, and deliver the right supplies to the right ward — without human guidance.',
+          lesson: 'A hospital delivery robot moves through corridors by following commands from its controller. Distance sensors detect walls and doors, feeding position data back so the robot corrects its path continuously. That loop is what you\'re about to practice.',
+          week4: 'Design your hospital robot'
+        },
+        'city-logistics': {
+          emoji: '🏙️',
+          name: 'City logistics',
+          teaser: 'Your robot will handle last-mile deliveries in dense Nairobi streets — navigating obstacles, tracking its position, and completing deliveries without a driver.',
+          lesson: 'Every autonomous delivery robot starts with one skill: move from A to B reliably. Sensors read the environment, the controller decides the next move, and feedback keeps the robot on course. That\'s exactly what you\'re about to try.',
+          week4: 'Design your city robot'
+        },
+        'waste-sorting': {
+          emoji: '♻️',
+          name: 'Waste sorting',
+          teaser: 'Your robot will classify different types of waste and move them to the correct bin automatically — turning a difficult, repetitive job into a solved problem.',
+          lesson: 'A sorting robot needs precise, repeatable movement. It senses what\'s in front of it, the controller decides where to move it, and feedback confirms the item landed correctly. That loop — sense, decide, act, correct — is what you\'re about to experience.',
+          week4: 'Design your sorting robot'
+        }
+      };
+
+      const DEFAULT_PROJECT = {
+        emoji: '🤖',
+        name: 'Robotics project',
+        teaser: 'By Week 4 you\'ll design a robot that solves a real local problem — using everything you\'ve learned about sensors, control, and autonomous movement.',
+        lesson: 'A robot moves by receiving commands from its controller. Sensors detect what\'s around it and feed information back so the robot can correct its path. That feedback loop — sense, decide, act, correct — is what you\'re about to experience.',
+        week4: 'Design your robot'
+      };
+
+      // ── State ────────────────────────────────────────────────────────────
+      let state = { phase: 'greeting' };  // greeting | journey | task | celebrate
+
+      function getStored() {
+        try {
+          return {
+            name:    JSON.parse(localStorage.getItem('portal_name')    || 'null') || '',
+            project: JSON.parse(localStorage.getItem('portal_project') || 'null') || ''
+          };
+        } catch { return { name: '', project: '' }; }
+      }
+
+      function saveStored(name, project) {
+        localStorage.setItem('portal_name',    JSON.stringify(name));
+        localStorage.setItem('portal_project', JSON.stringify(project));
+      }
+
+      function getProject(key) {
+        return PROJECTS[key] || DEFAULT_PROJECT;
+      }
+
+      // ── Render ───────────────────────────────────────────────────────────
+      const stage = document.getElementById('stage');
+
+      function render() {
+        stage.style.animation = 'none';
+        stage.offsetHeight;
+        stage.style.animation = '';
+
+        const phases = ['greeting', 'journey', 'task', 'celebrate'];
+        const idx    = phases.indexOf(state.phase);
+
+        const dots = phases.map((p, i) => `
+          <div class="step-dot ${i < idx ? 'done' : i === idx ? 'active' : ''}"></div>
+        `).join('');
+
+        const stored  = getStored();
+        const project = getProject(stored.project);
+
+        let content = '';
+        if      (state.phase === 'greeting')  content = renderGreeting(stored, project);
+        else if (state.phase === 'journey')   content = renderJourney(stored, project);
+        else if (state.phase === 'task')      content = renderTask(stored, project);
+        else if (state.phase === 'celebrate') content = renderCelebrate(stored, project);
+
+        stage.innerHTML = `
+          <div class="step-dots" aria-hidden="true">${dots}</div>
+          ${content}
+        `;
+
+        attachHandlers();
+      }
+
+      // ── Phase 1: Greeting ────────────────────────────────────────────────
+      function renderGreeting(stored, project) {
+        // If we have a name and project, go straight to the personalised view
+        if (stored.name && stored.project) {
+          return `
+            <div class="hero-emoji">${project.emoji}</div>
+            <h1 class="onboard-h1">Hi ${stored.name}! 👋</h1>
+            <p class="onboard-sub">Your application is in. Here's what you're building towards.</p>
+            <div class="project-badge">
+              ${project.emoji} ${project.name}
+            </div>
+            <div class="teaser-card">
+              <p class="label">Your Week 4 goal</p>
+              <p>${project.teaser}</p>
+            </div>
+            <button class="action-btn" data-action="to-journey">See your four-week journey →</button>
+          `;
+        }
+
+        // Fallback: no localStorage data — ask for name + project
+        return `
+          <div class="hero-emoji">👋</div>
+          <h1 class="onboard-h1">Welcome to Cohort 1.</h1>
+          <p class="onboard-sub">Let's set up your learning journey. Two quick questions.</p>
+          <div class="name-form">
+            <label>
+              Your first name
+              <input type="text" id="nameInput" placeholder="First name" autocomplete="given-name" maxlength="40" />
+            </label>
+            <label>
+              What do you want to build?
+              <div class="picker-grid" role="group" aria-label="Project options">
+                ${Object.entries(PROJECTS).map(([key, p]) => `
+                  <label class="picker-card">
+                    <input type="radio" name="project" value="${key}" />
+                    <span class="picker-card-inner">
+                      <span class="picker-emoji">${p.emoji}</span>
+                      <strong>${p.name}</strong>
+                    </span>
+                  </label>`).join('')}
+              </div>
+            </label>
+          </div>
+          <button class="action-btn" data-action="save-and-continue">Continue →</button>
+          <p id="formError" style="color:#e05252; font-size:0.85rem; margin-top:10px; display:none">
+            Please enter your name and pick a project.
+          </p>
+        `;
+      }
+
+      // ── Phase 2: Journey ─────────────────────────────────────────────────
+      function renderJourney(stored, project) {
+        const weeks = [
+          { num: 1, label: 'Week 1', title: 'Move a Robot', desc: 'Control your first robot in a simulator.', active: true },
+          { num: 2, label: 'Week 2', title: 'Program a Drone', desc: 'Write movement sequences and see how drones respond.' },
+          { num: 3, label: 'Week 3', title: 'Add Intelligence', desc: 'Build a robot that reacts to its environment.' },
+          { num: 4, label: 'Week 4', title: project.week4, desc: project.teaser, isProject: true }
+        ];
+
+        const weekItems = weeks.map((w, i) => `
+          <div class="journey-week">
+            <div class="journey-track">
+              <div class="journey-dot ${w.active ? 'active' : ''} ${w.isProject ? 'project-dot' : ''}">
+                ${w.isProject ? project.emoji : (w.active ? '→' : w.num)}
+              </div>
+              ${i < weeks.length - 1 ? '<div class="journey-line"></div>' : ''}
+            </div>
+            <div class="journey-content">
+              <p class="journey-week-label ${w.active ? 'active-label' : ''}">${w.label}</p>
+              <p class="journey-week-title">${w.title}</p>
+              <p class="journey-week-desc">${w.desc}</p>
+              ${w.active ? '<span class="you-are-here">← You are here</span>' : ''}
+            </div>
+          </div>
+        `).join('');
+
+        return `
+          <p class="eyebrow">Your journey</p>
+          <h1 class="onboard-h1" style="margin-bottom:8px">Four weeks to your first robot.</h1>
+          <p class="onboard-sub">Each week builds on the last. By Week 4, you'll have something real.</p>
+          <div class="journey-list">${weekItems}</div>
+          <button class="action-btn" data-action="to-task">Start Week 1 →</button>
+        `;
+      }
+
+      // ── Phase 3: First task ──────────────────────────────────────────────
+      function renderTask(stored, project) {
+        return `
+          <p class="eyebrow">Week 1 · First task</p>
+          <h1 class="onboard-h1" style="margin-bottom:8px">Move a robot.</h1>
+          <div class="task-meta">
+            <span class="task-meta-pill">⏱ About 5 minutes</span>
+          </div>
+          <div class="lesson-card">
+            <p class="lesson-label">Read this first</p>
+            <p>${project.lesson}</p>
+            <div class="loop-mini" aria-label="The robotics loop: Sense, Decide, Act, Feedback, Correct">
+              <span class="loop-node">Sense</span>
+              <span class="loop-arrow">→</span>
+              <span class="loop-node">Decide</span>
+              <span class="loop-arrow">→</span>
+              <span class="loop-node act">Act</span>
+              <span class="loop-arrow">→</span>
+              <span class="loop-node">Feedback</span>
+              <span class="loop-arrow">→</span>
+              <span class="loop-node correct">Correct</span>
+            </div>
+          </div>
+          <div class="sim-cta">
+            <div class="sim-cta-text">
+              <strong>Open the simulator</strong>
+              <span>Move the robot from START to END marker.</span>
+            </div>
+            <a class="sim-open-btn" href="https://uairobot.com/" target="_blank" rel="noopener noreferrer">
+              ▶ Open UAIbot
+            </a>
+          </div>
+          <p class="did-it-hint">Come back here when you've moved the robot.</p>
+          <button class="action-btn" data-action="first-win">✓ I moved the robot!</button>
+          <div style="height:12px"></div>
+          <button class="action-btn secondary" data-action="to-task-skip">Skip for now</button>
+        `;
+      }
+
+      // ── Phase 4: Celebration ─────────────────────────────────────────────
+      function renderCelebrate(stored, project) {
+        const name = stored.name || 'You';
+        return `
+          <div class="win-banner">
+            <div class="win-emoji">🎉</div>
+            <h1 class="win-title">First win, ${name}!</h1>
+            <p class="win-sub">You just commanded a robot.</p>
+          </div>
+          <div class="unlocked-badge">
+            <span>✓</span> Week 1 unlocked
+          </div>
+          <div class="win-understands">
+            <div class="win-item">
+              <span class="win-check">✓</span>
+              <span>What a controller does — it sends commands that make a robot move</span>
+            </div>
+            <div class="win-item">
+              <span class="win-check">✓</span>
+              <span>What sensors are for — collecting information to guide behavior</span>
+            </div>
+            <div class="win-item">
+              <span class="win-check">✓</span>
+              <span>What feedback means — checking results and correcting the next action</span>
+            </div>
+          </div>
+          <a class="action-btn" href="portal.html">Go to my portal →</a>
+        `;
+      }
+
+      // ── Handlers ─────────────────────────────────────────────────────────
+      function attachHandlers() {
+        stage.querySelectorAll('[data-action]').forEach(el => {
+          el.addEventListener('click', handleAction);
+        });
+      }
+
+      function handleAction(e) {
+        const action = e.currentTarget.dataset.action;
+
+        if (action === 'to-journey') {
+          state.phase = 'journey';
+          render();
+
+        } else if (action === 'save-and-continue') {
+          const nameEl    = document.getElementById('nameInput');
+          const projectEl = stage.querySelector('[name="project"]:checked');
+          const errorEl   = document.getElementById('formError');
+
+          if (!nameEl?.value.trim() || !projectEl) {
+            if (errorEl) errorEl.style.display = '';
+            return;
+          }
+
+          saveStored(nameEl.value.trim(), projectEl.value);
+          state.phase = 'journey';
+          render();
+
+        } else if (action === 'to-task') {
+          state.phase = 'task';
+          render();
+
+        } else if (action === 'first-win') {
+          try { localStorage.setItem('portal_first_win', 'true'); } catch {}
+          state.phase = 'celebrate';
+          render();
+
+        } else if (action === 'to-task-skip') {
+          state.phase = 'celebrate';
+          render();
+        }
+      }
+
+      // ── Init ─────────────────────────────────────────────────────────────
+      render();
+    </script>
   </body>
 </html>

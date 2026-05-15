@@ -309,18 +309,26 @@ dd {
   border-top: 1px solid var(--line);
 }
 
-.application-form {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  max-width: 960px;
+/* ── Simplified apply form ──────────────────────────────────────────────── */
+.apply-form {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
-label {
+.apply-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.apply-label {
   display: grid;
   gap: 8px;
   color: var(--ink);
   font-weight: 800;
+  font-size: 0.92rem;
 }
 
 input,
@@ -335,12 +343,122 @@ textarea {
   padding: 12px 13px;
 }
 
-textarea {
-  resize: vertical;
+/* Project picker fieldset */
+.project-fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
-.wide {
-  grid-column: 1 / -1;
+.project-fieldset legend {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.project-card {
+  cursor: pointer;
+}
+
+.project-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.project-card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 16px;
+  background: white;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.project-card:hover .project-card-inner {
+  border-color: var(--green-2);
+  background: #f4faf6;
+}
+
+.project-card input[type="radio"]:checked + .project-card-inner {
+  border-color: var(--green);
+  background: #edf5ef;
+  box-shadow: 0 0 0 3px rgba(36, 84, 58, 0.1);
+}
+
+.project-card input[type="radio"]:focus-visible + .project-card-inner {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+.project-emoji {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.project-card-inner strong {
+  font-size: 0.96rem;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.project-card-inner span:last-child {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+/* Commit checkbox + submit */
+.apply-commit {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.apply-commit input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  margin-top: 2px;
+  accent-color: var(--green);
+  cursor: pointer;
+}
+
+.apply-submit {
+  align-self: flex-start;
+  min-height: 50px;
+  padding: 0 28px;
+  font-size: 1rem;
+}
+
+.form-status {
+  margin: 0;
+  color: var(--green);
+  font-weight: 800;
+}
+
+/* Legacy label/checkbox used elsewhere on the page */
+label {
+  display: grid;
+  gap: 8px;
+  color: var(--ink);
+  font-weight: 800;
 }
 
 .checkbox {
@@ -352,13 +470,6 @@ textarea {
 .checkbox input {
   width: 18px;
   height: 18px;
-}
-
-.form-status {
-  grid-column: 1 / -1;
-  margin: 0;
-  color: var(--green);
-  font-weight: 800;
 }
 
 .portal-grid {
@@ -472,10 +583,18 @@ textarea {
 
   .hero,
   .two-column,
-  .application-form,
   .portal-grid,
   .checklist {
     grid-template-columns: 1fr;
+  }
+
+  .apply-fields,
+  .project-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .apply-submit {
+    width: 100%;
   }
 
   .metric-grid,

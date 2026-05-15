@@ -5,6 +5,482 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Student Portal | Engolon Robotics</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* ── Progress bar ──────────────────────────────────────────────────── */
+      .progress-wrap {
+        background: var(--panel);
+        border-bottom: 1px solid var(--line);
+        padding: 12px clamp(18px, 5vw, 72px);
+      }
+
+      .progress-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 8px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--muted);
+      }
+
+      .streak-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        background: #fff8e7;
+        border: 1px solid #f0d58e;
+        border-radius: 20px;
+        padding: 3px 10px;
+        color: #7a5900;
+        font-size: 0.78rem;
+        font-weight: 900;
+        white-space: nowrap;
+      }
+
+      .progress-track {
+        height: 7px;
+        background: var(--line);
+        border-radius: 99px;
+        overflow: hidden;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background: var(--green);
+        border-radius: 99px;
+        transition: width 0.5s ease;
+        min-width: 0;
+      }
+
+      /* ── Page intro ────────────────────────────────────────────────────── */
+      .portal-intro {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 32px clamp(18px, 5vw, 72px) 0;
+      }
+
+      .portal-intro h1 {
+        margin: 0 0 6px;
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
+        line-height: 1.15;
+      }
+
+      .portal-intro .sub {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      /* ── Name prompt ───────────────────────────────────────────────────── */
+      .name-prompt-wrap {
+        max-width: 1120px;
+        margin: 20px auto 0;
+        padding: 0 clamp(18px, 5vw, 72px);
+      }
+
+      .name-prompt-card {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        background: #fffbf0;
+        border: 1px solid #f0d58e;
+        border-radius: 12px;
+        padding: 18px 22px;
+      }
+
+      .name-prompt-card p {
+        margin: 0;
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+
+      .name-prompt-card input {
+        flex: 1;
+        min-width: 150px;
+        max-width: 260px;
+        padding: 10px 13px;
+        border: 1px solid #bfcac2;
+        border-radius: 8px;
+        font: inherit;
+        font-size: 0.95rem;
+        color: var(--ink);
+        background: white;
+      }
+
+      .name-prompt-card button {
+        padding: 10px 18px;
+        background: var(--green);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font: inherit;
+        font-weight: 850;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      .name-prompt-card button:hover {
+        background: var(--green-2);
+      }
+
+      /* ── Continue banner ───────────────────────────────────────────────── */
+      .continue-wrap {
+        max-width: 1120px;
+        margin: 20px auto 0;
+        padding: 0 clamp(18px, 5vw, 72px);
+      }
+
+      .continue-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        background: var(--green);
+        border-radius: 12px;
+        padding: 20px 24px;
+      }
+
+      .continue-text h3 {
+        margin: 0 0 3px;
+        color: white;
+        font-size: 1rem;
+      }
+
+      .continue-text p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 0.84rem;
+      }
+
+      .continue-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 10px 20px;
+        background: white;
+        color: var(--green);
+        border-radius: 8px;
+        font-weight: 850;
+        font-size: 0.9rem;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .continue-btn:hover {
+        background: #edf5ef;
+        text-decoration: none;
+      }
+
+      /* ── Week cards grid ───────────────────────────────────────────────── */
+      .weeks-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        max-width: 1120px;
+        margin: 28px auto 0;
+        padding: 0 clamp(18px, 5vw, 72px);
+      }
+
+      /* ── Week card ─────────────────────────────────────────────────────── */
+      .wk-card {
+        display: flex;
+        flex-direction: column;
+        background: var(--panel);
+        border: 1.5px solid var(--line);
+        border-radius: 14px;
+        padding: 22px;
+        transition: box-shadow 0.18s ease;
+      }
+
+      .wk-card:not(.locked):hover {
+        box-shadow: 0 4px 24px rgba(28, 46, 34, 0.1);
+      }
+
+      /* Status variants */
+      .wk-card.locked {
+        opacity: 0.52;
+        background: #f7f8f5;
+        pointer-events: none; /* prevent all interaction */
+      }
+
+      .wk-card.locked a,
+      .wk-card.locked input {
+        pointer-events: none;
+        cursor: default;
+      }
+
+      .wk-card.available {
+        border-color: var(--green-2);
+      }
+
+      .wk-card.in-progress {
+        border-color: var(--clay);
+      }
+
+      .wk-card.done {
+        border-color: #4caf7a;
+        background: #f4faf6;
+      }
+
+      /* Card top row */
+      .wk-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .wk-number {
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--clay);
+      }
+
+      .wk-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .wk-status.locked   { background: #eef0ec; color: #7a8a7d; }
+      .wk-status.available { background: #e8f4ed; color: var(--green); }
+      .wk-status.in-progress { background: #fff0e8; color: #9a4a1c; }
+      .wk-status.done     { background: #d6f0e2; color: #1a7a46; }
+
+      /* Card headings */
+      .wk-card h2 {
+        margin: 0 0 6px;
+        font-size: 1.22rem;
+        line-height: 1.2;
+        color: var(--ink);
+      }
+
+      .wk-desc {
+        margin: 0 0 18px;
+        font-size: 0.88rem;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      /* Project scenario chips (Week 4 teaser) */
+      .scenario-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 16px;
+      }
+
+      .scenario-chip {
+        padding: 4px 10px;
+        background: #edf5ef;
+        border-radius: 20px;
+        font-size: 0.77rem;
+        font-weight: 800;
+        color: var(--green);
+      }
+
+      /* Task list */
+      .wk-tasks {
+        list-style: none;
+        margin: 0 0 auto;
+        padding: 16px 0 0;
+        border-top: 1px solid var(--line);
+        display: grid;
+        gap: 10px;
+      }
+
+      .wk-task {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .wk-task input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        min-width: 18px;
+        margin-top: 2px;
+        accent-color: var(--green);
+        cursor: pointer;
+      }
+
+      .wk-task label {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.5;
+        cursor: pointer;
+      }
+
+      .wk-task.completed label {
+        color: var(--muted);
+        text-decoration: line-through;
+      }
+
+      /* Card footer */
+      .wk-footer {
+        margin-top: 18px;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .wk-resources {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+
+      .wk-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 0.81rem;
+        font-weight: 850;
+        text-decoration: none;
+      }
+
+      .wk-link:hover { text-decoration: none; }
+
+      .wk-link.sim {
+        background: #e8f0ff;
+        color: var(--blue);
+      }
+
+      .wk-link.sim:hover { background: #d6e4ff; }
+
+      .wk-link.doc {
+        background: #edf5ef;
+        color: var(--green);
+      }
+
+      .wk-link.doc:hover { background: #daeee0; }
+
+      .hidden { display: none; }
+
+      .wk-done-tag {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        border-radius: 10px;
+        font-weight: 850;
+        font-size: 0.9rem;
+        background: #d6f0e2;
+        color: #1a7a46;
+      }
+
+      .wk-done-tag.complete {
+        background: #fff0e8;
+        color: #9a4a1c;
+      }
+
+      /* ── Certificate checklist ─────────────────────────────────────────── */
+      .cert-section {
+        max-width: 1120px;
+        margin: 36px auto 0;
+        padding: 0 clamp(18px, 5vw, 72px) 56px;
+      }
+
+      .cert-section h2 {
+        margin: 0 0 16px;
+        font-size: 1.15rem;
+      }
+
+      .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        max-width: 860px;
+      }
+
+      .cert-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 16px;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        transition: border-color 0.15s, background 0.15s;
+      }
+
+      .cert-item.checked {
+        background: #f4faf6;
+        border-color: #4caf7a;
+      }
+
+      .cert-item input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        min-width: 18px;
+        accent-color: var(--green);
+        cursor: pointer;
+      }
+
+      .cert-item label {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.4;
+        cursor: pointer;
+      }
+
+      .cert-item.checked label {
+        color: var(--muted);
+      }
+
+      /* ── Mobile ────────────────────────────────────────────────────────── */
+      @media (max-width: 680px) {
+        .weeks-grid,
+        .cert-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .continue-card {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .continue-btn {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .name-prompt-card {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .name-prompt-card input {
+          max-width: 100%;
+          width: 100%;
+        }
+
+        .name-prompt-card button {
+          width: 100%;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -14,108 +490,445 @@
       </a>
       <nav aria-label="Main navigation">
         <a href="index.html#apply">Apply</a>
-        <a href="portal.html" aria-current="page">Student portal</a>
+        <a href="portal.html" aria-current="page">My learning</a>
         <a href="uaibot-starter-lab.html">UAIbot lab</a>
         <a href="admin.html">Admin</a>
       </nav>
     </header>
 
+    <!-- Progress bar -->
+    <div class="progress-wrap">
+      <div class="progress-meta">
+        <span id="progressLabel">0 of 12 tasks complete</span>
+        <span class="streak-badge" id="streakBadge">🔥 1 day</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
     <main>
-      <section class="page-title">
-        <p class="eyebrow">Cohort 1 learner portal</p>
-        <h1>Four weeks. Four outputs. One final project.</h1>
-        <p>
-          Use this page as the simple learning home for accepted learners. Each
-          week includes materials, simulator work, and a submission target.
-        </p>
-      </section>
-
-      <section class="portal-grid">
-        <article class="week-card">
-          <div class="week-card-header">
-            <span>Week 1</span>
-            <h2>Robotics and automation foundations</h2>
-          </div>
-          <ul>
-            <li>Read Module 1 handout.</li>
-            <li>Run a first robot movement task.</li>
-            <li>Submit a screenshot and short explanation.</li>
-          </ul>
-          <div class="resource-row">
-            <a href="../course-mvp/pdfs/term-1/module-1/handout.pdf">Handout PDF</a>
-            <a href="../course-mvp/pdfs/term-1/module-1/quiz.pdf">Quiz PDF</a>
-            <a href="https://uairobot.com/" target="_blank" rel="noreferrer">Simulator</a>
-          </div>
-        </article>
-
-        <article class="week-card">
-          <div class="week-card-header">
-            <span>Week 2</span>
-            <h2>Programming robot behavior</h2>
-          </div>
-          <ul>
-            <li>Practice sequence, loops, functions, and debugging.</li>
-            <li>Program a robot to complete a defined path.</li>
-            <li>Submit screenshot or short video evidence.</li>
-          </ul>
-          <div class="resource-row">
-            <a href="../course-mvp/pdfs/term-1/module-2/handout.pdf">Drone systems PDF</a>
-            <a href="../course-mvp/pdfs/term-1/course-map.pdf">Course map</a>
-          </div>
-        </article>
-
-        <article class="week-card">
-          <div class="week-card-header">
-            <span>Week 3</span>
-            <h2>Sensors, decisions, and feedback</h2>
-          </div>
-          <ul>
-            <li>Explore distance sensing and obstacle response.</li>
-            <li>Use conditionals to change robot behavior.</li>
-            <li>Explain feedback, error, stability, and response.</li>
-          </ul>
-          <div class="resource-row">
-            <a href="../course-mvp/pdfs/term-1/module-2/quiz.pdf">Control quiz PDF</a>
-            <a href="../course-mvp/pdfs/term-1/lab/simulation-lab-01.pdf">Simulation lab</a>
-          </div>
-        </article>
-
-        <article class="week-card accent">
-          <div class="week-card-header">
-            <span>Week 4</span>
-            <h2>Applied robotics project</h2>
-          </div>
-          <ul>
-            <li>Choose a local problem and robot mission.</li>
-            <li>Document sensors, actuators, control logic, and safety.</li>
-            <li>Present the project and explain how it works.</li>
-          </ul>
-          <div class="resource-row">
-            <a href="project-brief.html">Project brief</a>
-            <a href="mailto:info@zawadilabs.com?subject=Robotics%20Cohort%201%20Project%20Submission">Submit by email</a>
-          </div>
-        </article>
-      </section>
-
-      <section class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Completion checklist</p>
-          <h2>What qualifies a learner for certificate review.</h2>
+      <!-- Name prompt -->
+      <div class="name-prompt-wrap hidden" id="namePromptWrap">
+        <div class="name-prompt-card">
+          <p>👋 What's your name?</p>
+          <input
+            type="text"
+            id="nameInput"
+            placeholder="Your first name"
+            maxlength="40"
+            autocomplete="given-name"
+          />
+          <button type="button" id="nameSaveBtn">Let's go →</button>
         </div>
-        <div class="checklist">
-          <label><input type="checkbox" /> Attended Week 1 live session</label>
-          <label><input type="checkbox" /> Submitted Week 1 movement evidence</label>
-          <label><input type="checkbox" /> Completed programming path task</label>
-          <label><input type="checkbox" /> Completed sensor/feedback task</label>
-          <label><input type="checkbox" /> Submitted final project</label>
-          <label><input type="checkbox" /> Explained project logic clearly</label>
+      </div>
+
+      <!-- Page intro -->
+      <div class="portal-intro">
+        <p class="eyebrow">Cohort 1 learner portal</p>
+        <h1 id="welcomeHeading">Your four-week journey</h1>
+        <p class="sub">Complete each week to unlock the next. Your project is waiting at the end.</p>
+      </div>
+
+      <!-- Continue banner -->
+      <div class="continue-wrap hidden" id="continueWrap">
+        <div class="continue-card">
+          <div class="continue-text">
+            <h3 id="continueTitle">Continue where you left off</h3>
+            <p id="continueSubtitle">Pick up your tasks for this week</p>
+          </div>
+          <a class="continue-btn" id="continueBtn" href="#week-1">Continue →</a>
+        </div>
+      </div>
+
+      <!-- Week cards -->
+      <section class="weeks-grid" aria-label="Course weeks">
+
+        <!-- Week 1 -->
+        <article class="wk-card" id="wk-1">
+          <div class="wk-top">
+            <span class="wk-number">Week 1</span>
+            <span class="wk-status" id="status-1">Available</span>
+          </div>
+          <h2>Move a Robot</h2>
+          <p class="wk-desc">
+            Get your first robot moving. Understand the sense–decide–act loop and
+            run your first simulation task.
+          </p>
+          <ul class="wk-tasks">
+            <li class="wk-task" id="task-1-1">
+              <input type="checkbox" id="t1-1" />
+              <label for="t1-1">Read the Module 1 foundations handout</label>
+            </li>
+            <li class="wk-task" id="task-1-2">
+              <input type="checkbox" id="t1-2" />
+              <label for="t1-2">Open the simulator and move a robot from A to B</label>
+            </li>
+            <li class="wk-task" id="task-1-3">
+              <input type="checkbox" id="t1-3" />
+              <label for="t1-3">Submit your screenshot and a one-sentence explanation</label>
+            </li>
+          </ul>
+          <div class="wk-footer">
+            <div class="wk-resources">
+              <a class="wk-link sim" href="https://uairobot.com/" target="_blank" rel="noopener noreferrer">▶ Open simulator</a>
+              <a class="wk-link doc" href="handout-module-1.html">Handout</a>
+              <a class="wk-link doc" href="quiz-module-1.html">Quiz</a>
+            </div>
+            <span class="wk-done-tag" id="done-1">✓ Week 1 complete</span>
+          </div>
+        </article>
+
+        <!-- Week 2 -->
+        <article class="wk-card locked" id="wk-2">
+          <div class="wk-top">
+            <span class="wk-number">Week 2</span>
+            <span class="wk-status locked" id="status-2">🔒 Locked</span>
+          </div>
+          <h2>Program a Drone</h2>
+          <p class="wk-desc">
+            Learn drone architecture and flight control. Write your first movement
+            sequence and see how a drone responds to commands.
+          </p>
+          <ul class="wk-tasks">
+            <li class="wk-task" id="task-2-1">
+              <input type="checkbox" id="t2-1" disabled />
+              <label for="t2-1">Read the drone systems handout</label>
+            </li>
+            <li class="wk-task" id="task-2-2">
+              <input type="checkbox" id="t2-2" disabled />
+              <label for="t2-2">Program a robot to complete a defined path</label>
+            </li>
+            <li class="wk-task" id="task-2-3">
+              <input type="checkbox" id="t2-3" disabled />
+              <label for="t2-3">Submit screenshot or short video evidence</label>
+            </li>
+          </ul>
+          <div class="wk-footer">
+            <div class="wk-resources">
+              <a class="wk-link sim" href="https://uairobot.com/" target="_blank" rel="noopener noreferrer">▶ Open simulator</a>
+              <a class="wk-link doc" href="handout-module-2.html">Handout</a>
+              <a class="wk-link doc" href="quiz-module-2.html">Quiz</a>
+            </div>
+            <span class="wk-done-tag" id="done-2">✓ Week 2 complete</span>
+          </div>
+        </article>
+
+        <!-- Week 3 -->
+        <article class="wk-card locked" id="wk-3">
+          <div class="wk-top">
+            <span class="wk-number">Week 3</span>
+            <span class="wk-status locked" id="status-3">🔒 Locked</span>
+          </div>
+          <h2>Add Intelligence</h2>
+          <p class="wk-desc">
+            Explore sensors, feedback loops, and decision-making. Build a robot
+            that reacts to its environment and corrects itself.
+          </p>
+          <ul class="wk-tasks">
+            <li class="wk-task" id="task-3-1">
+              <input type="checkbox" id="t3-1" disabled />
+              <label for="t3-1">Explore distance sensing and obstacle response in the simulator</label>
+            </li>
+            <li class="wk-task" id="task-3-2">
+              <input type="checkbox" id="t3-2" disabled />
+              <label for="t3-2">Use conditionals to change your robot's behavior</label>
+            </li>
+            <li class="wk-task" id="task-3-3">
+              <input type="checkbox" id="t3-3" disabled />
+              <label for="t3-3">Complete the simulation lab worksheet and submit</label>
+            </li>
+          </ul>
+          <div class="wk-footer">
+            <div class="wk-resources">
+              <a class="wk-link sim" href="https://uairobot.com/" target="_blank" rel="noopener noreferrer">▶ Open simulator</a>
+              <a class="wk-link doc" href="../course-mvp/pdfs/term-1/module-2/quiz.pdf" target="_blank">Control quiz</a>
+              <a class="wk-link doc" href="../course-mvp/pdfs/term-1/lab/simulation-lab-01.pdf" target="_blank">Simulation lab</a>
+            </div>
+            <span class="wk-done-tag" id="done-3">✓ Week 3 complete</span>
+          </div>
+        </article>
+
+        <!-- Week 4 -->
+        <article class="wk-card locked" id="wk-4">
+          <div class="wk-top">
+            <span class="wk-number">Week 4</span>
+            <span class="wk-status locked" id="status-4">🔒 Locked</span>
+          </div>
+          <h2>Solve a Real Problem</h2>
+          <p class="wk-desc">
+            Pick a local challenge and design a robot solution that works. This is
+            what you've been building towards.
+          </p>
+          <div class="scenario-chips">
+            <span class="scenario-chip">🌾 Farm robot</span>
+            <span class="scenario-chip">🏥 Hospital delivery</span>
+            <span class="scenario-chip">🏙️ City logistics</span>
+            <span class="scenario-chip">♻️ Waste sorting</span>
+          </div>
+          <ul class="wk-tasks">
+            <li class="wk-task" id="task-4-1">
+              <input type="checkbox" id="t4-1" disabled />
+              <label for="t4-1">Choose your local problem scenario</label>
+            </li>
+            <li class="wk-task" id="task-4-2">
+              <input type="checkbox" id="t4-2" disabled />
+              <label for="t4-2">Document sensors, actuators, control logic, and safety plan</label>
+            </li>
+            <li class="wk-task" id="task-4-3">
+              <input type="checkbox" id="t4-3" disabled />
+              <label for="t4-3">Submit and present your final project</label>
+            </li>
+          </ul>
+          <div class="wk-footer">
+            <div class="wk-resources">
+              <a class="wk-link doc" href="project-brief.html" target="_blank">Project brief</a>
+              <a class="wk-link doc" href="mailto:info@zawadilabs.com?subject=Robotics%20Cohort%201%20Project%20Submission">Submit by email</a>
+            </div>
+            <span class="wk-done-tag complete" id="done-4">🎉 Course complete!</span>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Certificate checklist -->
+      <section class="cert-section">
+        <p class="eyebrow">Certificate checklist</p>
+        <h2>What qualifies you for certificate review.</h2>
+        <div class="cert-grid">
+          <div class="cert-item" id="cl-1">
+            <input type="checkbox" id="c1" />
+            <label for="c1">Attended Week 1 live session</label>
+          </div>
+          <div class="cert-item" id="cl-2">
+            <input type="checkbox" id="c2" />
+            <label for="c2">Submitted Week 1 movement evidence</label>
+          </div>
+          <div class="cert-item" id="cl-3">
+            <input type="checkbox" id="c3" />
+            <label for="c3">Completed programming path task</label>
+          </div>
+          <div class="cert-item" id="cl-4">
+            <input type="checkbox" id="c4" />
+            <label for="c4">Completed sensor / feedback task</label>
+          </div>
+          <div class="cert-item" id="cl-5">
+            <input type="checkbox" id="c5" />
+            <label for="c5">Submitted final project</label>
+          </div>
+          <div class="cert-item" id="cl-6">
+            <input type="checkbox" id="c6" />
+            <label for="c6">Explained project logic clearly</label>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>Student portal preview</span>
+      <span>Cohort 1 learner portal</span>
       <a href="index.html">Back to public page</a>
     </footer>
+
+    <script>
+      const WEEKS = 4;
+      const TASKS = 3;
+      const TOTAL_TASKS = WEEKS * TASKS;
+
+      // ── Storage helpers ───────────────────────────────────────────────────
+      function load(key, fallback) {
+        try {
+          const raw = localStorage.getItem(key);
+          return raw === null ? fallback : JSON.parse(raw);
+        } catch { return fallback; }
+      }
+
+      function save(key, value) {
+        localStorage.setItem(key, JSON.stringify(value));
+      }
+
+      // ── State ─────────────────────────────────────────────────────────────
+      let state = {
+        name:      load('portal_name', ''),
+        tasks:     load('portal_tasks', {}),       // { "1-1": true, ... }
+        checklist: load('portal_checklist', []),   // [1,3,5]
+        streak:    load('portal_streak', 1),
+        lastVisit: load('portal_last_visit', '')
+      };
+
+      function persist() {
+        save('portal_name',      state.name);
+        save('portal_tasks',     state.tasks);
+        save('portal_checklist', state.checklist);
+        save('portal_streak',    state.streak);
+        save('portal_last_visit', state.lastVisit);
+      }
+
+      // ── Streak ────────────────────────────────────────────────────────────
+      function refreshStreak() {
+        const today = new Date().toDateString();
+        if (state.lastVisit === today) return;
+        const yesterday = new Date(Date.now() - 86_400_000).toDateString();
+        state.streak    = state.lastVisit === yesterday ? state.streak + 1 : 1;
+        state.lastVisit = today;
+        persist();
+      }
+
+      // ── Computed helpers ──────────────────────────────────────────────────
+      function weekDone(w) {
+        for (let t = 1; t <= TASKS; t++) {
+          if (!state.tasks[`${w}-${t}`]) return false;
+        }
+        return true;
+      }
+
+      function weekTasksDone(w) {
+        let n = 0;
+        for (let t = 1; t <= TASKS; t++) if (state.tasks[`${w}-${t}`]) n++;
+        return n;
+      }
+
+      function totalDone() {
+        let n = 0;
+        for (let w = 1; w <= WEEKS; w++) n += weekTasksDone(w);
+        return n;
+      }
+
+      function activeWeek() {
+        for (let w = 1; w <= WEEKS; w++) if (!weekDone(w)) return w;
+        return WEEKS;
+      }
+
+      // ── Render ────────────────────────────────────────────────────────────
+      const WEEK_NAMES = ['', 'Move a Robot', 'Program a Drone', 'Add Intelligence', 'Solve a Real Problem'];
+
+      function render() {
+        const done  = totalDone();
+        const pct   = Math.round((done / TOTAL_TASKS) * 100);
+        const allDone = done === TOTAL_TASKS;
+        const active  = activeWeek();
+
+        // Progress bar
+        document.getElementById('progressFill').style.width  = pct + '%';
+        document.getElementById('progressLabel').textContent = `${done} of ${TOTAL_TASKS} tasks complete`;
+        document.getElementById('streakBadge').textContent   = `🔥 ${state.streak} day${state.streak !== 1 ? 's' : ''}`;
+
+        // Welcome heading
+        document.getElementById('welcomeHeading').textContent =
+          state.name ? `Welcome back, ${state.name}` : 'Your four-week journey';
+
+        // Name prompt
+        document.getElementById('namePromptWrap').classList.toggle('hidden', !!state.name);
+
+        // Continue banner
+        const banner = document.getElementById('continueWrap');
+        const showBanner = done > 0 && !allDone;
+        if (showBanner) {
+          const left = TASKS - weekTasksDone(active);
+          document.getElementById('continueTitle').textContent    = `Week ${active}: ${WEEK_NAMES[active]}`;
+          document.getElementById('continueSubtitle').textContent = `${left} task${left !== 1 ? 's' : ''} left this week`;
+          document.getElementById('continueBtn').href             = `#wk-${active}`;
+        }
+        banner.classList.toggle('hidden', !showBanner);
+
+        // Week cards
+        for (let w = 1; w <= WEEKS; w++) {
+          const card      = document.getElementById(`wk-${w}`);
+          const statusEl  = document.getElementById(`status-${w}`);
+          const doneTag   = document.getElementById(`done-${w}`);
+          const prevDone  = w === 1 || weekDone(w - 1);
+          const wDone     = weekDone(w);
+          const wStarted  = weekTasksDone(w) > 0;
+
+          // Card class
+          card.className = 'wk-card';
+          if (!prevDone) {
+            card.classList.add('locked');
+            statusEl.className   = 'wk-status locked';
+            statusEl.textContent = '🔒 Locked';
+          } else if (wDone) {
+            card.classList.add('done');
+            statusEl.className   = 'wk-status done';
+            statusEl.textContent = '✓ Done';
+          } else if (wStarted) {
+            card.classList.add('in-progress');
+            statusEl.className   = 'wk-status in-progress';
+            statusEl.textContent = '● In progress';
+          } else {
+            card.classList.add('available');
+            statusEl.className   = 'wk-status available';
+            statusEl.textContent = 'Available';
+          }
+
+          // Done tag
+          doneTag.style.display = wDone ? 'flex' : 'none';
+
+          // Checkboxes
+          for (let t = 1; t <= TASKS; t++) {
+            const cb       = document.getElementById(`t${w}-${t}`);
+            const taskItem = document.getElementById(`task-${w}-${t}`);
+            if (!cb) continue;
+            const checked    = !!state.tasks[`${w}-${t}`];
+            cb.checked       = checked;
+            cb.disabled      = !prevDone;
+            taskItem.classList.toggle('completed', checked);
+          }
+        }
+
+        // Certificate checklist
+        for (let i = 1; i <= 6; i++) {
+          const cb   = document.getElementById(`c${i}`);
+          const item = document.getElementById(`cl-${i}`);
+          if (!cb) continue;
+          const checked = state.checklist.includes(i);
+          cb.checked    = checked;
+          item.classList.toggle('checked', checked);
+        }
+      }
+
+      // ── Event handlers ────────────────────────────────────────────────────
+      // Task checkboxes — delegated
+      document.querySelector('.weeks-grid').addEventListener('change', (e) => {
+        if (e.target.type !== 'checkbox') return;
+        const id = e.target.id; // "t{w}-{t}"
+        const match = id.match(/^t(\d+)-(\d+)$/);
+        if (!match) return;
+        const [, w, t] = match;
+        state.tasks[`${w}-${t}`] = e.target.checked;
+        persist();
+        render();
+      });
+
+      // Certificate checklist — delegated
+      document.querySelector('.cert-grid').addEventListener('change', (e) => {
+        if (e.target.type !== 'checkbox') return;
+        const num = parseInt(e.target.id.replace('c', ''), 10);
+        if (e.target.checked) {
+          if (!state.checklist.includes(num)) state.checklist.push(num);
+        } else {
+          state.checklist = state.checklist.filter((n) => n !== num);
+        }
+        persist();
+        render();
+      });
+
+      // Name save
+      function saveName() {
+        const input = document.getElementById('nameInput');
+        const name  = input.value.trim();
+        if (!name) { input.focus(); return; }
+        state.name = name;
+        persist();
+        render();
+      }
+
+      document.getElementById('nameSaveBtn').addEventListener('click', saveName);
+      document.getElementById('nameInput').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') saveName();
+      });
+
+      // ── Init ──────────────────────────────────────────────────────────────
+      refreshStreak();
+      render();
+    </script>
   </body>
 </html>

@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Module 1 Quiz | Engolon Robotics</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* ── Shell ───────────────────────────────────────────────────────── */
+      .quiz-main {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 32px clamp(18px, 5vw, 48px) 72px;
+      }
+
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--muted);
+        margin-bottom: 32px;
+      }
+
+      .breadcrumb a { color: var(--muted); text-decoration: none; }
+      .breadcrumb a:hover { color: var(--green); }
+      .breadcrumb span { color: var(--line); }
+      .breadcrumb strong { color: var(--ink); }
+
+      /* ── Slide wrapper (fade transition) ─────────────────────────────── */
+      #quizStage {
+        animation: fadeIn 0.22s ease;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      /* ── Progress bar ────────────────────────────────────────────────── */
+      .q-progress-wrap {
+        margin-bottom: 28px;
+      }
+
+      .q-progress-meta {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        font-weight: 800;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      .q-progress-track {
+        height: 6px;
+        background: var(--line);
+        border-radius: 99px;
+        overflow: hidden;
+      }
+
+      .q-progress-fill {
+        height: 100%;
+        background: var(--green);
+        border-radius: 99px;
+        transition: width 0.35s ease;
+      }
+
+      /* ── Intro screen ────────────────────────────────────────────────── */
+      .intro-icon {
+        font-size: 2.8rem;
+        margin-bottom: 14px;
+        line-height: 1;
+      }
+
+      .intro-title {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        margin: 0 0 6px;
+        line-height: 1.15;
+      }
+
+      .intro-module {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin: 0 0 24px;
+      }
+
+      .intro-meta {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 28px;
+      }
+
+      .meta-pill {
+        padding: 5px 13px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 800;
+        background: #edf5ef;
+        color: var(--green);
+      }
+
+      .meta-pill.warn {
+        background: #fff0e8;
+        color: #9a4a1c;
+      }
+
+      .intro-topics {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 18px 20px;
+        margin-bottom: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .intro-topics p {
+        margin: 0;
+        font-size: 0.8rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .topic-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 0.9rem;
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      .topic-dot {
+        width: 7px;
+        height: 7px;
+        min-width: 7px;
+        border-radius: 50%;
+        background: var(--green);
+        margin-top: 6px;
+      }
+
+      /* ── Question screen ─────────────────────────────────────────────── */
+      .q-label {
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--clay);
+        margin-bottom: 10px;
+      }
+
+      .q-text {
+        font-size: clamp(1rem, 2.5vw, 1.15rem);
+        font-weight: 700;
+        line-height: 1.5;
+        color: var(--ink);
+        margin: 0 0 24px;
+      }
+
+      .options-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+
+      .option-btn {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        width: 100%;
+        min-height: 56px;
+        padding: 14px 16px;
+        background: white;
+        border: 1.5px solid var(--line);
+        border-radius: 12px;
+        cursor: pointer;
+        font: inherit;
+        text-align: left;
+        transition: border-color 0.15s, background 0.15s;
+        color: var(--ink);
+      }
+
+      .option-btn:hover:not(:disabled) {
+        border-color: var(--green-2);
+        background: #f4faf6;
+      }
+
+      .option-btn:disabled { cursor: default; }
+
+      .option-key {
+        width: 26px;
+        height: 26px;
+        min-width: 26px;
+        border-radius: 6px;
+        background: var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.78rem;
+        font-weight: 900;
+        color: var(--muted);
+        transition: background 0.15s, color 0.15s;
+        margin-top: 1px;
+      }
+
+      .option-text {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      /* Feedback states */
+      .option-btn.correct {
+        border-color: #4caf7a;
+        background: #f0faf4;
+      }
+
+      .option-btn.correct .option-key {
+        background: #4caf7a;
+        color: white;
+      }
+
+      .option-btn.wrong {
+        border-color: #e05252;
+        background: #fff5f5;
+      }
+
+      .option-btn.wrong .option-key {
+        background: #e05252;
+        color: white;
+      }
+
+      /* ── Hint card (shown after wrong answer) ────────────────────────── */
+      .hint-card {
+        display: flex;
+        gap: 12px;
+        background: #fffbf0;
+        border: 1px solid #f0d58e;
+        border-radius: 10px;
+        padding: 14px 16px;
+        margin-bottom: 20px;
+        font-size: 0.88rem;
+        line-height: 1.55;
+        color: var(--ink);
+      }
+
+      .hint-icon {
+        font-size: 1.1rem;
+        line-height: 1.4;
+        flex-shrink: 0;
+      }
+
+      /* ── Navigation button ───────────────────────────────────────────── */
+      .nav-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 50px;
+        padding: 0 24px;
+        background: var(--green);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font: inherit;
+        font-weight: 850;
+        font-size: 0.96rem;
+        cursor: pointer;
+        transition: background 0.15s;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .nav-btn:hover { background: var(--green-2); }
+
+      .nav-btn.secondary {
+        background: transparent;
+        color: var(--green);
+        border: 1.5px solid var(--green);
+      }
+
+      .nav-btn.secondary:hover { background: #edf5ef; }
+
+      /* ── Results screen ──────────────────────────────────────────────── */
+      .score-ring-wrap {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+      }
+
+      .score-ring {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 6px solid var(--line);
+        gap: 2px;
+      }
+
+      .score-ring.passed { border-color: #4caf7a; }
+      .score-ring.failed { border-color: var(--clay); }
+
+      .score-num {
+        font-size: 2rem;
+        font-weight: 900;
+        line-height: 1;
+        color: var(--ink);
+      }
+
+      .score-denom {
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--muted);
+      }
+
+      .result-verdict {
+        text-align: center;
+        margin-bottom: 8px;
+        font-size: clamp(1.4rem, 4vw, 1.8rem);
+        font-weight: 900;
+        color: var(--ink);
+      }
+
+      .result-sub {
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.92rem;
+        margin: 0 0 28px;
+      }
+
+      .result-sub.pass { color: #1a7a46; font-weight: 700; }
+
+      /* Wrong answers review */
+      .review-heading {
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 12px;
+      }
+
+      .review-item {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 14px 16px;
+        margin-bottom: 10px;
+      }
+
+      .review-item-q {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 8px;
+      }
+
+      .review-answer {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .review-answer strong {
+        color: var(--green);
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .result-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      /* ── Outcome badge ───────────────────────────────────────────────── */
+      .outcome-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #d6f0e2;
+        color: #1a7a46;
+        border-radius: 20px;
+        padding: 4px 12px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="assets/engolon-logo.png" alt="" />
+        <span>Engolon Robotics</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="portal.html">My learning</a>
+        <a href="uaibot-starter-lab.html">UAIbot lab</a>
+      </nav>
+    </header>
+
+    <main class="quiz-main">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="portal.html">Portal</a>
+        <span>›</span>
+        <a href="portal.html#wk-1">Week 1: Move a Robot</a>
+        <span>›</span>
+        <strong>Module 1 Quiz</strong>
+      </nav>
+
+      <div id="quizStage" role="main" aria-live="polite"></div>
+    </main>
+
+    <footer class="site-footer">
+      <span>Week 1 · Module 1 Quiz</span>
+      <a href="portal.html">Back to portal</a>
+    </footer>
+
+    <script>
+      // ── Quiz data ────────────────────────────────────────────────────────
+      const QUIZ = [
+        {
+          q: "Which set best describes the core subsystems of a basic robotic system?",
+          options: [
+            "Battery, frame, paint, and packaging",
+            "Sensors, actuators, controller, and feedback",
+            "Screen, keyboard, database, and printer",
+            "Camera, antenna, propeller, and landing gear"
+          ],
+          correct: 1,
+          hint: "A robot's four core subsystems are: sensors (gather information), actuators (create movement), a controller (make decisions), and feedback (check results and correct).",
+          outcome: "Describe robotic subsystems"
+        },
+        {
+          q: "What is the main role of a sensor in a robotic system?",
+          options: [
+            "To create motion",
+            "To collect information from the robot or environment",
+            "To replace the controller",
+            "To store the final report"
+          ],
+          correct: 1,
+          hint: "Sensors are the robot's eyes and ears — they gather data from the environment. Motion is created by actuators, not sensors.",
+          outcome: "Describe robotic subsystems"
+        },
+        {
+          q: "Kinematics primarily focuses on:",
+          options: [
+            "The motion of objects without emphasising the forces that cause it",
+            "The legal requirements for drone operations",
+            "The cost of robot manufacturing",
+            "The encryption of sensor data"
+          ],
+          correct: 0,
+          hint: "Kinematics studies position, velocity, and path — the 'what' of motion. Dynamics studies the forces and energy behind that motion — the 'why'.",
+          outcome: "Apply kinematic principles"
+        },
+        {
+          q: "Dynamics helps engineers understand:",
+          options: [
+            "Only the colour and shape of a robot",
+            "Forces, mass, acceleration, torque, and energy",
+            "Only the user interface of a robot",
+            "Only wireless communication range"
+          ],
+          correct: 1,
+          hint: "Dynamics is about the physics of motion — forces, torques, and energy. Without it you can't predict how a robot will behave under real loads.",
+          outcome: "Apply dynamic principles"
+        },
+        {
+          q: "What is the main difference between open-loop and closed-loop control?",
+          options: [
+            "Closed-loop control uses feedback to adjust behavior",
+            "Open-loop control is always more accurate",
+            "Closed-loop control does not use sensors",
+            "Open-loop control requires artificial intelligence"
+          ],
+          correct: 0,
+          hint: "In open-loop control, the robot sends a command and hopes for the best — no checking. In closed-loop control, feedback from sensors lets the robot detect and correct errors.",
+          outcome: "Explain control strategies"
+        },
+        {
+          q: "Why is simulation useful in robotics learning?",
+          options: [
+            "It removes the need to understand robotic behavior",
+            "It allows safe, low-cost testing before physical deployment",
+            "It guarantees perfect real-world performance",
+            "It only applies to entertainment robots"
+          ],
+          correct: 1,
+          hint: "Simulation lets you crash virtual robots, tune control systems, and explore edge cases without any physical cost or safety risk — before touching real hardware.",
+          outcome: "Explain simulation value"
+        },
+        {
+          q: "Which example best fits sustainability robotics?",
+          options: [
+            "A robot designed only to display advertisements",
+            "A drone fleet used to monitor biodiversity and ecosystem change",
+            "A machine built with no concern for energy use or maintenance",
+            "A robot that cannot be repaired or reused"
+          ],
+          correct: 1,
+          hint: "Sustainability robotics solves environmental or community problems — monitoring ecosystems, conserving resources, and designing systems that can be maintained locally.",
+          outcome: "Explain sustainability robotics"
+        },
+        {
+          q: "Bio-inspired robotics means:",
+          options: [
+            "Copying animals exactly in every detail",
+            "Using ideas from living systems to inform robotic design",
+            "Avoiding natural systems in engineering",
+            "Using robots only in biology laboratories"
+          ],
+          correct: 1,
+          hint: "Bio-inspired design takes principles from nature — not exact copies. Drone stability borrows from bird flight; swarm logic borrows from ant colonies.",
+          outcome: "Explain bio-inspired systems"
+        },
+        {
+          q: "If a mobile robot drifts away from its intended path, which concept is most directly involved in correcting the error?",
+          options: [
+            "Feedback",
+            "Packaging",
+            "Colour selection",
+            "Course enrollment"
+          ],
+          correct: 0,
+          hint: "Feedback is the mechanism that detects the gap between desired and actual behavior. Without it, the robot has no way to know it has drifted — or to correct itself.",
+          outcome: "Explain feedback control"
+        },
+        {
+          q: "A sustainable robotic design should consider:",
+          options: [
+            "Energy use, maintenance, repairability, context, and long-term impact",
+            "Only speed",
+            "Only physical appearance",
+            "Only whether the robot uses a camera"
+          ],
+          correct: 0,
+          hint: "Sustainability means thinking beyond function: how much energy, who maintains it, what happens when it breaks, and what the long-term community and environmental impact will be.",
+          outcome: "Explain sustainable design factors"
+        }
+      ];
+
+      const PASS_SCORE   = 7;
+      const STORAGE_KEY  = 'quiz_m1';
+      const KEYS         = ['A', 'B', 'C', 'D'];
+
+      // ── State ────────────────────────────────────────────────────────────
+      let state = {
+        phase:    'intro',    // intro | question | feedback | results
+        current:  0,          // 0-indexed question number
+        selected: null,       // index of option the user chose
+        answers:  [],         // { selected, correct } for each answered question
+      };
+
+      // ── Storage ──────────────────────────────────────────────────────────
+      function markComplete(score, passed) {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({ complete: true, score, passed }));
+        } catch { /* storage unavailable */ }
+      }
+
+      // ── Render ───────────────────────────────────────────────────────────
+      const stage = document.getElementById('quizStage');
+
+      function render() {
+        // Re-trigger animation
+        stage.style.animation = 'none';
+        stage.offsetHeight; // reflow
+        stage.style.animation = '';
+
+        if      (state.phase === 'intro')    stage.innerHTML = renderIntro();
+        else if (state.phase === 'question') stage.innerHTML = renderQuestion();
+        else if (state.phase === 'feedback') stage.innerHTML = renderFeedback();
+        else if (state.phase === 'results')  stage.innerHTML = renderResults();
+
+        attachHandlers();
+      }
+
+      // ── Intro ────────────────────────────────────────────────────────────
+      function renderIntro() {
+        return `
+          <div class="intro-icon">📋</div>
+          <h1 class="intro-title">Module 1 Quiz</h1>
+          <p class="intro-module">Introduction to Sustainability Robotics and Intelligent Systems</p>
+          <div class="intro-meta">
+            <span class="meta-pill">10 questions</span>
+            <span class="meta-pill warn">Pass: 7 or more correct</span>
+          </div>
+          <div class="intro-topics">
+            <p>What you'll be tested on</p>
+            ${[
+              'Robotic subsystems — sensing, actuation, control',
+              'Kinematics and dynamics',
+              'Open-loop vs. closed-loop control',
+              'The value of simulation',
+              'Sustainability and bio-inspired robotics'
+            ].map(t => `
+              <div class="topic-row">
+                <span class="topic-dot" aria-hidden="true"></span>
+                <span>${t}</span>
+              </div>`).join('')}
+          </div>
+          <button class="nav-btn" data-action="start">Start quiz →</button>
+        `;
+      }
+
+      // ── Question ─────────────────────────────────────────────────────────
+      function renderQuestion() {
+        const q   = QUIZ[state.current];
+        const num = state.current + 1;
+        const pct = Math.round(((num - 1) / QUIZ.length) * 100);
+
+        return `
+          <div class="q-progress-wrap">
+            <div class="q-progress-meta">
+              <span>Question ${num} of ${QUIZ.length}</span>
+              <span>${state.answers.length} answered</span>
+            </div>
+            <div class="q-progress-track">
+              <div class="q-progress-fill" style="width:${pct}%"></div>
+            </div>
+          </div>
+          <p class="q-label">Question ${num}</p>
+          <p class="q-text">${q.q}</p>
+          <div class="options-list" role="group" aria-label="Answer options">
+            ${q.options.map((opt, i) => `
+              <button
+                class="option-btn"
+                data-action="select"
+                data-index="${i}"
+                aria-label="Option ${KEYS[i]}: ${opt}"
+              >
+                <span class="option-key" aria-hidden="true">${KEYS[i]}</span>
+                <span class="option-text">${opt}</span>
+              </button>`).join('')}
+          </div>
+        `;
+      }
+
+      // ── Feedback ─────────────────────────────────────────────────────────
+      function renderFeedback() {
+        const q        = QUIZ[state.current];
+        const num      = state.current + 1;
+        const pct      = Math.round((num / QUIZ.length) * 100);
+        const isRight  = state.selected === q.correct;
+        const isLast   = state.current === QUIZ.length - 1;
+
+        const optionButtons = q.options.map((opt, i) => {
+          let cls = 'option-btn';
+          if (i === q.correct)                           cls += ' correct';
+          else if (i === state.selected && !isRight)     cls += ' wrong';
+          return `
+            <button class="option-btn ${
+              i === q.correct ? 'correct' : (i === state.selected && !isRight ? 'wrong' : '')
+            }" disabled aria-label="Option ${KEYS[i]}: ${opt}">
+              <span class="option-key" aria-hidden="true">${
+                i === q.correct ? '✓' : (i === state.selected && !isRight ? '✗' : KEYS[i])
+              }</span>
+              <span class="option-text">${opt}</span>
+            </button>`;
+        }).join('');
+
+        const hintBlock = !isRight
+          ? `<div class="hint-card" role="alert">
+               <span class="hint-icon" aria-hidden="true">💡</span>
+               <span>${q.hint}</span>
+             </div>`
+          : '';
+
+        const outcomeBlock = isRight
+          ? `<div class="outcome-badge" role="status">
+               <span aria-hidden="true">✓</span> ${q.outcome}
+             </div>`
+          : '';
+
+        return `
+          <div class="q-progress-wrap">
+            <div class="q-progress-meta">
+              <span>Question ${num} of ${QUIZ.length}</span>
+              <span role="status">${isRight ? '✓ Correct' : '✗ Incorrect'}</span>
+            </div>
+            <div class="q-progress-track">
+              <div class="q-progress-fill" style="width:${pct}%"></div>
+            </div>
+          </div>
+          <p class="q-label">Question ${num}</p>
+          <p class="q-text">${q.q}</p>
+          <div class="options-list">${optionButtons}</div>
+          ${hintBlock}
+          ${outcomeBlock}
+          <button class="nav-btn" data-action="next">
+            ${isLast ? 'See results →' : 'Next question →'}
+          </button>
+        `;
+      }
+
+      // ── Results ──────────────────────────────────────────────────────────
+      function renderResults() {
+        const score   = state.answers.filter(a => a.selected === a.correct).length;
+        const passed  = score >= PASS_SCORE;
+        const pct     = Math.round((score / QUIZ.length) * 100);
+
+        markComplete(score, passed);
+
+        const wrongs = state.answers
+          .map((a, i) => ({ ...a, qi: i }))
+          .filter(a => a.selected !== a.correct);
+
+        const wrongsHtml = wrongs.length > 0 ? `
+          <p class="review-heading" style="margin-top:28px">Questions to review</p>
+          ${wrongs.map(w => `
+            <div class="review-item">
+              <p class="review-item-q">Q${w.qi + 1}. ${QUIZ[w.qi].q}</p>
+              <div class="review-answer">
+                <strong>Correct:</strong>
+                <span>${QUIZ[w.qi].options[w.correct]}</span>
+              </div>
+            </div>`).join('')}
+        ` : '';
+
+        return `
+          <div class="score-ring-wrap">
+            <div class="score-ring ${passed ? 'passed' : 'failed'}" role="img"
+                 aria-label="${score} out of ${QUIZ.length} correct">
+              <span class="score-num">${score}</span>
+              <span class="score-denom">out of ${QUIZ.length}</span>
+            </div>
+          </div>
+          <p class="result-verdict">${passed ? '🎉 You passed!' : 'Almost there.'}</p>
+          <p class="result-sub ${passed ? 'pass' : ''}">
+            ${passed
+              ? `${pct}% — you're ready for the simulator.`
+              : `You need ${PASS_SCORE} to pass. Review the handout and try again.`}
+          </p>
+          ${wrongsHtml}
+          <div class="result-actions">
+            ${passed
+              ? `<a class="nav-btn" href="portal.html#wk-1">Back to portal →</a>`
+              : `<button class="nav-btn" data-action="retry">Try again →</button>
+                 <a class="nav-btn secondary" href="handout-module-1.html">Review handout</a>`}
+          </div>
+        `;
+      }
+
+      // ── Event handlers ───────────────────────────────────────────────────
+      function attachHandlers() {
+        stage.querySelectorAll('[data-action]').forEach(el => {
+          el.addEventListener('click', handleAction);
+        });
+      }
+
+      function handleAction(e) {
+        const action = e.currentTarget.dataset.action;
+
+        if (action === 'start') {
+          state = { phase: 'question', current: 0, selected: null, answers: [] };
+          render();
+
+        } else if (action === 'select') {
+          const idx = parseInt(e.currentTarget.dataset.index, 10);
+          state.selected = idx;
+          state.phase    = 'feedback';
+          state.answers.push({ selected: idx, correct: QUIZ[state.current].correct });
+          render();
+
+        } else if (action === 'next') {
+          if (state.current < QUIZ.length - 1) {
+            state.current++;
+            state.selected = null;
+            state.phase    = 'question';
+          } else {
+            state.phase = 'results';
+          }
+          render();
+
+        } else if (action === 'retry') {
+          state = { phase: 'question', current: 0, selected: null, answers: [] };
+          render();
+        }
+      }
+
+      // ── Init ─────────────────────────────────────────────────────────────
+      render();
+    </script>
+  </body>
+</html>
