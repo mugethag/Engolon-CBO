@@ -55,3 +55,17 @@ HyperFrames design system: dark editorial theme with Cyan `#55c7d9` and Green `#
 ## Deployment
 
 The main site is deployed via **Netlify** (`.netlify/state.json` present). GitHub remote: `https://github.com/mugethag/Engolon-CBO.git`.
+
+## Agent skills
+
+### Issue tracker
+
+Issues live in GitHub Issues (`github.com/mugethag/Engolon-CBO`). See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Default five-role vocabulary — no custom overrides. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context — one `CONTEXT.md` + `docs/adr/` at the repo root. See `docs/agents/domain.md`.
