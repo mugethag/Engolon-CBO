@@ -37,3 +37,6 @@ coverage/
 
 # Local Netlify folder
 .netlify
+
+# Playwright MCP screenshots and snapshots
+.playwright-mcp/
