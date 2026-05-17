@@ -41,6 +41,8 @@
 
   /* Typography */
   --font-serif:  'Playfair Display', Georgia, serif;
+  --font-body:   'Lora', Georgia, serif;
+  --font-sans:   -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
   --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
   --font-family-serif: 'Playfair Display', Georgia, serif;
 
@@ -157,6 +159,27 @@ p {
   margin-bottom: var(--space-3);
   line-height: var(--lh-relaxed);
   color: var(--color-text-muted);
+  font-family: var(--font-body);
+}
+
+/* UI paragraphs that should stay sans-serif */
+.section-label,
+.program-location,
+.program-tagline,
+.hero-caption,
+.stat-label,
+.youth-stat-label,
+.testimonial-role,
+.tour-highlights li,
+.involve-badge,
+.launching-badge,
+.milestone-detail,
+.booking-subtitle,
+.form-message,
+.modal-badge,
+.dignity-items span,
+.meaning-label {
+  font-family: var(--font-sans);
 }
 
 a {
@@ -462,6 +485,8 @@ nav a.btn-primary:hover {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   margin-bottom: var(--space-2);
+  font-family: var(--font-sans);
+  animation: heroRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both;
 }
 
 .hero-left h1 {
@@ -472,6 +497,7 @@ nav a.btn-primary:hover {
   color: var(--color-text);
   margin-bottom: var(--space-3);
   font-weight: 700;
+  animation: heroRise 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
 }
 
 .hero-left p {
@@ -480,6 +506,8 @@ nav a.btn-primary:hover {
   max-width: 480px;
   line-height: var(--lh-relaxed);
   margin-bottom: 0;
+  font-family: var(--font-body);
+  animation: heroRise 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
 }
 
 .hero-cta {
@@ -487,6 +515,7 @@ nav a.btn-primary:hover {
   gap: var(--space-3);
   flex-wrap: wrap;
   margin-top: var(--space-2);
+  animation: heroRise 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
 }
 
 .hero-cta .btn {
@@ -533,6 +562,11 @@ nav a.btn-primary:hover {
 @keyframes fadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+@keyframes heroRise {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ============================================
@@ -642,20 +676,6 @@ section {
 
 .section-title h2 {
   margin-bottom: var(--space-3);
-  position: relative;
-  display: inline-block;
-}
-
-.section-title h2::after {
-  content: '';
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 2px;
-  background-color: var(--color-orange);
-  border-radius: 1px;
 }
 
 .section-subtitle {
@@ -1803,10 +1823,10 @@ section {
 }
 
 .cta-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  max-width: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+  max-width: 480px;
   margin: 0 auto;
   margin-bottom: var(--space-8);
   position: relative;
@@ -1817,8 +1837,9 @@ section {
   width: 100%;
   background-color: var(--color-orange);
   color: #ffffff;
-  font-size: var(--text-base);
-  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  padding: var(--space-2) var(--space-3);
+  min-width: unset;
 }
 
 .cta-buttons .btn:hover {
@@ -2415,9 +2436,9 @@ footer a:hover {
   }
 
   .cta-buttons {
-    flex-direction: row;
+    grid-template-columns: repeat(4, auto);
+    max-width: none;
     justify-content: center;
-    flex-wrap: wrap;
     gap: var(--space-2);
   }
 
@@ -2450,7 +2471,11 @@ footer a:hover {
   .testimonials-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-5);
+    align-items: start;
   }
+
+  .testimonial-card:nth-child(3n+2) { margin-top: 1.75rem; }
+  .testimonial-card:nth-child(3n+3) { margin-top: 3.5rem; }
 
   .course-facts-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -3060,5 +3085,40 @@ footer a:hover {
 
   .btn-ta--outline {
     width: 100%;
+  }
+}
+
+/* ============================================
+   SCROLL-TRIGGERED FADE-UP ANIMATIONS
+   ============================================ */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: none;
+}
+
+.fade-up.visible {
+  animation: fadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Don't animate if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .fade-up,
+  .fade-up.visible {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  .hero-location,
+  .hero-left h1,
+  .hero-left p,
+  .hero-cta {
+    animation: none;
   }
 }

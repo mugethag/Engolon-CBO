@@ -8,7 +8,7 @@
   <title>Engolon CBO — Community, Kibra &amp; Beyond</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -1059,6 +1059,38 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeInvolveModal();
     });
+  </script>
+
+  <!-- Scroll-reveal: apply .fade-up to key elements, then observe -->
+  <script>
+    (function () {
+      var selectors = [
+        '.section-title', '.milestone-card', '.testimonial-card',
+        '.story-narrative', '.program-card', '.engolon-meaning',
+        '.youth-stat', '.tour-card', '.involve-card', '.course-teaser',
+        '.ta-trust-strip', '.involve-form-section', '.booking-section'
+      ];
+      selectors.forEach(function (sel) {
+        document.querySelectorAll(sel).forEach(function (el, i) {
+          el.classList.add('fade-up');
+          var siblings = Array.from(el.parentElement.children);
+          el.dataset.delay = Math.min(siblings.indexOf(el) * 80, 320);
+        });
+      });
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var el = entry.target;
+            el.style.animationDelay = (el.dataset.delay || 0) + 'ms';
+            el.classList.add('visible');
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.fade-up').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
   </script>
 
   <!-- Scripts -->
