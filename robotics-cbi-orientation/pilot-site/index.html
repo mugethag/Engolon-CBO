@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Engolon Robotics & Automation Foundations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" href="../assets/engolon-logo.png" />
   </head>
@@ -65,19 +68,19 @@
         </div>
         <div class="metric-grid">
           <article>
-            <strong>85%+</strong>
+            <strong data-count="85" data-suffix="%+">85%+</strong>
             <span>Week 1 attendance target</span>
           </article>
           <article>
-            <strong>65%+</strong>
+            <strong data-count="65" data-suffix="%+">65%+</strong>
             <span>Final project completion target</span>
           </article>
           <article>
-            <strong>35%+</strong>
+            <strong data-count="35" data-suffix="%+">35%+</strong>
             <span>Level 2 qualification target</span>
           </article>
           <article>
-            <strong>5-8</strong>
+            <strong>5–8</strong>
             <span>mentor candidates identified</span>
           </article>
         </div>
@@ -235,6 +238,65 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      (function () {
+        // Scroll reveal
+        var groups = [
+          '.section-heading', '.metric-grid article',
+          '.week-list article', '.pathway article', '.hero-panel'
+        ];
+        groups.forEach(function (sel) {
+          document.querySelectorAll(sel).forEach(function (el, i) {
+            el.classList.add('fade-up');
+            el.style.transitionDelay = (i % 4 * 75) + 'ms';
+          });
+        });
+        var revealObs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            e.target.classList.add('visible');
+            revealObs.unobserve(e.target);
+          });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.fade-up').forEach(function (el) {
+          revealObs.observe(el);
+        });
+
+        // Stat counters
+        function countUp(el) {
+          var target = +el.dataset.count;
+          var suffix = el.dataset.suffix || '';
+          var dur = 1100;
+          var t0 = performance.now();
+          (function tick(now) {
+            var p = Math.min((now - t0) / dur, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(eased * target) + suffix;
+            if (p < 1) requestAnimationFrame(tick);
+          }(t0));
+        }
+        var mg = document.querySelector('.metric-grid');
+        if (mg) {
+          var countObs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (!e.isIntersecting) return;
+              e.target.querySelectorAll('[data-count]').forEach(countUp);
+              countObs.unobserve(e.target);
+            });
+          }, { threshold: 0.25 });
+          countObs.observe(mg);
+        }
+
+        // Submit loading state
+        var form = document.getElementById('applicationForm');
+        if (form) {
+          form.addEventListener('submit', function () {
+            var btn = form.querySelector('.apply-submit');
+            if (btn) { btn.classList.add('loading'); btn.textContent = 'Submitting…'; }
+          });
+        }
+      })();
+    </script>
     <script>
       document.getElementById('applicationForm').addEventListener('submit', () => {
         const name    = document.querySelector('[name="name"]')?.value.trim() || '';
