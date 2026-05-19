@@ -1,0 +1,21 @@
+name: Social Media — Weekly Brand Refresh
+on:
+  schedule:
+    - cron: '0 2 * * 0'   # 05:00 EAT Sunday — runs before daily pipeline
+  workflow_dispatch:
+
+jobs:
+  brand-refresh:
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+      SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r social-media/requirements.txt
+      - name: Refresh brand profile
+        run: cd social-media && python -m agents.brand_agent

@@ -1,0 +1,41 @@
+name: Social Media — Daily Pipeline
+on:
+  schedule:
+    - cron: '0 3 * * *'   # 06:00 EAT every day
+  workflow_dispatch:
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
+      GMAIL_RECIPIENT: ${{ secrets.GMAIL_RECIPIENT }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r social-media/requirements.txt
+
+      - name: Run research_agent
+        id: research
+        run: cd social-media && python -m agents.research_agent
+        continue-on-error: true
+
+      - name: Run trend_agent
+        id: trend
+        run: cd social-media && python -m agents.trend_agent
+        continue-on-error: true
+
+      - name: Run script_agent
+        id: script
+        run: cd social-media && python -m agents.script_agent
+        continue-on-error: true
+
+      - name: Run digest_agent
+        run: cd social-media && python -m agents.digest_agent
