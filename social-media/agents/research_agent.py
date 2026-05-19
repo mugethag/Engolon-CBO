@@ -3,7 +3,6 @@ from datetime import date
 from integrations.youtube import get_channel_recent_videos
 from integrations.sheets import append_rows, read_rows
 from utils.logger import get_logger
-from utils.retry import with_retry
 
 logger = get_logger(__name__)
 
@@ -19,7 +18,9 @@ def _load_competitors(spreadsheet_id: str) -> list:
         name, platform, channel_id = row[0], row[1].strip().lower(), row[2].strip()
         if platform == "youtube" and not channel_id.startswith("REPLACE"):
             result.append({"name": name, "channel_id": channel_id})
-        elif platform != "youtube":
+        elif platform == "youtube" and channel_id.startswith("REPLACE"):
+            logger.debug(f"research_agent: skipping unconfigured channel '{name}' — update Channel ID in Config tab")
+        else:
             skipped += 1
     if skipped:
         logger.info(f"research_agent: skipped {skipped} non-YouTube entries (X/Twitter not supported in Phase 1)")
