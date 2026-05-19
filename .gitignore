@@ -40,3 +40,7 @@ coverage/
 
 # Playwright MCP screenshots and snapshots
 .playwright-mcp/
+
+# Social media agent project
+social-media/.env
+social-media/data/brand_profile.json
