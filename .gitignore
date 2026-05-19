@@ -44,3 +44,7 @@ coverage/
 # Social media agent project
 social-media/.env
 social-media/data/brand_profile.json
+
+# Python cache
+__pycache__/
+*.pyc
