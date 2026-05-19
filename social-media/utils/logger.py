@@ -2,6 +2,7 @@ import logging
 import sys
 
 def get_logger(name: str) -> logging.Logger:
+    """Get or create a logger with stderr output."""
     logger = logging.getLogger(name)
     if not logger.handlers:
         handler = logging.StreamHandler(sys.stderr)
