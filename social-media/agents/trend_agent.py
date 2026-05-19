@@ -53,7 +53,14 @@ Return ONLY valid JSON."""
         system="You are a social media strategist specializing in NGO/nonprofit content for East Africa.",
         user=prompt
     )
-    return {**video, **json.loads(raw)}
+    raw = raw.strip()
+    if raw.startswith("```"):
+        raw = raw.split("```")[1].lstrip("json").strip()
+    try:
+        return {**video, **json.loads(raw)}
+    except json.JSONDecodeError as e:
+        logger.error(f"_enrich: Claude returned invalid JSON: {e}\nRaw (first 300 chars): {raw[:300]}")
+        raise
 
 
 def run(spreadsheet_id: str) -> list:

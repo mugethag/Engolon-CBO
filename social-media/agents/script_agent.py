@@ -48,7 +48,14 @@ Generate an original Engolon CBO social media post as JSON:
 Return ONLY valid JSON."""
 
     raw = complete(system=_SYSTEM, user=prompt, max_tokens=1500)
-    return json.loads(raw)
+    raw = raw.strip()
+    if raw.startswith("```"):
+        raw = raw.split("```")[1].lstrip("json").strip()
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError as e:
+        logger.error(f"generate_post: Claude returned invalid JSON: {e}\nRaw (first 300 chars): {raw[:300]}")
+        raise
 
 
 def run(spreadsheet_id: str) -> list:
