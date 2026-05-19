@@ -68,19 +68,23 @@ def run(spreadsheet_id: str) -> list:
         logger.warning("script_agent: no outliers found — run trend_agent first")
         return []
 
+    today = str(date.today())
+    today_outliers = [row for row in rows[1:] if row and len(row) >= 8 and row[0] == today]
+    if not today_outliers:
+        logger.warning("script_agent: no outliers found for today — run trend_agent first")
+        return []
+
     top_3 = []
-    for row in rows[1:][-3:]:  # last 3 rows
-        if len(row) >= 8:
-            top_3.append({
-                "title":             row[3] if len(row) > 3 else "",
-                "hook_pattern":      row[4] if len(row) > 4 else "",
-                "why_it_works":      row[5] if len(row) > 5 else "",
-                "emotional_trigger": row[6] if len(row) > 6 else "",
-                "adaptation_idea":   row[7] if len(row) > 7 else "",
-            })
+    for row in today_outliers[-3:]:
+        top_3.append({
+            "title":             row[3] if len(row) > 3 else "",
+            "hook_pattern":      row[4] if len(row) > 4 else "",
+            "why_it_works":      row[5] if len(row) > 5 else "",
+            "emotional_trigger": row[6] if len(row) > 6 else "",
+            "adaptation_idea":   row[7] if len(row) > 7 else "",
+        })
 
     scripts = []
-    today = str(date.today())
 
     for outlier in top_3:
         try:

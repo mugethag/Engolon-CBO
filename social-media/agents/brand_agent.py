@@ -29,7 +29,14 @@ def run(spreadsheet_id: str, website_content: str) -> dict:
         system=_SYSTEM,
         user=f"Analyze this organization website and extract a brand voice profile:\n\n{website_content[:8000]}"
     )
-    profile = json.loads(raw)
+    raw = raw.strip()
+    if raw.startswith("```"):
+        raw = raw.split("```")[1].lstrip("json").strip()
+    try:
+        profile = json.loads(raw)
+    except json.JSONDecodeError as e:
+        logger.error(f"brand_agent: Claude returned invalid JSON: {e}\nRaw (first 300 chars): {raw[:300]}")
+        raise
 
     row = [
         str(date.today()),

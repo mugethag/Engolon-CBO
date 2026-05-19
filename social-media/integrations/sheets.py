@@ -7,7 +7,9 @@ from googleapiclient.discovery import build
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 def _get_service():
-    raw = os.environ['GOOGLE_CREDENTIALS_JSON']
+    raw = os.environ.get('GOOGLE_CREDENTIALS_JSON')
+    if not raw:
+        raise ValueError("GOOGLE_CREDENTIALS_JSON environment variable is not set")
     data = json.loads(base64.b64decode(raw))
     creds = service_account.Credentials.from_service_account_info(data, scopes=SCOPES)
     return build('sheets', 'v4', credentials=creds)
