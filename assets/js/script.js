@@ -94,33 +94,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // CTA Button Click Handlers
+  // Donate Button Click Handlers (hero + CTA section)
+  var DONATE_MAILTO = 'mailto:info@engolon.com?subject=Donation%20to%20Engolon%20CBO&body=Hello%2C%20I%20would%20like%20to%20make%20a%20donation%20to%20Engolon%20CBO.';
+
+  var heroDonateSumit = document.getElementById('donate-btn');
+  if (heroDonateSumit) {
+    heroDonateSumit.addEventListener('click', function () {
+      window.location.href = DONATE_MAILTO;
+    });
+  }
+
   const ctaDonateBtn = document.getElementById('cta-donate-btn');
   const ctaVolunteerBtn = document.getElementById('cta-volunteer-btn');
-  const resourcesBtn = document.getElementById('resources-btn');
-  const contactBtn = document.getElementById('contact-btn');
 
   if (ctaDonateBtn) {
     ctaDonateBtn.addEventListener('click', function () {
-      window.location.href = 'mailto:info@engolon.com?subject=Donation%20to%20Engolon%20CBO&body=Hello%2C%20I%20would%20like%20to%20make%20a%20donation%20to%20Engolon%20CBO.';
+      window.location.href = DONATE_MAILTO;
     });
   }
 
   if (ctaVolunteerBtn) {
     ctaVolunteerBtn.addEventListener('click', function () {
       openInvolveModal();
-    });
-  }
-
-  if (resourcesBtn) {
-    resourcesBtn.addEventListener('click', function () {
-      document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth' });
-    });
-  }
-
-  if (contactBtn) {
-    contactBtn.addEventListener('click', function () {
-      window.location.href = 'mailto:info@engolon.com?subject=Enquiry%20-%20Engolon%20CBO';
     });
   }
 

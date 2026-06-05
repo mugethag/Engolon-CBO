@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-05T00:00:00Z",
+  "title": "Design System: Engolon CBO",
+  "extensions": {
+    "colorMeta": {
+      "community-flame": {
+        "role": "primary",
+        "displayName": "Community Flame",
+        "canonical": "oklch(67% 0.17 48)",
+        "tonalRamp": ["#290c00", "#4a1800", "#6e2d00", "#954500", "#b85e0a", "#e8833a", "#f0aa6e", "#f8d4b0"]
+      },
+      "community-flame-deep": {
+        "role": "primary-deep",
+        "displayName": "Community Flame Deep",
+        "canonical": "oklch(62% 0.17 48)",
+        "tonalRamp": ["#220a00", "#400f00", "#612300", "#823b00", "#a45108", "#d4722a", "#e89d5e", "#f5c99a"]
+      },
+      "archive-black": {
+        "role": "neutral-bg",
+        "displayName": "Archive Black",
+        "canonical": "oklch(9% 0.003 80)",
+        "tonalRamp": ["#0d0d0d", "#141414", "#1a1a1a", "#242424", "#2e2e2e", "#3a3a3a", "#4a4a4a", "#5c5c5c"]
+      },
+      "warm-white": {
+        "role": "neutral-ink",
+        "displayName": "Warm White",
+        "canonical": "oklch(96% 0.01 80)",
+        "tonalRamp": ["#1c1b19", "#302f2d", "#484543", "#706e6c", "#8f8d8b", "#b8b5b3", "#d4d1cf", "#f5f0e8"]
+      },
+      "card-surface": {
+        "role": "neutral-surface",
+        "displayName": "Card Surface",
+        "canonical": "oklch(13% 0.003 80)",
+        "tonalRamp": ["#0d0d0d", "#111111", "#161616", "#1a1a1a", "#222222", "#2c2c2c", "#383838", "#484848"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headlines only. The em.accent italic-orange pattern lives inside Display headings." },
+      "headline": { "displayName": "Headline", "purpose": "Section-level h1 headings paired with section-label eyebrows." },
+      "title": { "displayName": "Title", "purpose": "Section h2 headings; slightly pulled back from Headline." },
+      "body": { "displayName": "Body Prose", "purpose": "All paragraphs. Lora at 1.75 line-height for dark-ground legibility." },
+      "label": { "displayName": "UI Label", "purpose": "Tags, captions, nav links, stats metadata. System sans only." }
+    },
+    "shadows": [
+      { "name": "xs",  "value": "0 1px 2px rgba(0, 0, 0, 0.3)",  "purpose": "Hairline lift for fine structural elements on the dark canvas." },
+      { "name": "sm",  "value": "0 2px 4px rgba(0, 0, 0, 0.4)",  "purpose": "Ambient card rest state: testimonials, gallery images." },
+      { "name": "md",  "value": "0 4px 12px rgba(0, 0, 0, 0.5)", "purpose": "Hover lift: cards, buttons. The primary interactive depth signal." },
+      { "name": "lg",  "value": "0 8px 24px rgba(0, 0, 0, 0.6)", "purpose": "Modal and floating panels. Rare." }
+    ],
+    "motion": [
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Hero entrance animations (heroRise). Soft deceleration for content entering from below." },
+      { "name": "ease-standard",  "value": "cubic-bezier(0.4, 0, 0.2, 1)",  "purpose": "State transitions: hover, focus, button press. 300ms default duration." },
+      { "name": "marquee-scroll", "value": "linear",                          "purpose": "Continuous marquee ticker — no easing, constant velocity." }
+    ],
+    "breakpoints": [
+      { "name": "mobile",  "value": "768px",  "note": "Below: hamburger menu, single-column layouts." },
+      { "name": "tablet",  "value": "1024px", "note": "768–1023px: 2-column grids." },
+      { "name": "desktop", "value": "1024px", "note": "1024px+: 4-column grids, full nav." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA. Orange fill, white text, uppercase. Used for Donate, Book a Walk, Send Message.",
+      "html": "<button class=\"ds-btn-primary\">DONATE NOW</button>",
+      "css": ".ds-btn-primary { display: inline-block; padding: 0.75rem 1.75rem; background-color: #e8833a; color: #ffffff; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border: none; border-radius: 4px; cursor: pointer; min-width: 160px; transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1), transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1); } .ds-btn-primary:hover { background-color: #d4722a; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.5); } .ds-btn-primary:focus-visible { outline: 3px solid #e8833a; outline-offset: 3px; } .ds-btn-primary:active { transform: translateY(0); box-shadow: none; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary CTA alongside Primary. Transparent with warm-white border. Used for Get Involved, secondary actions.",
+      "html": "<button class=\"ds-btn-outline\">GET INVOLVED</button>",
+      "css": ".ds-btn-outline { display: inline-block; padding: 0.75rem 1.75rem; background-color: transparent; color: #f5f0e8; border: 1px solid rgba(245,240,232,0.4); border-radius: 4px; font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; min-width: 160px; transition: border-color 0.3s cubic-bezier(0.4,0,0.2,1), background-color 0.3s cubic-bezier(0.4,0,0.2,1); } .ds-btn-outline:hover { border-color: #f5f0e8; background-color: rgba(245,240,232,0.05); color: #f5f0e8; } .ds-btn-outline:focus-visible { outline: 3px solid #e8833a; outline-offset: 3px; }"
+    },
+    {
+      "name": "Program Card",
+      "kind": "card",
+      "refersTo": "program-card",
+      "description": "Content card for programs and community walks. Sharp corners, orange top-accent, pricing rows inside.",
+      "html": "<div class=\"ds-program-card\"><div class=\"ds-program-icon\">✂️</div><p class=\"ds-program-location\">Kibra, Nairobi</p><h3 class=\"ds-program-title\">Women's Tailoring Program</h3><p class=\"ds-program-desc\">Teaching women to sew and tailor — building independent income and economic security.</p></div>",
+      "css": ".ds-program-card { background: #1a1a1a; border: 1px solid rgba(245,240,232,0.08); border-top: 3px solid #e8833a; padding: 2rem; display: flex; flex-direction: column; gap: 0.75rem; transition: transform 0.2s cubic-bezier(0.4,0,0.2,1); } .ds-program-card:hover { transform: translateY(-3px); } .ds-program-icon { font-size: 1.75rem; background: rgba(245,240,232,0.05); width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; border-radius: 4px; } .ds-program-location { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #e8833a; margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-program-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.35rem; font-weight: 700; color: #f5f0e8; margin: 0; line-height: 1.2; } .ds-program-desc { color: rgba(245,240,232,0.6); font-size: 0.875rem; line-height: 1.65; margin: 0; font-family: 'Lora', Georgia, serif; }"
+    },
+    {
+      "name": "Testimonial Card",
+      "kind": "card",
+      "refersTo": "testimonial-card",
+      "description": "Quote card from community beneficiaries. Rounded corners, lifts on hover, orange top-border appears on hover.",
+      "html": "<div class=\"ds-testimonial-card\"><p class=\"ds-testimonial-quote\">\"The training gave me a skill I can pass on to my children.\"</p><div class=\"ds-testimonial-author\"><span class=\"ds-testimonial-name\">Jane Mwangi</span><span class=\"ds-testimonial-role\">Tailoring Program Participant</span></div></div>",
+      "css": ".ds-testimonial-card { background: #1a1a1a; border: 1px solid rgba(245,240,232,0.08); border-radius: 6px; padding: 2.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.4); transition: box-shadow 0.3s cubic-bezier(0.4,0,0.2,1), transform 0.3s cubic-bezier(0.4,0,0.2,1), border-color 0.3s cubic-bezier(0.4,0,0.2,1), border-top-color 0.3s cubic-bezier(0.4,0,0.2,1); border-top: 3px solid transparent; } .ds-testimonial-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.5); transform: translateY(-4px); border-color: rgba(245,240,232,0.15); border-top-color: #e8833a; } .ds-testimonial-quote { font-family: 'Lora', Georgia, serif; font-size: 1rem; line-height: 1.75; color: rgba(245,240,232,0.6); font-style: italic; margin: 0 0 1.5rem 0; } .ds-testimonial-name { display: block; font-weight: 700; color: #f5f0e8; font-size: 0.9375rem; font-family: 'Playfair Display', Georgia, serif; } .ds-testimonial-role { display: block; font-size: 0.75rem; color: rgba(245,240,232,0.6); text-transform: uppercase; letter-spacing: 0.1em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 600; margin-top: 0.25rem; }"
+    },
+    {
+      "name": "Tag / Chip",
+      "kind": "chip",
+      "refersTo": "program-card",
+      "description": "Informational label. Pill-shaped, subtle background, no click state. Used for program categories.",
+      "html": "<span class=\"ds-tag\">Community-led</span>",
+      "css": ".ds-tag { display: inline-block; background: rgba(245,240,232,0.06); color: rgba(245,240,232,0.6); font-size: 0.68rem; padding: 0.2rem 0.55rem; border-radius: 100px; letter-spacing: 0.04em; border: 1px solid rgba(245,240,232,0.08); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }"
+    },
+    {
+      "name": "Form Input",
+      "kind": "input",
+      "refersTo": "program-card",
+      "description": "Text input for contact and newsletter forms. Near-invisible at rest, lights up orange on focus.",
+      "html": "<div class=\"ds-form-group\"><label class=\"ds-form-label\" for=\"ds-input-email\">Email address</label><input class=\"ds-form-input\" id=\"ds-input-email\" type=\"email\" placeholder=\"you@example.com\"></div>",
+      "css": ".ds-form-group { display: flex; flex-direction: column; gap: 0.5rem; } .ds-form-label { font-weight: 600; font-size: 0.9375rem; color: #f5f0e8; letter-spacing: 0.04em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-form-input { padding: 1rem 1.5rem; border: 1px solid rgba(245,240,232,0.2); border-radius: 4px; font-size: 1rem; color: #f5f0e8; background-color: rgba(245,240,232,0.05); transition: border-color 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-form-input::placeholder { color: rgba(245,240,232,0.35); } .ds-form-input:focus { outline: none; border-color: #e8833a; box-shadow: 0 0 0 3px rgba(232,131,58,0.15); background-color: rgba(245,240,232,0.07); } .ds-form-input:focus-visible { outline: none; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "button-primary",
+      "description": "Sticky top nav. Archive Black background, uppercase system-sans links, orange on hover, Playfair Display logo.",
+      "html": "<nav class=\"ds-nav\"><div class=\"ds-nav-logo\"><span>ENGOLON</span></div><ul class=\"ds-nav-links\"><li><a href=\"#about\" class=\"ds-nav-link\">About</a></li><li><a href=\"#our-work\" class=\"ds-nav-link\">Our Work</a></li><li><a href=\"#contact\" class=\"ds-nav-link ds-nav-cta\">Donate</a></li></ul></nav>",
+      "css": ".ds-nav { background: #0d0d0d; border-bottom: 1px solid rgba(245,240,232,0.08); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; } .ds-nav-logo { font-family: 'Playfair Display', Georgia, serif; font-size: 1.4rem; font-weight: 700; color: #f5f0e8; letter-spacing: 0.15em; text-transform: uppercase; } .ds-nav-links { list-style: none; display: flex; gap: 1.5rem; align-items: center; margin: 0; padding: 0; } .ds-nav-link { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.75rem; font-weight: 500; color: #f5f0e8; text-transform: uppercase; letter-spacing: 0.12em; text-decoration: none; transition: color 0.3s cubic-bezier(0.4,0,0.2,1); } .ds-nav-link:hover { color: #e8833a; } .ds-nav-cta { background: #e8833a; color: #ffffff !important; padding: 0.6rem 1.4rem; border-radius: 4px; font-weight: 700; } .ds-nav-cta:hover { background: #d4722a; color: #ffffff !important; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Community Archive",
+    "overview": "This system is built as a living record: dark and permanent like newsprint archive or documentary film, warm and specific in its accents like the orange glow of a community cooking fire. The canvas is near-total dark (#0d0d0d) — not atmospheric, not decorative — because it makes every image, every word, every orange accent feel like evidence. Things preserved. Things that matter.\n\nPlayfair Display carries the editorial gravity: the italic em.accent pattern inside headings is the system's most distinctive voice move — a phrase breaking into warmth mid-sentence, as if the speaker is leaning in. Lora handles body prose: unhurried, literate, designed for long reading. System sans handles UI metadata: legible, invisible, stepping aside for the serifs.\n\nThe single accent — Community Flame (#e8833a) — earns its place through rarity and specificity. It appears on CTAs, hover states, active borders, section labels, and the marquee strip. Nowhere else.",
+    "keyCharacteristics": [
+      "Near-total dark canvas with a single warm-orange accent",
+      "Serif-on-serif typography with system sans for UI metadata",
+      "Orange italic emphasis pattern inside headings (the em.accent convention)",
+      "Documentary imagery approach: real faces, real places, real situations",
+      "Cards and containers flat at rest; depth reveals on interaction"
+    ],
+    "rules": [
+      { "name": "The One Flame Rule", "body": "Community Flame is used in exactly one role at a time on any given screen. Its rarity is the signal.", "section": "colors" },
+      { "name": "The No Pure White Rule", "body": "Never use #ffffff for body text. Warm White (#f5f0e8) is the ceiling. Pure white reads as blown-out against the dark ground.", "section": "colors" },
+      { "name": "The Italic Accent Rule", "body": "em.accent inside headings always renders in Community Flame, italic. One accent phrase per heading.", "section": "typography" },
+      { "name": "The Sans Ceiling Rule", "body": "System sans-serif is for UI metadata only: labels under 1rem, tags, captions, nav links. Above 1rem, Lora or Playfair Display owns the voice.", "section": "typography" },
+      { "name": "The Dark Canvas Shadow Rule", "body": "Never use light-bg shadow values. Archive Black absorbs standard 0.1-alpha shadows. Minimum 0.3 alpha for xs; 0.5+ for interactive states.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Community Flame sparingly: one active role per screen at a time. Its rarity is the signal.",
+      "Do use the em.accent italic pattern inside headings for key phrases — the system's voice signature.",
+      "Do calibrate shadows for the dark canvas: minimum 0.3 alpha on xs.",
+      "Do use real community imagery: specific people, specific places, specific moments.",
+      "Do let Warm White (#f5f0e8) be the text ceiling. No pure white in body copy.",
+      "Do write alt text in the brand voice: 'Women in tailoring training, Kibra community' over 'women sewing'."
+    ],
+    "donts": [
+      "Don't use the generic NGO charity aesthetic: blue-and-stock-photo, helping-hands imagery, or the UNICEF/Red Cross visual register.",
+      "Don't use poverty-framing or guilt-tone copy. Celebrate community agency.",
+      "Don't use the corporate nonprofit look: polished, consistent, cold.",
+      "Don't add gradient text (background-clip: text with a gradient). Use solid Community Flame for emphasis.",
+      "Don't use glassmorphism decoratively.",
+      "Don't use warm-neutral cream or sand body backgrounds. The dark editorial ground is identity.",
+      "Don't introduce additional accent colors without documented purpose. Community Flame is the one warmth source.",
+      "Don't repeat the section eyebrow on every heading as reflex scaffolding."
+    ]
+  }
+}
