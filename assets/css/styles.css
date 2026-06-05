@@ -81,7 +81,9 @@
 
   /* Refinement */
   --radius:    4px;
+  --radius-sm: 2px;
   --radius-lg: 6px;
+  --color-muted: rgba(245, 240, 232, 0.6);
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
@@ -553,17 +555,6 @@ nav a.btn-primary:hover {
   margin-bottom: 0;
 }
 
-/* Keep old animations */
-@keyframes slideInDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
 @keyframes heroRise {
   from { opacity: 0; transform: translateY(32px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -601,6 +592,12 @@ nav a.btn-primary:hover {
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }
 
 /* ============================================
@@ -830,11 +827,10 @@ section {
   margin: var(--space-8) auto 0;
   padding: var(--space-8);
   background: var(--color-bg-card);
-  border-left: 3px solid var(--color-orange);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-orange);
   border-radius: var(--radius-lg);
   text-align: center;
-  border: 1px solid var(--color-border);
-  border-left: 3px solid var(--color-orange);
 }
 
 .story-lead {
@@ -932,10 +928,9 @@ section {
   text-align: center;
   padding: var(--space-4);
   background: var(--color-bg-card);
-  border-radius: var(--radius-lg);
-  border-top: 2px solid var(--color-orange);
   border: 1px solid var(--color-border);
   border-top: 2px solid var(--color-orange);
+  border-radius: var(--radius-lg);
 }
 
 .youth-stat-number {
@@ -1004,7 +999,6 @@ section {
 
 .program-card {
   background: var(--color-bg-card);
-  border-top: 3px solid var(--color-orange);
   border: 1px solid var(--color-border);
   border-top: 3px solid var(--color-orange);
   padding: var(--space-4);
@@ -1774,10 +1768,9 @@ section {
 .tech-highlight {
   background-color: var(--color-bg-card);
   padding: var(--space-4) var(--space-5);
-  border-left: 3px solid var(--color-orange);
-  border-radius: var(--radius);
   border: 1px solid var(--color-border);
-  border-left: 3px solid var(--color-orange);
+  border-top: 3px solid var(--color-orange);
+  border-radius: var(--radius);
   margin: var(--space-4) 0;
   color: var(--color-text-muted);
   font-size: var(--text-lg);
@@ -1835,15 +1828,12 @@ section {
 
 .cta-buttons .btn {
   width: 100%;
-  background-color: var(--color-orange);
-  color: #ffffff;
   font-size: var(--text-sm);
   padding: var(--space-2) var(--space-3);
   min-width: unset;
 }
 
 .cta-buttons .btn:hover {
-  background-color: var(--color-orange-dark);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -2436,8 +2426,8 @@ footer a:hover {
   }
 
   .cta-buttons {
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 700px;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 480px;
     gap: var(--space-2);
   }
 
