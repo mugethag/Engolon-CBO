@@ -17,6 +17,14 @@ SEARCH_QUERIES = {
     "GlobalGiving": "GlobalGiving official",
 }
 
+HANDLE_CANDIDATES = {
+    "Kenya Red Cross": ["KenyaRedCrossSociety", "KenyaRedCross"],
+    "SHOFCO": ["SHOFCO"],
+    "UNICEF Kenya": ["UNICEFKenya"],
+    "Amref Health": ["AmrefHealthAfrica"],
+    "GlobalGiving": ["GlobalGiving"],
+}
+
 
 def _normalize(value: str) -> str:
     return "".join(ch.lower() for ch in value if ch.isalnum())
@@ -41,9 +49,31 @@ def _score_candidate(row_name: str, title: str) -> int:
     return score
 
 
+def _channel_from_handle(service, handle: str) -> tuple[str, str] | None:
+    response = service.channels().list(
+        part="snippet",
+        forHandle=f"@{handle}",
+    ).execute()
+    items = response.get("items", [])
+    if not items:
+        return None
+
+    item = items[0]
+    channel_id = item.get("id", "")
+    title = item.get("snippet", {}).get("title", "")
+    if channel_id.startswith("UC"):
+        return channel_id, title
+    return None
+
+
 def resolve_channel_id(row_name: str, query: str) -> tuple[str, str]:
-    """Resolve a YouTube channel ID and title from a search query."""
+    """Resolve a YouTube channel ID and title from handles, then search as fallback."""
     service = _get_service()
+    for handle in HANDLE_CANDIDATES.get(row_name, []):
+        resolved = _channel_from_handle(service, handle)
+        if resolved:
+            return resolved
+
     response = service.search().list(
         part="snippet",
         q=query,
@@ -79,7 +109,7 @@ def update_config(spreadsheet_id: str) -> list[list[str]]:
         padded = (row + ["", "", "", ""])[:4]
         name, platform, channel_id, notes = padded
 
-        if platform.strip().lower() == "youtube" and channel_id.startswith("REPLACE"):
+        if platform.strip().lower() == "youtube" and name in SEARCH_QUERIES:
             query = SEARCH_QUERIES.get(name, notes or name)
             resolved_id, resolved_title = resolve_channel_id(name, query)
             channel_id = resolved_id
