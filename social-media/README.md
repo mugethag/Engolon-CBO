@@ -28,7 +28,8 @@ digest_agent → Daily Digest Archive tab + Gmail
 
 | Key | Where to get it |
 |---|---|
-| `ANTHROPIC_API_KEY` | [console.anthropic.com](https://console.anthropic.com) → API Keys |
+| `OPENAI_API_KEY` | [platform.openai.com](https://platform.openai.com) -> API keys |
+| `OPENAI_MODEL` | Optional. Defaults to `gpt-4.1-mini` if unset |
 | `YOUTUBE_API_KEY` | Google Cloud → APIs & Services → Credentials → API Key |
 | `GMAIL_APP_PASSWORD` | Gmail → Google Account → Security → App Passwords |
 
@@ -38,7 +39,8 @@ Go to your repo → Settings → Secrets and variables → Actions. Add:
 
 | Secret | Value |
 |---|---|
-| `ANTHROPIC_API_KEY` | Anthropic API key |
+| `OPENAI_API_KEY` | OpenAI API key |
+| `OPENAI_MODEL` | Optional model override, e.g. `gpt-4.1-mini` |
 | `GOOGLE_CREDENTIALS_JSON` | Base64-encoded service account JSON: `base64 -w0 service-account.json` |
 | `YOUTUBE_API_KEY` | YouTube API key |
 | `GMAIL_SENDER` | `mugethag@gmail.com` |

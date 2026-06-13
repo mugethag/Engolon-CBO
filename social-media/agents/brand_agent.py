@@ -2,7 +2,7 @@ import os
 import json
 from datetime import date
 from pathlib import Path
-from integrations.claude_client import complete
+from integrations.llm_client import complete
 from integrations.sheets import append_rows, read_rows
 from utils.logger import get_logger
 
@@ -35,7 +35,7 @@ def run(spreadsheet_id: str, website_content: str) -> dict:
     try:
         profile = json.loads(raw)
     except json.JSONDecodeError as e:
-        logger.error(f"brand_agent: Claude returned invalid JSON: {e}\nRaw (first 300 chars): {raw[:300]}")
+        logger.error(f"brand_agent: OpenAI returned invalid JSON: {e}\nRaw (first 300 chars): {raw[:300]}")
         raise
 
     row = [

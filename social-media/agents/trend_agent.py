@@ -3,7 +3,7 @@ import json
 from datetime import date
 from collections import defaultdict
 from integrations.sheets import read_rows, append_rows
-from integrations.claude_client import complete
+from integrations.llm_client import complete
 from utils.logger import get_logger
 from utils.retry import with_retry
 
@@ -33,7 +33,7 @@ def calculate_outlier_scores(videos: list) -> list:
 
 @with_retry(max_attempts=3, base_delay=2.0)
 def _enrich(video: dict) -> dict:
-    """Use Claude to extract patterns from an outlier video."""
+    """Use the LLM to extract patterns from an outlier video."""
     prompt = f"""A video is significantly outperforming its creator's average.
 
 Creator: {video['creator_name']} ({video.get('subscriber_count', 0):,} subscribers)
@@ -59,12 +59,12 @@ Return ONLY valid JSON."""
     try:
         return {**video, **json.loads(raw)}
     except json.JSONDecodeError as e:
-        logger.error(f"_enrich: Claude returned invalid JSON: {e}\nRaw (first 300 chars): {raw[:300]}")
+        logger.error(f"_enrich: OpenAI returned invalid JSON: {e}\nRaw (first 300 chars): {raw[:300]}")
         raise
 
 
 def run(spreadsheet_id: str) -> list:
-    """Detect outlier videos and enrich them with Claude analysis."""
+    """Detect outlier videos and enrich them with LLM analysis."""
     logger.info("trend_agent: starting")
     rows = read_rows(spreadsheet_id, "Competitor Tracking")
 
@@ -96,7 +96,7 @@ def run(spreadsheet_id: str) -> list:
     logger.info(f"trend_agent: {len(outliers)} outliers from {len(scored)} videos")
 
     enriched = []
-    for v in outliers[:10]:  # cap at 10 Claude calls per run
+    for v in outliers[:10]:  # cap at 10 LLM calls per run
         try:
             enriched.append(_enrich(v))
         except Exception as e:

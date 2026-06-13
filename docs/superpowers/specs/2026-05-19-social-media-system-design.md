@@ -17,7 +17,7 @@ Grow Engolon CBO's social media presence on Facebook, Instagram, YouTube, and X/
 - Brand voice profile builder
 - NGO/impact creator monitoring (YouTube + X/Twitter)
 - Outlier detection and pattern analysis
-- Caption, hook, and carousel script generation via Claude API
+- Caption, hook, and carousel script generation via OpenAI API
 - Google Sheets dashboard (7 tabs)
 - Daily Gmail digest to mugethag@gmail.com
 - GitHub Actions scheduling (free cloud runner)
@@ -46,7 +46,7 @@ Engolon CBO/
     │   ├── sheets.py             # Google Sheets read/write helpers
     │   ├── gmail.py              # Gmail send helpers
     │   ├── youtube.py            # YouTube Data API wrapper
-    │   └── claude_client.py      # Anthropic SDK wrapper
+    │   └── llm_client.py         # OpenAI SDK wrapper
     ├── data/
     │   └── brand_profile.json    # Local cache (committed to repo by weekly workflow)
     ├── utils/
@@ -83,7 +83,7 @@ Engolon CBO/
 ### `brand_agent`
 **Trigger:** Manual (setup) + weekly cron (Sunday)  
 **Input:** `index.html`, mission docs, program descriptions from website  
-**Process:** Sends Engolon content to Claude API; extracts mission, tone, target audience, content pillars (women, children, elderly, PWDs), fundraising language style, hook patterns  
+**Process:** Sends Engolon content to OpenAI API; extracts mission, tone, target audience, content pillars (women, children, elderly, PWDs), fundraising language style, hook patterns  
 **Output:** Writes to both **Brand Voice Profile** tab in Google Sheets (primary, always available to all agents) and commits `data/brand_profile.json` to the repo as a human-readable reference. Other agents always read from Sheets, not the local file, since GitHub Actions runners are ephemeral.
 
 ### `research_agent`
@@ -98,13 +98,13 @@ Engolon CBO/
 **Process:**
 - Calculates `outlier_score = recent_engagement / creator_30day_avg_engagement`
 - Flags score ≥ 2.5× (or ≥ 1.8× for creators < 10k followers)
-- Sends outlier to Claude API to extract: hook pattern, emotional trigger, why it worked, adaptation idea for Engolon  
+- Sends outlier to OpenAI API to extract: hook pattern, emotional trigger, why it worked, adaptation idea for Engolon  
 **Output:** Rows appended to **Trend Outliers** tab
 
 ### `script_agent`
 **Trigger:** Daily, after `trend_agent`  
 **Input:** Top 3 outliers from Trend Outliers tab + `brand_profile.json`  
-**Process:** For each outlier, calls Claude API to generate:
+**Process:** For each outlier, calls OpenAI API to generate:
 - Caption for Facebook/Instagram (donor-acquisition angle)
 - Hook line (≤ 10 words)
 - 3 talking points
@@ -156,10 +156,13 @@ research_agent → trend_agent → script_agent → digest_agent
 
 **GitHub Actions secrets required:**
 ```
-ANTHROPIC_API_KEY
+OPENAI_API_KEY
+OPENAI_MODEL                # Optional; defaults to gpt-4.1-mini
 GOOGLE_CREDENTIALS_JSON    # Service account JSON, base64-encoded
 YOUTUBE_API_KEY
+GMAIL_SENDER
 GMAIL_RECIPIENT            # mugethag@gmail.com
+GMAIL_APP_PASSWORD
 SPREADSHEET_ID
 ```
 

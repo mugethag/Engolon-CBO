@@ -2,7 +2,7 @@ import os
 import json
 from datetime import date
 from integrations.sheets import read_rows, append_rows
-from integrations.claude_client import complete
+from integrations.llm_client import complete
 from agents.brand_agent import load_brand_profile
 from utils.logger import get_logger
 
@@ -54,7 +54,7 @@ Return ONLY valid JSON."""
     try:
         return json.loads(raw)
     except json.JSONDecodeError as e:
-        logger.error(f"generate_post: Claude returned invalid JSON: {e}\nRaw (first 300 chars): {raw[:300]}")
+        logger.error(f"generate_post: OpenAI returned invalid JSON: {e}\nRaw (first 300 chars): {raw[:300]}")
         raise
 
 
