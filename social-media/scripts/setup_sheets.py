@@ -56,13 +56,19 @@ def setup(spreadsheet_id: str) -> None:
             body={'values': [headers]}
         ).execute()
 
-    sheets_values.append(
+    config_values = sheets_values.get(
         spreadsheetId=spreadsheet_id,
-        range="Config!A2",
-        valueInputOption='RAW',
-        insertDataOption='INSERT_ROWS',
-        body={'values': CONFIG_SEED}
-    ).execute()
+        range="Config!A2:D",
+    ).execute().get("values", [])
+
+    if not config_values:
+        sheets_values.append(
+            spreadsheetId=spreadsheet_id,
+            range="Config!A2",
+            valueInputOption='RAW',
+            insertDataOption='INSERT_ROWS',
+            body={'values': CONFIG_SEED}
+        ).execute()
 
     print("Setup complete.")
     print("IMPORTANT: Open the Config tab and replace all REPLACE_WITH_CHANNEL_ID values")

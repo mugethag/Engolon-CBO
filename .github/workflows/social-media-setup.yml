@@ -16,5 +16,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -r social-media/requirements.txt
+      - name: Create spreadsheet tabs
+        run: cd social-media && python scripts/setup_sheets.py
       - name: Run brand_agent
         run: cd social-media && python -m agents.brand_agent
